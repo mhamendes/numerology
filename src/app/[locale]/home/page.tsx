@@ -7,7 +7,7 @@ import { TestimonialsSection } from "(components)/testimonials-section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { StarIcon, SparklesIcon } from "lucide-react";
-import QA from "pages/qa";
+import QA from "@/app/[locale]/qa/page";
 import { useLanguage } from "(components)/language-context";
 
 export default function Home() {

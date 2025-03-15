@@ -1,14 +1,16 @@
 "use client";
 
 import React from "react";
-import { HeroSection } from "(components)/hero-section";
-import { ServicesSection } from "(components)/services-section";
-import { TestimonialsSection } from "(components)/testimonials-section";
+import { SparklesIcon,StarIcon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { StarIcon, SparklesIcon } from "lucide-react";
-import QA from "pages/qa";
+
+import { HeroSection } from "(components)/hero-section";
 import { useLanguage } from "(components)/language-context";
+import { ServicesSection } from "(components)/services-section";
+import { TestimonialsSection } from "(components)/testimonials-section";
+import QA from "@/app/[locale]/qa/page";
 
 export default function Home() {
   const { t } = useLanguage();

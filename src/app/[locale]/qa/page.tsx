@@ -1,6 +1,8 @@
 "use client"
 
 import React, { useState } from "react";
+import { SearchIcon } from "lucide-react";
+
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { SearchIcon } from "lucide-react";
+
 import { useLanguage } from "(components)/language-context";
 
 export default function QA() {
