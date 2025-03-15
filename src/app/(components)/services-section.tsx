@@ -18,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Link } from '@/i18n/navigation';
 
 export function ServicesSection() {
   const t = useTranslations('services');
@@ -215,8 +216,9 @@ export function ServicesSection() {
           <Button
             variant="outline"
             className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950"
+            asChild
           >
-            {t('contactCustom')}
+            <Link href="/contact">{t('contactCustom')}</Link>
           </Button>
         </div>
       </div>

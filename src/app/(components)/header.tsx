@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { BRAND_FIRST_NAME, BRAND_LAST_NAME } from '@/lib/constants';
 
-import LocaleSwitcher from './localeSwitcher';
+import LocaleSwitcher from './locale-switcher';
 
 import { useTheme } from '(components)/theme-provider';
 
@@ -48,7 +48,12 @@ export function Header() {
           >
             {t('home')}
           </Link>
-          <Link href="/services">{t('services')}</Link>
+          <Link
+            href="/services"
+            className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
+          >
+            {t('services')}
+          </Link>
           <Link
             href="/about"
             className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"

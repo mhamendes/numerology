@@ -50,7 +50,7 @@ export async function HeroSection() {
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row md:px-8">
         <div className="mb-12 text-center md:mb-0 md:w-1/2 md:text-left">
           <h1 className="mb-6 text-4xl font-bold text-indigo-900 md:text-5xl lg:text-6xl dark:text-indigo-100">
-            {t('unlockDestiny')}
+            {t('unlockDestiny')}{' '}
             <span className="text-indigo-600 dark:text-indigo-400">
               {t('numerology')}
             </span>
