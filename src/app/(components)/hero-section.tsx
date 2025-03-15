@@ -1,15 +1,23 @@
-'use client';
-
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Link } from '@/i18n/navigation';
 
-export function HeroSection() {
-  const t = useTranslations('hero');
+const randomNumberList = Array.from({ length: 9 }, (_, idx) => {
+  return {
+    top: Math.floor(Math.random() * 100),
+    left: Math.floor(Math.random() * 100),
+    rotation: Math.random() * 360,
+    animation: `float ${5 + Math.random() * 10}s infinite ease-in-out`,
+    num: idx + 1,
+  };
+});
+
+export async function HeroSection() {
+  const t = await getTranslations('hero');
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
@@ -22,21 +30,19 @@ export function HeroSection() {
 
       {/* Numbers floating in background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num, index) => (
+        {randomNumberList.map((num, index) => (
           <div
             key={index}
             className="absolute text-6xl font-bold text-indigo-200 opacity-30 md:text-8xl dark:text-indigo-800"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-              animation: `float ${
-                5 + Math.random() * 10
-              }s infinite ease-in-out`,
+              top: `${num.top}%`,
+              left: `${num.left}%`,
+              transform: `rotate(${num.rotation}deg)`,
+              animation: num.animation,
             }}
             id={`3vwjx8_${index}`}
           >
-            {num}
+            {num.num}
           </div>
         ))}
       </div>
@@ -44,7 +50,7 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row md:px-8">
         <div className="mb-12 text-center md:mb-0 md:w-1/2 md:text-left">
           <h1 className="mb-6 text-4xl font-bold text-indigo-900 md:text-5xl lg:text-6xl dark:text-indigo-100">
-            {t('unlockDestiny')}{' '}
+            {t('unlockDestiny')}
             <span className="text-indigo-600 dark:text-indigo-400">
               {t('numerology')}
             </span>
@@ -106,19 +112,6 @@ export function HeroSection() {
           </Card>
         </div>
       </div>
-
-      {/* Custom CSS for floating animation */}
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(5deg);
-          }
-        }
-      `}</style>
     </section>
   );
 }

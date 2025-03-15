@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
 import { SparklesIcon, StarIcon } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,8 +10,8 @@ import { ServicesSection } from '(components)/services-section';
 import { TestimonialsSection } from '(components)/testimonials-section';
 import QA from '@/app/[locale]/qa/page';
 
-export default function Home() {
-  const t = useTranslations('home');
+export default async function Home() {
+  const t = await getTranslations('home');
 
   return (
     <div className="w-full">
