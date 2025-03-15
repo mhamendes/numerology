@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
 
 export default function Contact() {
   const t = useTranslations('contactUs');
@@ -91,7 +92,7 @@ export default function Contact() {
                         {t('emailUs')}
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        contact@cosmicnumbers.com
+                        {CONTACT_EMAIL}
                       </p>
                       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                         {t('emailResponse')}
@@ -112,7 +113,7 @@ export default function Contact() {
                         {t('callUs')}
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        (555) 123-4567
+                        {PHONE_NUMBER}
                       </p>
                       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                         {t('callHours')}
@@ -133,7 +134,7 @@ export default function Contact() {
                         {t('visitUs')}
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        123 Cosmic Way, Universe City
+                        {BRAND_ADDRESS}
                       </p>
                       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                         {t('byAppointment')}

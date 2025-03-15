@@ -58,7 +58,10 @@
     "teamCompatibility": "Team Compatibility Assessment",
     "strategicTiming": "Strategic Timing Recommendations",
     "growthOpportunity": "Growth Opportunity Forecast",
-    "oneHundredTwentyMinuteConsultation": "120-minute consultation with follow-up"
+    "oneHundredTwentyMinuteConsultation": "120-minute consultation with follow-up",
+    "lifePathNumber": "Life Path Number",
+    "destinyNumber": "Destiny Number",
+    "soulUrgeNumber": "Soul Urge Number"
   },
   "footer": {
     "unlockingSecrets": "Unlocking the secrets of numerology to guide you on your life's journey.",
@@ -98,6 +101,8 @@
     "allQuestions": "en"
   },
   "home": {
+    "discoverPath": "Discover Your Life Path",
+    "numerologyDesc": "Numerology is the mystical study of numbers and their influence on human life. Each number carries a unique vibration that can reveal insights about your personality, talents, obstacles, and opportunities.",
     "lifePathNumber": "Life Path Number",
     "lifePathDescription": "Discover your core purpose and the path you're meant to follow in this lifetime.",
     "destinyNumber": "Destiny Number",

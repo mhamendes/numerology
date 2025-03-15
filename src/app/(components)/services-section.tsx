@@ -21,28 +21,29 @@ import {
 
 export function ServicesSection() {
   const t = useTranslations('services');
+  const tBirthMap = useTranslations('birthMap');
 
   // Services are now defined inside the component to access the t function
   const services = [
     {
       title: t('birthMap'),
-      description: t('birthMapDescription'),
+      description: tBirthMap('birthMapPageDescription'),
       price: '$49',
       features: [
-        t('motivationNumber'),
-        t('expressionNumber'),
-        t('birthDayNumber'),
-        t('hiddenTalent'),
-        t('conjugalVibration'),
-        t('hiddenTendency'),
-        t('destinyNumberTitle'),
-        t('missionNumber'),
-        t('karmicLessons'),
-        t('lifeCycles'),
-        t('decisiveMoments'),
-        t('invertedTriangle'),
-        t('personalYears'),
-        t('monthlyGuidance'),
+        tBirthMap('motivationNumber'),
+        tBirthMap('expressionNumber'),
+        tBirthMap('birthDayNumber'),
+        tBirthMap('hiddenTalent'),
+        tBirthMap('conjugalVibration'),
+        tBirthMap('hiddenTendency'),
+        tBirthMap('destinyNumberTitle'),
+        tBirthMap('missionNumber'),
+        tBirthMap('karmicLessons'),
+        tBirthMap('lifeCycles'),
+        tBirthMap('decisiveMoments'),
+        tBirthMap('invertedTriangle'),
+        tBirthMap('personalYears'),
+        tBirthMap('monthlyGuidance'),
       ],
 
       icon: <BookIcon className="h-6 w-6 text-purple-500" />,

@@ -58,7 +58,10 @@
     "teamCompatibility": "Avaliação de Compatibilidade da Equipe",
     "strategicTiming": "Recomendações de Timing Estratégico",
     "growthOpportunity": "Previsão de Oportunidades de Crescimento",
-    "oneHundredTwentyMinuteConsultation": "Consulta de 120 minutos com acompanhamento"
+    "oneHundredTwentyMinuteConsultation": "Consulta de 120 minutos com acompanhamento",
+    "lifePathNumber": "Número do Caminho de Vida",
+    "destinyNumber": "Número do Destino",
+    "soulUrgeNumber": "Número do Desejo da Alma"
   },
   "footer": {
     "unlockingSecrets": "Desvendando os segredos da numerologia para guiá-lo na jornada da sua vida.",
@@ -98,6 +101,8 @@
     "allQuestions": "pt"
   },
   "home": {
+    "discoverPath": "Descubra Seu Caminho de Vida",
+    "numerologyDesc": "A numerologia é o estudo místico dos números e sua influência na vida humana. Cada número carrega uma vibração única que pode revelar insights sobre sua personalidade, talentos, obstáculos e oportunidades.",
     "lifePathNumber": "Número do Caminho de Vida",
     "lifePathDescription": "Descubra seu propósito central e o caminho que você está destinado a seguir nesta vida.",
     "destinyNumber": "Número do Destino",
