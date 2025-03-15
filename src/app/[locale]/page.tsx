@@ -1,82 +1,82 @@
-"use client";
+'use client';
 
-import React from "react";
-import { SparklesIcon,StarIcon } from "lucide-react";
+import React from 'react';
+import { SparklesIcon, StarIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
-import { HeroSection } from "(components)/hero-section";
-import { useLanguage } from "(components)/language-context";
-import { ServicesSection } from "(components)/services-section";
-import { TestimonialsSection } from "(components)/testimonials-section";
-import QA from "@/app/[locale]/qa/page";
+import { HeroSection } from '(components)/hero-section';
+import { ServicesSection } from '(components)/services-section';
+import { TestimonialsSection } from '(components)/testimonials-section';
+import QA from '@/app/[locale]/qa/page';
 
 export default function Home() {
-  const { t } = useLanguage();
+  const t = useTranslations('home');
 
   return (
     <div className="w-full">
       <HeroSection />
 
       {/* About Numerology Section */}
-      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-indigo-800 dark:text-indigo-300">
-            {t("discoverPath")}
+      <section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">
+            {t('discoverPath')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t("numerologyDesc")}
+          <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+            {t('numerologyDesc')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm border border-indigo-100 dark:border-indigo-900">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <Card className="border border-indigo-100 bg-white/80 backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/50">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
                 <StarIcon className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
-                {t("lifePathNumber")}
+              <h3 className="mb-2 text-xl font-semibold text-indigo-700 dark:text-indigo-300">
+                {t('lifePathNumber')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                {t("lifePathDescription")}
+                {t('lifePathDescription')}
               </p>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm border border-indigo-100 dark:border-indigo-900">
+          <Card className="border border-indigo-100 bg-white/80 backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/50">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
                 <SparklesIcon className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
-                {t("destinyNumber")}
+              <h3 className="mb-2 text-xl font-semibold text-indigo-700 dark:text-indigo-300">
+                {t('destinyNumber')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                {t("destinyDescription")}
+                {t('destinyDescription')}
               </p>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm border border-indigo-100 dark:border-indigo-900">
+          <Card className="border border-indigo-100 bg-white/80 backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/50">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30">
                 <StarIcon className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">
-                {t("soulUrgeNumber")}
+              <h3 className="mb-2 text-xl font-semibold text-indigo-700 dark:text-indigo-300">
+                {t('soulUrgeNumber')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                {t("soulUrgeDescription")}
+                {t('soulUrgeDescription')}
               </p>
             </CardContent>
           </Card>
         </div>
 
-        <div className="text-center mt-12">
-          <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 rounded-full text-lg">
-            {t("calculateYourNumbers")}
+        <div className="mt-12 text-center">
+          <Button className="rounded-full bg-indigo-600 px-8 py-6 text-lg text-white hover:bg-indigo-700">
+            {t('calculateYourNumbers')}
           </Button>
         </div>
       </section>
@@ -90,16 +90,16 @@ export default function Home() {
       </div>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 bg-indigo-600 dark:bg-indigo-800">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            {t("beginJourney")}
+      <section className="bg-indigo-600 px-4 py-20 dark:bg-indigo-800">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
+            {t('beginJourney')}
           </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-            {t("unlockHiddenMeanings")}
+          <p className="mx-auto mb-8 max-w-3xl text-xl text-indigo-100">
+            {t('unlockHiddenMeanings')}
           </p>
-          <Button className="bg-white hover:bg-gray-100 text-indigo-600 px-8 py-6 rounded-full text-lg">
-            {t("getPersonalReading")}
+          <Button className="rounded-full bg-white px-8 py-6 text-lg text-indigo-600 hover:bg-gray-100">
+            {t('getPersonalReading')}
           </Button>
         </div>
       </section>

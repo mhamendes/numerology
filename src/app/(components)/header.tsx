@@ -1,22 +1,21 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { MenuIcon, XIcon, MoonIcon, SunIcon, GlobeIcon } from "lucide-react";
-import { useTheme } from "(components)/theme-provider";
-import { useLanguage } from "(components)/language-context";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import React, { useState } from 'react';
+import { MenuIcon, MoonIcon, SunIcon, XIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
+import { Button } from '@/components/ui/button';
+import { Link } from '@/i18n/navigation';
+import { BRAND_FIRST_NAME, BRAND_LAST_NAME } from '@/lib/constants';
+
+import LocaleSwitcher from './localeSwitcher';
+
+import { useTheme } from '(components)/theme-provider';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const { language, setLanguage, t } = useLanguage();
+  const t = useTranslations('header');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,86 +25,67 @@ export function Header() {
     setIsMenuOpen(false);
   };
 
-  const handleLanguageChange = (value: string) => {
-    setLanguage(value as "en" | "it" | "pt-br");
-  };
-
   return (
-    <header className="w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md py-4 px-6 sticky top-0 z-50 border-b border-indigo-100 dark:border-indigo-900">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <header className="sticky top-0 z-50 w-full border-b border-indigo-100 bg-white/80 px-6 py-4 backdrop-blur-md dark:border-indigo-900 dark:bg-gray-900/80">
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center">
-          <a
-            className="text-2xl font-bold text-indigo-700 dark:text-indigo-400 cursor-pointer"
+          <Link
             href="/"
+            className="cursor-pointer text-2xl font-bold text-indigo-700 dark:text-indigo-400"
           >
-            <span className="text-indigo-900 dark:text-indigo-300">Cosmic</span>
-            Numbers
-          </a>
+            <span className="text-indigo-900 dark:text-indigo-300">
+              {BRAND_FIRST_NAME}
+            </span>
+            {BRAND_LAST_NAME}
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-4">
-          <a
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer"
+        <nav className="hidden items-center space-x-4 md:flex">
+          <Link
             href="/"
+            className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
           >
-            {t("home")}
-          </a>
-          <a
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer"
-            href="/services"
-          >
-            {t("services")}
-          </a>
-          <a
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer"
+            {t('home')}
+          </Link>
+          <Link href="/services">{t('services')}</Link>
+          <Link
             href="/about"
+            className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
           >
-            {t("about")}
-          </a>
-          <a
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer"
+            {t('about')}
+          </Link>
+          <Link
             href="/contact"
+            className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
           >
-            {t("contact")}
-          </a>
-          <a
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer"
+            {t('contact')}
+          </Link>
+          <Link
             href="/qa"
+            className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
           >
-            {t("qa")}
-          </a>
+            {t('qa')}
+          </Link>
           <Button
-            className="bg-indigo-600 hover:bg-indigo-700 text-white"
+            className="bg-indigo-600 text-white hover:bg-indigo-700"
             asChild
           >
-            <a href="/booking">{t("bookReading")}</a>
+            <Link href="/booking">{t('bookReading')}</Link>
           </Button>
 
           {/* Language Selector */}
           <div className="relative flex items-center">
-            <Select value={language} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-[130px] h-9 border-indigo-200 dark:border-indigo-800">
-                <div className="flex items-center">
-                  <GlobeIcon className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Language" />
-                </div>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="en">English</SelectItem>
-                <SelectItem value="pt-br">Português</SelectItem>
-                <SelectItem value="it">Italiano</SelectItem>
-              </SelectContent>
-            </Select>
+            <LocaleSwitcher />
           </div>
 
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? (
+            {theme === 'dark' ? (
               <SunIcon className="h-5 w-5" />
             ) : (
               <MoonIcon className="h-5 w-5" />
@@ -114,26 +94,17 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center md:hidden space-x-4">
+        <div className="flex items-center space-x-4 md:hidden">
           {/* Mobile Language Selector */}
-          <Select value={language} onValueChange={handleLanguageChange}>
-            <SelectTrigger className="w-[70px] h-9 border-indigo-200 dark:border-indigo-800">
-              <GlobeIcon className="h-4 w-4" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="it">Italiano</SelectItem>
-              <SelectItem value="pt-br">Português (BR)</SelectItem>
-            </SelectContent>
-          </Select>
+          <LocaleSwitcher />
 
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? (
+            {theme === 'dark' ? (
               <SunIcon className="h-5 w-5" />
             ) : (
               <MoonIcon className="h-5 w-5" />
@@ -151,49 +122,49 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-indigo-100 dark:border-indigo-900">
-          <div className="flex flex-col p-4 space-y-4">
-            <a
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer py-2"
+        <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white md:hidden dark:border-indigo-900 dark:bg-gray-900">
+          <div className="flex flex-col space-y-4 p-4">
+            <Link
               href="/"
+              className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
               onClick={() => closeMenu()}
             >
-              {t("home")}
-            </a>
-            <a
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer py-2"
+              {t('home')}
+            </Link>
+            <Link
               href="/services"
+              className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
               onClick={() => closeMenu()}
             >
-              {t("services")}
-            </a>
-            <a
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer py-2"
+              {t('services')}
+            </Link>
+            <Link
               href="/about"
+              className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
               onClick={() => closeMenu()}
             >
-              {t("about")}
-            </a>
-            <a
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer py-2"
+              {t('about')}
+            </Link>
+            <Link
+              className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
               href="/contact"
               onClick={() => closeMenu()}
             >
-              {t("contact")}
-            </a>
-            <a
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer py-2"
+              {t('contact')}
+            </Link>
+            <Link
+              className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
               href="/qa"
               onClick={() => closeMenu()}
             >
-              {t("qa")}
-            </a>
+              {t('qa')}
+            </Link>
             <Button
-              className="bg-indigo-600 hover:bg-indigo-700 text-white w-full"
+              className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
               asChild
               onClick={() => closeMenu()}
             >
-              <a href="/booking">{t("bookReading")}</a>
+              <Link href="/booking">{t('bookReading')}</Link>
             </Button>
           </div>
         </div>

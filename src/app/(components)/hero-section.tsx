@@ -1,21 +1,23 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
-import { useLanguage } from "(components)/language-context";
+import React from 'react';
+import { useTranslations } from 'next-intl';
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Link } from '@/i18n/navigation';
 
 export function HeroSection() {
-  const { t } = useLanguage();
+  const t = useTranslations('hero');
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10">
-        <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-indigo-300 dark:bg-indigo-700 blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 rounded-full bg-purple-300 dark:bg-purple-700 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-pink-300 dark:bg-pink-700 blur-3xl"></div>
+        <div className="absolute top-20 left-1/4 h-64 w-64 rounded-full bg-indigo-300 blur-3xl dark:bg-indigo-700"></div>
+        <div className="absolute right-1/4 bottom-20 h-80 w-80 rounded-full bg-purple-300 blur-3xl dark:bg-purple-700"></div>
+        <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-pink-300 blur-3xl dark:bg-pink-700"></div>
       </div>
 
       {/* Numbers floating in background */}
@@ -23,7 +25,7 @@ export function HeroSection() {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num, index) => (
           <div
             key={index}
-            className="absolute text-6xl md:text-8xl font-bold text-indigo-200 dark:text-indigo-800 opacity-30"
+            className="absolute text-6xl font-bold text-indigo-200 opacity-30 md:text-8xl dark:text-indigo-800"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -39,66 +41,66 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-indigo-900 dark:text-indigo-100">
-            {t("unlockDestiny")}{" "}
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row md:px-8">
+        <div className="mb-12 text-center md:mb-0 md:w-1/2 md:text-left">
+          <h1 className="mb-6 text-4xl font-bold text-indigo-900 md:text-5xl lg:text-6xl dark:text-indigo-100">
+            {t('unlockDestiny')}{' '}
             <span className="text-indigo-600 dark:text-indigo-400">
-              {t("numerology")}
+              {t('numerology')}
             </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
-            {t("discoverHidden")}
+          <p className="mx-auto mb-8 max-w-xl text-xl text-gray-600 md:mx-0 dark:text-gray-300">
+            {t('discoverHidden')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 rounded-full text-lg">
-              {t("premiumAnalysis")}
+          <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
+            <Button className="rounded-full bg-indigo-600 px-8 py-6 text-lg text-white hover:bg-indigo-700">
+              {t('premiumAnalysis')}
             </Button>
             <Button
               variant="outline"
-              className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950 px-8 py-6 rounded-full text-lg"
+              className="rounded-full border-indigo-600 px-8 py-6 text-lg text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950"
               asChild
             >
-              <a href="/birth-map">{t("getBirthMap")}</a>
+              <Link href="/birth-map">{t('getBirthMap')}</Link>
             </Button>
           </div>
         </div>
 
         <div className="md:w-1/2 md:pl-12">
-          <Card className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-indigo-100 dark:border-indigo-900 shadow-xl">
+          <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
             <CardContent className="p-6 md:p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-center text-indigo-800 dark:text-indigo-300">
-                {t("calculateLifePath")}
+              <h3 className="mb-6 text-center text-2xl font-semibold text-indigo-800 dark:text-indigo-300">
+                {t('calculateLifePath')}
               </h3>
               <form className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    {t("fullName")}
+                  <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {t('fullName')}
                   </label>
                   <Input
                     type="text"
-                    placeholder={t("enterFullName")}
-                    className="border-indigo-200 dark:border-indigo-800 focus:ring-indigo-500"
+                    placeholder={t('enterFullName')}
+                    className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    {t("birthDate")}
+                  <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {t('birthDate')}
                   </label>
                   <Input
                     type="date"
-                    className="border-indigo-200 dark:border-indigo-800 focus:ring-indigo-500"
+                    className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-5"
+                  className="w-full bg-indigo-600 py-5 text-white hover:bg-indigo-700"
                 >
-                  {t("revealNumbers")}
+                  {t('revealNumbers')}
                 </Button>
               </form>
-              <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400">
-                {t("discoverDestiny")}
+              <p className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                {t('discoverDestiny')}
               </p>
             </CardContent>
           </Card>

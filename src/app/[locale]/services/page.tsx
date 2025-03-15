@@ -1,7 +1,8 @@
-"use client"
+'use client';
 
-import React from "react";
-import { ServicesSection } from "(components)/services-section";
+import React from 'react';
+
+import { ServicesSection } from '(components)/services-section';
 
 export default function Services() {
   return (
