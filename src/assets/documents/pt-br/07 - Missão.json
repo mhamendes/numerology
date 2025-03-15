@@ -1,0 +1,72 @@
+{
+  "title": "06 - Destino",
+  "description": "Um dos mais importantes números do Mapa de Nascimento. Descreve influências na personalidade, obstáculos e oportunidades que irá encontrar ao longo da vida. Indica também algumas alternativas e o resultado provável delas.",
+  "items": {
+    "1": {
+      "title": "Número 1 - Liderança",
+      "positive": "pioneirismo, iniciativa, liderança, inventividade, capacidade de comando, espírito executivo",
+      "negative": "caso eu não me desenvolva, poderei desenvolver forte tendência à arrogância, egoísmo, prepotência, excesso de ânimo e dominação, por vezes achando que o sucesso do grupo dependeu exclusivamente de mim. Esse tipo de postura pode tornar difícil o convívio com os amigos e colegas de trabalho, além de dificultar o relacionamento a dois, pois não é nada fácil conviver com esse tipo de pessoa. Um dos obstáculos à minha realização pessoal é a tendência a sobrecarregar o sistema nervoso com atitude crítica e preocupada. Tal fato pode me isolar dos outros, portanto preciso ter fé em mim e nas minhas habilidades e aproveitar ao máximo minhas ideias originais e inventivas.",
+      "orientation": "Vou para onde eu possa ter brilho, sucesso e reconhecimento. Serei o melhor possível na minha área de atuação, me mostrando sempre feliz, alegre, com descontração e muita confiança. Como não gosto de receber ordens, devo trabalhar por conta própria ou em cargo de chefia. Pelo fato de ser uma pessoa individualista e naturalmente líder, vou me preocupar em ser alguém de grande integridade, honestidade e pioneirismo."
+    },
+    "2": {
+      "title": "Número 2 - Amor e Ordem",
+      "positive": "capaz de unir ideias e fatos para realizar projetos, capacidade em entender as ideias dos outros, diplomacia, leal com amizades, excelente familiar ou colega de trabalho, gosta de proteger.",
+      "negative": "devo cuidar para não desenvolver tendências ao acomodamento e a esperar que os outros tomem a iniciativa, ficando na retaguarda e aparecendo pouco. Como não sou uma pessoa pioneira ou individualista, devo tomar cuidado para não deixar o tempo passar e perder projetos que são importantes para mim. Devo também tomar cuidado para não desenvolver autopiedade ou comodismo.",
+      "orientation": "Vou para onde eu possa cultivar a paciência, cooperação, tato, lealdade e minhas capacidades. Meu principal atributo é a união e devo aprender a unir todos aqueles que desejam parceria comigo."
+    },
+    "3": {
+      "title": "Número 3 - Comunicação e Sociabilidade",
+      "positive": "sociabilidade, alegre, versátil, talento, dom artístico, criatividade.",
+      "negative": "devo tomar cuidado para não desenvolver tendência a me entediar facilmente, me tornar um ser vaidoso em demasia, impaciente, extravagante, exagerado, esbanjador, com certa irresponsabilidade para cumprir horários e desprezar pessoas com nível que considero inferior ao meu. Quando essas características se manifestam, posso me tornar completamente insociável, uma pessoa dispersa com grande tendência ao tédio, ao isolamento e crises nervosas.",
+      "orientation": "Vou para onde eu possa usar o dom da palavra, pois como tenho senso artístico e charme, com bom-humor e com talento social, terei meu trunfo na comunicação. A criatividade e a emoção serão raízes do meu sucesso."
+    },
+    "4": {
+      "title": "Número 4 - Trabalho Duro e Ordem",
+      "positive": "conquista, trabalho duro, incansável, solidez, dedicação, senso de visão, segurança, estabilidade.",
+      "negative": "devo tomar cuidado para não me tornar um ser muito estruturado, conservador e inflexível. Viver em grupo é extremamente difícil e quase sempre rejeito o novo, pois essa incerteza acaba me transmitindo insegurança e possibilidades de perdas. Irei me atentar em não ser muito perfeccionista e cobrar demais dos outros, sejam familiares, amigos ou subordinados, pois isso poderá me fazer passar por vezes como uma pessoa chata e incompreendida. Devo me desviar com toda força de assuntos fraudulentos, conspirações, orgulho demasiado ou a planos astutos e maléficos para enriquecer de forma rápida às custas do sofrimento alheio.",
+      "orientation": "Irei para onde poderei aplicar responsabilidade moral, justiça e ponderação. Preciso de pessoas inteligentes à minha volta para compartilhar meus interesses."
+    },
+    "5": {
+      "title": "Número 5 - Versatilidade e Liberdade",
+      "positive": "viajante, desejo de mudanças, versátil, gosta do novo, alegre, comunicação, discernimento, mente ativa.",
+      "negative": "devo tomar cuidado para não comprar mais coisas do que necessito ou que posso pagar, me levando a ter problemas financeiros ao longo da vida. No lado sentimental, devo tomar cuidado para não me envolver em situações afetivas que dificilmente conseguirei me desvencilhar pois tenho tendência a querer relações novas e intrigantes. Sou um ser extrovertido com ampla visão de tudo e de todos, mas inconstante em meus objetivos, me levando a ter muitos começos e poucos fins.",
+      "orientation": "Vou para onde poderei ser versátil, no sentido de mudar, alterar e transformar as coisas. Irei sempre à procura do que é novo, moderno e diferente. Vou aprender e conhecer tudo que puder e estarei em ambientes onde possa expressar minha alegria, comunicação, inteligência e receptividade às pessoas. Irei também elevar meu caráter para trabalhar com algo de interesse humanitário. Quando eu encontrar muita desordem, devo alterar com minhas altas capacidades. Irei para onde eu puder exercitar meu poder cerebral na companhia de pessoas inteligentes."
+    },
+    "6": {
+      "title": "Número 6 - Amor Universal",
+      "positive": "dócil, educação, aversão à brigas, calma, tranquilidade, harmonia, compaixão, perfeccionista, paz, gentileza, amante de plantas e animais.",
+      "negative": "devo tomar cuidado para não me tornar muito sentimental, vulnerável, sempre confiando nas aparências sem analisar os fatos friamente. Irei me atentar à tendência ao acomodamento e a falta de interesse. Por ser uma pessoa profunda, necessito de tranquilidade para aparentar estar bem comigo. Preciso constantemente ter incentivos, pois caso contrário posso desenvolver tendência a deixar tudo no meio do caminho. Na tentativa de manter tudo calmo e tranquilo, por vezes posso acabar interferindo de maneira não condizente com o momento, pois nem sempre a docilidade é o melhor remédio para certas situações, e isso pode me perturbar, levando a me retrair e a acomodar, até que outro fato ou circunstância me incentivem.",
+      "orientation": "Vou para onde terei harmonia, paz, amor e compaixão. Tenho destino de liderança e responsabilidade e irei ajustar as situações desarmoniosas, defendendo minhas próprias ideias. Serei uma pessoa determinada, com paciência e perseverança e pelo fato de conquistar amizades e simpatias com grande facilidade, posso me dar bem em trabalhos com o público."
+    },
+    "7": {
+      "title": "Número 7 - Fé, Sabedoria e Intuição",
+      "positive": "eficiente, intuição, perfeccionista, racional, boa reflexão, concentração, pessoa reservada, amorosidade, compreensão.",
+      "negative": "devo tomar cuidado para não desenvolver um espírito dominador, crítico, exigente, perfeccionista, angustiado, impaciente, orgulhoso e aparentemente descrente. Embora eu seja uma pessoa pragmática por natureza, posso às vezes ter ideias pouco convencionais e devo tomar cuidado para que isso não vire uma desculpa para ser do contra somente para me fazer de difícil. Devo aprender a valorizar as pessoas como elas são, ou seja, respeitar o fato de os outros serem fruto daquilo que conseguiram absorver da vida e do convívio com os demais.",
+      "orientation": "Vou para onde possa desenvolver meus poderes mentais, estudar muito, meditar e buscar o significado último da vida. Pois como tenho uma inteligência desenvolvida e habilidade de liderança, terei muitas oportunidades de sucesso na vida. Preciso desenvolver espiritualmente o planeta com conhecimentos de qualidade e grande autoconsciência que são qualidades minhas."
+    },
+    "8": {
+      "title": "Número 8 - Negócios e Justiça",
+      "positive": "planejamento, organização, mundo dos negócios, ganho material e financeiro, inteligência, individualidade, personalidade exigente, lealdade, ambição, gentileza.",
+      "negative": "devo tomar cuidado para não me focar somente em ganhar dinheiro e conquistas materiais, para não acabar esquecendo da família, do lado sentimental, social e principalmente de mim. Posso às vezes ter certa dificuldade em demonstrar afeto e carinho, aparentando frieza nos relacionamentos em geral. Na realidade, sou um ser altamente emotivo, necessitando de ajuda e compreensão por parte das pessoas mais chegadas.",
+      "orientation": "Irei para o mundo dos negócios, onde possa cultivar a eficiência na arte de negociar e compreender as leis que comandam a acumulação, o poder e o uso do dinheiro. Irei aproveitar ao máximo minha inteligência rápida, a necessidade de expressão e o lado sociável de minha natureza. Irei dar atenção às pessoas e desenvolver minhas capacidades executivas."
+    },
+    "9": {
+      "title": "Número 9 - Humanitarismo e Sabedoria",
+      "positive": "universalidade, espirituosidade, charme, diversão, amor, benevolência, sensibilidade emocional, poder psíquico",
+      "negative": "devo cuidar da tendência a viver para os outros e por vezes acabar perdendo excelentes oportunidades, principalmente no âmbito profissional. Embora eu seja um ser idealista e generoso, posso em algumas situações ser reservado e ocultar sentimentos profundos que podem se transformar em ressentimentos. Devo me policiar para não me frustrar com certa facilidade, me tornar um ser pouco prático, de certa maneira egoísta, com complexo de inferioridade, medos, preocupação exagerada e tendência ao isolamento.",
+      "orientation": "Vou para onde eu possa servir, evoluir e me divertir. Possuo uma capacidade grande para adquirir conhecimentos e minha direção será ajudar a humanidade. Irei amar o próximo, me livrar de qualquer preconceito e ser uma pessoa generosa e compreensiva com todos. Irei me beneficiar de viagens internacionais e da interação com pessoas de círculos sociais diferentes."
+    },
+    "11": {
+      "title": "Número 11 - Espiritualidade e Intuição",
+      "positive": "intuição, sensibilidade, visão, energia, potencial mental, versátil, imaginatividade, idealismo, inspiração, espiritualidade, habilidade para curar, humanitarismo.",
+      "negative": "devo tomar cuidado para não cair na tendência a vícios, falta de objetivos, complexo de superioridade, me magoar com facilidade, ser hipersensível, emotividade excessiva, de certa forma egoísta e quando as coisas não correm como quero, devo cuidar para não me tornar um ser desonesto da busca de conseguir o que quero. Como sou altamente sensível, capto com maior intensidade as imperfeições do mundo e das pessoas. Caso não saiba lidar com tal situação, poderei acabar acumulando insatisfações e sofrimentos. Devo usar essas insatisfações e sofrimentos para melhorar sempre os meus conceitos sobre tudo e todos.",
+      "orientation": "Devo ir para qualquer área onde eu ajude a melhorar o planeta, meus semelhantes e minha própria vida. Irei precisar de liberdade para agir onde irei usar meu pensamento imaginativo e minha praticidade para obter resultados extraordinários. Sou a pessoa da inspiração, vejo facilmente a realidade atual e seus desdobramentos e devo usar a compostura e perseverança para meu sucesso. Irei buscar a espiritualidade, humanitarismo e minhas habilidades psíquicas."
+    },
+    "22": {
+      "title": "Número 22 - Contribuição e Realização",
+      "positive": "altruísmo, sabedoria, praticidade, sociabilidade, espiritualidade, honestidade, liderança, carisma, compreensão profunda das pessoas, muitos amigos, diplomacia.",
+      "negative": "devo cuidar para não cair na tendência à arrogância, orgulho, nervosismo, preguiça, egoísmo, autopromoção, traição e a menosprezar meus semelhantes. Devo me policiar, pois apesar de ser uma pessoa emocional e materialmente generosa, posso às vezes, radicalizar, deixando me levar por uma vida de luxo e glamour.",
+      "orientation": "Vou para onde poderei me dedicar altruisticamente à humanidade. Usarei minha sabedoria mental ou espiritual para enxergar o profundo e invisível. Trabalharei com honestidade e liderança protegendo sempre as pessoas. Irei usar justiça e cooperação no meu cotidiano para penetrar nos problemas até as últimas raízes. Irei usar todos meus atributos para exercer meu papel de líder."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "unifyingNumbersTitle": "Unificando seus Números",
+  "unifyingNumbersDescription": "Para tirar ainda mais proveito de seus números, uma boa tática é entender como amarrar ou unir de forma objetiva suas vibrações numéricas para melhor se alinhar ao seu propósito de vida. Nas três categorias listadas abaixo, você irá encontrar os números correspondentes a cada área a ser harmonizada e sua explicação.",
+  "whereIAmGoingTitle": "Para Onde Eu Vou",
+  "whereIAmGoingDescription": "Sempre que você entrar ou criar um novo projeto, um novo emprego ou qualquer jornada profissional que for empreender veja o que diz seus números de:",
+  "whereIAmGoingList": [
+    [
+      "• Destino e seus Ciclos mais importantes (Ciclos de Vida, Momentos Decisivos e Ano Pessoal)"
+    ],
+    ["• Missão"]
+  ],
+  "whereIAmGoingExtra": "Caso o caminho que você irá seguir esteja alinhado com o que diz a descrição desses dois números que você possui, as vibrações estarão a seu favor e irá cumprir melhor seu propósito.",
+  "toolsIAmUsingTitle": "Ferramentas Que Possuo",
+  "toolsIAmUsingDescription": "Quando quiser ter mais consciência sobre as ferramentas que a vida lhe presenteou para cumprir sua missão ou quando sentir em si certa falta de autoconfiança, veja os poderes que lhe foram dados nos números abaixo:",
+  "toolsIAmUsingList": [
+    ["• Motivação", "• Impressão", "• Expressão"],
+    ["• Dia Natalício", "• Número Psíquico", ""]
+  ],
+  "questionsIAmAskingTitle": "Questões Que Preciso Resolver",
+  "questionsIAmAskingDescription": "Aqui são apresentadas as questões de carma ou tendências que podem estar te impedindo de evoluir, é muito importante cuidar de tais orientações para que não se alimente com mais carma ou repita padrões de comportamentos não produtivos.",
+  "questionsIAmAskingList": [
+    [
+      "• Lições Cármicas",
+      "• Dívidas Cármicas",
+      "• Tendências Ocultas",
+      "• Resposta Subconsciente"
+    ],
+    ["• Desafios", "• Triângulo da Vida (Arcanos e Sequências Negativas)"]
+  ],
+  "phone": "Telefone:",
+  "email": "Email:",
+  "instagram": "Instagram:",
+  "website": "Site:",
+  "address": "Endereço:",
+  "mentorName": "Mentora/Numeróloga:",
+  "doneAt": "Realizado em:",
+  "birthMapTitle": "Mapa de Nascimento",
+  "subject": "Mapa de Nascimento de {{fullName}}"
+}

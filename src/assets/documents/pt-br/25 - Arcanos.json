@@ -1,0 +1,402 @@
+{
+  "title": "25 - Arcanos",
+  "description": "Segue abaixo a descrição de cada um dos seus Arcanos.",
+  "items": {
+    "1": {
+      "title": "Arcano 1 - O MAGO",
+      "data": "Aponta para os dons e para o potencial criativo que ainda não se manifestaram. Pode surgir como um pressentimento, uma intuição, uma súbita rajada de energia com relação a novas oportunidades. Indica um momento de clareza e de identificação das possibilidades inexploradas. O Mago vem indicar que agora a viagem será possível, e que ele tem consciência de suas reais possibilidades e de sua capacidade, ainda que não desenvolvida. A atenção deve se voltar para a intuição e os pressentimentos, pois podem revelar as novas oportunidades que poderão surgir de modo inesperado. Representa a atividade mental consciente, a convicção e a direção e prontidão; a inteligência materializada pela vontade."
+    },
+    "2": {
+      "title": "Arcano 2 - A SACERDOTISA ou A PAPISA",
+      "data": "Indica força e intuição e sugere o encontro com o mundo interior. O indivíduo pode estar sendo conduzido para esse mundo sem qualquer explicação por intermédio de seu interesse pelas coisas ocultas, pelo esoterismo, ou, talvez, pelos efeitos de algum sonho perturbador. Enfim, por algo que de alguma forma lhe diga que existem forças superiores que atuam na vida das pessoas. Denota percepção das próprias necessidades espirituais e sentimento religioso. Representa a atividade mental intuitiva; a sensibilidade aflorada, a sabedoria e o mistério, os planos futuros, os estudos, o silêncio e a espera."
+    },
+    "3": {
+      "title": "Arcano 3 - A IMPERATRIZ",
+      "data": "Significa criatividade, produtividade, maternidade, abundância, boas colheitas, êxito em um ambiente seguro e isento de perigos. Fertilidade tanto mental como física. Indica uma fase da vida mais ligada às coisas terrenas. Um casamento, ou mesmo o nascimento de uma criança podem estar prestes a acontecer. A Imperatriz mostra ainda o êxito nas empresas, e nos empreendimentos, se a pessoa for firme e reta nos pensamentos e ações. Representa o poder da imaginação, a visualização criativa, as emoções saudáveis e o amor; a materialização do desejo; comunicação, inovação, fertilidade, expansão e crescimento."
+    },
+    "4": {
+      "title": "Arcano 4 - O IMPERADOR",
+      "data": "Significa liderança, atividade mental, dominação, domínio, paternidade. Ditadura; paixão, mas sempre controlada pela inteligência. É a majestade e o poder. Mostra manifestação de autoridade ou necessidade de consulta a uma autoridade ou superior hierárquico. Confronto com o princípio paternal, tanto no seu aspecto positivo quanto negativo. Representa o poder e a autoridade, a faculdade da razão, a lógica e o raciocínio indutivo; atividade, força e poder; a realidade estruturada e lógica, a disciplina, o anseio por estabilidade e seriedade; os planos seguros."
+    },
+    "5": {
+      "title": "Arcano 5 - O HIEROFANTE ou O PAPA",
+      "data": "Significa ortodoxia, apego às formas externas, ao convencional, ao credo e ao ritual. Tradicionalismo; necessidade de seguir as normas socialmente aceitas; disposição para o dever, a consciência, a generosidade, o perdão, a compaixão e a busca por respostas de ordem filosófica. O Hierofante pode surgir na forma de um psicoterapeuta, um conselheiro, um mestre ou mentor espiritual a quem nos dirigimos em busca de auxílio e orientação. Pode estar indicando que há necessidade de começar a buscar algumas respostas de ordem filosófica. Esse questionamento pode se traduzir no estudo aprofundado de alguma filosofia, ou de um sistema religioso, ou crença, ou mesmo na forma de um profundo comprometimento com relação ao sentido da vida. Representa a compreensão racional das coisas percebidas intuitivamente; as trocas de experiências para aprender e ensinar, as mudanças, a responsabilidade e a moralidade."
+    },
+    "6": {
+      "title": "Arcano 6 - OS ENAMORADOS",
+      "data": "Significa escolha, eleição, tentação, atração. A luta entre o sagrado e o profano nas relações amorosas. Harmonia dos aspectos interior e exterior da vida; amor puro na sua expressão mais elevada; altruísmo. No mundo divino é a ciência do bem e do mal; no mundo intelectual é o equilíbrio da necessidade e da liberdade; no mundo físico é o antagonismo das forças naturais, o encadeamento das causas aos efeitos. Indica necessidade de escolhas, quase sempre no plano amoroso. Pode também indicar a necessidade de estabilizar as emoções. Representa as escolhas seletivas, as faculdades discriminativas da mente; a busca pelo equilíbrio e estabilidade emocional; as uniões, as relações e situações felizes."
+    },
+    "7": {
+      "title": "Arcano 7 - O CARRO",
+      "data": "Significa triunfo, êxito, vitória. Controle sobre as forças da natureza. Recuperação da saúde, vitória sobre as penúrias econômicas ou sobre inimigos de qualquer tipo. É o arcano que representa o alcance de algo grande; conflito e luta que, por sua vez, resultam em crescimento e fortalecimento da personalidade. Pode também significar viagens agradáveis e cômodas. Representa poder e vontade; triunfo, avanço e progresso; novas experiências, confiança, novidades, agilidade."
+    },
+    "8": {
+      "title": "Arcano 8 - A JUSTIÇA",
+      "data": "Significa mente equilibrada, resolução judicial favorável; recompensa justa. Personalidade desejosa de livrar-se do supérfluo, de ideias equivocadas ou errôneas, de conhecimentos inúteis; necessidade do pensamento equilibrado e de tomada de decisões imparciais. Representa a lei de causa e efeito, a busca pelo equilíbrio pessoal e universal; igualdade, equanimidade e justiça; razão, objetividade, realismo, sinceridade e recompensas."
+    },
+    "9": {
+      "title": "Arcano 9 - O EREMITA",
+      "data": "Significa iluminação, conselho silencioso e prudente; discrição; sabedoria que nos vem do alto. Um período de solitude, de exílio voluntário das coisas mundanas, da agitação da vida, de forma a obtermos paciência e sabedoria. Esse momento representa a grande oportunidade de erguer e fortalecer a personalidade se estiver disposto a esperar. Representa a sabedoria e o recolhimento necessário para alcançá-la; introspecção e busca interior, prudência e paz de espírito; também resoluções e finalizações."
+    },
+    "10": {
+      "title": "Arcano 10 - A RODA DA FORTUNA",
+      "data": "Significa êxito, golpe de sorte inesperado; mudança para melhor. Evolução favorável, segundo as leis do acaso; prenuncia alguma mudança brusca na vida, que tanto pode ser boa como ruim. De qualquer forma, a virada da roda sempre traz o crescimento e inaugura uma nova fase da vida. Representa a riqueza, as trocas favoráveis e a expansão; mudanças e boa fortuna; adverte sobre o tempo e a instabilidade, a falta de planos e a lei do retorno; indica que é tempo de aprender para crescer."
+    },
+    "11": {
+      "title": "Arcano 11 - A FORÇA",
+      "data": "Significa força de caráter; o poder espiritual vencendo o poder material e as forças impulsivas das paixões físicas e emocionais. O amor triunfando sobre o ódio. Vitória da natureza superior sobre os desejos mundanos e carnais; uma situação onde a colisão com o leão interior é inevitável, em que a administração bem conduzida da própria raiva e de todas as emoções é altamente benéfica. A coragem, a força e a autodisciplina são necessárias para dominar a situação. Representa a energia que atua transformando a matéria; a força da mente e o domínio sobre o ambiente."
+    },
+    "12": {
+      "title": "Arcano 12 - O ENFORCADO",
+      "data": "Significa renúncia ou sacrifício por motivos superiores; desenvolvimento das faculdades psíquicas; domínio da tentação material; transformação da personalidade através da renúncia ou do sacrifício; necessidade do sacrifício voluntário com o propósito de atingir algo muito mais valioso. Representa a abnegação e o sacrifício voluntário por uma causa justa."
+    },
+    "13": {
+      "title": "Arcano 13 - A MORTE",
+      "data": "Significa transformação, mudança e destruição seguidas de renovação; morte de uma parte de si, para o nascimento de novas ideias e de novas oportunidades; uma transformação inevitável, um renascimento do ser interior, desde que se consiga abrir mão da parte de nós que não somos mais. Se essa experiência será dolorosa ou não, vai depender da nossa capacidade em aceitar e reconhecer a necessidade dos fechamentos. Representa as transformações profundas que a vida exige de nós; renovação e mudanças radicais."
+    },
+    "14": {
+      "title": "Arcano 14 - A TEMPERANÇA",
+      "data": "Significa moderação, adaptação, compreensão, cooperação e trabalho em harmonia com os demais; boa administração; o que imagina ocorrerá; conseguirá combinações de êxito; paz interior; necessidade de um redirecionamento no fluxo dos sentimentos e dos relacionamentos. Representa as provas a serem superadas e o otimismo e a confiança necessários para isso; adaptação."
+    },
+    "15": {
+      "title": "Arcano 15 - O DIABO",
+      "data": "Significa enfermidade, catástrofes, excessos, imprevistos, desastres, com encadeamento às vezes voluntário; magia negra; descontentamento, depressão; escravidão da matéria; sensação de pecado e sentimento de culpa; alheamento de compreensão; timidez e incapacidade para tomar decisões; necessidade de confrontação com tudo o que está oculto e vergonhoso na base da personalidade. Representa a ideia do mal, a limitação, o medo, a ignorância que gera sofrimento; as más influências, forças perigosas e malignas, apego às ilusões e paixões, cegueira emocional e o sexo por puro prazer físico."
+    },
+    "16": {
+      "title": "Arcano 16 - A TORRE",
+      "data": "Significa perigo, conflito, catástrofe; destruição das estruturas obsoletas e das velhas ideias; acusações falsas; opressão; mudança brusca no modo de viver. A ambição egoísta está a ponto de criar um estalido. A Torre indica quebra ou rompimento de formas e estruturas vigentes e, da mesma forma que a Morte e o Diabo, depende muito da atitude pessoal frente às dificuldades e ao sofrimento numa separação. Representa o instante em que uma forma de ser, pensar e agir é modificada por um efeito inesperado radical; cataclismos, catástrofes e acidentes."
+    },
+    "17": {
+      "title": "Arcano 17 - A ESTRELA",
+      "data": "Significa inspiração, visão, esperança, idealismo; ajuda desinteressada; dons espirituais em desenvolvimento; grande amor em evidência; esperança e fé em meio às atribulações; renascimento da alegria e do amor; influência, ascendência, criatividade, contato com alguma pessoa que trará inspiração. Representa ideia ou conceito de esperança; caminhos abertos, reinício, ação e projetos favoráveis."
+    },
+    "18": {
+      "title": "Arcano 18 - A LUA",
+      "data": "Significa inspiração, imaginação, intuição; desenvolvimento das faculdades psíquicas latentes; viagem astral; o mundo subconsciente dos sonhos; as trevas; um período de confusão, de flutuação e de incertezas. Representa o inconsciente misterioso e oculto; inimigos ocultos, feitiçaria, escuridão, medo, intrigas e fofocas."
+    },
+    "19": {
+      "title": "Arcano 19 - O SOL",
+      "data": "Significa paz, amor e felicidade; uma vida bem vivida; um trabalho bem-feito; despertar e renovação; assuntos legais favoráveis; alegria e prosperidade; cumulação no plano espiritual; um período de clareza, dinamismo e confiança renovada. Representa a luz presente em cada ser humano, sua sabedoria, generosidade, confiança e caráter; saúde e bem-estar."
+    },
+    "20": {
+      "title": "Arcano 20 - O JULGAMENTO",
+      "data": "Significa renascimento de uma nova vida; que coisas maravilhosas vão ocorrer; poderá vislumbrar o que lhe prepara o futuro; transformação; verá tudo sob uma nova luz; rompimento com o convencional; propõe um período de recompensas pelos esforços empreendidos anteriormente. Representa o julgamento ou síntese que permitem a compreensão da realidade final e o transcender da mente; aproveitar as experiências passadas, renascer para vida nova; troca de ideias, popularidade, fama."
+    },
+    "21": {
+      "title": "Arcano 21 - O MUNDO",
+      "data": "Significa liberdade para ir em qualquer direção que desejar; conclusão de um trabalho bem-feito; triunfo em qualquer coisa que se empreenda; um período de realizações e de totalização; o momento do sucesso, da finalização positiva de um processo ou de uma questão; o instante de alcançarmos um objetivo, de atingirmos um ideal pelo qual lutamos durante muito tempo. Representa os poderes paranormais, a dominação sobre as leis físicas e a matéria; sucesso, viagens, plenitude."
+    },
+    "22": {
+      "title": "Arcano 22 - O LOUCO",
+      "data": "Significa decisão importante; encontrar-se diante de uma escolha que deve ser decidida com cuidado, mas também com coragem e, sobretudo, atendendo a intuição e aos impulsos interiores; anuncia o advento de um novo capítulo da vida. Existe o risco, mas existe também o desejo de saltar no desconhecido. Representa as inteligências sobre-humanas, a espontaneidade, o espiritual atuando no material, o risco."
+    },
+    "23": {
+      "title": "Arcano 23 - Rei de Paus",
+      "data": "Aparece um aspecto da personalidade que vai gerar novas ideias; qualidades de liderança, bondade e honestidade. É o símbolo do poder adquirido pelo mérito e pelo trabalho, sendo emblema de proteção das pessoas bem colocadas. Representa autoconfiança, motivação, empreendedorismo, sabedoria e convicção; respeitabilidade e amizades. Risco: inflexibilidade e intolerância."
+    },
+    "24": {
+      "title": "Arcano 24 - Rainha de Paus",
+      "data": "É símbolo de posição elevada; demonstra a força da imaginação, da constância e da objetividade; momento de oferecer e receber aconchego e proteção. Representa a ação desejada, o plano criativo; o feminino atraente e inteligente; crescimento, atividade, firmeza e amor pela vida. Risco: vaidade e orgulho."
+    },
+    "25": {
+      "title": "Arcano 25 - Cavaleiro de Paus",
+      "data": "Significa partida, mudanças, fuga, dissensão, separação, abandono, início ou final de uma situação importante; o símbolo dos altos empregos secundários, da luta para conquistar uma posição, do poder adquirido pelas lutas; momento de desenvolver as qualidades exuberantes, aventureiras e voláteis contidas em si. Representa a ação necessária no plano formativo; mudança de residência, de cidade, de situação e modo de vida; entusiasmo. Risco: tensão, euforia, exibicionismo, impaciência."
+    },
+    "26": {
+      "title": "Arcano 26 - Valete de Paus",
+      "data": "Significa curiosidade, entusiasmo; que é hora de identificar os lampejos criativos dentro de si e ser audacioso. Esse momento quase sempre se manifesta na forma de uma vaga sensação de insatisfação, mas que não chega a justificar uma mudança radical. Representa ação imediata no plano material; chegada de boas notícias, oportunidade, entusiasmo e aventura, bem como possibilidade de viagens. Risco: impulsividade, inexperiência levando a maus resultados."
+    },
+    "27": {
+      "title": "Arcano 27 - Dez de Paus",
+      "data": "Representa situações opressivas em seu limite; falta de perspectiva, fardo pesado, excesso de responsabilidades, sobrecarga, tensões e preocupações, desentendimentos, traições, falsidades e hipocrisias; necessidade de mudar a energia; final de uma fase."
+    },
+    "28": {
+      "title": "Arcano 28 - Nove de Paus",
+      "data": "Empreendimentos científicos ou misteriosos, cujo sucesso depende de muita prudência e discrição; viagens perigosas; surpresas; atraso, suspensão, adiamento, demora, obstáculo, contrariedade. Representa o poder da informação e da cultura, força física ou psíquica; conhecimentos especiais; atitude defensiva, medo de se machucar e sofrer que leva a manter uma situação que não funciona mais; desconfiança, recusa de novidades que leva a fechar-se em si. Persistência e vigilância. Risco de virar um “mártir”."
+    },
+    "29": {
+      "title": "Arcano 29 - Oito de Paus",
+      "data": "Significa rapidez e fluidez dos impulsos criativos; que o sucesso da sua meta está ao seu alcance e próximo; um período de ação depois de muita espera e luta; novas ideias que trarão benefícios; campo, agricultura, bens imóveis, divertimento, alegria, paz, tranquilidade; viagens por causa de dinheiro e de grandes negócios, felicidade certa; necessidade de equilibrar o orçamento. Representa a percepção dos sentimentos das outras pessoas; o imprevisto e a rapidez de ação; notícias imprevistas."
+    },
+    "30": {
+      "title": "Arcano 30 - Sete de Paus",
+      "data": "Significa bravura e muita pressão no trabalho ou em outros aspectos da vida. Representa o valor e o prazer em riscos e atividades perigosas que resultam em estímulo; atividades arriscadas; defesa do interesse mediante intransigência, ameaças e concorrência. Equilibrar a força defensiva, a fim de obter vitórias em seus pontos de vista. Risco de se fixar só na defensiva."
+    },
+    "31": {
+      "title": "Arcano 31 - Seis de Paus",
+      "data": "O sucesso nos empreendimentos depende de vontade, firmeza e perseverança. Representa esforços compensados, vitória depois da luta; reconhecimento, conquistas e sucesso. Triunfo pela perseverança e exemplo. Risco de se tornar orgulhoso."
+    },
+    "32": {
+      "title": "Arcano 32 - Cinco de Paus",
+      "data": "Pressagia concurso de circunstâncias favoráveis ao êxito das empresas, se o consulente não exceder o fim a que se propõe; energias opostas criando agitação e inquietude; luta contra o dragão da realidade material para atingir os objetivos. Representa luta pela vida e poder, competição, respeito pelos outros; desafio pondo à prova as habilidades. Contendas, disputas, embates, espírito esportivo e confronto de ideias. Risco de instabilidade nos ímpetos."
+    },
+    "33": {
+      "title": "Arcano 33 - Quatro de Paus",
+      "data": "Significa um período de recompensa pelos esforços empreendidos; realização do sucesso esperado; empresas sérias e estáveis; associação, aliança, reunião, contrato, êxito, adiantamento; momento de desfrutar dos resultados do trabalho. Representa o fim de um trabalho bem-feito e a satisfação proporcionada, ambientes e sensações agradáveis; boa comunicação, alegria, sociabilidade. Estabilidade e realização; o valor das pequenas conquistas. Risco de desprezar o valor das pequenas conquistas."
+    },
+    "34": {
+      "title": "Arcano 34 - Três de Paus",
+      "data": "Denota começo de êxito nos empreendimentos, inovações felizes, espírito de invenção; poderá receber ajuda de alguém de sua confiança; bases firmes e os negócios tendem a prosperar. Representa a união que cria a força; criatividade e associações férteis, visão de longo alcance; a ética pessoal. A virtude está em se reconhecer o que é necessário para seguir em frente."
+    },
+    "35": {
+      "title": "Arcano 35 - Dois de Paus",
+      "data": "Significa o equilíbrio, ou desequilíbrio, dos ímpetos; grande capacidade e intuição; formulação de um novo projeto, de um objetivo ou de uma ideia; o futuro parece brilhante, mas guarda seus segredos e mistérios. Representa o poder que se manifesta como cooperação e ajuda; a dualidade que se manifesta como cooperação e assistência, mas que traz o componente da indecisão, da apatia; dividir para multiplicar. Risco de se tornar arrogante."
+    },
+    "36": {
+      "title": "Arcano 36 - Ás de Paus",
+      "data": "Representa a força criativa propulsora das novas ideias, a inspiração, a determinação e a coragem; novos horizontes e a disposição para arriscar-se; os estágios iniciais de um novo empreendimento ou o nascimento de algo ou de uma criança. Risco de inflexibilidade."
+    },
+    "37": {
+      "title": "Arcano 37 - Rei de Copas",
+      "data": "O controle emocional. É o momento de experimentar um aspecto ambivalente da própria personalidade, ou seja, o conselheiro, o ouvinte, aquele que pode curar os outros com suas palavras e carinho. Representa o plano arquetípico das emoções e sentimentos; a força dos sentimentos espirituais na alma; o fluir dos sentimentos; a sensibilidade, a honestidade e a generosidade masculinas; autoajuda. Risco de desonestidade e hipocrisia masculina."
+    },
+    "38": {
+      "title": "Arcano 38 - Rainha de Copas",
+      "data": "Maturidade emocional. É o momento de encontrar-se com o profundo, desconhecido e paradoxal mundo dos sentimentos que traz dentro de si; anuncia justiça, favores e proteção; o agente catalisador dos sentimentos mais profundos. Representa o plano arquetípico das emoções estéticas, o plano criativo e a inteligência ativa feminina; a espera para obter clareza. Risco de preguiça e pouca afabilidade feminina."
+    },
+    "39": {
+      "title": "Arcano 39 - Cavaleiro de Copas",
+      "data": "É tempo de experimentar a incrível e mágica dimensão do amor, a conexão com as emoções; indica uma possível proposta de casamento, ou mesmo o momento de se apaixonar; uma proposta de trabalho, ou o envolvimento com ideais mais elevados. Representa as emoções e os sentimentos no plano formativo; chegada de novas amizades e afeições; reconciliação, cordialidade e paz. Risco de abuso de confiança."
+    },
+    "40": {
+      "title": "Arcano 40 - Valete de Copas",
+      "data": "É indício de algo novo no plano afetivo, que pode ser um relacionamento ou uma nova perspectiva emocional dentro de um relacionamento existente, ou até mesmo o nascimento de uma criança. Representa as emoções no plano do desejo e temor; proposta amorosa e oferta afetuosa; reconciliação, consideração e promoção. Sensibilidade emocional. Risco de sedução e zombaria."
+    },
+    "41": {
+      "title": "Arcano 41 - Dez de Copas",
+      "data": "É a experiência da felicidade desejada; um período de muito contentamento e de harmonia permanente nos domínios do coração; realização das suas esperanças e sonhos; vida feliz; muitas simpatias. Representa o sucesso no nível emocional e dos sentimentos; a felicidade familiar compartilhada; boa reputação e um lar feliz. A saciedade que leva à plenitude da felicidade pela autorrealização. Risco de se tornar dependente dos outros."
+    },
+    "42": {
+      "title": "Arcano 42 - Nove de Copas",
+      "data": "Os seus desejos poderão agora ser realizados; um período de satisfação e alegrias, de realizações de sonhos e projetos; fortuna, honras, glória e reputação; vitória, êxito, ganho, triunfo, prosperidade, lealdade, boa-fé, franqueza, verdade. Representa a felicidade, o bem-estar e a segurança material; alegria de viver e o desfrutar do êxito. Risco de excessos e luxúria, escapismo e fuga."
+    },
+    "43": {
+      "title": "Arcano 43 - Oito de Copas",
+      "data": "É a necessidade de buscar um sentido para a vida e para suas relações amorosas; necessidade de despertar e desistir de alguma coisa; excessivo interesse pelos prazeres que pode levar a escândalos amorosos; paixões violentas, divórcio, mau casamento, sedução. Representa a busca espiritual pelo abandono do material; partida difícil. A indolência e contrariedade; hora de perceber qual é o seu papel na relação. Risco de abandono cruel."
+    },
+    "44": {
+      "title": "Arcano 44 - Sete de Copas",
+      "data": "É reflexão, pensamento, talentos; uma situação emocional em que existem muitas possibilidades aparentes, mas o indivíduo está diante do desafio de optar e agir em termos realistas para que aquelas potencialidades possam se manifestar. Representa megalomania e ilusões; a realidade onírica, fantasias e êxito de pouco valor; excesso de opções e expectativas e fuga da realidade. Muitas oportunidades; momento de obter os frutos da imaginação. Risco de estagnação e ilusão."
+    },
+    "45": {
+      "title": "Arcano 45 - Seis de Copas",
+      "data": "É a felicidade que vem do passado; o prazer. Possível encontro ou reencontro com pessoa de significado, ou o retorno de um amor antigo, de um sonho acalentado há muito que poderá ser realizado num futuro próximo. Ser feliz por si mesmo; entregar-se ao momento e ser feliz. Representa ânsia pelo passado, pela infância, com recordações felizes, paz interior por aceitação do passado; sonhos. Risco de apego ao passado que traz melancolia, ou de buscar o prazer nos outros."
+    },
+    "46": {
+      "title": "Arcano 46 - Cinco de Copas",
+      "data": "É final de uma relação ou amizade com sofrimento; remorso; algo não deu certo, uma possível traição abrindo espaço para a tristeza e o arrependimento; separação num relacionamento, mas que pode não significar um rompimento definitivo. Representa a alegria perdida, tristezas, lamentações e prazeres obscuros; despedida dolorosa, amargura, depressão, fracasso e resignação. Frustração e arrependimento."
+    },
+    "47": {
+      "title": "Arcano 47 - Quatro de Copas",
+      "data": "O prazer excessivo que costuma conduzir ao cansaço e ao desejo de coisas ainda maiores, talvez impossíveis de alcançar; aparente inocência, mas com um aguilhão desagradável escondido exigindo moderação nas relações e em tudo o que tenha a ver com as emoções. Representa aborrecimento e depressão, insatisfação e traições; inconstância nos sentimentos e falta de motivação, apatia, mau humor e ciúmes. Ostentação e saciedade com risco de tédio."
+    },
+    "48": {
+      "title": "Arcano 48 - Três de Copas",
+      "data": "Êxito, começo de um novo estilo de vida, de um novo relacionamento, o nascimento de uma criança ou qualquer outra situação promissora de realização emocional. Porém, cada uma dessas situações é também um princípio, uma iniciação em níveis mais profundos das experiências do coração e o indício de novas descobertas para o futuro. Representa abundância, amizades, alegria, diversão, celebrações e sucesso; gratidão. Risco de se tornar autossuficiente e dissimular os sentimentos."
+    },
+    "49": {
+      "title": "Arcano 49 - Dois de Copas",
+      "data": "Abundância, equilíbrio emocional, amizades e celebração. Entendimento, amizade profunda ou amor; início de um relacionamento; também uma reconciliação, um encontro ou um acordo comercial; quase sempre sugere uma relação entre duas pessoas; poder de atração. Representa amor, afeição e amizade; união afetiva ou casamento; harmonia. Risco de dependência emocional."
+    },
+    "50": {
+      "title": "Arcano 50 - Ás de Copas",
+      "data": "Início de coisas: amor, alegria ou saúde. Representa o poder dos sentimentos; amor, abundância, alegria e prazer; a escolha certa da oportunidade que gera satisfação e realização. Novas emoções envolvendo os relacionamentos em geral, renovando-os. Risco de cegueira e instabilidade emocional."
+    },
+    "51": {
+      "title": "Arcano 51 - Rei de Espadas",
+      "data": "Significa maturidade e sabedoria, confiança; um conselheiro confiável; momento de encontrar dentro de si o dom ambivalente da liderança e da estratégia; o arrojo intelectual e a inspiração para desenvolver novos projetos. Representa o pensamento organizado e ideias claras e objetivas; espirituosidade, perspicácia, versatilidade; autoridade masculina enérgica. Risco de intelectualismo excessivo, desumanidade e cinismo masculino."
+    },
+    "52": {
+      "title": "Arcano 52 - Rainha de Espadas",
+      "data": "Momento de se defrontar com sua própria dimensão obstinada e sua fé inabalável nos altos propósitos e ideais. Esses ideais, altivos e nobres, irão contribuir para o aperfeiçoamento da consciência e a qualidade da própria vida. Será preciso enxergar onde os problemas estão sendo criados para si mesmo ao exigir uma perfeição exagerada para si e para os outros. Representa o plano criativo ordenado pelo pensamento racional indutivo – a razão; independência, inteligência e intelecto femininos. Risco de ressentimento e dureza intelectual feminina."
+    },
+    "53": {
+      "title": "Arcano 53 - Cavaleiro de Espadas",
+      "data": "É momento de se preparar para eventuais mudanças repentinas em sua vida deixando de lado os antigos padrões existentes. Tais mudanças podem acontecer com uma pessoa que aparece trazendo a inquietação, o fascínio e a tendência para o rompimento, ou a concepção de uma nova ideia, ou projeto, que surge para quebrar antigas formas de pensamento, ou ainda, alguém que se oponha aos seus planos ou pensamentos. Representa a sequência ordenada do pensamento lógico no plano formativo; imprevisibilidade, controvérsia, rigor, hostilidade e agressividade. Contundência, impetuosidade e atropelo."
+    },
+    "54": {
+      "title": "Arcano 54 - Valete de Espadas",
+      "data": "Momento de confrontar-se com a curiosidade infantil e a predisposição maliciosa para a fofoca e o mexerico. Possibilidade de vir a se tornar vítima da intriga dos outros ou ter propensão para se envolver em pequenas disputas. Representa o pensamento aproximado na verificação do plano material; espionagem, vigilância; a discórdia semeada e a crítica esclarecedora. Defensividade."
+    },
+    "55": {
+      "title": "Arcano 55 - Dez de Espadas",
+      "data": "Finalização de uma situação difícil; pode ser dolorosa, mas, pelo menos o problema será encarado de frente com honestidade, para que um futuro com muito menos conflitos possa começar. A lição já se completou, e tanto a situação econômica como a saúde tendem a melhorar. Representa a ruína total e irreversível; desolação, o ponto final insuportável. Um pedido de ajuda pode ser atendido. Hora de finalizar uma ideia, um processo, uma situação que se esgotou."
+    },
+    "56": {
+      "title": "Arcano 56 - Nove de Espadas",
+      "data": "Um período de muita ansiedade e dúvidas com relação ao futuro. É importante examinar e identificar de onde surge a culpa por trás dos temores, em vez de se deixar escravizar por ela. Representa crueldade, desespero, preocupações, tristeza e depressão; consciência culpada, arrependimento, abatimento, tormento, insônia e medo. Pede paciência e resignação."
+    },
+    "57": {
+      "title": "Arcano 57 - Oito de Espadas",
+      "data": "Uma situação de dificuldade e quase impossibilidade de agir por medo das consequências; uma decisão se faz necessária, com muita prudência. Representa força paralisada, impossibilidade de ação, indecisão; confusão mental e autossabotagem; racionalidade sem emoção; um período de crises finalizando. Autoaprisionamento mental."
+    },
+    "58": {
+      "title": "Arcano 58 - Sete de Espadas",
+      "data": "Momento de agir com muita diplomacia evitando os confrontos diretos para preservar ao máximo as próprias forças; pode acarretar uma desagradável sensação de falsidade e hipocrisia, mas a vida assim o exige; seus planos poderão não dar resultados positivos ou não estão dando resultados como esperava. Representa esforço inútil; falsidade, impostura, fuga; enganar-se para conseguir algo. Futilidades e subterfúgios; jogos mentais, uso de artifícios mentais; presunção."
+    },
+    "59": {
+      "title": "Arcano 59 - Seis de Espadas",
+      "data": "Período onde a capacidade de compreensão da mente ajuda a diminuir a dificuldade e a liberar a ansiedade provocada anteriormente para efetuar uma passagem mais serena. Representa a procura de novos objetivos; o progresso, o sucesso merecido, as viagens; novas experiências, transformação hesitante; um terreno novo; cautela. O aprendizado da ciência mental; afastar-se do problema para vê-lo em perspectiva. Risco de vitimização."
+    },
+    "60": {
+      "title": "Arcano 60 - Cinco de Espadas",
+      "data": "Necessidade de se encarar as próprias limitações e de reconhecer que a vida deve ser vivida dentro dos limites das próprias capacidades. Representa derrotas, traições e aflições; infâmia e perfídia; o lado negro extrapolado. A derrota, tanto a sua quanto do seu adversário. Risco de humilhar os outros tendo-os como adversários."
+    },
+    "61": {
+      "title": "Arcano 61 - Quatro de Espadas",
+      "data": "Período de introversão, silêncio e recuperação das forças para enfrentar os novos desafios; a situação tende a melhorar. Representa um período de descanso, uma trégua e um tempo de retiro para recuperação à espera do momento oportuno. A trégua necessária para alcançar a paz mental. Hora de questionar quais dos sacrifícios feitos foram importantes; meditar. Risco de procrastinação."
+    },
+    "62": {
+      "title": "Arcano 62 - Três de Espadas",
+      "data": "Conflito, dor e separação; pequenas brigas podem levar a desgostos sérios; alguém tem que começar a perdoar; mais vale que seja você. Representa dor e sofrimento, infortúnio e privação; sentimentos feridos. Tristeza, sacrifícios necessários."
+    },
+    "63": {
+      "title": "Arcano 63 - Dois de Espadas",
+      "data": "Um estado de tensão, no qual existe uma recusa tácita em enfrentar uma situação iminente de conflito; indecisão na hora de definir opções. Representa um período de paz com estagnação; dilema e análise. Desequilíbrio mental; não é momento de decidir. Risco de impasse."
+    },
+    "64": {
+      "title": "Arcano 64 - Ás de Espadas",
+      "data": "A emergência de um novo conceito dentro de um conflito; poderes mentais despertando; isso significa uma mudança na vida da pessoa. Representa o poder da mente e da razão; capacidade para o triunfo, compreensão, resolução e prontidão; a hora chegada. Nova maneira de pensar; nova oportunidade de usar a mente. Risco de racionalidade excessiva; mente astuciosa."
+    },
+    "65": {
+      "title": "Arcano 65 - Rei de Ouros",
+      "data": "Momento de aceitar os desafios materiais da vida; canalização da autoconfiança e do aperfeiçoamento no processo de realização material da própria pessoa; boa posição nos negócios. Representa a inteligência masculina para o sucesso; a sensação auditiva; solidez, estabilidade e tino comercial; o rei de todos os recursos, o investidor. Risco de se tornar controlador."
+    },
+    "66": {
+      "title": "Arcano 66 - Rainha de Ouros",
+      "data": "Momento de aprender mais a respeito da própria sensualidade; de compreender o valor do corpo e a importância dos prazeres que preservam e enriquecem a vida; de aprender a preservar seus recursos materiais, estabelecendo condições de vida seguras e estáveis, administrando e economizando dinheiro e esforços. Representa a inteligência feminina atuando no plano criativo; a sensação visual; dinheiro, constância, fidelidade, coragem, fertilidade, senso familiar; habilidadee competência no rumo certo. Cuidado, nutrição e proteção. Risco de mimar demais os seus “protegidos”."
+    },
+    "67": {
+      "title": "Arcano 67 - Cavaleiro de Ouros",
+      "data": "Momento de desenvolver aquela dimensão da personalidade capaz de aceitar com serenidade e firmeza quaisquer tarefas de caráter cotidiano; dedicação, lealdadee firmeza de atitudes; decisão e ação firme; motivação constante; êxito, conquista de fortuna; paz e tranquilidade final. Representa o plano formativo na sensação do olfato e do paladar; a perseverança nas ideias e ações que geram dinheiro; recebimento de ofertas. Cauteloso e observador, sabe o que deseja."
+    },
+    "68": {
+      "title": "Arcano 68 - Valete de Ouros",
+      "data": "O acúmulo de energia a ser utilizada na realização de projetos materiais e para preencher as necessidades do corpo; aparece na forma de pequenas quantias de dinheiro que devem ser poupadas, ao invés de serem gastas inutilmente, ou surge um passatempo que pode se tornar uma profissão altamente lucrativa; abertura para novas ideias e visão das oportunidades surgindo. Representa o plano material na sensação do tato; oportunidade surpreendente e valiosa e proposta concreta e útil; observação e estudo."
+    },
+    "69": {
+      "title": "Arcano 69 - Dez de Ouros",
+      "data": "Período de muita satisfação e segurança e a consciência de que realizou algo permanente para ser passado adiante; situação econômica próspera; sugere partilhamento de herança de família, ou talvez um momento de realização artística; perpetuação de uma coisa boa. Representa a posse do segredo da riqueza; plenitudee riqueza. Risco de opulência."
+    },
+    "70": {
+      "title": "Arcano 70 - Nove de Ouros",
+      "data": "Período de autossatisfação justificada em vista de tudo aquilo que se conseguiu. Representa riqueza material e sucesso econômico; vislumbre, golpe de sorte, lucro e abundância. O ganho pelos feitos do esforço no trabalho. Risco de autossuficiência."
+    },
+    "71": {
+      "title": "Arcano 71 - Oito de Ouros",
+      "data": "Momento em que o indivíduo representa o papel do aprendiz dedicado que se empenha bravamente para adquirir e desenvolver um novo ofício; um talento recém-descoberto que vale a pena ser trabalhado e desenvolvido; em termos mais práticos, um passatempo pode se transformar numa profissão. Representa as tarefas sistemáticas, o esforço dirigido e o aprendizado; início promissor. A prudência, a repetição das práticas básicas confirmadas."
+    },
+    "72": {
+      "title": "Arcano 72 - Sete de Ouros",
+      "data": "Momento de tomada de decisão; ponderação e cautela; energia para um novo projeto; fortuna adquirida pelo trabalho pessoal. Representa o amadurecimento e a paciência; “devagar e sempre”. Escolher o momento certo de tomar a decisão; de escolher entre investir mais ou se contentar com que já colheu. Risco de apegar-se ao que já conquistou, e perder."
+    },
+    "73": {
+      "title": "Arcano 73 - Seis de Ouros",
+      "data": "Uma situação de oferecimento, tanto financeiro como pessoal; será levado a oferecer sua bondade, ou receber a generosidade dos outros; momento de recuperar a autoconfiança e a fé na vida; coisas boas, possível ascensão e ambiente feliz; desfrute os bons resultados do seu trabalho. Representa surpresas agradáveis, presentes e filantropia – o propósito vale a pena; generosidade e disposição para ajudar – caridade; tolerância e compreensão. Sucesso. Risco de manipulação pela caridade praticada em favor do ego."
+    },
+    "74": {
+      "title": "Arcano 74 - Cinco de Ouros",
+      "data": "Um período de dificuldades financeiras, ou até mesmo grandes perdas; pode vir acompanhado pela perda da autoconfiança; é muito importante reagir a esse desafio positivamente; não se deixe levar pelo orgulho; tudo passa inclusive esse momento. Representa ruína econômica, desemprego e pobreza; crise, obstáculos e privações. Preocupação; momento de refletir sobre as reais necessidades."
+    },
+    "75": {
+      "title": "Arcano 75 - Quatro de Ouros",
+      "data": "Momento favorável; possíveis aquisições ou herança; capacidade de trabalho e de acúmulo de posses. Representa o poder econômico e a prosperidade. Momento de estabilizar as posses dos recursos para conservar. Risco de ganância."
+    },
+    "76": {
+      "title": "Arcano 76 - Três de Ouros",
+      "data": "Período de sucesso inicial em algum empreendimento; talvez um projeto comece a dar lucro, ou mesmo uma obra literária ou artística que atinja o sucesso; prêmio, reconhecimento do trabalho e do talento; fortuna por empresas habilmente dirigidas, pelo trabalho e pelo gênio. Representa o trabalho material e a construção; o progresso e os holofotes. Sucesso pelo trabalho em equipe. Risco de discrepâncias pelo trabalho."
+    },
+    "77": {
+      "title": "Arcano 77 - Dois de Ouros",
+      "data": "Período de disponibilidade de recursos financeiros e de energia para a realização de novos projetos; é necessário que esteja disposto a aplicar seu capital e aassumir riscos ao invés de economizar para uma possibilidade futura; um momento favorável para todos aqueles que sabem lidar com dinheiro, ou fortuna dividida, porém, probabilidade de associação produtiva. Representa as trocas harmoniosas e favoráveis; flexibilidade. Adaptação para lidar bem com os recursos conquistados, principalmente frente a mudanças."
+    },
+    "78": {
+      "title": "Arcano 78 - Ás de Ouros",
+      "data": "Possibilidade de realização material; disposição de energia à execução de um trabalho; início de prosperidade ou aventuras bem sucedidas; o dinheiro pode surgir de repente na forma de uma herança ou jogo. Representa a grande oportunidade da concretização do plano material e da riqueza; a percepção sensorial. Novas habilidades; despertar de novos talentos. Risco de transformar tudo em obrigação."
+    },
+    "79": {
+      "title": "Arcano 79",
+      "data": "Reinício de uma atividade; novo momento; nova vida."
+    },
+    "80": {
+      "title": "Arcano 80",
+      "data": "Reportar-se ao Arcano 8 (A Justiça)."
+    },
+    "81": {
+      "title": "Arcano 81",
+      "data": "Poderá haver problemas com a justiça; ou da lei de causa e efeito."
+    },
+    "82": {
+      "title": "Arcano 82",
+      "data": "Poderá servir de escada para os outros, voluntária ou involuntariamente."
+    },
+    "83": {
+      "title": "Arcano 83",
+      "data": "Associação intelectual ou cultural; progresso."
+    },
+    "84": {
+      "title": "Arcano 84",
+      "data": "Trabalhar com e para o povo – político, filantropo ou humanitário."
+    },
+    "85": {
+      "title": "Arcano 85",
+      "data": "Significa afastamento da vida social ou perda temporária de bens ou da própria vida."
+    },
+    "86": {
+      "title": "Arcano 86",
+      "data": "Significa vitória sobre alguma coisa conseguida após muita luta e determinação."
+    },
+    "87": {
+      "title": "Arcano 87",
+      "data": "Reportar-se ao Arcano 15 (O Diabo)."
+    },
+    "88": {
+      "title": "Arcano 88",
+      "data": "Reportar-se ao Arcano 16 (A Torre)."
+    },
+    "89": {
+      "title": "Arcano 89",
+      "data": "Significa mérito não reconhecido."
+    },
+    "90": {
+      "title": "Arcano 90",
+      "data": "Reportar-se ao Arcano 9 (O Eremita)."
+    },
+    "91": {
+      "title": "Arcano 91",
+      "data": "Período de solidão enquanto perdurar a influência do Arcano."
+    },
+    "92": {
+      "title": "Arcano 92",
+      "data": "União tardia ou uma associação com grupos ou pessoas."
+    },
+    "93": {
+      "title": "Arcano 93",
+      "data": "Significa um grande período de sabedoria e bons resultados."
+    },
+    "94": {
+      "title": "Arcano 94",
+      "data": "Significa solidão na velhice ou morte de pessoa idosa."
+    },
+    "95": {
+      "title": "Arcano 95",
+      "data": "Significa reconhecimento intelectual."
+    },
+    "96": {
+      "title": "Arcano 96",
+      "data": "Significa amores secretos e que poderão causar graves problemas."
+    },
+    "97": {
+      "title": "Arcano 97",
+      "data": "Significa decisão difícil ou solidão a muito esperada que se concretiza."
+    },
+    "98": {
+      "title": "Arcano 98",
+      "data": "Significa alto cargo e grande influência."
+    },
+    "99": {
+      "title": "Arcano 99",
+      "data": "Significa muito dinheiro e riqueza material."
+    }
+  }
+}

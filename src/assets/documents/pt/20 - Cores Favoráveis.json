@@ -1,0 +1,50 @@
+{
+  "title": "20 - Cores Favoráveis",
+  "description": "São cores que vibram bem com seu nome, não quer dizer que deva obrigatoriamente usá-las em todos os aspectos, apenas que são cores com boas vibrações para você. Cores: Branco: simboliza luz, alegria, poder de Deus e pureza. Amarelo: simboliza amor divino, compreensão e caridade. Azul: simboliza eternidade, sabedoria e vontade. Verde: simboliza vida, crescimento e esperança. Violeta: simboliza dignidade e saber. Vermelho: simboliza emoções. Preto: simboliza tristeza e escuridão",
+  "items": {
+    "1": {
+      "title": "Expressão 1",
+      "data": "todos os tons de amarelo e laranja, castanho, dourado, verde, creme e branco."
+    },
+    "2": {
+      "title": "Expressão 2",
+      "data": "todos os tons de verde, creme, branco e cinza."
+    },
+    "3": {
+      "title": "Expressão 3",
+      "data": "violeta, vinho, púrpura e vermelho."
+    },
+    "4": {
+      "title": "Expressão 4",
+      "data": "azul, cinza, púrpura e ouro."
+    },
+    "5": {
+      "title": "Expressão 5",
+      "data": "todas as cores claras, cinza e prateado."
+    },
+    "6": {
+      "title": "Expressão 6",
+      "data": "rosa, azul e verde."
+    },
+    "7": {
+      "title": "Expressão 7",
+      "data": "verde, amarelo, branco, cinza e azul-claro."
+    },
+    "8": {
+      "title": "Expressão 8",
+      "data": "púrpura, cinza, azul, preto e castanho."
+    },
+    "9": {
+      "title": "Expressão 9",
+      "data": "vermelho, rosa, coral e vinho."
+    },
+    "11": {
+      "title": "Expressão 11",
+      "data": "branco, violeta e cores claras."
+    },
+    "22": {
+      "title": "Expressão 22",
+      "data": "violeta, branco e cores claras."
+    }
+  }
+}

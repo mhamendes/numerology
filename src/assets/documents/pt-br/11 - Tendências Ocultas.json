@@ -1,0 +1,42 @@
+{
+  "title": "11 - Tendências Ocultas",
+  "description": "Apresenta desejos que a pessoa foi exposta em existências anteriores. Assim como Carl Jung mostra que por falta de autoconhecimento, acabamos deixando alguns comportamentos obscuros e sem cuidados dentro de nós, tais comportamentos podem tomar conta das nossas ações caso não estejamos conscientes.",
+  "items": {
+    "1": {
+      "title": "Tendência Oculta 1",
+      "data": "Desejo da individualidade, há uma tendência ao autoritarismo, dominação e egoísmo."
+    },
+    "2": {
+      "title": "Tendência Oculta 2",
+      "data": "É o desejo de associações. Há uma tendência para depender demasiadamente dos outros, principalmente da família e dos amigos, tanto monetariamente como emocionalmente."
+    },
+    "3": {
+      "title": "Tendência Oculta 3",
+      "data": "É o desejo da autoexpressão. Há uma tendência à vaidade, à impaciência, à presunção, a dispersar energias, viver sem objetivos concretos e buscando sempre diversões e festas, sem se preocupar muito com o dia de amanhã."
+    },
+    "4": {
+      "title": "Tendência Oculta 4",
+      "data": "É o desejo de trabalho. Há uma tendência para asfixiar sua personalidade com quantidade excessiva de detalhes, perfeccionismo, teimosia, intolerância e obstinação."
+    },
+    "5": {
+      "title": "Tendência Oculta 5",
+      "data": "É o desejo de mudança e também de liberdade pessoal. Há uma tendência para viver à custa dos outros, abusar do sexo, de algumas drogas (cigarro e álcool), para mudanças sem motivo aparente e para precipitação e impulsividade."
+    },
+    "6": {
+      "title": "Tendência Oculta 6",
+      "data": "É o desejo de realização e responsabilidade. Há uma tendência para se preocupar excessivamente com a família, principalmente com os filhos (se os tiver), com os deveres profissionais, tendência à teimosia, perfeccionismo e para apegar-se a modelos inflexíveis e obstinados."
+    },
+    "7": {
+      "title": "Tendência Oculta 7",
+      "data": "É o desejo de sabedoria e conhecimento. Há uma tendência para o fingimento, para a intriga e até para o alcoolismo, pois normalmente sente-se uma pessoa incompreendida e até rejeitada pelos parentes, amigos, cônjuge ou simplesmente conhecidos."
+    },
+    "8": {
+      "title": "Tendência Oculta 8",
+      "data": "É o desejo do materialismo. Há uma tendência para se preocupar excessivamente em como ganhar dinheiro, obter bens materiais e também poder."
+    },
+    "9": {
+      "title": "Tendência Oculta 9",
+      "data": "É o desejo de conhecimento e amor universal. Há uma tendência para se preocupar excessivamente com os problemas mundiais, deixando de lado seus próprios sentimentos e os da família."
+    }
+  }
+}

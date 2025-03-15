@@ -1,0 +1,42 @@
+{
+  "title": "05 - Números Psíquicos",
+  "description": "Diferente do dia natalício que tem suas características próprias, o número psíquico nos mostra certas relações entre os dias do mês que têm em comum o mesmo número quando reduzidos a um dígito. Assim, pessoas que nasceram nos dias 3, 12, 21 e 30, por exemplo, têm em comum o número psíquico 3. Este número evidencia as qualidades psíquicas que traduzem os nossos desejos, nossas ambições e refletem nossas sensações interiores e como elas influenciam nossas escolhas pessoais, amizades, profissão, sexo, desejos e até mesmo o casamento. Esse número representa o que somos em nosso íntimo.",
+  "items": {
+    "1": {
+      "title": "Número Psíquico: 1",
+      "data": "As pessoas de número psíquico 1 são as que nasceram nos dias 01, 10, 19 e 28. São pessoas originais e transparentes em suas ações. São independentes, generosas, pioneiras. Possuem personalidade marcante. São líderes. Não mudam de ideia facilmente, principalmente se acharem que estão certas. São audaciosas, firmes em seus propósitos. Gostam do trabalho e são muito eficientes. Geralmente são pessoas de sorte. São padrões interiores comuns a que pertence a esse grupo: liderança, independência, originalidade, pioneirismo e coragem."
+    },
+    "2": {
+      "title": "Número Psíquico: 2",
+      "data": "As pessoas de número psíquico 2 são as que nasceram nos dias 02, 11, 20 e 29. São pessoas pacíficas, sentimentais. Possuem forte intuição e instinto de cooperação. São românticas, diplomáticas. Com sensibilidade artística. Usam sua intuição e sua diplomacia para resolverem conflitos e buscam sempre a união entre as pessoas. São padrões interiores comuns a que pertence a esse grupo: cooperação, união, diplomacia, sensibilidade e intuição."
+    },
+    "3": {
+      "title": "Número Psíquico: 3",
+      "data": "As pessoas de número psíquico 3 são as que nasceram nos dias 03, 12, 21 e 30. São pessoas criativas, independentes. São populares, comunicativas, sociáveis. Possuem dons artísticos e são espontâneas. São alegres, responsáveis, ambiciosas e conscientes de suas ações. Não medem esforços para conquistarem seus objetivos. São padrões interiores comuns a que pertence a esse grupo: comunicação, criação, alegria, popularidade e natureza artística."
+    },
+    "4": {
+      "title": "Número Psíquico: 4",
+      "data": "As pessoas de número psíquico 4 são as que nasceram nos dias 04, 13, 22 e 31. São pessoas determinadas, persistentes, sérias, obstinadas. São críticas a ponto de serem consideradas duras demais. São pessoas de poucas, mas boas amizades. Geralmente também são teimosas e céticas. Não toleram o que é medíocre. São padrões interiores comuns a que pertence a esse grupo: trabalho, determinação, rigor e persistência."
+    },
+    "5": {
+      "title": "Número Psíquico: 5",
+      "data": "As pessoas de número psíquico 5 são as que nasceram nos dias 05, 14, e 23. Têm espírito aventureiro. São dinâmicas, inquietas, gostam de liberdade e de movimentação. São curiosas e versáteis. Conseguem fazer amigos facilmente. São pessoas intuitivas e adaptáveis. São rápidas na tomada de decisões e não gostam de fazer planos a longo prazo. São padrões interiores comuns a que pertence a esse grupo: liberdade, versatilidade, progresso e curiosidade."
+    },
+    "6": {
+      "title": "Número Psíquico: 6",
+      "data": "As pessoas de número psíquico 6 são as que nasceram nos dias 06, 15, e 24. São sensíveis e amorosas, com bom gosto pelas artes, viagens, boa gastronomia e por tudo que a vida tem de melhor. Dão muito valor aos vínculos familiares. São avessas a tumultos, à desordem. Atraem as pessoas devido à sua inteligência e por serem sociáveis e boas ouvintes. São padrões interiores comuns a que pertence a esse grupo: afetividade, harmonia, sensibilidade e paciência."
+    },
+    "7": {
+      "title": "Número Psíquico: 7",
+      "data": "As pessoas de número psíquico 7 são as que nasceram nos dias 07, 16, e 25. São pessoas perfeccionistas que persistem até obterem o sucesso. Gostam do conhecimento, da análise. Sempre veem o lado bom das coisas. São introspectivas, gostam de conhecimentos ocultos, são inspiradas e convivem pacificamente com todos. São pessoas que fazem a diferença e são fonte de inspiração para todos. São padrões interiores comuns a que pertence a esse grupo: introspecção, conhecimento e interioridade."
+    },
+    "8": {
+      "title": "Número Psíquico: 8",
+      "data": "As pessoas de número psíquico 8 são as que nasceram nos dias 08, 17, e 26. São pessoas racionais, determinadas e práticas. São introvertidas, com senso de justiça, seguras de si e reservadas. São também sinceras e de presença marcante. Geralmente são materialistas e sua determinação faz com que tenham segurança financeira e bem-estar social. O sucesso é sua meta maior, pois sempre pensam grande. São padrões interiores comuns a que pertence a esse grupo: racionalidade, justiça, espírito prático, determinação e planejamento."
+    },
+    "9": {
+      "title": "Número Psíquico: 9",
+      "data": "As pessoas de número psíquico 9 são as que nasceram nos dias 09, 18, e 27. São ambiciosas e possuem a força de vontade para alcançar seus objetivos. São também muito sensíveis e generosas embora não demonstrem. São inquietas e geralmente alcançam o sucesso na maturidade. Tendem a ser inflexíveis, o que pode gerar ressentimentos. São pessoas intuitivas e doadoras, com sentimento de universalidade. São padrões interiores comuns a que pertence a esse grupo: generosidade, universalidade, sensibilidade, intuição e doação."
+    }
+  }
+}
