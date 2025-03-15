@@ -12,10 +12,8 @@ import { Button } from "@/components/ui/button";
 import {
   CheckIcon,
   StarIcon,
-  SparklesIcon,
   HeartIcon,
   GlobeIcon,
-  CalendarIcon,
   BookIcon,
 } from "lucide-react";
 import { useLanguage } from "(components)/language-context";

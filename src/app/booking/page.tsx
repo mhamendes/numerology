@@ -47,12 +47,12 @@ export default function Booking() {
     },
   ];
 
-  const handleServiceSelect = (serviceId) => {
+  const handleServiceSelect = (serviceId: string) => {
     setSelectedService(serviceId);
     setStep(2);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStep(3);
   };
