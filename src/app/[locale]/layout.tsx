@@ -1,14 +1,15 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
-import Layout from 'pages/layout';
+import { getMessages } from 'next-intl/server';
 
 import { routing } from '@/i18n/routing';
 
+import { Footer } from '(components)/footer';
+import { Header } from '(components)/header';
 import { ThemeProvider } from '(components)/theme-provider';
 
-export default async function App({
+export default async function Layout({
   children,
   params,
 }: {
@@ -17,7 +18,6 @@ export default async function App({
 }) {
   const { locale } = await params;
   const messages = await getMessages();
-  setRequestLocale(locale);
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -28,7 +28,11 @@ export default async function App({
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <Layout>{children}</Layout>
+            <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

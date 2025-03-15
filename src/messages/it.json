@@ -73,7 +73,14 @@
     "newsletterDesc": "Iscriviti alla nostra newsletter per approfondimenti numerologici e offerte speciali.",
     "yourEmail": "La tua email",
     "subscribe": "Iscriviti",
-    "allRightsReserved": "Tutti i diritti riservati."
+    "allRightsReserved": "Tutti i diritti riservati.",
+    "whatClientsSay": "Cosa Dicono i Nostri Clienti",
+    "home": "Home",
+    "services": "Servizi",
+    "about": "Chi Siamo",
+    "contact": "Contatto",
+    "qa": "Domande",
+    "bookReading": "Prenota una Lettura"
   },
   "testimonials": {
     "whatClientsSay": "Cosa Dicono i Nostri Clienti",
@@ -87,7 +94,8 @@
     "clearSearch": "Cancella Ricerca",
     "stillHaveQuestions": "Hai Ancora Domande?",
     "cantFindAnswer": "Se non hai trovato la risposta che stavi cercando, non esitare a contattarci direttamente.",
-    "contactUs": "Contattaci"
+    "contactUs": "Contattaci",
+    "allQuestions": "it"
   },
   "home": {
     "lifePathNumber": "Numero del Percorso di Vita",

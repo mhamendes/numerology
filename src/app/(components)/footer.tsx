@@ -10,22 +10,26 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from 'lucide-react';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   BRAND_ADDRESS,
+  BRAND_FACEBOOK_PAGE,
   BRAND_FIRST_NAME,
+  BRAND_INSTAGRAM_PAGE,
   BRAND_LAST_NAME,
   BRAND_NAME,
+  BRAND_TWITTER_PAGE,
+  BRAND_YOUTUBE_PAGE,
   CONTACT_EMAIL,
   PHONE_NUMBER,
 } from '@/lib/constants';
 
-import { useLanguage } from '(components)/language-context';
-
 export function Footer() {
-  const { t } = useLanguage();
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -42,30 +46,30 @@ export function Footer() {
               {t('unlockingSecrets')}
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#"
+              <Link
+                href={BRAND_FACEBOOK_PAGE}
                 className="text-indigo-200 transition-colors hover:text-white"
               >
                 <FacebookIcon className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={BRAND_INSTAGRAM_PAGE}
                 className="text-indigo-200 transition-colors hover:text-white"
               >
                 <InstagramIcon className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={BRAND_TWITTER_PAGE}
                 className="text-indigo-200 transition-colors hover:text-white"
               >
                 <TwitterIcon className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={BRAND_YOUTUBE_PAGE}
                 className="text-indigo-200 transition-colors hover:text-white"
               >
                 <YoutubeIcon className="h-6 w-6" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -76,44 +80,44 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/services"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('services')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/about"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('about')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/testimonials"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('whatClientsSay')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('contact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -125,44 +129,44 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('numerologyBlog')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/calculator"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('freeCalculator')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/qa"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('numerologyGuide')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/qa"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('faqs')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/privacy-policy"
                   className="text-indigo-200 transition-colors hover:text-white"
                 >
                   {t('privacyPolicy')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -73,7 +73,14 @@
     "newsletterDesc": "Subscribe to our newsletter for numerology insights and special offers.",
     "yourEmail": "Your email",
     "subscribe": "Subscribe",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "All rights reserved.",
+    "whatClientsSay": "What Our Clients Say",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "qa": "Q&A",
+    "bookReading": "Book a Reading"
   },
   "testimonials": {
     "whatClientsSay": "What Our Clients Say",
@@ -87,7 +94,8 @@
     "clearSearch": "Clear Search",
     "stillHaveQuestions": "Still Have Questions?",
     "cantFindAnswer": "If you couldn't find the answer you were looking for, feel free to contact us directly.",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "allQuestions": "en"
   },
   "home": {
     "lifePathNumber": "Life Path Number",

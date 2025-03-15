@@ -73,7 +73,14 @@
     "newsletterDesc": "Inscreva-se em nossa newsletter para insights numerológicos e ofertas especiais.",
     "yourEmail": "Seu email",
     "subscribe": "Inscrever-se",
-    "allRightsReserved": "Todos os direitos reservados."
+    "allRightsReserved": "Todos os direitos reservados.",
+    "whatClientsSay": "O Que Nossos Clientes Dizem",
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre",
+    "contact": "Contato",
+    "qa": "Perguntas",
+    "bookReading": "Agendar Leitura"
   },
   "testimonials": {
     "whatClientsSay": "O Que Nossos Clientes Dizem",
@@ -87,7 +94,8 @@
     "clearSearch": "Limpar Pesquisa",
     "stillHaveQuestions": "Ainda Tem Perguntas?",
     "cantFindAnswer": "Se você não encontrou a resposta que estava procurando, sinta-se à vontade para nos contatar diretamente.",
-    "contactUs": "Contate-nos"
+    "contactUs": "Contate-nos",
+    "allQuestions": "pt_br"
   },
   "home": {
     "lifePathNumber": "Número do Caminho de Vida",
