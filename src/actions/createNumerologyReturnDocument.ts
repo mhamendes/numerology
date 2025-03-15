@@ -4,7 +4,7 @@ import 'server-only';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 
-import { DEFAULT_LOCALE } from '@/lib/constants';
+import { DEFAULT_LOCALE } from '@/i18n/routing';
 import {
   createContactPage,
   createFooter,
@@ -63,8 +63,9 @@ export async function createNumerologyReturnDocument({
 
   const baseBase = (await import(`src/assets/documents/pt-br/base.json`))
     .default;
-  const base = (await import(`src/assets/documents/${locale}/base.json`))
-    .default as typeof baseBase ?? baseBase;
+  const base =
+    ((await import(`src/assets/documents/${locale}/base.json`))
+      .default as typeof baseBase) ?? baseBase;
 
   const subject = base.subject.replace('{{fullName}}', fullName);
   const filename = `${subject}.pdf`;
@@ -77,7 +78,7 @@ export async function createNumerologyReturnDocument({
   return { uri, content, subject, filename };
 }
 
-const schemaWithPassword = schema.extend({
+const _schemaWithPassword = schema.extend({
   password: z.string().min(8, {
     message: 'password',
   }),
@@ -87,7 +88,7 @@ export async function actionCreateNumerologyReturnDocument({
   fullName,
   birthday,
   password,
-}: z.infer<typeof schemaWithPassword>) {
+}: z.infer<typeof _schemaWithPassword>) {
   if (password !== 'braga341314') throw new Error('wrong-password');
 
   return createNumerologyReturnDocument({ fullName, birthday });

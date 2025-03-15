@@ -34,7 +34,7 @@ import {
   OneToNineNumbers,
 } from '@/lib/numerology/types';
 
-const schema = z.object({
+const _schema = z.object({
   fullName: z.string().min(2, {
     message: 'fullName',
   }),
@@ -48,7 +48,7 @@ export async function actionGetNumerologyResponse({
   fullName,
   birthday,
   password,
-}: z.infer<typeof schema>) {
+}: z.infer<typeof _schema>) {
   if (password !== 'braga341314') throw new Error('wrong-password');
 
   return getNumerologyResponse({ fullName, birthday });
@@ -61,7 +61,7 @@ export type NumerologyResponse = Awaited<
 export async function getNumerologyResponse({
   fullName,
   birthday,
-}: Omit<z.infer<typeof schema>, 'password'>) {
+}: Omit<z.infer<typeof _schema>, 'password'>) {
   const motivationNumber = getMotivationNumber({ fullName });
   const impressionNumber = getImpressionNumber({ fullName });
   const expressionNumber = getExpressionNumber({ fullName });

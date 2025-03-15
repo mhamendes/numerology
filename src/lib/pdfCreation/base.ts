@@ -42,9 +42,9 @@ export async function createIntroductionPage(pdf: jsPDF, locale: string) {
   const baseIntroduction = (
     await import(`src/assets/documents/pt-br/introduction.json`)
   ).default;
-  const introduction = (
-    await import(`src/assets/documents/${locale}/introduction.json`)
-  ).default as typeof baseIntroduction;
+  const introduction =
+    ((await import(`src/assets/documents/${locale}/introduction.json`))
+      .default as typeof baseIntroduction) ?? baseIntroduction;
 
   pdf.setFont('zapfino', 'normal');
   pdf.setFontSize(11);
@@ -65,9 +65,10 @@ export async function createIntroductionPage(pdf: jsPDF, locale: string) {
 async function getBaseContent(locale: string) {
   const baseBase = (await import(`src/assets/documents/pt-br/base.json`))
     .default;
-  const base = (await import(`src/assets/documents/${locale}/base.json`))
-    .default as typeof baseBase;
-  return base;
+  return (
+    ((await import(`src/assets/documents/${locale}/base.json`))
+      .default as typeof baseBase) ?? baseBase
+  );
 }
 
 type CreateMainPageArgs = {
