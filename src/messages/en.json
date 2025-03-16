@@ -223,6 +223,7 @@
     "bookingDescription": "Take the first step towards understanding your numerological blueprint and unlocking your potential.",
     "selectService": "Select Service",
     "yourDetails": "Your Details",
+    "payment": "Payment",
     "confirmation": "Confirmation",
     "yourInformation": "Your Information",
     "phoneNumber": "Phone Number",
@@ -247,8 +248,76 @@
     "bookingConfirmed": "Booking Confirmed!",
     "bookingThankYou": "Thank you for booking your numerology reading with us. We've sent a confirmation email with all the details to your inbox.",
     "nextSteps": "Next Steps",
+    "birthMapPaymentConfirmed": "Payment Confirmed!",
+    "birthMapPaymentThankYou": "Thank you for purchasing your Birth Map. We've sent a confirmation email with all the payment details to your inbox.",
     "birthMapDelivery": "Your Birth Map will be prepared and delivered to your email within 2 business days.",
     "numerologistContact": "Our numerologist will contact you within 24 hours to schedule your session.",
-    "bookAnother": "Book Another Reading"
+    "bookAnother": "Book Another Reading",
+    "buyAnother": "Buy Another Service"
+  },
+  "form": {
+    "name": {
+      "label": "Full name",
+      "placeholder": "Full name",
+      "description": "Attention: make sure you have written all the letters of your first and last name and accented them (if applicable) before submitting.",
+      "errorMessage": "Full name is required"
+    },
+    "birthday": {
+      "label": "Date of birth",
+      "placeholder": "MM/DD/YYYY",
+      "description": "This field is required. Make sure to enter the date of birth exactly as it is registered on your birth certificate.",
+      "errorMessage": "Date of birth is required"
+    },
+    "email": {
+      "label": "Email address",
+      "placeholder": "Enter your email address",
+      "description": "This email will be used to send your Birth Map.",
+      "errorMessage": "Email address is required"
+    },
+    "phone": {
+      "label": "Phone number",
+      "placeholder": "Enter your phone number",
+      "description": "This number will be used to send your Birth Map.",
+      "errorMessage": "Phone number is required"
+    },
+    "partnerInformation": "Partner Information",
+    "partnerName": {
+      "label": "Partner's Full Name",
+      "placeholder": "Partner's Full Name",
+      "description": "This name will be used to send your Birth Map.",
+      "errorMessage": "Partner's Full Name is required"
+    },
+    "partnerBirthday": {
+      "label": "Partner's Date of Birth",
+      "placeholder": "MM/DD/YYYY",
+      "description": "This field is required. Make sure to enter the date of birth exactly as it is registered on your birth certificate.",
+      "errorMessage": "Partner's Date of Birth is required"
+    },
+    "businessInformation": "Business Information",
+    "businessName": {
+      "label": "Business Name",
+      "placeholder": "Business Name",
+      "description": "This name will be used to send your Birth Map.",
+      "errorMessage": "Business Name is required"
+    },
+    "businessType": {
+      "label": "Business Type",
+      "placeholder": "Select Business Type",
+      "description": "This type of business will be used to send your Birth Map.",
+      "errorMessage": "Business Type is required",
+      "startup": "Startup",
+      "smallBusiness": "Small Business",
+      "mediumEnterprise": "Medium Enterprise",
+      "largeCorporation": "Large Corporation"
+    },
+    "specificQuestions": {
+      "label": "Specific Questions or Concerns (Optional)",
+      "placeholder": "Is there anything specific you'd like us to address in your reading?"
+    },
+    "error": {
+      "somethingWentWrong": "Something went wrong. Please try again."
+    },
+    "back": "Back",
+    "continueToPayment": "Continue to Payment"
   }
 }

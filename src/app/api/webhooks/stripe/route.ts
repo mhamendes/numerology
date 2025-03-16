@@ -7,7 +7,7 @@ import { stripe } from '@/lib/stripe/stripe';
 import { createNumerologyReturnDocument } from '@/actions/createNumerologyReturnDocument';
 import { sendEmail } from '@/actions/sendEmail';
 
-const log = logger.child({ module: 'api/webhooks' });
+const log = logger.child({ module: 'api/webhooks/stripe' });
 export async function POST(req: Request) {
   let event: Stripe.Event;
 

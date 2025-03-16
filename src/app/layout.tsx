@@ -3,6 +3,8 @@ import '@/globals.css';
 import React from 'react';
 import { setRequestLocale } from 'next-intl/server';
 
+import { Toaster } from '@/components/ui/toaster';
+
 export default async function Layout({
   children,
   params,
@@ -15,7 +17,10 @@ export default async function Layout({
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

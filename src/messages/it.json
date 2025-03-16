@@ -223,6 +223,7 @@
     "bookingDescription": "Fai il primo passo verso la comprensione del tuo schema numerologico e lo sblocco del tuo potenziale.",
     "selectService": "Seleziona Servizio",
     "yourDetails": "I Tuoi Dettagli",
+    "payment": "Pagamento",
     "confirmation": "Conferma",
     "yourInformation": "Le Tue Informazioni",
     "phoneNumber": "Numero di Telefono",
@@ -231,7 +232,7 @@
     "specificQuestions": "Domande o Preoccupazioni Specifiche (Opzionale)",
     "questionsPlaceholder": "C'è qualcosa di specifico che vorresti che affrontassimo nella tua lettura?",
     "back": "Indietro",
-    "partnerInformation": "Informazioni sul Partner",
+    "partnerInformation": "Informazioni del Partner",
     "partnersFullName": "Nome Completo del Partner",
     "enterPartnersName": "Inserisci il nome completo del tuo partner",
     "partnersDateOfBirth": "Data di Nascita del Partner",
@@ -247,8 +248,76 @@
     "bookingConfirmed": "Prenotazione Confermata!",
     "bookingThankYou": "Grazie per aver prenotato la tua lettura numerologica con noi. Abbiamo inviato un'email di conferma con tutti i dettagli alla tua casella di posta.",
     "nextSteps": "Prossimi Passi",
+    "birthMapPaymentConfirmed": "Pagamento Confermato!",
+    "birthMapPaymentThankYou": "Grazie per aver acquistato il tuo Mappa di Nascita. Abbiamo inviato un'email di conferma con tutti i dettagli del pagamento alla tua casella di posta.",
     "birthMapDelivery": "La tua Mappa di Nascita sarà preparata e consegnata alla tua email entro 2 giorni lavorativi.",
     "numerologistContact": "Il nostro numerologo ti contatterà entro 24 ore per programmare la tua sessione.",
-    "bookAnother": "Prenota un'Altra Lettura"
+    "bookAnother": "Prenota un'Altra Lettura",
+    "buyAnother": "Acquista un Altro Servizio"
+  },
+  "form": {
+    "name": {
+      "label": "Nome completo",
+      "placeholder": "Nome completo",
+      "description": "Attenzione: assicurati di aver scritto tutte le lettere del tuo nome e cognome e di averle accentate (se applicabile) prima di inviare.",
+      "errorMessage": "Il nome completo è obbligatorio"
+    },
+    "birthday": {
+      "label": "Data di nascita",
+      "placeholder": "GG/MM/AAAA",
+      "description": "Questo campo è obbligatorio. Assicurati di inserire la data di nascita esattamente come è registrata sul tuo certificato di nascita.",
+      "errorMessage": "La data di nascita è obbligatoria"
+    },
+    "email": {
+      "label": "Indirizzo email",
+      "placeholder": "Inserisci il tuo indirizzo email",
+      "description": "Questa email sarà utilizzata per inviare la tua Mappa di Nascita.",
+      "errorMessage": "L'indirizzo email è obbligatorio"
+    },
+    "phone": {
+      "label": "Numero di telefono",
+      "placeholder": "Inserisci il tuo numero di telefono",
+      "description": "Questo numero sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "errorMessage": "Il numero di telefono è obbligatorio"
+    },
+    "partnerInformation": "Informazioni del Partner",
+    "partnerName": {
+      "label": "Nome completo del partner",
+      "placeholder": "Nome completo del partner",
+      "description": "Questo nome sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "errorMessage": "Il nome completo del partner è obbligatorio"
+    },
+    "partnerBirthday": {
+      "label": "Data di nascita del partner",
+      "placeholder": "GG/MM/AAAA",
+      "description": "Questo campo è obbligatorio. Assicurati di digitare la data di nascita esattamente come è registrata sul tuo certificato di nascita.",
+      "errorMessage": "La data di nascita del partner è obbligatoria"
+    },
+    "businessInformation": "Informazioni sull'Azienda",
+    "businessName": {
+      "label": "Nome dell'azienda",
+      "placeholder": "Nome dell'azienda",
+      "description": "Questo nome sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "errorMessage": "Il nome dell'azienda è obbligatorio"
+    },
+    "businessType": {
+      "label": "Tipo di azienda",
+      "placeholder": "Seleziona il tipo di azienda",
+      "description": "Questo tipo di azienda sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "errorMessage": "Il tipo di azienda è obbligatorio",
+      "startup": "Startup",
+      "smallBusiness": "Piccola Impresa",
+      "mediumEnterprise": "Media Impresa",
+      "largeCorporation": "Grande Azienda"
+    },
+    "specificQuestions": {
+      "label": "Domande o Preoccupazioni Specifiche (Opzionale)",
+      "placeholder": "C'è qualcosa di specifico che vorresti che affrontassimo nella tua lettura?"
+    },
+    "error": {
+      "somethingWentWrong": "Qualcosa è andato storto. Per favore, riprova."
+    },
+    "back": "Indietro",
+    "continueToPayment": "Continua al Pagamento"
   }
 }

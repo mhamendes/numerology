@@ -223,6 +223,7 @@
     "bookingDescription": "Dê o primeiro passo para entender seu esquema numerológico e desbloquear seu potencial.",
     "selectService": "Selecione o Serviço",
     "yourDetails": "Seus Detalhes",
+    "payment": "Pagamento",
     "confirmation": "Confirmação",
     "yourInformation": "Suas Informações",
     "phoneNumber": "Número de Telefone",
@@ -247,8 +248,76 @@
     "bookingConfirmed": "Agendamento Confirmado!",
     "bookingThankYou": "Obrigado por agendar sua leitura numerológica conosco. Enviamos um email de confirmação com todos os detalhes para sua caixa de entrada.",
     "nextSteps": "Próximos Passos",
+    "birthMapPaymentConfirmed": "Pagamento Confirmado!",
+    "birthMapPaymentThankYou": "Obrigado por comprar seu Mapa de Nascimento. Enviamos um email de confirmação com todos os detalhes do pagamento para sua caixa de entrada.",
     "birthMapDelivery": "Seu Mapa de Nascimento será preparado e entregue em seu email dentro de 2 dias úteis.",
     "numerologistContact": "Nosso numerólogo entrará em contato com você dentro de 24 horas para agendar sua sessão.",
-    "bookAnother": "Agendar Outra Leitura"
+    "bookAnother": "Agendar Outra Leitura",
+    "buyAnother": "Adquirir Outro Serviço"
+  },
+  "form": {
+    "name": {
+      "label": "Nome completo",
+      "placeholder": "Nome completo",
+      "description": "Atenção: certifique-se que escreveu todas as letras do seu nome e sobrenome e se os acentuou (se for o caso), antes de validar seu envio.",
+      "errorMessage": "Nome completo é obrigatório"
+    },
+    "birthday": {
+      "label": "Data de nascimento",
+      "placeholder": "DD/MM/YYYY",
+      "description": "Este campo é obrigatório. Certifique-se de digitar a data de nascimento exatamente como está registrada em sua certidão de nascimento.",
+      "errorMessage": "Data de nascimento é obrigatória"
+    },
+    "email": {
+      "label": "Endereço de email",
+      "placeholder": "Digite seu endereço de email",
+      "description": "Este email será usado para enviar seu Mapa de Nascimento.",
+      "errorMessage": "Endereço de email é obrigatório"
+    },
+    "phone": {
+      "label": "Número de telefone",
+      "placeholder": "Digite seu número de telefone",
+      "description": "Este número será usado para enviar seu Mapa de Nascimento.",
+      "errorMessage": "Número de telefone é obrigatório"
+    },
+    "partnerInformation": "Informações do Parceiro",
+    "partnerName": {
+      "label": "Nome completo do parceiro",
+      "placeholder": "Nome completo do parceiro",
+      "description": "Este nome será usado para enviar seu Mapa de Nascimento.",
+      "errorMessage": "Nome completo do parceiro é obrigatório"
+    },
+    "partnerBirthday": {
+      "label": "Data de nascimento do parceiro",
+      "placeholder": "DD/MM/YYYY",
+      "description": "Este campo é obrigatório. Certifique-se de digitar a data de nascimento exatamente como está registrada em sua certidão de nascimento.",
+      "errorMessage": "Data de nascimento do parceiro é obrigatória"
+    },
+    "businessInformation": "Informações da Empresa",
+    "businessName": {
+      "label": "Nome da empresa",
+      "placeholder": "Nome da empresa",
+      "description": "Este nome será usado para enviar seu Mapa de Nascimento.",
+      "errorMessage": "Nome da empresa é obrigatório"
+    },
+    "businessType": {
+      "label": "Tipo de empresa",
+      "placeholder": "Selecione o tipo de empresa",
+      "description": "Este tipo de empresa será usado para enviar seu Mapa de Nascimento.",
+      "errorMessage": "Tipo de empresa é obrigatório",
+      "startup": "Startup",
+      "smallBusiness": "Pequena Empresa",
+      "mediumEnterprise": "Média Empresa",
+      "largeCorporation": "Grande Corporação"
+    },
+    "specificQuestions": {
+      "label": "Perguntas ou Preocupações Específicas (Opcional)",
+      "placeholder": "Há algo específico que você gostaria que abordássemos em sua leitura?"
+    },
+    "error": {
+      "somethingWentWrong": "Algo deu errado. Por favor, tente novamente."
+    },
+    "back": "Voltar",
+    "continueToPayment": "Continuar para Pagamento"
   }
 }
