@@ -41,7 +41,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-flow-col grid-cols-1 gap-8 md:grid-cols-2 lg:auto-cols-fr">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:auto-cols-fr lg:grid-flow-col">
           {orderedServices.map((service, index) => (
             <Card
               key={index}
