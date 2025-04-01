@@ -29,7 +29,7 @@ export default function ServiceSelection() {
               className="flex items-center justify-between"
               id={`yeps0e_${index}`}
             >
-              <span id={`sbhdks_${index}`}>{product.name}</span>
+              <span id={`sbhdks_${index}`}>{product.title}</span>
               <span
                 className="text-indigo-600 dark:text-indigo-400"
                 id={`zm60j3_${index}`}

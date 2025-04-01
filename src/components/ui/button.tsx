@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import { LoadingSpinner } from './loading-spinner';
 
 const buttonVariants = cva(
-  'focus-visible:ring-ring relative inline-flex cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'focus-visible:ring-ring inline-flex cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
@@ -41,13 +41,13 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+  asChild?: true;
   isLoading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, isLoading, variant, asChild = false, onClick, ...props },
+    { className, isLoading, variant, size, asChild = false, onClick, ...props },
     ref
   ) => {
     const Comp = asChild ? Slot : 'button';
@@ -63,25 +63,31 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       onClick?.(e);
     };
 
+    const child = asChild ? (
+      props.children
+    ) : (
+      <div className="relative flex w-full items-center justify-center">
+        <div
+          className={cn(
+            buttonVariants({ variant, className }),
+            'absolute hidden w-full items-center justify-center',
+            isLoading && 'flex'
+          )}
+        >
+          <LoadingSpinner />
+        </div>
+        {props.children}
+      </div>
+    );
+
     return (
       <Comp
-        className={cn(buttonVariants({ variant, className }))}
+        className={cn(buttonVariants({ variant, size, className }))}
         onClick={handleClick}
         ref={ref}
         {...props}
       >
-        <div className="relative flex w-full items-center justify-between">
-          <div
-            className={cn(
-              buttonVariants({ variant, className }),
-              'absolute hidden w-full items-center justify-center',
-              isLoading && 'flex'
-            )}
-          >
-            <LoadingSpinner />
-          </div>
-          {props.children}
-        </div>
+        {child}
       </Comp>
     );
   }

@@ -1,34 +1,76 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
 import { BookIcon, CalendarIcon, CheckIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import { useRouter } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+
+import { useBooking } from '../booking/(components)/context';
 
 export default function BirthMap() {
   const t = useTranslations('birthMap');
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    fullName: '',
-    birthDate: '',
-    email: '',
+  const tForm = useTranslations('form');
+  const { products } = useBooking();
+  const router = useRouter();
+  const birthMapProduct = products.find(
+    (product) => product.id === 'birth-map'
+  );
+
+  const FormSchema = z.object({
+    fullName: z.string().min(2, {
+      message: tForm('name.errorMessage'),
+    }),
+    birthday: z.date({ required_error: tForm('birthday.errorMessage') }),
+    email: z.string().email({ message: tForm('email.errorMessage') }),
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+  });
+
+  const onSubmit = (data: z.infer<typeof FormSchema>) => {
+    const searchParams = new URLSearchParams({
+      fullName: data.fullName,
+      birthday: data.birthday.toISOString(),
+      email: data.email,
+      productId: birthMapProduct?.id as string,
+    });
+
+    router.push(`/booking?${searchParams.toString()}`);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStep(2);
-  };
+  useEffect(() => {
+    if (!birthMapProduct) {
+      router.push('/');
+    }
+  }, [birthMapProduct, router]);
+
+  if (!birthMapProduct) {
+    return null;
+  }
 
   return (
     <div className="w-full px-4 py-16">
@@ -64,7 +106,7 @@ export default function BirthMap() {
                 <div className="pt-4">
                   <div className="mb-2 flex items-center">
                     <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
-                      $49
+                      {birthMapProduct?.price}
                     </span>
                     <span className="ml-2 text-gray-500 dark:text-gray-400">
                       {t('oneTimePayment')}
@@ -79,54 +121,99 @@ export default function BirthMap() {
           </div>
 
           <div>
-            {step === 1 ? (
-              <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
-                <CardHeader>
-                  <CardTitle className="text-xl text-indigo-800 dark:text-indigo-300">
-                    {t('getBirthMapTitle')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('fullName')}
-                      </label>
-                      <Input
-                        type="text"
-                        name="fullName"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        placeholder={t('enterFullName')}
-                        className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('birthDate')}
-                      </label>
-                      <Input
-                        type="date"
-                        name="birthDate"
-                        value={formData.birthDate}
-                        onChange={handleChange}
-                        className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('emailAddress')}
-                      </label>
-                      <Input
-                        type="email"
+            <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
+              <CardHeader>
+                <CardTitle className="text-xl text-indigo-800 dark:text-indigo-300">
+                  {t('getBirthMapTitle')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-6"
+                  >
+                    <div className="flex flex-col gap-4">
+                      <FormField
+                        control={form.control}
                         name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder={t('enterYourEmail')}
-                        className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                        required
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('email.label')}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={tForm('email.placeholder')}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="fullName"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('name.label')}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={tForm('name.placeholder')}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="birthday"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('birthday.label')}</FormLabel>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <FormControl>
+                                  <Button
+                                    variant="outline"
+                                    className={cn(
+                                      'w-full pl-3 text-left font-normal',
+                                      'flex h-10 rounded-md border bg-white px-3 py-2 text-sm focus-visible:ring-slate-950 disabled:cursor-not-allowed disabled:opacity-50',
+                                      !field.value && 'text-muted-foreground'
+                                    )}
+                                  >
+                                    {field.value ? (
+                                      format(field.value, 'P')
+                                    ) : (
+                                      <span>
+                                        {tForm('birthday.placeholder')}
+                                      </span>
+                                    )}
+                                    <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                  </Button>
+                                </FormControl>
+                              </PopoverTrigger>
+                              <PopoverContent
+                                className="w-auto p-0"
+                                align="start"
+                              >
+                                <Calendar
+                                  mode="single"
+                                  selected={field.value}
+                                  onSelect={field.onChange}
+                                  disabled={(date) =>
+                                    date > new Date() ||
+                                    date < new Date('1900-01-01')
+                                  }
+                                  autoFocus
+                                  endMonth={new Date()}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
                     </div>
                     <Button
@@ -136,43 +223,9 @@ export default function BirthMap() {
                       {t('continueToPayment')}
                     </Button>
                   </form>
-                </CardContent>
-              </Card>
-            ) : (
-              <Card className="border border-indigo-100 bg-white/90 text-center shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
-                <CardHeader>
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-                    <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
-                  </div>
-                  <CardTitle className="text-2xl text-indigo-800 dark:text-indigo-300">
-                    {t('orderThankYou')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {t('orderReceived')} {formData.email} {t('withinHours')}
-                  </p>
-                  <div className="mb-6 inline-block rounded-lg bg-indigo-50 p-6 dark:bg-gray-800">
-                    <div className="mb-2 flex items-center justify-center">
-                      <CalendarIcon className="mr-2 h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-
-                      <span className="font-medium text-indigo-700 dark:text-indigo-300">
-                        {t('expectedDelivery')}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {t('deliveryTime')}
-                    </p>
-                  </div>
-                  <Button
-                    onClick={() => setStep(1)}
-                    className="bg-indigo-600 text-white hover:bg-indigo-700"
-                  >
-                    {t('orderAnother')}
-                  </Button>
-                </CardContent>
-              </Card>
-            )}
+                </Form>
+              </CardContent>
+            </Card>
           </div>
         </div>
 

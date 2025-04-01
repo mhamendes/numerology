@@ -4,7 +4,8 @@ import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Link } from '@/i18n/navigation';
+
+import { HeroSectionButtons } from './hero-section-buttons';
 
 const randomNumberList = Array.from({ length: 9 }, (_, idx) => {
   return {
@@ -58,18 +59,7 @@ export async function HeroSection() {
           <p className="mx-auto mb-8 max-w-xl text-xl text-gray-600 md:mx-0 dark:text-gray-300">
             {t('discoverHidden')}
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
-            <Button className="rounded-full bg-indigo-600 px-8 py-6 text-lg text-white hover:bg-indigo-700">
-              {t('premiumAnalysis')}
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full border-indigo-600 px-8 py-6 text-lg text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950"
-              asChild
-            >
-              <Link href="/birth-map">{t('getBirthMap')}</Link>
-            </Button>
-          </div>
+          <HeroSectionButtons />
         </div>
 
         <div className="md:w-1/2 md:pl-12">
