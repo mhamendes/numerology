@@ -48,7 +48,7 @@
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^3.8.4",
     "lucide-react": "^0.477.0",
-    "next": "15.2.3",
+    "next": "15.2.4",
     "next-intl": "^4.0.2",
     "next-themes": "^0.4.6",
     "pino": "^9.6.0",
