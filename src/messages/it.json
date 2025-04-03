@@ -278,7 +278,7 @@
       "label": "Numero di telefono",
       "placeholder": "Inserisci il tuo numero di telefono",
       "description": "Questo numero sarà utilizzato per inviare la tua Mappa di Nascita.",
-      "errorMessage": "Il numero di telefono è obbligatorio"
+      "errorMessage": "Numero di telefono non valido"
     },
     "partnerInformation": "Informazioni del Partner",
     "partnerName": {

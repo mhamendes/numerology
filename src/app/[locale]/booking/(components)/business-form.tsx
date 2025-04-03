@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { PhoneInput } from '@/components/ui/input-phone';
 import {
   Select,
   SelectContent,
@@ -41,7 +42,7 @@ export default function BusinessForm() {
       message: t('businessType.errorMessage'),
     }),
     email: z.string().email({ message: t('email.errorMessage') }),
-    phone: z.string().min(10, { message: t('phone.errorMessage') }),
+    phone: z.string().min(1, { message: t('phone.errorMessage') }),
     specificQuestions: z.string().optional(),
   });
 
@@ -75,7 +76,10 @@ export default function BusinessForm() {
                 <FormItem className="flex flex-col">
                   <FormLabel>{t('phone.label')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('phone.placeholder')} {...field} />
+                    <PhoneInput
+                      placeholder={t('phone.placeholder')}
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>{t('phone.description')}</FormDescription>
                   <FormMessage />

@@ -21,6 +21,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { PhoneInput } from '@/components/ui/input-phone';
 import {
   Popover,
   PopoverContent,
@@ -41,7 +42,7 @@ export default function RelationshipForm() {
     }),
     birthday: z.date({ required_error: t('birthday.errorMessage') }),
     email: z.string().email({ message: t('email.errorMessage') }),
-    phone: z.string().min(10, { message: t('phone.errorMessage') }),
+    phone: z.string().min(1, { message: t('phone.errorMessage') }),
     partnerFullName: z.string().min(2, {
       message: t('partnerName.errorMessage'),
     }),
@@ -81,7 +82,10 @@ export default function RelationshipForm() {
                 <FormItem className="flex flex-col">
                   <FormLabel>{t('phone.label')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('phone.placeholder')} {...field} />
+                    <PhoneInput
+                      placeholder={t('phone.placeholder')}
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>{t('phone.description')}</FormDescription>
                   <FormMessage />

@@ -278,7 +278,7 @@
       "label": "Phone number",
       "placeholder": "Enter your phone number",
       "description": "This number will be used to send your Birth Map.",
-      "errorMessage": "Phone number is required"
+      "errorMessage": "Invalid phone number"
     },
     "partnerInformation": "Partner Information",
     "partnerName": {
