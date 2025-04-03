@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL } from '@/lib/constants';
+
 const pt_br = [
   {
     question: 'O que é o Mapa de Nascimento?',
@@ -93,7 +95,7 @@ const pt_br = [
   {
     question: 'Recebi meu mapa, mas não me reconheci nele. O que aconteceu?',
     answerList: [
-      'Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email contact@cosmicnumbers.com para analisarmos a situação e corrigirmos se necessário.',
+      `Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
     ],
   },
 ];
@@ -193,7 +195,7 @@ const pt = [
   {
     question: 'Recebi meu mapa, mas não me reconheci nele. O que aconteceu?',
     answerList: [
-      'Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email contact@cosmicnumbers.com para analisarmos a situação e corrigirmos se necessário.',
+      `Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
     ],
   },
 ];
@@ -295,7 +297,7 @@ const en = [
     question:
       "I received my map, but I didn't recognize myself in it. What happened?",
     answerList: [
-      "If you didn't identify with your Birth Map, there may have been an error in filling out your data. We recommend that you check your birth certificate and verify that you wrote your full name and date of birth correctly when requesting. If you find any mistake, contact us by email at contact@cosmicnumbers.com to analyze the situation and correct it if necessary.",
+      `If you didn't identify with your Birth Map, there may have been an error in filling out your data. We recommend that you check your birth certificate and verify that you wrote your full name and date of birth correctly when requesting. If you find any mistake, contact us by email at ${CONTACT_EMAIL} to analyze the situation and correct it if necessary.`,
     ],
   },
 ];
@@ -398,7 +400,7 @@ const it = [
     question:
       'Ho ricevuto la mia mappa, ma non mi sono riconosciuto in essa. Cosa è successo?',
     answerList: [
-      'Se non ti sei identificato con la tua Mappa di Nascita, potrebbe esserci stato un errore nella compilazione dei tuoi dati. Ti consigliamo di controllare il tuo certificato di nascita e verificare di aver scritto correttamente il tuo nome completo e la data di nascita quando hai fatto la richiesta. Se trovi qualche errore, contattaci via email a contact@cosmicnumbers.com per analizzare la situazione e correggerla se necessario.',
+      `Se non ti sei identificato con la tua Mappa di Nascita, potrebbe esserci stato un errore nella compilazione dei tuoi dati. Ti consigliamo di controllare il tuo certificato di nascita e verificare di aver scritto correttamente il tuo nome completo e la data di nascita quando hai fatto la richiesta. Se trovi qualche errore, contattaci via email a ${CONTACT_EMAIL} per analizzare la situazione e correggerla se necessario.`,
     ],
   },
 ];
