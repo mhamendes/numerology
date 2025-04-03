@@ -23,6 +23,8 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        calendar:
+          'border-input hover:text-accent-foreground flex h-10 w-full rounded-md border bg-transparent px-3 py-2 pl-3 text-left text-sm font-normal shadow-sm focus-visible:ring-slate-950 disabled:cursor-not-allowed disabled:opacity-50',
       },
       size: {
         default: 'h-9 px-4 py-2',

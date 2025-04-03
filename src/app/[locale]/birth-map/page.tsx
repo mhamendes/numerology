@@ -176,10 +176,8 @@ export default function BirthMap() {
                               <PopoverTrigger asChild>
                                 <FormControl>
                                   <Button
-                                    variant="outline"
+                                    variant="calendar"
                                     className={cn(
-                                      'w-full pl-3 text-left font-normal',
-                                      'flex h-10 rounded-md border bg-white px-3 py-2 text-sm focus-visible:ring-slate-950 disabled:cursor-not-allowed disabled:opacity-50',
                                       !field.value && 'text-muted-foreground'
                                     )}
                                   >
