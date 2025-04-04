@@ -2,11 +2,13 @@
 'server-only';
 
 import { Resend } from 'resend';
-import { ProductId } from '@/actions/stripe/getProductPrice';
+
 import { getBirthMapEmailReact } from './getBirthMapEmailReact';
+import { getBusinessNumerologyEmailReact } from './getBusinessNumerologyEmailReact';
 import { getPersonalReadingEmailReact } from './getPersonalReadingEmailReact';
 import { getRelationshipCompatibilityEmailReact } from './getRelationshipCompatibilityEmailReact';
-import { getBusinessNumerologyEmailReact } from './getBusinessNumerologyEmailReact';
+
+import { ProductId } from '@/actions/stripe/getProductPrice';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

@@ -1,20 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckIcon, MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { CheckIcon, MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { z } from 'zod';
 import { toast } from 'sonner';
-import { Link } from '@/i18n/navigation';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
-import { sendEmail } from '@/actions/email/sendEmail';
 import {
   Dialog,
   DialogContent,
@@ -30,6 +25,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
+
+import { sendEmail } from '@/actions/email/sendEmail';
 
 export default function Contact() {
   const t = useTranslations('contactUs');
