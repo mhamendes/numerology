@@ -17,7 +17,7 @@ import {
 } from '@/lib/pdfCreation';
 import { createPersonalDaysSection } from '@/lib/pdfCreation/createPersonalDaysSection';
 
-import { sendEmail } from '@/actions/sendEmail';
+import { sendEmail } from '@/actions/email/sendEmail';
 
 const _schema = z.object({
   email: z.string().email({ message: 'email' }),
@@ -102,7 +102,7 @@ export async function sendPersonalDaysDocumentEmail({
       to: email,
       subject,
       attachments: [{ filename, content }],
-      type: 'personalDays',
+      type: 'free',
     });
 
     return true;

@@ -43,12 +43,14 @@ async function getProductPrice({ productId, locale }: GetProductPriceProps) {
   };
 }
 
+export type ProductId =
+  | 'birth-map'
+  | 'personal-reading'
+  | 'relationship-compatibility'
+  | 'business-numerology';
+
 export type Product = {
-  id:
-    | 'personal-reading'
-    | 'relationship-compatibility'
-    | 'business-numerology'
-    | 'birth-map';
+  id: ProductId;
   serverId: string;
   price: string;
   popular: boolean;

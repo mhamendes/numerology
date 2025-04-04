@@ -5,7 +5,8 @@ import { logger } from '@/lib/logger';
 import { stripe } from '@/lib/stripe/stripe';
 
 import { createNumerologyReturnDocument } from '@/actions/createNumerologyReturnDocument';
-import { sendEmail } from '@/actions/sendEmail';
+import { sendEmail } from '@/actions/email/sendEmail';
+import { ProductId } from '@/actions/stripe/getProductPrice';
 
 const log = logger.child({ module: 'api/webhooks/stripe' });
 export async function POST(req: Request) {
@@ -54,7 +55,7 @@ export async function POST(req: Request) {
         to: customerEmail,
         subject,
         attachments: [{ filename, content }],
-        type: 'fullMap',
+        type: data.metadata?.productId as ProductId | undefined,
       });
 
       log.info(`Email sent to ${customerEmail}`);

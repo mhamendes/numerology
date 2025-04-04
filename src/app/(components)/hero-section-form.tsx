@@ -55,11 +55,6 @@ export function HeroSectionForm() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      email: 'omatheusmendes@gmail.com',
-      fullName: 'Matheus Henrique Araújo Mendes',
-      birthday: new Date('1995-07-13'),
-    },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {

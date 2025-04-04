@@ -14,7 +14,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
-import { sendEmail } from '@/actions/sendEmail';
+import { sendEmail } from '@/actions/email/sendEmail';
 import {
   Dialog,
   DialogContent,
