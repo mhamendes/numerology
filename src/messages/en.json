@@ -138,7 +138,15 @@
     "callUs": "Call Us",
     "callHours": "Available Monday-Friday, 9am-5pm EST",
     "visitUs": "Visit Us",
-    "byAppointment": "By appointment only"
+    "byAppointment": "By appointment only",
+    "errorMessage": "Unable to send the email at the moment, please try again later",
+    "emailError": "Invalid email",
+    "requiredMessage": "Required field",
+    "success": {
+      "title": "Email sent successfully",
+      "description": "We will get back to you soon",
+      "closebutton": "Close"
+    }
   },
   "birthMap": {
     "fullName": "Full Name",

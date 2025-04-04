@@ -138,7 +138,15 @@
     "callUs": "Ligue para Nós",
     "callHours": "Disponível de segunda a sexta, das 9h às 17h EST",
     "visitUs": "Visite-nos",
-    "byAppointment": "Apenas com agendamento"
+    "byAppointment": "Apenas com agendamento",
+    "errorMessage": "Não foi possível enviar o email no momento, tente novamente mais tarde",
+    "emailError": "Email inválido",
+    "requiredMessage": "Campo obrigatório",
+    "success": {
+      "title": "Email enviado com sucesso",
+      "description": "Em breve retornaremos seu contato",
+      "closebutton": "Fechar"
+    }
   },
   "birthMap": {
     "fullName": "Nome Completo",

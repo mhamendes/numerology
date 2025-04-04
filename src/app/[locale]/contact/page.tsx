@@ -1,17 +1,78 @@
 'use client';
 
-import React from 'react';
-import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckIcon, MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
+import { z } from 'zod';
+import { toast } from 'sonner';
+import { Link } from '@/i18n/navigation';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
+import { sendEmail } from '@/actions/sendEmail';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 
 export default function Contact() {
   const t = useTranslations('contactUs');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const FormSchema = z.object({
+    email: z.string().email({ message: t('emailError') }),
+    fullName: z.string().min(2, { message: t('requiredMessage') }),
+    subject: z.string().min(2, { message: t('requiredMessage') }),
+    message: z.string().min(2, { message: t('requiredMessage') }),
+  });
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      email: 'omatheusmendes@gmail.com',
+      fullName: 'Matheus Henrique Araújo Mendes',
+      subject: 'Test',
+      message: 'testando mensagem',
+    },
+  });
+
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    'server-only';
+    if (isLoading) return;
+
+    setIsLoading(true);
+    try {
+      await sendEmail({
+        to: 'contact@drcosmicnumber.com',
+        subject: data.subject,
+        html: `${data.fullName} de email ${data.email} enviou a mensagem: ${data.message}`,
+        type: 'contact',
+      });
+      setIsModalOpen(true);
+    } catch (error) {
+      console.error(error);
+      toast.error(t('error.somethingWentWrong'));
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <div className="w-full px-4 py-16">
@@ -30,50 +91,79 @@ export default function Contact() {
             <h3 className="mb-6 text-2xl font-semibold text-indigo-700 dark:text-indigo-400">
               {t('sendMessage')}
             </h3>
-            <form className="space-y-6">
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {t('yourName')}
-                </label>
-                <Input
-                  type="text"
-                  placeholder={t('enterYourName')}
-                  className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
+                <FormField
+                  control={form.control}
+                  name="fullName"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>{t('yourName')}</FormLabel>
+                      <FormControl>
+                        <Input placeholder={t('enterYourName')} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {t('emailAddress')}
-                </label>
-                <Input
-                  type="email"
-                  placeholder={t('enterYourEmail')}
-                  className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>{t('emailAddress')}</FormLabel>
+                      <FormControl>
+                        <Input placeholder={t('enterYourEmail')} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {t('subject')}
-                </label>
-                <Input
-                  type="text"
-                  placeholder={t('whatIsYourMessageAbout')}
-                  className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>{t('subject')}</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder={t('whatIsYourMessageAbout')}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {t('message')}
-                </label>
-                <Textarea
-                  placeholder={t('enterYourMessage')}
-                  className="min-h-[150px] border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>{t('message')}</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          className="mb-1 min-h-[100px] border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
+                          placeholder={t('enterYourMessage')}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <Button className="w-full bg-indigo-600 text-white hover:bg-indigo-700">
-                {t('sendMessageBtn')}
-              </Button>
-            </form>
+                <Button
+                  type="submit"
+                  isLoading={isLoading}
+                  className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+                >
+                  {t('sendMessageBtn')}
+                </Button>
+              </form>
+            </Form>
           </div>
 
           <div>
@@ -147,6 +237,45 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      <SuccessModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
+  );
+}
+
+type SuccessModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
+  const t = useTranslations('contactUs');
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
+            {t('success.title')}
+          </DialogTitle>
+          <DialogDescription>
+            <div className="flex flex-col gap-2">
+              <p className="mb-6 text-gray-600 dark:text-gray-300">
+                {t('success.description')}
+              </p>
+              <Button
+                onClick={onClose}
+                className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                {t('success.closebutton')}
+              </Button>
+            </div>
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
   );
 }

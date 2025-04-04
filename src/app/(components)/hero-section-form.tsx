@@ -18,7 +18,6 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog';
 import {
   Form,
@@ -217,7 +216,7 @@ function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
               </p>
               <Button
                 asChild
-                className="rounded-full bg-indigo-600 px-8 py-6 text-lg text-white hover:bg-indigo-700"
+                className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
               >
                 <Link href="/booking">{t('button')}</Link>
               </Button>

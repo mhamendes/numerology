@@ -138,7 +138,15 @@
     "callUs": "Chiamaci",
     "callHours": "Disponibile dal lunedì al venerdì, dalle 9 alle 17 EST",
     "visitUs": "Visitaci",
-    "byAppointment": "Solo su appuntamento"
+    "byAppointment": "Solo su appuntamento",
+    "errorMessage": "Non è stato possibile inviare l'email al momento, riprova più tardi",
+    "emailError": "Email non valida",
+    "requiredMessage": "Campo obbligatorio",
+    "success": {
+      "title": "Email inviata con successo",
+      "description": "Ti risponderemo al più presto",
+      "closebutton": "Chiudi"
+    }
   },
   "birthMap": {
     "fullName": "Nome Completo",
