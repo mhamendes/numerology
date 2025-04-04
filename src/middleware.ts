@@ -1,13 +1,15 @@
 import { NextRequest } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
 
-import { LOCALES, routing } from '@/i18n/routing';
+import { LOCALES, LocalesType, routing } from '@/i18n/routing';
 
 export default async function middleware(request: NextRequest) {
   // Step 1: Use the incoming request (example)
   const acceptLanguageHeader =
     request.headers.get('Accept-Language')?.split(',')[0] ?? '';
-  const acceptLanguageDefaultLocale = LOCALES.includes(acceptLanguageHeader)
+  const acceptLanguageDefaultLocale = LOCALES.includes(
+    acceptLanguageHeader as LocalesType
+  )
     ? acceptLanguageHeader
     : 'pt-br';
 
