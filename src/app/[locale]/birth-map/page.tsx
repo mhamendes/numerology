@@ -35,7 +35,9 @@ export default function BirthMap() {
   const tForm = useTranslations('form');
   const { products } = useBooking();
   const router = useRouter();
-  const birthMapProduct = products.find((product) => product.id === 'birthMap');
+  const birthMapProduct = products.find(
+    (product) => product.id === 'birth-map'
+  );
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {

@@ -88,14 +88,14 @@ export default function BookingSuccess() {
               <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
             </div>
             <CardTitle className="text-2xl">
-              {selectedProduct?.id === 'birthMap'
+              {selectedProduct?.id === 'birth-map'
                 ? t('birthMapPaymentConfirmed')
                 : t('bookingConfirmed')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-6 text-gray-600 dark:text-gray-300">
-              {selectedProduct?.id === 'birthMap'
+              {selectedProduct?.id === 'birth-map'
                 ? t('birthMapPaymentThankYou')
                 : t('bookingThankYou')}
             </p>
@@ -108,7 +108,7 @@ export default function BookingSuccess() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                {selectedProduct?.id === 'birthMap'
+                {selectedProduct?.id === 'birth-map'
                   ? t('birthMapDelivery')
                   : t('numerologistContact')}
               </p>
@@ -118,7 +118,7 @@ export default function BookingSuccess() {
               className="bg-indigo-600 text-white hover:bg-indigo-700"
             >
               <Link href="/booking">
-                {selectedProduct?.id === 'birthMap'
+                {selectedProduct?.id === 'birth-map'
                   ? t('buyAnother')
                   : t('bookAnother')}
               </Link>
