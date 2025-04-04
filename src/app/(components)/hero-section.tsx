@@ -1,11 +1,8 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-
 import { HeroSectionButtons } from './hero-section-buttons';
+import { HeroSectionForm } from './hero-section-form';
 
 const randomNumberList = Array.from({ length: 9 }, (_, idx) => {
   return {
@@ -62,45 +59,7 @@ export async function HeroSection() {
           <HeroSectionButtons />
         </div>
 
-        <div className="md:w-1/2 md:pl-12">
-          <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="mb-6 text-center text-2xl font-semibold text-indigo-800 dark:text-indigo-300">
-                {t('calculateLifePath')}
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('fullName')}
-                  </label>
-                  <Input
-                    type="text"
-                    placeholder={t('enterFullName')}
-                    className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                  />
-                </div>
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('birthDate')}
-                  </label>
-                  <Input
-                    type="date"
-                    className="border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-indigo-600 py-5 text-white hover:bg-indigo-700"
-                >
-                  {t('revealNumbers')}
-                </Button>
-              </form>
-              <p className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
-                {t('discoverDestiny')}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+        <HeroSectionForm />
       </div>
     </section>
   );

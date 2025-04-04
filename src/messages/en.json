@@ -26,6 +26,11 @@
     "discoverPath": "Discover Your Life Path",
     "numerologyDesc": "Numerology is the mystical study of numbers and their influence on human life. Each number carries a unique vibration that can reveal insights about your personality, talents, obstacles, and opportunities."
   },
+  "personal-days-success": {
+    "title": "Request completed!",
+    "description": "Congratulations on taking the first step to discover your numerology profile. You will soon receive your Birth Day Numerology Profile in your email. Also, get your complete Birth Map by clicking the button below!",
+    "button": "I want my Birth Map"
+  },
   "services": {
     "ourNumerologyServices": "Our Numerology Services",
     "servicesDescription": "Explore our range of personalized numerology services designed to provide clarity, guidance, and insight into your life's journey.",

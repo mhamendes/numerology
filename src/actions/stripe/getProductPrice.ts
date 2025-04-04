@@ -1,6 +1,6 @@
 'use server';
 
-import { LOCALES } from '@/i18n/routing';
+import { LOCALES, LocalesType } from '@/i18n/routing';
 import { stripe } from '@/lib/stripe/stripe';
 
 type CurrencyOptions = Record<(typeof LOCALES)[number], string>;
@@ -27,7 +27,7 @@ async function getProductPrice({ productId, locale }: GetProductPriceProps) {
     expand: ['currency_options'],
   });
 
-  const currencyToUse = currencyOptions[locale];
+  const currencyToUse = currencyOptions[locale as LocalesType];
   const priceInCurrency = price.currency_options?.[currencyToUse];
 
   if (!priceInCurrency) {
@@ -53,41 +53,48 @@ export type Product = {
   price: string;
   popular: boolean;
   isActive: boolean;
+  allowedLocales: LocalesType[];
 };
 
 export async function getProducts(locale: string): Promise<Product[]> {
-  const products = [
+  const products: Omit<Product, 'price'>[] = [
     {
       serverId: process.env.BIRTH_MAP_PRODUCT_ID as string,
       id: 'birth-map' as const,
       popular: true,
       isActive: !!process.env.BIRTH_MAP_PRODUCT_ID,
+      allowedLocales: ['pt-br', 'pt', 'en', 'it'],
     },
     {
       serverId: process.env.PERSONAL_READING_PRODUCT_ID as string,
       id: 'personal-reading' as const,
-
       popular: false,
       isActive: !!process.env.PERSONAL_READING_PRODUCT_ID,
+      allowedLocales: ['pt-br', 'pt'],
     },
     {
       serverId: process.env.RELATIONSHIP_COMPATIBILITY_PRODUCT_ID as string,
       id: 'relationship-compatibility' as const,
       popular: false,
       isActive: !!process.env.RELATIONSHIP_COMPATIBILITY_PRODUCT_ID,
+      allowedLocales: ['pt-br', 'pt'],
     },
     {
       serverId: process.env.BUSINESS_NUMEROLOGY_PRODUCT_ID as string,
       id: 'business-numerology' as const,
-
       popular: false,
       isActive: !!process.env.BUSINESS_NUMEROLOGY_PRODUCT_ID,
+      allowedLocales: ['pt-br', 'pt'],
     },
-  ] as Product[];
+  ];
 
   const productsWithPrice = await Promise.all(
     products
-      .filter((product) => product.isActive)
+      .filter(
+        (product) =>
+          product.isActive &&
+          product.allowedLocales.includes(locale as LocalesType)
+      )
       .map(async (product) => {
         const price = await getProductPrice({
           productId: product.serverId,

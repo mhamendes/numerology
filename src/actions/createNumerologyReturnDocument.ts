@@ -58,7 +58,7 @@ export async function createNumerologyReturnDocument({
   });
   pdf = await createUnificationSection(pdf, locale);
   pdf = await createContactPage(pdf, locale);
-  pdf = await createHeader(pdf, locale);
+  pdf = await createHeader(pdf, locale, 'fullMap');
   pdf = await createFooter(pdf);
 
   const baseBase = (await import(`src/assets/documents/pt-br/base.json`))
@@ -67,7 +67,7 @@ export async function createNumerologyReturnDocument({
     ((await import(`src/assets/documents/${locale}/base.json`))
       .default as typeof baseBase) ?? baseBase;
 
-  const subject = base.subject.replace('{{fullName}}', fullName);
+  const subject = base.birthMapSubject.replace('{{fullName}}', fullName);
   const filename = `${subject}.pdf`;
   const uri = pdf.output('datauristring', {
     filename,

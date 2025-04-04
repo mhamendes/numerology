@@ -26,6 +26,11 @@
     "discoverPath": "Descubra Seu Caminho de Vida",
     "numerologyDesc": "A numerologia é o estudo místico dos números e sua influência na vida humana. Cada número carrega uma vibração única que pode revelar insights sobre sua personalidade, talentos, obstáculos e oportunidades."
   },
+  "personal-days-success": {
+    "title": "Solicitação concluída!",
+    "description": "Parabéns pelo primeiro passo para descobrir o seu perfil numerológico. Em breve você receberá seu Perfil Numerológico do Dia de Nascimento no seu email. Adquira também seu Mapa de Nascimento completo clicando no botão abaixo!",
+    "button": "Quero meu Mapa de Nascimento"
+  },
   "services": {
     "ourNumerologyServices": "Nossos Serviços de Numerologia",
     "servicesDescription": "Explore nossa gama de serviços numerológicos personalizados projetados para fornecer clareza, orientação e insights para a jornada da sua vida.",

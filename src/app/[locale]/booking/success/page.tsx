@@ -14,8 +14,6 @@ export default function BookingSuccess() {
   const t = useTranslations('booking');
   const { selectedProduct } = useBooking();
 
-  console.log('selectedProduct', selectedProduct);
-
   return (
     <div className="w-full px-4 py-16">
       <div className="mx-auto max-w-4xl">
@@ -101,30 +99,32 @@ export default function BookingSuccess() {
                 ? t('birthMapPaymentThankYou')
                 : t('bookingThankYou')}
             </p>
-            <div className="mb-6 inline-block rounded-lg bg-indigo-50 p-6 dark:bg-gray-800">
-              <div className="mb-2 flex items-center justify-center">
-                <CalendarIcon className="mr-2 h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+            <div className="flex flex-col gap-2">
+              <div className="mb-6 inline-block rounded-lg bg-indigo-50 p-6 dark:bg-gray-800">
+                <div className="mb-2 flex items-center justify-center">
+                  <CalendarIcon className="mr-2 h-5 w-5 text-indigo-600 dark:text-indigo-400" />
 
-                <span className="font-medium text-indigo-700 dark:text-indigo-300">
-                  {t('nextSteps')}
-                </span>
+                  <span className="font-medium text-indigo-700 dark:text-indigo-300">
+                    {t('nextSteps')}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {selectedProduct?.id === 'birth-map'
+                    ? t('birthMapDelivery')
+                    : t('numerologistContact')}
+                </p>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                {selectedProduct?.id === 'birth-map'
-                  ? t('birthMapDelivery')
-                  : t('numerologistContact')}
-              </p>
+              <Button
+                asChild
+                className="bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                <Link href="/booking">
+                  {selectedProduct?.id === 'birth-map'
+                    ? t('buyAnother')
+                    : t('bookAnother')}
+                </Link>
+              </Button>
             </div>
-            <Button
-              asChild
-              className="bg-indigo-600 text-white hover:bg-indigo-700"
-            >
-              <Link href="/booking">
-                {selectedProduct?.id === 'birth-map'
-                  ? t('buyAnother')
-                  : t('bookAnother')}
-              </Link>
-            </Button>
           </CardContent>
         </Card>
       </div>

@@ -54,6 +54,7 @@ export async function POST(req: Request) {
         to: customerEmail,
         subject,
         attachments: [{ filename, content }],
+        type: 'fullMap',
       });
 
       log.info(`Email sent to ${customerEmail}`);

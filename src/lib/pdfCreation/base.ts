@@ -3,6 +3,7 @@ import 'jspdf-autotable';
 import jsPDF from 'jspdf';
 
 import { createSectionWithBulletPoints } from './createSectionWithBulletPoints';
+import { DocType } from './types';
 
 import { centuryGothic } from '@/assets/fonts/centuryGothic';
 import { centuryGothicBold } from '@/assets/fonts/centuryGothicBold';
@@ -232,10 +233,15 @@ export async function createContactPage(pdf: jsPDF, locale: string) {
   return pdf;
 }
 
-export async function createHeader(pdf: jsPDF, locale: string) {
+export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
   const base = await getBaseContent(locale);
 
   const numberOfPages = pdf.getNumberOfPages();
+
+  const title: Record<DocType, string> = {
+    fullMap: base.birthMapTitle,
+    personalDays: base.personalDaysTitle,
+  };
 
   Array.from({ length: numberOfPages }).forEach((_, index) => {
     pdf.setPage(index + 1);
@@ -244,7 +250,7 @@ export async function createHeader(pdf: jsPDF, locale: string) {
     pdf.setFontSize(20);
     pdf.setTextColor(PALETTE.green);
     pdf.setFont('zapfino', 'normal');
-    pdf.text(base.birthMapTitle, 70, 17, undefined, undefined);
+    pdf.text(title[type], 70, 17, undefined, undefined);
     pdf.setDrawColor(PALETTE.green);
     pdf.setLineWidth(0.7);
     pdf.line(START_WIDTH, 22, 190, 22);

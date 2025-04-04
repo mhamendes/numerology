@@ -59,7 +59,6 @@ export default function BirthMapForm() {
       email: searchParams.get('email') ?? undefined,
       phone: searchParams.get('phone') ?? undefined,
     },
-    mode: 'onBlur',
   });
 
   return (
