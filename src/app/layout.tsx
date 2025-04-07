@@ -5,6 +5,8 @@ import { setRequestLocale } from 'next-intl/server';
 
 import { Toaster } from '@/components/ui/toaster';
 
+import FacebookPixel from '@/app/(components)/facebookPixel';
+
 export default async function Layout({
   children,
   params,
@@ -19,6 +21,7 @@ export default async function Layout({
     <html lang={locale}>
       <body>
         {children}
+        <FacebookPixel />
         <Toaster />
       </body>
     </html>
