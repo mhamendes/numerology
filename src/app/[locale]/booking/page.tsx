@@ -91,7 +91,7 @@ export default function Booking() {
             <CardHeader>
               <CardTitle>{t('yourInformation')}</CardTitle>
             </CardHeader>
-            {['birthMap', 'personal-reading'].includes(
+            {['birth-map', 'personal-reading'].includes(
               selectedProduct?.id ?? ''
             ) ? (
               <BirthMapForm />
