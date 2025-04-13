@@ -1,5 +1,6 @@
 import { jsPDF } from 'jspdf';
 
+import { getMonthString } from '@/lib/date';
 import { getPersonalDays } from '@/lib/numerology/numbers';
 
 import {
@@ -75,9 +76,12 @@ export async function createPersonalDaysSection({
     })),
   });
 
+  const months = getMonths(results, locale);
+  console.log({ months });
+
   pdf.autoTable({
     head: [
-      [personalDatesExtraContent.month, ...getMonths(results)],
+      [personalDatesExtraContent.month, ...getMonths(results, locale)],
       [
         personalDatesExtraContent.monthPersonal,
         ...results.map((result) => result.monthNumber),
@@ -178,29 +182,15 @@ export async function createPersonalDaysSection({
   return pdf;
 }
 
-const NUMBER_TO_MONTH = {
-  1: 'Jan',
-  2: 'Fev',
-  3: 'Mar',
-  4: 'Abr',
-  5: 'Mai',
-  6: 'Jun',
-  7: 'Jul',
-  8: 'Ago',
-  9: 'Set',
-  10: 'Out',
-  11: 'Nov',
-  12: 'Dez',
-} as const;
-
 const getMonths = (
   data: {
     month: number;
-  }[]
+  }[],
+  locale: string
 ) => {
-  return data.map(
-    (item) => NUMBER_TO_MONTH[item.month as keyof typeof NUMBER_TO_MONTH]
-  );
+  return data.map((item) => {
+    return getMonthString(item.month, locale);
+  });
 };
 
 type MatrixArgs = {

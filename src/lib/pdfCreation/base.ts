@@ -8,7 +8,7 @@ import {
   BRAND_WEBSITE,
   CONTACT_EMAIL,
   PHONE_NUMBER,
-} from '../constants';
+} from '@/lib/constants';
 
 import { createSectionWithBulletPoints } from './createSectionWithBulletPoints';
 import { DocType } from './types';
@@ -204,7 +204,7 @@ export async function createContactPage(pdf: jsPDF, locale: string) {
   ];
 
   pdf.autoTable({
-    head: [['Contatos:']],
+    head: [[base.contacts]],
     startY: 100,
     headStyles: {
       cellPadding: 1,
