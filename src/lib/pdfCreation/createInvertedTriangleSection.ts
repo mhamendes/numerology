@@ -313,7 +313,7 @@ async function getArcaneDuration({
       : invertedTriangleExtraContent.years;
 
   if (months === 0) return `${years} ${yearsText}`;
-  return `${years} ${yearsText} e ${months} ${monthsText}`;
+  return `${years} ${yearsText} ${invertedTriangleExtraContent.and} ${months} ${monthsText}`;
 }
 
 type CreateInvertedTriangleImage = {
