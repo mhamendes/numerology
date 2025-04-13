@@ -2,6 +2,14 @@ import 'jspdf-autotable';
 
 import jsPDF from 'jspdf';
 
+import {
+  BRAND_ADDRESS,
+  BRAND_INSTAGRAM_USERNAME,
+  BRAND_WEBSITE,
+  CONTACT_EMAIL,
+  PHONE_NUMBER,
+} from '../constants';
+
 import { createSectionWithBulletPoints } from './createSectionWithBulletPoints';
 import { DocType } from './types';
 
@@ -188,14 +196,11 @@ export async function createContactPage(pdf: jsPDF, locale: string) {
 
   pdf.addPage();
   const data = [
-    [base.phone, '935 625 353\n'],
-    [base.email, 'carmelindataraujo@gmail.com\n'],
-    [base.instagram, '@carmelinda.araujo.mentora\n'],
-    [base.website, 'https://carmelindaaraujo.com\n'],
-    [
-      base.address,
-      'Praça Camilo Castelo Branco, 31 – Centro\nComercial da Estação – Sala 36\nBraga – Portugal – CP: 4700-427',
-    ],
+    [base.phone, `${PHONE_NUMBER}\n`],
+    [base.email, `${CONTACT_EMAIL}\n`],
+    [base.instagram, `${BRAND_INSTAGRAM_USERNAME}\n`],
+    [base.website, `${BRAND_WEBSITE}\n`],
+    [base.address, BRAND_ADDRESS.join('\n')],
   ];
 
   pdf.autoTable({

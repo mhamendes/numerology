@@ -16,7 +16,6 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
-  BRAND_ADDRESS,
   BRAND_FACEBOOK_PAGE,
   BRAND_FIRST_NAME,
   BRAND_INSTAGRAM_PAGE,
@@ -25,6 +24,7 @@ import {
   BRAND_TWITTER_PAGE,
   BRAND_YOUTUBE_PAGE,
   CONTACT_EMAIL,
+  JOINED_BRAND_ADDRESS,
   PHONE_NUMBER,
 } from '@/lib/constants';
 
@@ -205,7 +205,7 @@ export function Footer() {
             <div className="flex items-center">
               <MapPinIcon className="mr-2 h-5 w-5 text-indigo-400" />
 
-              <span className="text-indigo-200">{BRAND_ADDRESS}</span>
+              <span className="text-indigo-200">{JOINED_BRAND_ADDRESS}</span>
             </div>
           </div>
         </div>

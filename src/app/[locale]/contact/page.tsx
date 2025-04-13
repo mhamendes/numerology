@@ -27,7 +27,11 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { BRAND_ADDRESS, CONTACT_EMAIL, PHONE_NUMBER } from '@/lib/constants';
+import {
+  CONTACT_EMAIL,
+  JOINED_BRAND_ADDRESS,
+  PHONE_NUMBER,
+} from '@/lib/constants';
 
 import { sendEmail } from '@/actions/email/sendEmail';
 
@@ -224,7 +228,7 @@ export default function Contact() {
                         {t('visitUs')}
                       </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        {BRAND_ADDRESS}
+                        {JOINED_BRAND_ADDRESS}
                       </p>
                       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                         {t('byAppointment')}

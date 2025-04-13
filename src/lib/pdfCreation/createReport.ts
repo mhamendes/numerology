@@ -173,10 +173,10 @@ export async function createReport({
   pdf.text(reportExtraContent.ascensionDegree, START_WIDTH, START_HEIGHT + 150);
 
   const ascensionDegreeBase = (
-    await import(`src/assets/documents/pt-br/19 - Grau de Ascensão.json`)
+    await import(`src/assets/documents/pt-br/19-ascensionDegree.json`)
   ).default;
   const ascensionDegree =
-    ((await import(`src/assets/documents/${locale}/19 - Grau de Ascensão.json`))
+    ((await import(`src/assets/documents/${locale}/19-ascensionDegree.json`))
       .default as typeof ascensionDegreeBase) ?? ascensionDegreeBase;
 
   pdf.setTextColor(PALETTE.black);
@@ -195,10 +195,10 @@ export async function createReport({
   pdf.text(reportExtraContent.favorableColors, START_WIDTH, START_HEIGHT + 172);
 
   const favorableColorsBase = (
-    await import(`src/assets/documents/pt-br/20 - Cores Favoráveis.json`)
+    await import(`src/assets/documents/pt-br/20-favorableColors.json`)
   ).default;
   const favorableColors =
-    ((await import(`src/assets/documents/${locale}/20 - Cores Favoráveis.json`))
+    ((await import(`src/assets/documents/${locale}/20-favorableColors.json`))
       .default as typeof favorableColorsBase) ?? favorableColorsBase;
 
   pdf.setTextColor(PALETTE.black);
