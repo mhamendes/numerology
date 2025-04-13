@@ -204,19 +204,17 @@ function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
             <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
             {t('title')}
           </DialogTitle>
-          <DialogDescription>
-            <div className="flex flex-col gap-2">
-              <p className="mb-6 text-gray-600 dark:text-gray-300">
-                {t('description')}
-              </p>
-              <Button
-                asChild
-                className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
-              >
-                <Link href="/booking">{t('button')}</Link>
-              </Button>
-            </div>
-          </DialogDescription>
+          <div className="flex flex-col gap-2">
+            <DialogDescription className="mb-6 text-gray-600 dark:text-gray-300">
+              {t('description')}
+            </DialogDescription>
+            <Button
+              asChild
+              className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+            >
+              <Link href="/booking">{t('button')}</Link>
+            </Button>
+          </div>
         </DialogHeader>
       </DialogContent>
     </Dialog>
