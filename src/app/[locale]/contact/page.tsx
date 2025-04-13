@@ -27,6 +27,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { DEFAULT_LOCALE } from '@/i18n/routing';
 import {
   CONTACT_EMAIL,
   JOINED_BRAND_ADDRESS,
@@ -66,8 +67,10 @@ export default function Contact() {
       await sendEmail({
         to: 'contact@drcosmicnumber.com',
         subject: data.subject,
-        html: `${data.fullName} de email ${data.email} enviou a mensagem: ${data.message}`,
+        fullName: data.fullName,
+        html: data.message,
         type: 'contact',
+        locale: DEFAULT_LOCALE,
       });
       setIsModalOpen(true);
     } catch (error) {

@@ -4,7 +4,7 @@ import 'server-only';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 
-import { DEFAULT_LOCALE } from '@/i18n/routing';
+import { DEFAULT_LOCALE, LocalesType } from '@/i18n/routing';
 import { logger } from '@/lib/logger';
 import { getPersonalDays } from '@/lib/numerology/numbers';
 import {
@@ -28,10 +28,9 @@ const _schema = z.object({
 export async function createPersonalDaysReturnDocument({
   fullName,
   birthday,
-}: Omit<z.infer<typeof _schema>, 'email'>) {
+  locale,
+}: Omit<z.infer<typeof _schema>, 'email'> & { locale: LocalesType }) {
   const personalDays = getPersonalDays({ birthday });
-
-  const locale = (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;
 
   let pdf = await getConfiguredPdf();
 
@@ -90,19 +89,28 @@ const log = logger.child({ module: 'sendPersonalDaysDocumentEmail' });
 
 export async function sendPersonalDaysDocumentEmail({
   email,
+  fullName,
   ...props
 }: z.infer<typeof _schema>) {
+  const locale =
+    ((await cookies()).get('NEXT_LOCALE')?.value as LocalesType | undefined) ??
+    DEFAULT_LOCALE;
+
   try {
     const { content, filename, subject } =
       await createPersonalDaysReturnDocument({
+        fullName,
+        locale,
         ...props,
       });
 
     await sendEmail({
       to: email,
+      fullName,
       subject,
       attachments: [{ filename, content }],
       type: 'free',
+      locale,
     });
 
     return true;

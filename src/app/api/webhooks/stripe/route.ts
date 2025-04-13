@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { Stripe } from 'stripe';
 
+import { LocalesType } from '@/i18n/routing';
 import { logger } from '@/lib/logger';
 import { stripe } from '@/lib/stripe/stripe';
 
@@ -36,12 +37,19 @@ export async function POST(req: Request) {
     try {
       const data = event.data.object as Stripe.Checkout.Session;
       const customerEmail = data.customer_details?.email;
-      const fullName = data.metadata?.fullName;
-      const birthday = data.metadata?.birthday;
-
       if (!customerEmail) throw new Error('Customer email not found');
+
+      const fullName = data.metadata?.fullName;
       if (!fullName) throw new Error('Full name not found');
+
+      const birthday = data.metadata?.birthday;
       if (!birthday) throw new Error('Birthday not found');
+
+      const locale = data.metadata?.locale as LocalesType | undefined;
+      if (!locale) throw new Error('Locale not found');
+
+      const productId = data.metadata?.productId as ProductId | undefined;
+      if (!productId) throw new Error('Product ID not found');
 
       log.info(`CheckoutSession status: ${data.payment_status}`);
 
@@ -49,13 +57,16 @@ export async function POST(req: Request) {
         await createNumerologyReturnDocument({
           fullName,
           birthday: new Date(birthday),
+          locale,
         });
 
       const response = await sendEmail({
         to: customerEmail,
+        fullName,
         subject,
         attachments: [{ filename, content }],
-        type: data.metadata?.productId as ProductId | undefined,
+        type: productId,
+        locale,
       });
 
       log.info(`Email sent to ${customerEmail}`);
@@ -68,6 +79,7 @@ export async function POST(req: Request) {
         email: data.customer_details?.email,
         fullName: data.metadata?.fullName,
         birthday: data.metadata?.birthday,
+        locale: data.metadata?.locale as LocalesType,
       });
       logError.error(error, 'Webhook Error on document creation');
       return NextResponse.json(

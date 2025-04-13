@@ -1,5 +1,8 @@
 'use server';
 
+import { cookies } from 'next/headers';
+
+import { DEFAULT_LOCALE } from '@/i18n/routing';
 import { stripe } from '@/lib/stripe/stripe';
 
 type CreateCheckoutSessionProps = {
@@ -58,11 +61,13 @@ export async function createCheckoutSession({
     throw new Error('Price not found');
   }
 
+  const locale = (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;
+
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: price.id, quantity: 1 }],
     mode: 'payment',
     ui_mode: 'embedded',
-    return_url: getReturnUrl(),
+    return_url: getReturnUrl(productId),
     allow_promotion_codes: true,
     customer_email: email,
     metadata: {
@@ -70,11 +75,13 @@ export async function createCheckoutSession({
       birthday,
       email,
       phone,
+      productId,
       partnerFullName,
       partnerBirthday,
       businessName,
       businessType,
       specificQuestions,
+      locale,
     },
   });
 
@@ -85,9 +92,9 @@ export async function createCheckoutSession({
   return { client_secret: session.client_secret };
 }
 
-function getReturnUrl() {
+function getReturnUrl(productId: string) {
   if (process.env.NODE_ENV === 'production') {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/booking/return?sessionId={CHECKOUT_SESSION_ID}`;
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/booking/return?productId=${productId}&sessionId={CHECKOUT_SESSION_ID}`;
   }
-  return `http://${process.env.LOCAL_URL}/booking/return?sessionId={CHECKOUT_SESSION_ID}`;
+  return `http://${process.env.LOCAL_URL}/booking/return?productId=${productId}&sessionId={CHECKOUT_SESSION_ID}`;
 }

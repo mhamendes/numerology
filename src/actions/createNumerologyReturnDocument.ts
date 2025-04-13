@@ -1,10 +1,9 @@
 'use server';
 import 'server-only';
 
-import { cookies } from 'next/headers';
 import { z } from 'zod';
 
-import { DEFAULT_LOCALE } from '@/i18n/routing';
+import { LocalesType } from '@/i18n/routing';
 import {
   createContactPage,
   createFooter,
@@ -29,13 +28,15 @@ const schema = z.object({
 export async function createNumerologyReturnDocument({
   fullName,
   birthday,
-}: z.infer<typeof schema>) {
+  locale,
+}: z.infer<typeof schema> & { locale: LocalesType }) {
+  if (!locale)
+    throw new Error('Missing locale when creating numerology return document');
+
   const numerologyResponse = await getNumerologyResponse({
     fullName,
     birthday,
   });
-
-  const locale = (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;
 
   let pdf = await getConfiguredPdf();
 
@@ -88,8 +89,9 @@ export async function actionCreateNumerologyReturnDocument({
   fullName,
   birthday,
   password,
-}: z.infer<typeof _schemaWithPassword>) {
+  locale,
+}: z.infer<typeof _schemaWithPassword> & { locale: LocalesType }) {
   if (password !== 'braga341314') throw new Error('wrong-password');
 
-  return createNumerologyReturnDocument({ fullName, birthday });
+  return createNumerologyReturnDocument({ fullName, birthday, locale });
 }
