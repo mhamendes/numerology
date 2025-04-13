@@ -2,5 +2,9 @@
   "head1": "At this moment - {{age}} years old - I found the Arcane {{arcane}} dominating your life. This Arcane will dominate the period until approximately {{arcaneEndAge}} years old.",
   "head2": "The Life Triangle of your birth name is governed by the Arcane {{arcane}}.",
   "head3": "Your birth name is formed by the following Arcanes:",
-  "head4": "Each Arcane in your birth name dominates for about {{arcaneDuration}}."
+  "head4": "Each Arcane in your birth name dominates for about {{arcaneDuration}}.",
+  "month": "month",
+  "months": "months",
+  "year": "year",
+  "years": "years"
 }

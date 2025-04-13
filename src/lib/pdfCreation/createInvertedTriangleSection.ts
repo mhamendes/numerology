@@ -188,12 +188,16 @@ export async function createInvertedTriangleSection({
     margin: { top: TOP_MARGIN },
   });
 
+  const arcaneDuration = await getArcaneDuration({
+    locale,
+    ...result.timeOfEachArcane,
+  });
   pdf.autoTable({
     head: [
       [
         invertedTriangleExtraContent.head4.replace(
           '{{arcaneDuration}}',
-          getArcaneDuration(result.timeOfEachArcane)
+          arcaneDuration
         ),
       ],
     ],
@@ -210,7 +214,7 @@ export async function createInvertedTriangleSection({
     margin: { top: TOP_MARGIN },
   });
 
-  pdf.setDrawColor(PALETTE.green);
+  pdf.setDrawColor(PALETTE.purple);
   pdf.setLineWidth(0.7);
   pdf.line(
     START_WIDTH,
@@ -250,7 +254,7 @@ export async function createInvertedTriangleSection({
         startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + sum,
         headStyles: {
           cellPadding: 1,
-          textColor: PALETTE.green,
+          textColor: PALETTE.purple,
           font: 'CenturyGothic',
           fontSize: 14,
           fontStyle: 'normal',
@@ -279,15 +283,34 @@ export async function createInvertedTriangleSection({
   return pdf;
 }
 
-function getArcaneDuration({
+async function getArcaneDuration({
+  locale,
   years,
   months,
 }: {
+  locale: string;
   years: number;
   months: number;
 }) {
-  const monthsText = months === 1 ? 'mês' : 'meses';
-  const yearsText = years === 1 ? 'ano' : 'anos';
+  const invertedTriangleExtraContentBase = (
+    await import(`src/assets/documents/pt-br/invertedTriangleExtraContent.json`)
+  ).default;
+  const invertedTriangleExtraContent =
+    ((
+      await import(
+        `src/assets/documents/${locale}/invertedTriangleExtraContent.json`
+      )
+    ).default as typeof invertedTriangleExtraContentBase) ??
+    invertedTriangleExtraContentBase;
+
+  const monthsText =
+    months === 1
+      ? invertedTriangleExtraContent.month
+      : invertedTriangleExtraContent.months;
+  const yearsText =
+    years === 1
+      ? invertedTriangleExtraContent.year
+      : invertedTriangleExtraContent.years;
 
   if (months === 0) return `${years} ${yearsText}`;
   return `${years} ${yearsText} e ${months} ${monthsText}`;

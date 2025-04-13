@@ -28,6 +28,8 @@ export const PALETTE = {
   green: '#006871',
   lightGreen: '#E3EFD9',
   red: '#FF0000',
+  purple: '#4F39F6',
+  lightPurple: '#A3B3FF',
 };
 
 export async function getConfiguredPdf() {
@@ -208,7 +210,7 @@ export async function createContactPage(pdf: jsPDF, locale: string) {
     startY: 100,
     headStyles: {
       cellPadding: 1,
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'zapfino',
       fontSize: 16,
       fontStyle: 'normal',
@@ -223,7 +225,7 @@ export async function createContactPage(pdf: jsPDF, locale: string) {
     startY: (pdf.lastAutoTable.finalY ?? 110) + 10,
     headStyles: {
       cellPadding: 1,
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'CenturyGothic',
       fontSize: 12,
       fontStyle: 'normal',
@@ -253,10 +255,10 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
 
     pdf.addImage(logoBase64, 'WEBP', 20, 5, 24, 15);
     pdf.setFontSize(20);
-    pdf.setTextColor(PALETTE.green);
+    pdf.setTextColor(PALETTE.purple);
     pdf.setFont('zapfino', 'normal');
     pdf.text(title[type], 70, 17, undefined, undefined);
-    pdf.setDrawColor(PALETTE.green);
+    pdf.setDrawColor(PALETTE.purple);
     pdf.setLineWidth(0.7);
     pdf.line(START_WIDTH, 22, 190, 22);
   });
@@ -269,11 +271,11 @@ export async function createFooter(pdf: jsPDF) {
 
   Array.from({ length: numberOfPages }).forEach((_, index) => {
     pdf.setPage(index + 1);
-    pdf.setDrawColor(PALETTE.green);
+    pdf.setDrawColor(PALETTE.purple);
     pdf.setLineWidth(0.7);
     pdf.line(START_WIDTH, pageHeight - 15, 190, pageHeight - 15);
     pdf.setFontSize(12);
-    pdf.setTextColor(PALETTE.green);
+    pdf.setTextColor(PALETTE.purple);
     pdf.setFont('CenturyGothic', 'normal');
     pdf.text(`${index + 1}`, 185, pageHeight - 10);
   });
@@ -301,7 +303,7 @@ export async function createTitle({
     startY: startHeight,
     head: [[title]],
     headStyles: {
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'zapfino',
       fontSize: 16,
     },
@@ -309,7 +311,7 @@ export async function createTitle({
     tableWidth: 180,
   });
 
-  pdf.setDrawColor(PALETTE.green);
+  pdf.setDrawColor(PALETTE.purple);
   pdf.setLineWidth(0.7);
   pdf.line(START_WIDTH, startHeight + 15, 190, startHeight + 15);
 

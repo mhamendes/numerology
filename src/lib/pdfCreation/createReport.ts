@@ -46,13 +46,13 @@ export async function createReport({
     START_HEIGHT + 10
   );
 
-  pdf.setTextColor(PALETTE.green);
+  pdf.setTextColor(PALETTE.purple);
   pdf.setFontSize(14);
   pdf.text(reportExtraContent.reportTitle, START_WIDTH, START_HEIGHT + 20);
 
   const tableStyle: UserOptions = {
     headStyles: {
-      fillColor: PALETTE.lightGreen,
+      fillColor: PALETTE.lightPurple,
       textColor: PALETTE.black,
       halign: 'center',
       valign: 'middle',
@@ -62,8 +62,8 @@ export async function createReport({
       cellWidth: 45,
     },
     bodyStyles: {
-      textColor: PALETTE.green,
-      fillColor: PALETTE.lightGreen,
+      textColor: PALETTE.purple,
+      fillColor: PALETTE.lightPurple,
       halign: 'center',
       valign: 'middle',
       font: 'CenturyGothic',
@@ -168,7 +168,7 @@ export async function createReport({
 
   pdf.setFont('CenturyGothic', 'normal');
 
-  pdf.setTextColor(PALETTE.green);
+  pdf.setTextColor(PALETTE.purple);
   pdf.setFontSize(14);
   pdf.text(reportExtraContent.ascensionDegree, START_WIDTH, START_HEIGHT + 150);
 
@@ -190,7 +190,7 @@ export async function createReport({
     }
   );
 
-  pdf.setTextColor(PALETTE.green);
+  pdf.setTextColor(PALETTE.purple);
   pdf.setFontSize(14);
   pdf.text(reportExtraContent.favorableColors, START_WIDTH, START_HEIGHT + 172);
 
@@ -215,7 +215,7 @@ export async function createReport({
     }
   );
 
-  pdf.setTextColor(PALETTE.green);
+  pdf.setTextColor(PALETTE.purple);
   pdf.setFontSize(14);
   pdf.text(reportExtraContent.favorableDays, START_WIDTH, START_HEIGHT + 194);
 
@@ -230,7 +230,7 @@ export async function createReport({
     }
   );
 
-  pdf.setTextColor(PALETTE.green);
+  pdf.setTextColor(PALETTE.purple);
   pdf.setFontSize(14);
   pdf.text(reportExtraContent.more, START_WIDTH, START_HEIGHT + 211);
 

@@ -22,6 +22,7 @@ type CreateSectionArgs<T extends AllPossibleNumbers> = {
   title: string;
   result: {
     value: T;
+    valuePrefix: string;
     info: {
       title: string;
       data: number[];
@@ -55,11 +56,11 @@ export async function createSectionWithListOfNumbers<
   });
 
   pdf.autoTable({
-    head: [[`Vibração Conjugal: ${result.value}`]],
+    head: [[`${result.valuePrefix}: ${result.value}`]],
     startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
     headStyles: {
       cellPadding: 1,
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'CenturyGothic',
       fontSize: 14,
       fontStyle: 'normal',
@@ -109,7 +110,7 @@ export async function createSectionWithListOfNumbers<
     });
   }
 
-  pdf.setDrawColor(PALETTE.green);
+  pdf.setDrawColor(PALETTE.purple);
   pdf.setLineWidth(0.7);
   pdf.line(
     START_WIDTH,

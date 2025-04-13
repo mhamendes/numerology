@@ -24,7 +24,7 @@ export async function createSectionWithBulletPoints({
     startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
     headStyles: {
       cellPadding: 1,
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'CenturyGothic',
       fontSize: 14,
       fontStyle: 'normal',

@@ -2,5 +2,9 @@
   "head1": "In questo momento - {{age}} anni di età - ho individuato che nella tua vita domina l'Arcano {{arcane}}. Questo Arcano dominerà il periodo più o meno fino a {{arcaneEndAge}} anni di età.",
   "head2": "Il Triangolo della Vita del tuo nome di nascita è governato dall'Arcano {{arcane}}.",
   "head3": "Il tuo nome di nascita è formato dai seguenti Arcani:",
-  "head4": "Ogni Arcano nel tuo nome di nascita domina per circa {{arcaneDuration}}."
+  "head4": "Ogni Arcano nel tuo nome di nascita domina per circa {{arcaneDuration}}.",
+  "month": "mese",
+  "months": "mesi",
+  "year": "anno",
+  "years": "anni"
 }

@@ -55,6 +55,7 @@ export async function createSections({
     title: sectionTitles.motivationNumber,
     result: numerologyResponse.motivationNumber,
     text: motivationNumberText,
+    locale,
   });
 
   const impressionNumberTextBase = (
@@ -69,6 +70,7 @@ export async function createSections({
     title: sectionTitles.impressionNumber,
     result: numerologyResponse.impressionNumber,
     text: impressionNumberText,
+    locale,
   });
 
   const expressionNumberTextBase = (
@@ -83,6 +85,7 @@ export async function createSections({
     title: sectionTitles.expressionNumber,
     result: numerologyResponse.expressionNumber,
     text: expressionNumberText,
+    locale,
   });
 
   const birthdayVibrationTextBase = (
@@ -98,6 +101,7 @@ export async function createSections({
     title: sectionTitles.birthdayVibration,
     result: String(getDate(birthday)) as DefaultNumbers,
     text: birthdayVibrationText,
+    locale,
   });
 
   const psychicNumberTextBase = (
@@ -112,6 +116,7 @@ export async function createSections({
     title: sectionTitles.psychicNumber,
     result: numerologyResponse.psychicNumber,
     text: psychicNumberText,
+    locale,
   });
 
   const destinyNumberTextBase = (
@@ -126,6 +131,7 @@ export async function createSections({
     title: sectionTitles.destinyNumber,
     result: numerologyResponse.destinyNumber,
     text: destinyNumberText,
+    locale,
   });
 
   const missionNumberTextBase = (
@@ -140,6 +146,7 @@ export async function createSections({
     title: sectionTitles.missionNumber,
     result: numerologyResponse.missionNumber,
     text: missionNumberText,
+    locale,
   });
 
   const hiddenTalentNumberTextBase = (
@@ -155,6 +162,7 @@ export async function createSections({
     title: sectionTitles.hiddenTalentNumber,
     result: numerologyResponse.hiddenTalentNumber,
     text: hiddenTalentNumberText,
+    locale,
   });
 
   const karmicLessonsTextBase = (
@@ -169,6 +177,7 @@ export async function createSections({
     title: sectionTitles.karmicLessons,
     results: numerologyResponse.karmicLessons,
     text: karmicLessonsText,
+    locale,
   });
 
   const karmicDebtsTextBase = (
@@ -183,6 +192,7 @@ export async function createSections({
     title: sectionTitles.karmicDebts,
     results: numerologyResponse.karmicDebts,
     text: karmicDebtsText,
+    locale,
   });
 
   const hiddenTendenciesTextBase = (
@@ -197,6 +207,7 @@ export async function createSections({
     title: sectionTitles.hiddenTendencies,
     results: numerologyResponse.hiddenTendencies,
     text: hiddenTendenciesText,
+    locale,
   });
 
   const subconsciousResponseTextBase = (
@@ -215,6 +226,7 @@ export async function createSections({
     title: sectionTitles.subconsciousResponse,
     result: numerologyResponse.subconsciousResponse,
     text: subconsciousResponseText,
+    locale,
   });
 
   const lifeCyclesTextBase = (
@@ -320,6 +332,7 @@ export async function createSections({
     pdf,
     title: sectionTitles.compatibleNumbers,
     result: {
+      valuePrefix: sectionTitles.yourNumber,
       value: numerologyResponse.compatibleNumbers.value,
       info: [
         {
@@ -351,6 +364,7 @@ export async function createSections({
     pdf,
     title: sectionTitles.conjugalVibration,
     result: {
+      valuePrefix: sectionTitles.conjugalVibration,
       value: numerologyResponse.conjugalVibration.value,
       info: [
         {
@@ -435,6 +449,7 @@ type CreateSectionArgs<T extends AllPossibleNumbers> = {
   result: T;
   ocurrences?: number;
   text: Text<T>;
+  locale: string;
 };
 
 async function createSection<T extends AllPossibleNumbers>({
@@ -445,7 +460,15 @@ async function createSection<T extends AllPossibleNumbers>({
   result,
   ocurrences,
   text,
+  locale,
 }: CreateSectionArgs<T>) {
+  const baseSectionSubtitles = (
+    await import(`src/assets/documents/pt-br/sectionSubtitles.json`)
+  ).default;
+  const sectionSubtitles =
+    ((await import(`src/assets/documents/${locale}/sectionSubtitles.json`))
+      .default as typeof baseSectionSubtitles) ?? baseSectionSubtitles;
+
   if (!skipTitle) {
     pdf = await createTitle({
       pdf,
@@ -478,7 +501,7 @@ async function createSection<T extends AllPossibleNumbers>({
     startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
     headStyles: {
       cellPadding: 1,
-      textColor: PALETTE.green,
+      textColor: PALETTE.purple,
       font: 'CenturyGothic',
       fontSize: 14,
       fontStyle: 'normal',
@@ -490,7 +513,7 @@ async function createSection<T extends AllPossibleNumbers>({
 
   if (resultText.positive) {
     pdf.autoTable({
-      head: [['Pontos positivos:']],
+      head: [[`${sectionSubtitles.positive}:`]],
       body: [[resultText.positive]],
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
       headStyles: {
@@ -514,7 +537,7 @@ async function createSection<T extends AllPossibleNumbers>({
 
   if (resultText.negative) {
     pdf.autoTable({
-      head: [['Pontos negativos:']],
+      head: [[`${sectionSubtitles.negative}:`]],
       body: [[resultText.negative]],
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
       headStyles: {
@@ -557,7 +580,7 @@ async function createSection<T extends AllPossibleNumbers>({
 
   if (resultText.orientation) {
     pdf.autoTable({
-      head: [['Orientação:']],
+      head: [[`${sectionSubtitles.orientation}:`]],
       body: [[resultText.orientation]],
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
       headStyles: {
@@ -585,7 +608,7 @@ async function createSection<T extends AllPossibleNumbers>({
   });
   if (ocurrencesText) {
     pdf.autoTable({
-      head: [['ATENÇÃO']],
+      head: [[sectionSubtitles.attention]],
       body: [[ocurrencesText.title], [ocurrencesText.data]],
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
       headStyles: {
@@ -609,7 +632,7 @@ async function createSection<T extends AllPossibleNumbers>({
   }
 
   if (!skipEndLine) {
-    pdf.setDrawColor(PALETTE.green);
+    pdf.setDrawColor(PALETTE.purple);
     pdf.setLineWidth(0.7);
     pdf.line(
       START_WIDTH,
@@ -651,6 +674,7 @@ async function createSectionWithMultipleResults<T extends AllPossibleNumbers>({
   results,
   title,
   text,
+  locale,
 }: CreateSectionWithMultipleResultsArgs<T>) {
   const resultsSetArray = Array.from(new Set(results));
 
@@ -668,6 +692,7 @@ async function createSectionWithMultipleResults<T extends AllPossibleNumbers>({
       ocurrences: ocurrencesMap.get(resultsSetArray[i]),
       result: resultsSetArray[i],
       text,
+      locale,
     });
   }
 

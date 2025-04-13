@@ -140,7 +140,7 @@ export async function createPersonalDaysSection({
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 10,
       headStyles: {
         cellPadding: 1,
-        textColor: PALETTE.green,
+        textColor: PALETTE.purple,
         font: 'CenturyGothic',
         fontSize: 14,
         fontStyle: 'normal',
@@ -167,7 +167,7 @@ export async function createPersonalDaysSection({
     });
   }
 
-  pdf.setDrawColor(PALETTE.green);
+  pdf.setDrawColor(PALETTE.purple);
   pdf.setLineWidth(0.7);
   pdf.line(
     START_WIDTH,

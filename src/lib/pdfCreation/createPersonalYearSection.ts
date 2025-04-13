@@ -99,7 +99,7 @@ export async function createPersonalYearSection({
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
       headStyles: {
         cellPadding: 1,
-        textColor: PALETTE.green,
+        textColor: PALETTE.purple,
         font: 'CenturyGothic',
         fontSize: 14,
         fontStyle: 'normal',
@@ -114,7 +114,7 @@ export async function createPersonalYearSection({
       startY: pdf.lastAutoTable.finalY ?? START_HEIGHT,
       headStyles: {
         cellPadding: 1,
-        textColor: PALETTE.green,
+        textColor: PALETTE.purple,
         font: 'CenturyGothic',
         fontSize: 14,
         fontStyle: 'normal',
@@ -142,7 +142,7 @@ export async function createPersonalYearSection({
 
     if (item.orientation) {
       pdf.autoTable({
-        head: [['Orientação:']],
+        head: [[`${personalDatesExtraContent.orientation}:`]],
         startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
         headStyles: {
           cellPadding: 1,
@@ -175,7 +175,7 @@ export async function createPersonalYearSection({
     }
   }
 
-  pdf.setDrawColor(PALETTE.green);
+  pdf.setDrawColor(PALETTE.purple);
   pdf.setLineWidth(0.7);
   pdf.line(
     START_WIDTH,
