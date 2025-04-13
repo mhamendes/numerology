@@ -1,0 +1,51 @@
+{
+  "title": "16 - Personal Year",
+  "description": "For Kabbalistic Numerology, human life unfolds in successive cycles of 9 years. The Personal Year begins on the birthday and ends on the eve of the next birthday, exerting a strong influence on the person's life. Each Personal Year brings a set of specific opportunities and lessons, which, if followed, will make life more prosperous and happy. The sequence of Personal Years below is valid for a lifetime, ending one 9-year Cycle and starting another successively.\n\nFollow below the Numerical Vibrations of each Personal Year.",
+  "items": {
+    "1": {
+      "title": "Personal Year 1 - Planting the Seeds",
+      "data": "This is the year to start new things, the year that sets the style for the entire nine-year cycle. It is the time to take initiative and show courage and determination. To succeed and achieve happiness, the person needs to be independent, creative, confident, selective, and follow their own intuition.",
+      "orientation": "The trap to avoid is the lack of initiative, which could very well result in apathy that will extend throughout the cycle."
+    },
+    "2": {
+      "title": "Personal Year 2 - The Seeds Take Root",
+      "data": "This is the year to act with discretion and be patient, remaining receptive to the ideas of others and staying in the background. It is a very good phase for friendships and relationships. To succeed and achieve happiness, the person needs to be gentle, diplomatic, and cooperative in dealing with others.",
+      "orientation": "The traps to avoid are hypersensitivity and the propensity to get involved in arguments and/or be excessively bold."
+    },
+    "3": {
+      "title": "Personal Year 3 - The First Shoots Appear",
+      "data": "This is a year of good health and intense social life, which, however, may bring emotional tension. It is a good phase for entertainment, travel, personal growth, and cultivating new friendships. Success and happiness result from giving vent to one's own creativity and expressing oneself constructively through words by writing, teaching, acting, or singing.",
+      "orientation": "The traps to avoid are extravagance (which can lead to financial difficulties in year '4') and the loss of opportunities due to the dispersion of energies. The '3' is also a year prone to romances, and married people who succumb to extramarital relationships this year are almost certainly preparing the way for divorce or separation in year '4'."
+    },
+    "4": {
+      "title": "Personal Year 4 - Digging and Weeding",
+      "data": "This is a year of restrictions, hard work, and great expenses. It is the time to build for the future. Success and happiness result from self-discipline, being methodical, and giving concrete form to one's ideas. This is a good phase to deal with properties and real estate.",
+      "orientation": "The trap to avoid is neglecting health; there may be some problem with bones and/or teeth."
+    },
+    "5": {
+      "title": "Personal Year 5 - Buds Form",
+      "data": "This is a year to let oneself be carried away by constantly changing conditions, to live in the present without making many plans for the future, to abandon oneself to one's impulses! It is a fast-paced year, prone to accidents and full of unexpected changes from good to bad, from bad to good. It is a year for entertainment, without thinking about the future. Success and happiness result from being adaptable, seeking to develop one's own personality, and seizing opportunities before they are lost.",
+      "orientation": "The traps to avoid are the dispersion of energies, excessive sexual activities, and the misuse of personal freedom to the detriment of others."
+    },
+    "6": {
+      "title": "Personal Year 6 - Flowering",
+      "data": "This is a year for marriage and domestic responsibilities. It is a phase in which some chronic illness may manifest so that it can be treated. It may also be a year of problems related to travel, such as car defects, lost luggage, and so on. Success and happiness result from selfless dedication to family and community.",
+      "orientation": "The traps to avoid consist of being excessively idealistic or prone to arguments and expecting too much from others."
+    },
+    "7": {
+      "title": "Personal Year 7 - The Plants Bear Fruit",
+      "data": "This is a year for isolation and rest. A year for study and inner improvement. This is a phase of introspection. Success and happiness result from studying the higher meanings of life. Materialistic activities should be avoided. Money will only appear if it is not chased after. The less ambition, the better the results.",
+      "orientation": "The traps to avoid are neglecting health, forcing decisions, being overly critical, and allowing submerged fears and complexes to surface."
+    },
+    "8": {
+      "title": "Personal Year 8 - Harvest Time",
+      "data": "This is a dynamic and materialistic year. Businesses are likely to prosper. There may be great losses or great gains, depending on how the other years of the cycle were handled. It is an excellent phase to buy and sell real estate. It is the time to pay and collect debts. Money may come from unexpected sources. Success and happiness result from the courage to dare great deeds, using common sense, being concerned with money, being organized, practical, and efficient.",
+      "orientation": "The traps to avoid are being overly emotional and sentimental."
+    },
+    "9": {
+      "title": "Personal Year 9 - Time to Clear the Land After the Harvest and Prepare it for New Planting",
+      "data": "This is a year of cleaning between the end of one cycle and the beginning of the next. It is the time to get rid of everything that is unnecessary or worn out, especially people who no longer have a place in your life. It is a good phase for writing, acting, traveling, and dedicating oneself to metaphysical studies. There will be some kind of loss, a relationship may end. Success and happiness result from compassion, humanitarian activities, emotional detachment, and letting go of whatever begins to leave your life.",
+      "orientation": "The traps to avoid are being overly jealous and/or possessive."
+    }
+  }
+}

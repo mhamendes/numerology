@@ -1,0 +1,50 @@
+{
+  "title": "20 - Colori Favoriti",
+  "description": "Sono colori che vibrano bene con il tuo nome, non significa che devi necessariamente usarli in tutti gli aspetti, ma solo che sono colori con buone vibrazioni per te. Colori: Bianco: simboleggia luce, gioia, potere di Dio e purezza. Giallo: simboleggia amore divino, comprensione e carità. Blu: simboleggia eternità, saggezza e volontà. Verde: simboleggia vita, crescita e speranza. Viola: simboleggia dignità e sapere. Rosso: simboleggia emozioni. Nero: simboleggia tristezza e oscurità",
+  "items": {
+    "1": {
+      "title": "Espressione 1",
+      "data": "tutte le tonalità di giallo e arancione, marrone, dorato, verde, crema e bianco."
+    },
+    "2": {
+      "title": "Espressione 2",
+      "data": "tutte le tonalità di verde, crema, bianco e grigio."
+    },
+    "3": {
+      "title": "Espressione 3",
+      "data": "viola, vino, porpora e rosso."
+    },
+    "4": {
+      "title": "Espressione 4",
+      "data": "blu, grigio, porpora e oro."
+    },
+    "5": {
+      "title": "Espressione 5",
+      "data": "tutti i colori chiari, grigio e argentato."
+    },
+    "6": {
+      "title": "Espressione 6",
+      "data": "rosa, blu e verde."
+    },
+    "7": {
+      "title": "Espressione 7",
+      "data": "verde, giallo, bianco, grigio e azzurro."
+    },
+    "8": {
+      "title": "Espressione 8",
+      "data": "porpora, grigio, blu, nero e marrone."
+    },
+    "9": {
+      "title": "Espressione 9",
+      "data": "rosso, rosa, corallo e vino."
+    },
+    "11": {
+      "title": "Espressione 11",
+      "data": "bianco, viola e colori chiari."
+    },
+    "22": {
+      "title": "Espressione 22",
+      "data": "viola, bianco e colori chiari."
+    }
+  }
+}

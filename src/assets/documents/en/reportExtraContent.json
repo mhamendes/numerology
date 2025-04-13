@@ -1,0 +1,25 @@
+{
+  "reportTitle": "Numerology Report",
+  "birthday": "Date of Birth: {{birthday}}",
+  "head1": [["Motivation", "Impression", "Expression", "Birthday"]],
+  "head2": [["Psychic Number", "Destiny", "Mission", "Hidden Talent"]],
+  "head3": [
+    [
+      "Karmic Lessons",
+      "Karmic Debts",
+      "Hidden Tendencies",
+      "Subconscious Response"
+    ]
+  ],
+  "head4": [["Life Cycles", "Challenges", "Decisive Moments", "Personal Year"]],
+  "head4FirstRow": "1st - {{firstEnergyNumber}}\n2nd - {{secondEnergyNumber}}\n3rd - {{thirdEnergyNumber}}",
+  "head4SecondRow": "1st - {{firstNumber}}\n2nd - {{secondNumber}}\nMain - {{mainNumber}}",
+  "head4ThirdRow": "1st - {{firstDecisiveMomentNumber}}\n2nd - {{secondDecisiveMomentNumber}}\n3rd - {{thirdDecisiveMomentNumber}}\n4th - {{fourthDecisiveMomentNumber}}",
+  "ascensionDegree": "Ascension Degree",
+  "favorableNumbers": "Favorable Numbers",
+  "favorableColors": "Favorable Colors",
+  "favorableColorsDescription": "Colors that resonate well with your name: {{favorableColors}}",
+  "favorableDays": "Favorable Days",
+  "more": "More",
+  "moreDescription": "Personal Month; Personal Day; Compatible Numbers; Marital Vibration; Vocational Study; Inverted Life Triangle and Its Arcanes"
+}

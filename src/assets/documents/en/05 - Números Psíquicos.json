@@ -1,0 +1,42 @@
+{
+  "title": "05 - Psychic Numbers",
+  "description": "Unlike the birth day, which has its own characteristics, the psychic number shows us certain relationships between the days of the month that have in common the same number when reduced to a single digit. Thus, people born on the 3rd, 12th, 21st, and 30th, for example, have in common the psychic number 3. This number highlights the psychic qualities that translate our desires, ambitions, and reflect our inner sensations and how they influence our personal choices, friendships, profession, sex, desires, and even marriage. This number represents what we are at our core.",
+  "items": {
+    "1": {
+      "title": "Psychic Number: 1",
+      "data": "People with psychic number 1 are those born on the 1st, 10th, 19th, and 28th. They are original and transparent in their actions. They are independent, generous, pioneers. They have a striking personality. They are leaders. They do not change their minds easily, especially if they think they are right. They are bold, firm in their purposes. They like work and are very efficient. They are generally lucky people. Common inner patterns belonging to this group: leadership, independence, originality, pioneering, and courage."
+    },
+    "2": {
+      "title": "Psychic Number: 2",
+      "data": "People with psychic number 2 are those born on the 2nd, 11th, 20th, and 29th. They are peaceful, sentimental people. They have strong intuition and a cooperative instinct. They are romantic, diplomatic. With artistic sensitivity. They use their intuition and diplomacy to resolve conflicts and always seek unity among people. Common inner patterns belonging to this group: cooperation, unity, diplomacy, sensitivity, and intuition."
+    },
+    "3": {
+      "title": "Psychic Number: 3",
+      "data": "People with psychic number 3 are those born on the 3rd, 12th, 21st, and 30th. They are creative, independent people. They are popular, communicative, sociable. They have artistic gifts and are spontaneous. They are cheerful, responsible, ambitious, and aware of their actions. They do not spare efforts to achieve their goals. Common inner patterns belonging to this group: communication, creation, joy, popularity, and artistic nature."
+    },
+    "4": {
+      "title": "Psychic Number: 4",
+      "data": "People with psychic number 4 are those born on the 4th, 13th, 22nd, and 31st. They are determined, persistent, serious, obstinate people. They are critical to the point of being considered too harsh. They have few but good friendships. They are generally also stubborn and skeptical. They do not tolerate mediocrity. Common inner patterns belonging to this group: work, determination, rigor, and persistence."
+    },
+    "5": {
+      "title": "Psychic Number: 5",
+      "data": "People with psychic number 5 are those born on the 5th, 14th, and 23rd. They have an adventurous spirit. They are dynamic, restless, like freedom and movement. They are curious and versatile. They make friends easily. They are intuitive and adaptable people. They are quick in decision-making and do not like to make long-term plans. Common inner patterns belonging to this group: freedom, versatility, progress, and curiosity."
+    },
+    "6": {
+      "title": "Psychic Number: 6",
+      "data": "People with psychic number 6 are those born on the 6th, 15th, and 24th. They are sensitive and loving, with good taste for the arts, travel, good gastronomy, and everything life has to offer. They value family ties greatly. They are averse to turmoil and disorder. They attract people due to their intelligence and for being sociable and good listeners. Common inner patterns belonging to this group: affection, harmony, sensitivity, and patience."
+    },
+    "7": {
+      "title": "Psychic Number: 7",
+      "data": "People with psychic number 7 are those born on the 7th, 16th, and 25th. They are perfectionists who persist until they achieve success. They like knowledge and analysis. They always see the good side of things. They are introspective, like hidden knowledge, are inspired, and live peacefully with everyone. They are people who make a difference and are a source of inspiration for all. Common inner patterns belonging to this group: introspection, knowledge, and interiority."
+    },
+    "8": {
+      "title": "Psychic Number: 8",
+      "data": "People with psychic number 8 are those born on the 8th, 17th, and 26th. They are rational, determined, and practical people. They are introverted, with a sense of justice, self-assured, and reserved. They are also sincere and have a striking presence. They are generally materialistic, and their determination ensures financial security and social well-being. Success is their greatest goal, as they always think big. Common inner patterns belonging to this group: rationality, justice, practical spirit, determination, and planning."
+    },
+    "9": {
+      "title": "Psychic Number: 9",
+      "data": "People with psychic number 9 are those born on the 9th, 18th, and 27th. They are ambitious and have the willpower to achieve their goals. They are also very sensitive and generous, although they do not show it. They are restless and generally achieve success in maturity. They tend to be inflexible, which can lead to resentments. They are intuitive and giving people, with a sense of universality. Common inner patterns belonging to this group: generosity, universality, sensitivity, intuition, and giving."
+    }
+  }
+}

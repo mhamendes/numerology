@@ -1,0 +1,72 @@
+{
+  "title": "06 - Destino",
+  "description": "Uno dei numeri più importanti della Mappa di Nascita. Descrive influenze sulla personalità, ostacoli e opportunità che si incontreranno nel corso della vita. Indica anche alcune alternative e il risultato probabile di esse.",
+  "items": {
+    "1": {
+      "title": "Numero 1 - Leadership",
+      "positive": "pionierismo, iniziativa, leadership, inventiva, capacità di comando, spirito esecutivo",
+      "negative": "se non mi sviluppo, potrei sviluppare una forte tendenza all'arroganza, egoismo, prepotenza, eccesso di entusiasmo e dominazione, a volte pensando che il successo del gruppo dipenda esclusivamente da me. Questo tipo di atteggiamento può rendere difficile la convivenza con amici e colleghi di lavoro, oltre a complicare il rapporto di coppia, poiché non è affatto facile convivere con questo tipo di persona. Uno degli ostacoli alla mia realizzazione personale è la tendenza a sovraccaricare il sistema nervoso con un atteggiamento critico e preoccupato. Questo fatto può isolarmi dagli altri, quindi devo avere fiducia in me stesso e nelle mie capacità e sfruttare al massimo le mie idee originali e inventive.",
+      "orientation": "Vado dove posso avere brillantezza, successo e riconoscimento. Sarò il migliore possibile nel mio campo, mostrandomi sempre felice, allegro, con disinvoltura e molta fiducia. Poiché non mi piace ricevere ordini, dovrei lavorare in proprio o in una posizione di comando. Essendo una persona individualista e naturalmente leader, mi preoccuperò di essere qualcuno di grande integrità, onestà e pionierismo."
+    },
+    "2": {
+      "title": "Numero 2 - Amore e Ordine",
+      "positive": "capace di unire idee e fatti per realizzare progetti, capacità di comprendere le idee degli altri, diplomazia, leale con le amicizie, eccellente familiare o collega di lavoro, ama proteggere.",
+      "negative": "devo fare attenzione a non sviluppare tendenze all'accomodamento e ad aspettare che gli altri prendano l'iniziativa, rimanendo in secondo piano e apparendo poco. Poiché non sono una persona pioniera o individualista, devo fare attenzione a non lasciare che il tempo passi e perdere progetti che sono importanti per me. Devo anche fare attenzione a non sviluppare autocommiserazione o pigrizia.",
+      "orientation": "Vado dove posso coltivare pazienza, cooperazione, tatto, lealtà e le mie capacità. Il mio principale attributo è l'unione e devo imparare a unire tutti coloro che desiderano una partnership con me."
+    },
+    "3": {
+      "title": "Numero 3 - Comunicazione e Sociabilità",
+      "positive": "sociabilità, allegria, versatilità, talento, dono artistico, creatività.",
+      "negative": "devo fare attenzione a non sviluppare la tendenza ad annoiarmi facilmente, diventare una persona eccessivamente vanitosa, impaziente, stravagante, esagerata, spendacciona, con una certa irresponsabilità nel rispettare gli orari e disprezzare le persone che considero di livello inferiore al mio. Quando queste caratteristiche si manifestano, posso diventare completamente insociabile, una persona dispersa con una grande tendenza alla noia, all'isolamento e alle crisi nervose.",
+      "orientation": "Vado dove posso usare il dono della parola, poiché avendo senso artistico e fascino, con buon umore e talento sociale, avrò il mio asso nella comunicazione. La creatività e l'emozione saranno le radici del mio successo."
+    },
+    "4": {
+      "title": "Numero 4 - Lavoro Duro e Ordine",
+      "positive": "conquista, lavoro duro, instancabile, solidità, dedizione, senso della visione, sicurezza, stabilità.",
+      "negative": "devo fare attenzione a non diventare una persona troppo strutturata, conservatrice e inflessibile. Vivere in gruppo è estremamente difficile e quasi sempre rifiuto il nuovo, poiché questa incertezza mi trasmette insicurezza e possibilità di perdite. Mi impegnerò a non essere troppo perfezionista e a non esigere troppo dagli altri, siano essi familiari, amici o subordinati, poiché questo potrebbe farmi apparire a volte come una persona noiosa e incompresa. Devo evitare con tutte le forze argomenti fraudolenti, cospirazioni, orgoglio eccessivo o piani astuti e malvagi per arricchirmi rapidamente a spese della sofferenza altrui.",
+      "orientation": "Andrò dove potrò applicare responsabilità morale, giustizia e ponderazione. Ho bisogno di persone intelligenti intorno a me per condividere i miei interessi."
+    },
+    "5": {
+      "title": "Numero 5 - Versatilità e Libertà",
+      "positive": "viaggiatore, desiderio di cambiamenti, versatile, amante del nuovo, allegro, comunicazione, discernimento, mente attiva.",
+      "negative": "devo fare attenzione a non comprare più cose di quante ne abbia bisogno o possa permettermi, portandomi a problemi finanziari nel corso della vita. Sul lato sentimentale, devo fare attenzione a non coinvolgermi in situazioni affettive da cui difficilmente riuscirò a liberarmi poiché ho la tendenza a desiderare relazioni nuove e intriganti. Sono una persona estroversa con una visione ampia di tutto e di tutti, ma incostante nei miei obiettivi, portandomi ad avere molti inizi e pochi fini.",
+      "orientation": "Vado dove posso essere versatile, nel senso di cambiare, alterare e trasformare le cose. Andrò sempre alla ricerca di ciò che è nuovo, moderno e diverso. Imparerò e conoscerò tutto ciò che posso e sarò in ambienti dove posso esprimere la mia allegria, comunicazione, intelligenza e ricettività verso le persone. Eleverò anche il mio carattere per lavorare con qualcosa di interesse umanitario. Quando troverò molta disordine, lo cambierò con le mie alte capacità. Andrò dove posso esercitare il mio potere cerebrale in compagnia di persone intelligenti."
+    },
+    "6": {
+      "title": "Numero 6 - Amore Universale",
+      "positive": "docile, educazione, avversione ai litigi, calma, tranquillità, armonia, compassione, perfezionista, pace, gentilezza, amante delle piante e degli animali.",
+      "negative": "devo fare attenzione a non diventare troppo sentimentale, vulnerabile, sempre fidandomi delle apparenze senza analizzare i fatti freddamente. Mi impegnerò a evitare la tendenza all'accomodamento e alla mancanza di interesse. Essendo una persona profonda, ho bisogno di tranquillità per apparire in pace con me stesso. Ho costantemente bisogno di incentivi, altrimenti potrei sviluppare la tendenza a lasciare tutto a metà. Nel tentativo di mantenere tutto calmo e tranquillo, a volte potrei finire per interferire in modo non appropriato, poiché non sempre la docilità è la migliore soluzione per certe situazioni, e questo potrebbe disturbarmi, portandomi a ritirarmi e ad accomodarmi, fino a quando un altro fatto o circostanza mi incentiveranno.",
+      "orientation": "Vado dove avrò armonia, pace, amore e compassione. Ho un destino di leadership e responsabilità e aggiusterò le situazioni disarmoniche, difendendo le mie idee. Sarò una persona determinata, con pazienza e perseveranza e poiché conquisto amicizie e simpatie con grande facilità, posso avere successo in lavori con il pubblico."
+    },
+    "7": {
+      "title": "Numero 7 - Fede, Saggezza e Intuizione",
+      "positive": "efficiente, intuizione, perfezionista, razionale, buona riflessione, concentrazione, persona riservata, amorevolezza, comprensione.",
+      "negative": "devo fare attenzione a non sviluppare uno spirito dominante, critico, esigente, perfezionista, angosciato, impaziente, orgoglioso e apparentemente scettico. Sebbene io sia una persona pragmatica per natura, a volte posso avere idee poco convenzionali e devo fare attenzione a non usare questo come scusa per essere contrario solo per rendermi difficile. Devo imparare a valorizzare le persone per quello che sono, cioè rispettare il fatto che gli altri sono il frutto di ciò che hanno assorbito dalla vita e dalla convivenza con gli altri.",
+      "orientation": "Vado dove posso sviluppare i miei poteri mentali, studiare molto, meditare e cercare il significato ultimo della vita. Poiché ho un'intelligenza sviluppata e abilità di leadership, avrò molte opportunità di successo nella vita. Devo sviluppare spiritualmente il pianeta con conoscenze di qualità e grande autoconsapevolezza che sono qualità mie."
+    },
+    "8": {
+      "title": "Numero 8 - Affari e Giustizia",
+      "positive": "pianificazione, organizzazione, mondo degli affari, guadagno materiale e finanziario, intelligenza, individualità, personalità esigente, lealtà, ambizione, gentilezza.",
+      "negative": "devo fare attenzione a non concentrarmi solo sul guadagno di denaro e sulle conquiste materiali, per non finire per dimenticare la famiglia, il lato sentimentale, sociale e soprattutto me stesso. A volte posso avere una certa difficoltà a dimostrare affetto e amore, apparendo freddo nei rapporti in generale. In realtà, sono una persona altamente emotiva, che ha bisogno di aiuto e comprensione da parte delle persone più vicine.",
+      "orientation": "Andrò nel mondo degli affari, dove posso coltivare l'efficienza nell'arte di negoziare e comprendere le leggi che governano l'accumulo, il potere e l'uso del denaro. Sfrutterò al massimo la mia intelligenza rapida, la necessità di espressione e il lato socievole della mia natura. Presterò attenzione alle persone e svilupperò le mie capacità esecutive."
+    },
+    "9": {
+      "title": "Numero 9 - Umanitarismo e Saggezza",
+      "positive": "universalità, spiritualità, fascino, divertimento, amore, benevolenza, sensibilità emotiva, potere psichico",
+      "negative": "devo fare attenzione alla tendenza a vivere per gli altri e a volte finire per perdere eccellenti opportunità, soprattutto in ambito professionale. Sebbene io sia una persona idealista e generosa, in alcune situazioni posso essere riservato e nascondere sentimenti profondi che possono trasformarsi in risentimenti. Devo controllarmi per non frustrarmi facilmente, diventare una persona poco pratica, in un certo senso egoista, con complesso di inferiorità, paure, preoccupazione eccessiva e tendenza all'isolamento.",
+      "orientation": "Vado dove posso servire, evolvere e divertirmi. Ho una grande capacità di acquisire conoscenze e la mia direzione sarà aiutare l'umanità. Amerò il prossimo, mi libererò di qualsiasi pregiudizio e sarò una persona generosa e comprensiva con tutti. Beneficerò di viaggi internazionali e dell'interazione con persone di diversi ambienti sociali."
+    },
+    "11": {
+      "title": "Numero 11 - Spiritualità e Intuizione",
+      "positive": "intuizione, sensibilità, visione, energia, potenziale mentale, versatile, immaginazione, idealismo, ispirazione, spiritualità, abilità di guarigione, umanitarismo.",
+      "negative": "devo fare attenzione a non cadere nella tendenza ai vizi, mancanza di obiettivi, complesso di superiorità, ferirmi facilmente, essere ipersensibile, emotività eccessiva, in un certo senso egoista e quando le cose non vanno come voglio, devo fare attenzione a non diventare disonesto nella ricerca di ottenere ciò che voglio. Essendo altamente sensibile, percepisco con maggiore intensità le imperfezioni del mondo e delle persone. Se non so come affrontare questa situazione, potrei finire per accumulare insoddisfazioni e sofferenze. Devo usare queste insoddisfazioni e sofferenze per migliorare sempre i miei concetti su tutto e tutti.",
+      "orientation": "Devo andare in qualsiasi area dove posso aiutare a migliorare il pianeta, i miei simili e la mia stessa vita. Avrò bisogno di libertà per agire dove userò il mio pensiero immaginativo e la mia praticità per ottenere risultati straordinari. Sono una persona di ispirazione, vedo facilmente la realtà attuale e i suoi sviluppi e devo usare compostezza e perseveranza per il mio successo. Cercherò la spiritualità, l'umanitarismo e le mie abilità psichiche."
+    },
+    "22": {
+      "title": "Numero 22 - Contributo e Realizzazione",
+      "positive": "altruismo, saggezza, praticità, socievolezza, spiritualità, onestà, leadership, carisma, comprensione profonda delle persone, molti amici, diplomazia.",
+      "negative": "devo fare attenzione a non cadere nella tendenza all'arroganza, orgoglio, nervosismo, pigrizia, egoismo, autopromozione, tradimento e a sminuire i miei simili. Devo controllarmi, poiché nonostante sia una persona generosa emotivamente e materialmente, a volte posso radicalizzare, lasciandomi trasportare da una vita di lusso e glamour.",
+      "orientation": "Vado dove posso dedicarmi altruisticamente all'umanità. Userò la mia saggezza mentale o spirituale per vedere il profondo e l'invisibile. Lavorerò con onestà e leadership proteggendo sempre le persone. Userò giustizia e cooperazione nella mia vita quotidiana per penetrare nei problemi fino alle radici. Userò tutti i miei attributi per esercitare il mio ruolo di leader."
+    }
+  }
+}

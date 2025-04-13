@@ -1,0 +1,402 @@
+{
+  "title": "25 - Arcanas",
+  "description": "Below is the description of each of your Arcanas.",
+  "items": {
+    "1": {
+      "title": "Arcana 1 - THE MAGICIAN",
+      "data": "Points to the gifts and creative potential that have not yet manifested. It may appear as a premonition, an intuition, a sudden burst of energy regarding new opportunities. Indicates a moment of clarity and identification of unexplored possibilities. The Magician indicates that now the journey will be possible, and that he is aware of his real possibilities and his capacity, even if undeveloped. Attention should be paid to intuition and premonitions, as they may reveal new opportunities that may arise unexpectedly. Represents conscious mental activity, conviction and direction and readiness; intelligence materialized by will."
+    },
+    "2": {
+      "title": "Arcana 2 - THE HIGH PRIESTESS",
+      "data": "Indicates strength and intuition and suggests an encounter with the inner world. The individual may be led to this world without any explanation through their interest in occult things, esotericism, or perhaps through the effects of a disturbing dream. In short, by something that somehow tells them that there are higher forces at work in people's lives. Denotes perception of one's own spiritual needs and religious feeling. Represents intuitive mental activity; heightened sensitivity, wisdom and mystery, future plans, studies, silence and waiting."
+    },
+    "3": {
+      "title": "Arcana 3 - THE EMPRESS",
+      "data": "Means creativity, productivity, motherhood, abundance, good harvests, success in a safe and danger-free environment. Fertility both mental and physical. Indicates a phase of life more connected to earthly things. A marriage, or even the birth of a child may be about to happen. The Empress also shows success in business and enterprises, if the person is firm and upright in thoughts and actions. Represents the power of imagination, creative visualization, healthy emotions and love; the materialization of desire; communication, innovation, fertility, expansion and growth."
+    },
+    "4": {
+      "title": "Arcana 4 - THE EMPEROR",
+      "data": "Means leadership, mental activity, domination, mastery, fatherhood. Dictatorship; passion, but always controlled by intelligence. It is majesty and power. Shows manifestation of authority or need to consult an authority or hierarchical superior. Confrontation with the paternal principle, both in its positive and negative aspects. Represents power and authority, the faculty of reason, logic and inductive reasoning; activity, strength and power; structured and logical reality, discipline, longing for stability and seriousness; secure plans."
+    },
+    "5": {
+      "title": "Arcana 5 - THE HIEROPHANT",
+      "data": "Means orthodoxy, attachment to external forms, to the conventional, to creed and ritual. Traditionalism; need to follow socially accepted norms; disposition for duty, conscience, generosity, forgiveness, compassion and the search for answers of a philosophical order. The Hierophant may appear in the form of a psychotherapist, a counselor, a master or spiritual mentor to whom we turn for help and guidance. It may be indicating that there is a need to start seeking some answers of a philosophical order. This questioning can translate into the in-depth study of some philosophy, or a religious system, or belief, or even in the form of a deep commitment to the meaning of life. Represents the rational understanding of things perceived intuitively; the exchange of experiences to learn and teach, changes, responsibility and morality."
+    },
+    "6": {
+      "title": "Arcana 6 - THE LOVERS",
+      "data": "Means choice, election, temptation, attraction. The struggle between the sacred and the profane in love relationships. Harmony of the inner and outer aspects of life; pure love in its highest expression; altruism. In the divine world it is the science of good and evil; in the intellectual world it is the balance of necessity and freedom; in the physical world it is the antagonism of natural forces, the chaining of causes to effects. Indicates the need for choices, almost always on the emotional level. It can also indicate the need to stabilize emotions. Represents selective choices, the discriminative faculties of the mind; the search for emotional balance and stability; unions, relationships and happy situations."
+    },
+    "7": {
+      "title": "Arcana 7 - THE CHARIOT",
+      "data": "Means triumph, success, victory. Control over the forces of nature. Recovery of health, victory over economic hardships or over enemies of any kind. It is the arcana that represents the achievement of something great; conflict and struggle which, in turn, result in growth and strengthening of personality. It can also mean pleasant and comfortable trips. Represents power and will; triumph, advancement and progress; new experiences, confidence, novelties, agility."
+    },
+    "8": {
+      "title": "Arcana 8 - JUSTICE",
+      "data": "Means balanced mind, favorable judicial resolution; fair reward. Personality desirous of getting rid of the superfluous, of mistaken or erroneous ideas, of useless knowledge; need for balanced thinking and impartial decision making. Represents the law of cause and effect, the search for personal and universal balance; equality, equanimity and justice; reason, objectivity, realism, sincerity and rewards."
+    },
+    "9": {
+      "title": "Arcana 9 - THE HERMIT",
+      "data": "Means enlightenment, silent and prudent advice; discretion; wisdom that comes from above. A period of solitude, of voluntary exile from worldly things, from the hustle and bustle of life, in order to obtain patience and wisdom. This moment represents the great opportunity to raise and strengthen the personality if one is willing to wait. Represents the wisdom and the necessary withdrawal to achieve it; introspection and inner search, prudence and peace of mind; also resolutions and endings."
+    },
+    "10": {
+      "title": "Arcana 10 - THE WHEEL OF FORTUNE",
+      "data": "Means success, unexpected stroke of luck; change for the better. Favorable evolution, according to the laws of chance; foretells some sudden change in life, which can be either good or bad. In any case, the turning of the wheel always brings growth and inaugurates a new phase of life. Represents wealth, favorable exchanges and expansion; changes and good fortune; warns about time and instability, lack of plans and the law of return; indicates that it is time to learn to grow."
+    },
+    "11": {
+      "title": "Arcana 11 - STRENGTH",
+      "data": "Means strength of character; spiritual power overcoming material power and the impulsive forces of physical and emotional passions. Love triumphing over hatred. Victory of the higher nature over worldly and carnal desires; a situation where collision with the inner lion is inevitable, where well-managed anger and all emotions are highly beneficial. Courage, strength and self-discipline are needed to master the situation. Represents the energy that acts transforming matter; the strength of the mind and the mastery over the environment."
+    },
+    "12": {
+      "title": "Arcana 12 - THE HANGED MAN",
+      "data": "Means renunciation or sacrifice for higher reasons; development of psychic faculties; mastery of material temptation; transformation of personality through renunciation or sacrifice; need for voluntary sacrifice in order to achieve something much more valuable. Represents selflessness and voluntary sacrifice for a just cause."
+    },
+    "13": {
+      "title": "Arcana 13 - DEATH",
+      "data": "Means transformation, change and destruction followed by renewal; death of a part of oneself, for the birth of new ideas and new opportunities; an inevitable transformation, a rebirth of the inner being, as long as one can let go of the part of us that we are no longer. Whether this experience will be painful or not will depend on our ability to accept and recognize the need for closures. Represents the deep transformations that life demands of us; renewal and radical changes."
+    },
+    "14": {
+      "title": "Arcana 14 - TEMPERANCE",
+      "data": "Means moderation, adaptation, understanding, cooperation and working in harmony with others; good management; what you imagine will happen; you will achieve successful combinations; inner peace; need for a redirection in the flow of feelings and relationships. Represents the trials to be overcome and the optimism and confidence needed for this; adaptation."
+    },
+    "15": {
+      "title": "Arcana 15 - THE DEVIL",
+      "data": "Means illness, catastrophes, excesses, unforeseen events, disasters, sometimes voluntary chaining; black magic; discontent, depression; enslavement to matter; sense of sin and guilt; alienation from understanding; shyness and inability to make decisions; need to confront everything that is hidden and shameful at the base of the personality. Represents the idea of evil, limitation, fear, ignorance that generates suffering; bad influences, dangerous and evil forces, attachment to illusions and passions, emotional blindness and sex for pure physical pleasure."
+    },
+    "16": {
+      "title": "Arcana 16 - THE TOWER",
+      "data": "Means danger, conflict, catastrophe; destruction of obsolete structures and old ideas; false accusations; oppression; sudden change in the way of living. Selfish ambition is about to create a crack. The Tower indicates the breaking or rupture of existing forms and structures and, like Death and the Devil, depends greatly on personal attitude towards difficulties and suffering in a separation. Represents the moment when a way of being, thinking and acting is modified by an unexpected radical effect; cataclysms, catastrophes and accidents."
+    },
+    "17": {
+      "title": "Arcana 17 - THE STAR",
+      "data": "Means inspiration, vision, hope, idealism; selfless help; developing spiritual gifts; great love in evidence; hope and faith in the midst of tribulations; rebirth of joy and love; influence, ascendancy, creativity, contact with someone who will bring inspiration. Represents the idea or concept of hope; open paths, restart, action and favorable projects."
+    },
+    "18": {
+      "title": "Arcana 18 - THE MOON",
+      "data": "Means inspiration, imagination, intuition; development of latent psychic faculties; astral travel; the subconscious world of dreams; darkness; a period of confusion, fluctuation and uncertainty. Represents the mysterious and hidden unconscious; hidden enemies, witchcraft, darkness, fear, intrigues and gossip."
+    },
+    "19": {
+      "title": "Arcana 19 - THE SUN",
+      "data": "Means peace, love and happiness; a well-lived life; a job well done; awakening and renewal; favorable legal matters; joy and prosperity; accumulation on the spiritual plane; a period of clarity, dynamism and renewed confidence. Represents the light present in every human being, their wisdom, generosity, confidence and character; health and well-being."
+    },
+    "20": {
+      "title": "Arcana 20 - JUDGEMENT",
+      "data": "Means rebirth of a new life; that wonderful things will happen; you will be able to glimpse what the future holds for you; transformation; you will see everything in a new light; breaking with the conventional; proposes a period of rewards for previous efforts. Represents the judgment or synthesis that allows the understanding of the final reality and the transcendence of the mind; taking advantage of past experiences, being reborn to a new life; exchange of ideas, popularity, fame."
+    },
+    "21": {
+      "title": "Arcana 21 - THE WORLD",
+      "data": "Means freedom to go in any direction you desire; completion of a job well done; triumph in anything you undertake; a period of achievements and totalization; the moment of success, the positive completion of a process or issue; the moment of reaching a goal, of achieving an ideal for which we have fought for a long time. Represents paranormal powers, domination over physical laws and matter; success, travel, fulfillment."
+    },
+    "22": {
+      "title": "Arcana 22 - THE FOOL",
+      "data": "Means important decision; finding oneself faced with a choice that must be decided with care, but also with courage and, above all, attending to intuition and inner impulses; announces the advent of a new chapter in life. There is risk, but there is also the desire to leap into the unknown. Represents superhuman intelligences, spontaneity, the spiritual acting in the material, the risk."
+    },
+    "23": {
+      "title": "Arcana 23 - King of Wands",
+      "data": "An aspect of the personality that will generate new ideas appears; qualities of leadership, kindness and honesty. It is the symbol of power acquired by merit and work, being an emblem of protection of well-placed people. Represents self-confidence, motivation, entrepreneurship, wisdom and conviction; respectability and friendships. Risk: inflexibility and intolerance."
+    },
+    "24": {
+      "title": "Arcana 24 - Queen of Wands",
+      "data": "It is a symbol of elevated position; demonstrates the strength of imagination, constancy and objectivity; moment to offer and receive comfort and protection. Represents the desired action, the creative plan; the attractive and intelligent feminine; growth, activity, firmness and love for life. Risk: vanity and pride."
+    },
+    "25": {
+      "title": "Arcana 25 - Knight of Wands",
+      "data": "Means departure, changes, escape, dissension, separation, abandonment, beginning or end of an important situation; the symbol of high secondary jobs, the struggle to conquer a position, the power acquired by struggles; moment to develop the exuberant, adventurous and volatile qualities contained within oneself. Represents the necessary action in the formative plan; change of residence, city, situation and way of life; enthusiasm. Risk: tension, euphoria, exhibitionism, impatience."
+    },
+    "26": {
+      "title": "Arcana 26 - Page of Wands",
+      "data": "Means curiosity, enthusiasm; it is time to identify the creative flashes within oneself and be bold. This moment almost always manifests itself in the form of a vague feeling of dissatisfaction, but which does not justify a radical change. Represents immediate action in the material plane; arrival of good news, opportunity, enthusiasm and adventure, as well as the possibility of travel. Risk: impulsiveness, inexperience leading to bad results."
+    },
+    "27": {
+      "title": "Arcana 27 - Ten of Wands",
+      "data": "Represents oppressive situations at their limit; lack of perspective, heavy burden, excess responsibilities, overload, tensions and worries, misunderstandings, betrayals, falsehoods and hypocrisies; need to change the energy; end of a phase."
+    },
+    "28": {
+      "title": "Arcana 28 - Nine of Wands",
+      "data": "Scientific or mysterious enterprises, whose success depends on much prudence and discretion; dangerous journeys; surprises; delay, suspension, postponement, delay, obstacle, setback. Represents the power of information and culture, physical or psychic strength; special knowledge; defensive attitude, fear of getting hurt and suffering that leads to maintaining a situation that no longer works; distrust, refusal of novelties that leads to closing in on oneself. Persistence and vigilance. Risk of becoming a 'martyr'."
+    },
+    "29": {
+      "title": "Arcana 29 - Eight of Wands",
+      "data": "Means speed and fluidity of creative impulses; that the success of your goal is within reach and near; a period of action after much waiting and struggle; new ideas that will bring benefits; countryside, agriculture, real estate, entertainment, joy, peace, tranquility; travel for money and big business, certain happiness; need to balance the budget. Represents the perception of other people's feelings; the unexpected and the speed of action; unexpected news."
+    },
+    "30": {
+      "title": "Arcana 30 - Seven of Wands",
+      "data": "Means bravery and a lot of pressure at work or in other aspects of life. Represents courage and pleasure in risks and dangerous activities that result in stimulation; risky activities; defense of interest through intransigence, threats and competition. Balance the defensive force in order to achieve victories in your points of view. Risk of focusing only on the defensive."
+    },
+    "31": {
+      "title": "Arcana 31 - Six of Wands",
+      "data": "Success in enterprises depends on will, firmness and perseverance. Represents compensated efforts, victory after struggle; recognition, achievements and success. Triumph through perseverance and example. Risk of becoming proud."
+    },
+    "32": {
+      "title": "Arcana 32 - Five of Wands",
+      "data": "Foretells a combination of circumstances favorable to the success of enterprises, if the consultant does not exceed the goal they propose; opposing energies creating agitation and restlessness; struggle against the dragon of material reality to achieve goals. Represents struggle for life and power, competition, respect for others; challenge testing skills. Contests, disputes, clashes, sportsmanship and clash of ideas. Risk of instability in impulses."
+    },
+    "33": {
+      "title": "Arcana 33 - Four of Wands",
+      "data": "Means a period of reward for efforts made; realization of expected success; serious and stable enterprises; association, alliance, meeting, contract, success, advancement; moment to enjoy the results of work. Represents the end of a job well done and the satisfaction provided, pleasant environments and sensations; good communication, joy, sociability. Stability and achievement; the value of small achievements. Risk of despising the value of small achievements."
+    },
+    "34": {
+      "title": "Arcana 34 - Three of Wands",
+      "data": "Denotes beginning of success in enterprises, happy innovations, spirit of invention; may receive help from someone you trust; firm foundations and businesses tend to prosper. Represents the union that creates strength; creativity and fertile associations, long-range vision; personal ethics. The virtue lies in recognizing what is necessary to move forward."
+    },
+    "35": {
+      "title": "Arcana 35 - Two of Wands",
+      "data": "Means balance, or imbalance, of impulses; great capacity and intuition; formulation of a new project, goal or idea; the future looks bright, but holds its secrets and mysteries. Represents the power that manifests as cooperation and help; duality that manifests as cooperation and assistance, but which brings the component of indecision, apathy; divide to multiply. Risk of becoming arrogant."
+    },
+    "36": {
+      "title": "Arcana 36 - Ace of Wands",
+      "data": "Represents the creative force driving new ideas, inspiration, determination, and courage; new horizons and the willingness to take risks; the early stages of a new venture or the birth of something or a child. Risk of inflexibility."
+    },
+    "37": {
+      "title": "Arcana 37 - King of Cups",
+      "data": "Emotional control. It is time to experience an ambivalent aspect of one's own personality, that is, the advisor, the listener, the one who can heal others with their words and affection. Represents the archetypal plane of emotions and feelings; the strength of spiritual feelings in the soul; the flow of feelings; male sensitivity, honesty, and generosity; self-help. Risk of male dishonesty and hypocrisy."
+    },
+    "38": {
+      "title": "Arcana 38 - Queen of Cups",
+      "data": "Emotional maturity. It is time to meet the deep, unknown, and paradoxical world of feelings that one carries within; announces justice, favors, and protection; the catalyst agent of the deepest feelings. Represents the archetypal plane of aesthetic emotions, the creative plane, and active female intelligence; waiting to gain clarity. Risk of laziness and lack of female affability."
+    },
+    "39": {
+      "title": "Arcana 39 - Knight of Cups",
+      "data": "It is time to experience the incredible and magical dimension of love, the connection with emotions; indicates a possible marriage proposal, or even the moment to fall in love; a job offer, or involvement with higher ideals. Represents emotions and feelings on the formative plane; arrival of new friendships and affections; reconciliation, cordiality, and peace. Risk of abuse of trust."
+    },
+    "40": {
+      "title": "Arcana 40 - Page of Cups",
+      "data": "It is an indication of something new on the emotional plane, which could be a relationship or a new emotional perspective within an existing relationship, or even the birth of a child. Represents emotions on the plane of desire and fear; love proposal and affectionate offer; reconciliation, consideration, and promotion. Emotional sensitivity. Risk of seduction and mockery."
+    },
+    "41": {
+      "title": "Arcana 41 - Ten of Cups",
+      "data": "It is the experience of desired happiness; a period of great contentment and permanent harmony in the realms of the heart; fulfillment of your hopes and dreams; happy life; many sympathies. Represents success on the emotional and feelings level; shared family happiness; good reputation and a happy home. The satiety that leads to the fullness of happiness through self-realization. Risk of becoming dependent on others."
+    },
+    "42": {
+      "title": "Arcana 42 - Nine of Cups",
+      "data": "Your wishes can now be fulfilled; a period of satisfaction and joys, of realizing dreams and projects; fortune, honors, glory, and reputation; victory, success, gain, triumph, prosperity, loyalty, good faith, frankness, truth. Represents happiness, well-being, and material security; joy of living and enjoying success. Risk of excesses and lust, escapism, and evasion."
+    },
+    "43": {
+      "title": "Arcana 43 - Eight of Cups",
+      "data": "It is the need to seek meaning in life and your love relationships; need to wake up and give up something; excessive interest in pleasures that can lead to love scandals; violent passions, divorce, bad marriage, seduction. Represents the spiritual quest for abandoning the material; difficult departure. Indolence and contrariety; time to realize your role in the relationship. Risk of cruel abandonment."
+    },
+    "44": {
+      "title": "Arcana 44 - Seven of Cups",
+      "data": "It is reflection, thought, talents; an emotional situation where there are many apparent possibilities, but the individual faces the challenge of choosing and acting realistically so that those potentialities can manifest. Represents megalomania and illusions; the dreamlike reality, fantasies, and success of little value; excess of options and expectations and escape from reality. Many opportunities; time to reap the fruits of imagination. Risk of stagnation and illusion."
+    },
+    "45": {
+      "title": "Arcana 45 - Six of Cups",
+      "data": "It is the happiness that comes from the past; pleasure. Possible meeting or reunion with a significant person, or the return of an old love, of a long-cherished dream that may come true in the near future. Being happy for oneself; surrender to the moment and be happy. Represents longing for the past, for childhood, with happy memories, inner peace through acceptance of the past; dreams. Risk of attachment to the past that brings melancholy, or seeking pleasure in others."
+    },
+    "46": {
+      "title": "Arcana 46 - Five of Cups",
+      "data": "It is the end of a relationship or friendship with suffering; remorse; something went wrong, a possible betrayal opening space for sadness and regret; separation in a relationship, but it may not mean a definitive breakup. Represents lost joy, sadness, lamentations, and obscure pleasures; painful farewell, bitterness, depression, failure, and resignation. Frustration and regret."
+    },
+    "47": {
+      "title": "Arcana 47 - Four of Cups",
+      "data": "Excessive pleasure that often leads to fatigue and the desire for even greater things, perhaps impossible to achieve; apparent innocence, but with an unpleasant sting hidden, requiring moderation in relationships and everything related to emotions. Represents boredom and depression, dissatisfaction and betrayals; inconstancy in feelings and lack of motivation, apathy, bad mood, and jealousy. Ostentation and satiety with the risk of boredom."
+    },
+    "48": {
+      "title": "Arcana 48 - Three of Cups",
+      "data": "Success, the beginning of a new lifestyle, a new relationship, the birth of a child, or any other promising situation of emotional fulfillment. However, each of these situations is also a beginning, an initiation into deeper levels of heart experiences and the indication of new discoveries for the future. Represents abundance, friendships, joy, fun, celebrations, and success; gratitude. Risk of becoming self-sufficient and dissimulating feelings."
+    },
+    "49": {
+      "title": "Arcana 49 - Two of Cups",
+      "data": "Abundance, emotional balance, friendships, and celebration. Understanding, deep friendship or love; the beginning of a relationship; also a reconciliation, a meeting, or a business agreement; almost always suggests a relationship between two people; power of attraction. Represents love, affection, and friendship; emotional union or marriage; harmony. Risk of emotional dependence."
+    },
+    "50": {
+      "title": "Arcana 50 - Ace of Cups",
+      "data": "Beginning of things: love, joy, or health. Represents the power of feelings; love, abundance, joy, and pleasure; the right choice of opportunity that generates satisfaction and fulfillment. New emotions involving relationships in general, renewing them. Risk of blindness and emotional instability."
+    },
+    "51": {
+      "title": "Arcana 51 - King of Swords",
+      "data": "Signifies maturity and wisdom, confidence; a reliable advisor; time to find within oneself the ambivalent gift of leadership and strategy; intellectual boldness and inspiration to develop new projects. Represents organized thinking and clear and objective ideas; wit, insight, versatility; energetic male authority. Risk of excessive intellectualism, inhumanity, and male cynicism."
+    },
+    "52": {
+      "title": "Arcana 52 - Queen of Swords",
+      "data": "Time to confront your own obstinate dimension and your unwavering faith in high purposes and ideals. These lofty and noble ideals will contribute to the improvement of consciousness and the quality of one's own life. It will be necessary to see where problems are being created for oneself by demanding exaggerated perfection for oneself and others. Represents the creative plane ordered by inductive rational thought – reason; female independence, intelligence, and intellect. Risk of resentment and female intellectual harshness."
+    },
+    "53": {
+      "title": "Arcana 53 - Knight of Swords",
+      "data": "It is time to prepare for possible sudden changes in your life by setting aside old existing patterns. Such changes can happen with a person who appears bringing restlessness, fascination, and a tendency to break, or the conception of a new idea or project that arises to break old ways of thinking, or even someone who opposes your plans or thoughts. Represents the ordered sequence of logical thought on the formative plane; unpredictability, controversy, rigor, hostility, and aggressiveness. Bluntness, impetuosity, and rush."
+    },
+    "54": {
+      "title": "Arcana 54 - Page of Swords",
+      "data": "Time to confront childish curiosity and the malicious predisposition to gossip and tattle. Possibility of becoming a victim of others' intrigue or having a propensity to get involved in small disputes. Represents approximate thinking in verifying the material plane; espionage, surveillance; sown discord and enlightening criticism. Defensiveness."
+    },
+    "55": {
+      "title": "Arcana 55 - Ten of Swords",
+      "data": "Completion of a difficult situation; it may be painful, but at least the problem will be faced head-on with honesty, so that a future with much less conflict can begin. The lesson is already complete, and both the economic situation and health tend to improve. Represents total and irreversible ruin; desolation, the unbearable end point. A request for help may be answered. Time to finalize an idea, a process, a situation that has run its course."
+    },
+    "56": {
+      "title": "Arcana 56 - Nine of Swords",
+      "data": "A period of much anxiety and doubts about the future. It is important to examine and identify where the guilt behind the fears arises from, instead of being enslaved by it. Represents cruelty, despair, worries, sadness, and depression; guilty conscience, regret, dejection, torment, insomnia, and fear. Calls for patience and resignation."
+    },
+    "57": {
+      "title": "Arcana 57 - Eight of Swords",
+      "data": "A situation of difficulty and almost impossibility to act due to fear of the consequences; a decision is necessary, with great prudence. Represents paralyzed strength, inability to act, indecision; mental confusion and self-sabotage; rationality without emotion; a period of crises ending. Mental self-imprisonment."
+    },
+    "58": {
+      "title": "Arcana 58 - Seven of Swords",
+      "data": "Time to act with great diplomacy avoiding direct confrontations to preserve one's own strength as much as possible; it may bring an unpleasant feeling of falseness and hypocrisy, but life demands it; your plans may not yield positive results or are not yielding results as expected. Represents futile effort; falseness, imposture, escape; deceiving oneself to achieve something. Futility and subterfuges; mental games, use of mental artifices; presumption."
+    },
+    "59": {
+      "title": "Arcana 59 - Six of Swords",
+      "data": "A period where the mind's ability to understand helps to reduce difficulty and release previously caused anxiety to make a more serene transition. Represents the search for new goals; progress, deserved success, travels; new experiences, hesitant transformation; new ground; caution. The learning of mental science; distancing oneself from the problem to see it in perspective. Risk of victimization."
+    },
+    "60": {
+      "title": "Arcana 60 - Five of Swords",
+      "data": "Need to face one's own limitations and recognize that life must be lived within the limits of one's own capabilities. Represents defeats, betrayals, and afflictions; infamy and perfidy; the extrapolated dark side. Defeat, both yours and your adversary's. Risk of humiliating others by seeing them as adversaries."
+    },
+    "61": {
+      "title": "Arcana 61 - Four of Swords",
+      "data": "A period of introversion, silence, and recovery of strength to face new challenges; the situation tends to improve. Represents a period of rest, a truce, and a time of retreat for recovery while waiting for the opportune moment. The necessary truce to achieve mental peace. Time to question which of the sacrifices made were important; meditate. Risk of procrastination."
+    },
+    "62": {
+      "title": "Arcana 62 - Three of Swords",
+      "data": "Conflict, pain, and separation; small quarrels can lead to serious disappointments; someone has to start forgiving; it is better if it is you. Represents pain and suffering, misfortune and deprivation; wounded feelings. Sadness, necessary sacrifices."
+    },
+    "63": {
+      "title": "Arcana 63 - Two of Swords",
+      "data": "A state of tension, in which there is a tacit refusal to face an imminent conflict situation; indecision when defining options. Represents a period of peace with stagnation; dilemma and analysis. Mental imbalance; it is not the time to decide. Risk of impasse."
+    },
+    "64": {
+      "title": "Arcana 64 - Ace of Swords",
+      "data": "The emergence of a new concept within a conflict; awakening mental powers; this means a change in the person's life. Represents the power of mind and reason; capacity for triumph, understanding, resolution, and readiness; the time has come. New way of thinking; new opportunity to use the mind. Risk of excessive rationality; cunning mind."
+    },
+    "65": {
+      "title": "Arcana 65 - King of Pentacles",
+      "data": "Time to accept the material challenges of life; channeling self-confidence and improvement in the process of material realization of oneself; good business position. Represents male intelligence for success; auditory sensation; solidity, stability, and commercial acumen; the king of all resources, the investor. Risk of becoming controlling."
+    },
+    "66": {
+      "title": "Arcana 66 - Queen of Pentacles",
+      "data": "Time to learn more about one's own sensuality; to understand the value of the body and the importance of pleasures that preserve and enrich life; to learn to preserve material resources, establishing safe and stable living conditions, managing and saving money and efforts. Represents female intelligence acting on the creative plane; visual sensation; money, constancy, fidelity, courage, fertility, family sense; skill and competence in the right direction. Care, nurturing, and protection. Risk of spoiling your 'protected ones' too much."
+    },
+    "67": {
+      "title": "Arcana 67 - Knight of Pentacles",
+      "data": "Time to develop that dimension of personality capable of accepting any daily tasks with serenity and firmness; dedication, loyalty, and firmness of attitudes; firm decision and action; constant motivation; success, fortune acquisition; final peace and tranquility. Represents the formative plane in the sense of smell and taste; perseverance in ideas and actions that generate money; receiving offers. Cautious and observant, knows what he wants."
+    },
+    "68": {
+      "title": "Arcana 68 - Page of Pentacles",
+      "data": "The accumulation of energy to be used in the realization of material projects and to meet the needs of the body; appears in the form of small amounts of money that should be saved instead of being spent uselessly, or a hobby that can become a highly profitable profession; openness to new ideas and vision of emerging opportunities. Represents the material plane in the sense of touch; surprising and valuable opportunity and concrete and useful proposal; observation and study."
+    },
+    "69": {
+      "title": "Arcana 69 - Ten of Pentacles",
+      "data": "A period of great satisfaction and security and the awareness that something permanent has been achieved to be passed on; prosperous economic situation; suggests sharing family inheritance, or perhaps a moment of artistic achievement; perpetuation of something good. Represents the possession of the secret of wealth; fullness and wealth. Risk of opulence."
+    },
+    "70": {
+      "title": "Arcana 70 - Nine of Pentacles",
+      "data": "A period of justified self-satisfaction in view of everything that has been achieved. Represents material wealth and economic success; glimpse, stroke of luck, profit, and abundance. The gain from the efforts of work. Risk of self-sufficiency."
+    },
+    "71": {
+      "title": "Arcana 71 - Eight of Pentacles",
+      "data": "A moment when the individual plays the role of the dedicated apprentice who bravely strives to acquire and develop a new trade; a newly discovered talent worth working on and developing; in more practical terms, a hobby can turn into a profession. Represents systematic tasks, directed effort, and learning; promising start. Prudence, repetition of confirmed basic practices."
+    },
+    "72": {
+      "title": "Arcana 72 - Seven of Pentacles",
+      "data": "Time to make a decision; consideration and caution; energy for a new project; fortune acquired through personal work. Represents maturity and patience; 'slow and steady.' Choosing the right moment to make the decision; to choose between investing more or being content with what has already been harvested. Risk of clinging to what has already been achieved and losing."
+    },
+    "73": {
+      "title": "Arcana 73 - Six of Pentacles",
+      "data": "A situation of offering, both financial and personal; you will be led to offer your kindness, or receive the generosity of others; time to regain self-confidence and faith in life; good things, possible ascension, and happy environment; enjoy the good results of your work. Represents pleasant surprises, gifts, and philanthropy – the purpose is worth it; generosity and willingness to help – charity; tolerance and understanding. Success. Risk of manipulation by charity practiced in favor of the ego."
+    },
+    "74": {
+      "title": "Arcana 74 - Five of Pentacles",
+      "data": "A period of financial difficulties, or even great losses; it may be accompanied by a loss of self-confidence; it is very important to react positively to this challenge; do not let pride take over; everything passes, including this moment. Represents economic ruin, unemployment, and poverty; crisis, obstacles, and deprivations. Concern; time to reflect on real needs."
+    },
+    "75": {
+      "title": "Arcana 75 - Four of Pentacles",
+      "data": "Favorable moment; possible acquisitions or inheritance; work capacity and accumulation of possessions. Represents economic power and prosperity. Time to stabilize the possession of resources to conserve. Risk of greed."
+    },
+    "76": {
+      "title": "Arcana 76 - Three of Pentacles",
+      "data": "Period of initial success in some enterprise; perhaps a project starts to make a profit, or even a literary or artistic work that achieves success; prize, recognition of work and talent; fortune through skillfully managed enterprises, work, and genius. Represents material work and construction; progress and spotlight. Success through teamwork. Risk of discrepancies due to work."
+    },
+    "77": {
+      "title": "Arcana 77 - Two of Pentacles",
+      "data": "Period of availability of financial resources and energy for the realization of new projects; it is necessary to be willing to invest your capital and take risks instead of saving for a future possibility; a favorable moment for all those who know how to handle money, or divided fortune, however, probability of productive association. Represents harmonious and favorable exchanges; flexibility. Adaptation to deal well with the resources acquired, especially in the face of changes."
+    },
+    "78": {
+      "title": "Arcana 78 - Ace of Pentacles",
+      "data": "Possibility of material realization; disposition of energy for the execution of a job; beginning of prosperity or successful ventures; money may suddenly appear in the form of an inheritance or game. Represents the great opportunity for the realization of the material plane and wealth; sensory perception. New skills; awakening of new talents. Risk of turning everything into an obligation."
+    },
+    "79": {
+      "title": "Arcana 79",
+      "data": "Restart of an activity; new moment; new life."
+    },
+    "80": {
+      "title": "Arcana 80",
+      "data": "Refer to Arcana 8 (Justice)."
+    },
+    "81": {
+      "title": "Arcana 81",
+      "data": "There may be problems with justice; or the law of cause and effect."
+    },
+    "82": {
+      "title": "Arcana 82",
+      "data": "May serve as a stepping stone for others, voluntarily or involuntarily."
+    },
+    "83": {
+      "title": "Arcana 83",
+      "data": "Intellectual or cultural association; progress."
+    },
+    "84": {
+      "title": "Arcana 84",
+      "data": "Work with and for the people – politician, philanthropist, or humanitarian."
+    },
+    "85": {
+      "title": "Arcana 85",
+      "data": "Means withdrawal from social life or temporary loss of assets or life itself."
+    },
+    "86": {
+      "title": "Arcana 86",
+      "data": "Means victory over something achieved after much struggle and determination."
+    },
+    "87": {
+      "title": "Arcana 87",
+      "data": "Refer to Arcana 15 (The Devil)."
+    },
+    "88": {
+      "title": "Arcana 88",
+      "data": "Refer to Arcana 16 (The Tower)."
+    },
+    "89": {
+      "title": "Arcana 89",
+      "data": "Means unrecognized merit."
+    },
+    "90": {
+      "title": "Arcana 90",
+      "data": "Refer to Arcana 9 (The Hermit)."
+    },
+    "91": {
+      "title": "Arcana 91",
+      "data": "Period of solitude while the influence of the Arcana lasts."
+    },
+    "92": {
+      "title": "Arcana 92",
+      "data": "Late union or an association with groups or people."
+    },
+    "93": {
+      "title": "Arcana 93",
+      "data": "Means a great period of wisdom and good results."
+    },
+    "94": {
+      "title": "Arcana 94",
+      "data": "Means loneliness in old age or death of an elderly person."
+    },
+    "95": {
+      "title": "Arcana 95",
+      "data": "Means intellectual recognition."
+    },
+    "96": {
+      "title": "Arcana 96",
+      "data": "Means secret loves that may cause serious problems."
+    },
+    "97": {
+      "title": "Arcana 97",
+      "data": "Means a difficult decision or long-awaited solitude that materializes."
+    },
+    "98": {
+      "title": "Arcana 98",
+      "data": "Means high position and great influence."
+    },
+    "99": {
+      "title": "Arcana 99",
+      "data": "Means a lot of money and material wealth."
+    }
+  }
+}

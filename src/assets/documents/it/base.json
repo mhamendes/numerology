@@ -1,0 +1,41 @@
+{
+  "unifyingNumbersTitle": "Unificando i tuoi Numeri",
+  "unifyingNumbersDescription": "Per trarre ancora più vantaggio dai tuoi numeri, una buona tattica è capire come legare o unire in modo obiettivo le tue vibrazioni numeriche per allinearti meglio al tuo scopo di vita. Nelle tre categorie elencate di seguito, troverai i numeri corrispondenti a ciascuna area da armonizzare e la loro spiegazione.",
+  "whereIAmGoingTitle": "Dove Sto Andando",
+  "whereIAmGoingDescription": "Ogni volta che inizi o crei un nuovo progetto, un nuovo lavoro o qualsiasi percorso professionale che intendi intraprendere, guarda cosa dicono i tuoi numeri di:",
+  "whereIAmGoingList": [
+    [
+      "• Destino e i suoi Cicli più importanti (Cicli di Vita, Momenti Decisivi e Anno Personale)"
+    ],
+    ["• Missione"]
+  ],
+  "whereIAmGoingExtra": "Se il percorso che seguirai è allineato con quanto descritto da questi due numeri che possiedi, le vibrazioni saranno a tuo favore e compirai meglio il tuo scopo.",
+  "toolsIAmUsingTitle": "Strumenti Che Possiedo",
+  "toolsIAmUsingDescription": "Quando vuoi avere maggiore consapevolezza sugli strumenti che la vita ti ha donato per compiere la tua missione o quando senti in te una certa mancanza di autostima, guarda i poteri che ti sono stati dati nei numeri seguenti:",
+  "toolsIAmUsingList": [
+    ["• Motivazione", "• Impressione", "• Espressione"],
+    ["• Giorno di Nascita", "• Numero Psichico", ""]
+  ],
+  "questionsIAmAskingTitle": "Questioni Che Devo Risolvere",
+  "questionsIAmAskingDescription": "Qui sono presentate le questioni di karma o tendenze che potrebbero impedirti di evolvere, è molto importante prendersi cura di tali orientamenti per non alimentarsi con più karma o ripetere schemi di comportamento non produttivi.",
+  "questionsIAmAskingList": [
+    [
+      "• Lezioni Karmiche",
+      "• Debiti Karmici",
+      "• Tendenze Occulte",
+      "• Risposta Subconscia"
+    ],
+    ["• Sfide", "• Triangolo della Vita (Arcani e Sequenze Negative)"]
+  ],
+  "phone": "Telefono:",
+  "email": "Email:",
+  "instagram": "Instagram:",
+  "website": "Sito:",
+  "address": "Indirizzo:",
+  "mentorName": "Mentore/Numerologa:",
+  "doneAt": "Realizzato il:",
+  "birthMapTitle": "Mappa di Nascita",
+  "personalDaysTitle": "Giorni Personali",
+  "birthMapSubject": "Mappa di Nascita di {{fullName}}",
+  "personalDaysSubject": "Giorni Personali di {{fullName}}"
+}

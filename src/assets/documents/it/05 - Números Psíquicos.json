@@ -1,0 +1,42 @@
+{
+  "title": "05 - Numeri Psichici",
+  "description": "Diversamente dal giorno di nascita che ha le sue caratteristiche proprie, il numero psichico ci mostra certe relazioni tra i giorni del mese che hanno in comune lo stesso numero quando ridotti a una cifra. Così, persone nate nei giorni 3, 12, 21 e 30, per esempio, hanno in comune il numero psichico 3. Questo numero evidenzia le qualità psichiche che traducono i nostri desideri, le nostre ambizioni e riflettono le nostre sensazioni interiori e come esse influenzano le nostre scelte personali, amicizie, professione, sesso, desideri e persino il matrimonio. Questo numero rappresenta ciò che siamo nel nostro intimo.",
+  "items": {
+    "1": {
+      "title": "Numero Psichico: 1",
+      "data": "Le persone con numero psichico 1 sono quelle nate nei giorni 01, 10, 19 e 28. Sono persone originali e trasparenti nelle loro azioni. Sono indipendenti, generose, pioniere. Possiedono una personalità marcata. Sono leader. Non cambiano idea facilmente, soprattutto se pensano di avere ragione. Sono audaci, ferme nei loro propositi. Amano il lavoro e sono molto efficienti. Generalmente sono persone fortunate. Sono modelli interiori comuni a cui appartiene questo gruppo: leadership, indipendenza, originalità, pionierismo e coraggio."
+    },
+    "2": {
+      "title": "Numero Psichico: 2",
+      "data": "Le persone con numero psichico 2 sono quelle nate nei giorni 02, 11, 20 e 29. Sono persone pacifiche, sentimentali. Possiedono una forte intuizione e un istinto di cooperazione. Sono romantiche, diplomatiche. Con sensibilità artistica. Usano la loro intuizione e la loro diplomazia per risolvere conflitti e cercano sempre l'unione tra le persone. Sono modelli interiori comuni a cui appartiene questo gruppo: cooperazione, unione, diplomazia, sensibilità e intuizione."
+    },
+    "3": {
+      "title": "Numero Psichico: 3",
+      "data": "Le persone con numero psichico 3 sono quelle nate nei giorni 03, 12, 21 e 30. Sono persone creative, indipendenti. Sono popolari, comunicative, socievoli. Possiedono doni artistici e sono spontanee. Sono allegre, responsabili, ambiziose e consapevoli delle loro azioni. Non risparmiano sforzi per raggiungere i loro obiettivi. Sono modelli interiori comuni a cui appartiene questo gruppo: comunicazione, creazione, allegria, popolarità e natura artistica."
+    },
+    "4": {
+      "title": "Numero Psichico: 4",
+      "data": "Le persone con numero psichico 4 sono quelle nate nei giorni 04, 13, 22 e 31. Sono persone determinate, persistenti, serie, ostinate. Sono critiche al punto da essere considerate troppo dure. Sono persone di poche, ma buone amicizie. Generalmente sono anche testarde e scettiche. Non tollerano ciò che è mediocre. Sono modelli interiori comuni a cui appartiene questo gruppo: lavoro, determinazione, rigore e persistenza."
+    },
+    "5": {
+      "title": "Numero Psichico: 5",
+      "data": "Le persone con numero psichico 5 sono quelle nate nei giorni 05, 14 e 23. Hanno uno spirito avventuroso. Sono dinamiche, irrequiete, amano la libertà e il movimento. Sono curiose e versatili. Riescono a fare amicizia facilmente. Sono persone intuitive e adattabili. Sono rapide nel prendere decisioni e non amano fare piani a lungo termine. Sono modelli interiori comuni a cui appartiene questo gruppo: libertà, versatilità, progresso e curiosità."
+    },
+    "6": {
+      "title": "Numero Psichico: 6",
+      "data": "Le persone con numero psichico 6 sono quelle nate nei giorni 06, 15 e 24. Sono sensibili e amorevoli, con buon gusto per le arti, i viaggi, la buona gastronomia e per tutto ciò che la vita ha di meglio. Danno molto valore ai legami familiari. Sono avverse ai tumulti, al disordine. Attraggono le persone grazie alla loro intelligenza e per essere socievoli e buone ascoltatrici. Sono modelli interiori comuni a cui appartiene questo gruppo: affettività, armonia, sensibilità e pazienza."
+    },
+    "7": {
+      "title": "Numero Psichico: 7",
+      "data": "Le persone con numero psichico 7 sono quelle nate nei giorni 07, 16 e 25. Sono persone perfezioniste che persistono fino a ottenere il successo. Amano la conoscenza, l'analisi. Vedono sempre il lato positivo delle cose. Sono introspettive, amano le conoscenze occulte, sono ispirate e convivono pacificamente con tutti. Sono persone che fanno la differenza e sono fonte di ispirazione per tutti. Sono modelli interiori comuni a cui appartiene questo gruppo: introspezione, conoscenza e interiorità."
+    },
+    "8": {
+      "title": "Numero Psichico: 8",
+      "data": "Le persone con numero psichico 8 sono quelle nate nei giorni 08, 17 e 26. Sono persone razionali, determinate e pratiche. Sono introverse, con senso di giustizia, sicure di sé e riservate. Sono anche sincere e di presenza marcata. Generalmente sono materialiste e la loro determinazione fa sì che abbiano sicurezza finanziaria e benessere sociale. Il successo è il loro obiettivo maggiore, poiché pensano sempre in grande. Sono modelli interiori comuni a cui appartiene questo gruppo: razionalità, giustizia, spirito pratico, determinazione e pianificazione."
+    },
+    "9": {
+      "title": "Numero Psichico: 9",
+      "data": "Le persone con numero psichico 9 sono quelle nate nei giorni 09, 18 e 27. Sono ambiziose e possiedono la forza di volontà per raggiungere i loro obiettivi. Sono anche molto sensibili e generose, sebbene non lo dimostrino. Sono irrequiete e generalmente raggiungono il successo nella maturità. Tendono a essere inflessibili, il che può generare risentimenti. Sono persone intuitive e donatrici, con sentimento di universalità. Sono modelli interiori comuni a cui appartiene questo gruppo: generosità, universalità, sensibilità, intuizione e donazione."
+    }
+  }
+}

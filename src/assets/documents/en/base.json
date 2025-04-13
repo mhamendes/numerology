@@ -1,0 +1,41 @@
+{
+  "unifyingNumbersTitle": "Unifying Your Numbers",
+  "unifyingNumbersDescription": "To make even more use of your numbers, a good tactic is to understand how to objectively tie or unite your numerical vibrations to better align with your life purpose. In the three categories listed below, you will find the numbers corresponding to each area to be harmonized and their explanation.",
+  "whereIAmGoingTitle": "Where I Am Going",
+  "whereIAmGoingDescription": "Whenever you enter or create a new project, a new job, or any professional journey you are going to undertake, see what your numbers say about:",
+  "whereIAmGoingList": [
+    [
+      "• Destiny and its most important Cycles (Life Cycles, Decisive Moments, and Personal Year)"
+    ],
+    ["• Mission"]
+  ],
+  "whereIAmGoingExtra": "If the path you are going to follow is aligned with what the description of these two numbers you possess says, the vibrations will be in your favor and you will better fulfill your purpose.",
+  "toolsIAmUsingTitle": "Tools I Have",
+  "toolsIAmUsingDescription": "When you want to be more aware of the tools life has given you to fulfill your mission or when you feel a certain lack of self-confidence, see the powers given to you in the numbers below:",
+  "toolsIAmUsingList": [
+    ["• Motivation", "• Impression", "• Expression"],
+    ["• Birthday", "• Psychic Number", ""]
+  ],
+  "questionsIAmAskingTitle": "Questions I Need to Resolve",
+  "questionsIAmAskingDescription": "Here are presented the karma issues or tendencies that may be preventing you from evolving, it is very important to take care of such guidance so that you do not feed more karma or repeat non-productive behavior patterns.",
+  "questionsIAmAskingList": [
+    [
+      "• Karmic Lessons",
+      "• Karmic Debts",
+      "• Hidden Tendencies",
+      "• Subconscious Response"
+    ],
+    ["• Challenges", "• Life Triangle (Arcanas and Negative Sequences)"]
+  ],
+  "phone": "Phone:",
+  "email": "Email:",
+  "instagram": "Instagram:",
+  "website": "Website:",
+  "address": "Address:",
+  "mentorName": "Mentor/Numerologist:",
+  "doneAt": "Completed on:",
+  "birthMapTitle": "Birth Map",
+  "personalDaysTitle": "Personal Days",
+  "birthMapSubject": "Birth Map of {{fullName}}",
+  "personalDaysSubject": "Personal Days of {{fullName}}"
+}

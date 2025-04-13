@@ -1,0 +1,5 @@
+{
+  "endText1": "a {{endAge}}",
+  "endText2": "fino alla fine della vita",
+  "head1": "{{title}}: Nº {{number}} - Periodo: {{start}} {{endText}}"
+}

@@ -1,0 +1,42 @@
+{
+  "title": "11 - Tendenze Occulte",
+  "description": "Presenta desideri a cui la persona è stata esposta in esistenze precedenti. Così come Carl Jung mostra che per mancanza di autoconoscenza, finiamo per lasciare alcuni comportamenti oscuri e trascurati dentro di noi, tali comportamenti possono prendere il controllo delle nostre azioni se non siamo consapevoli.",
+  "items": {
+    "1": {
+      "title": "Tendenza Occulta 1",
+      "data": "Desiderio di individualità, c'è una tendenza all'autoritarismo, alla dominazione e all'egoismo."
+    },
+    "2": {
+      "title": "Tendenza Occulta 2",
+      "data": "È il desiderio di associazioni. C'è una tendenza a dipendere eccessivamente dagli altri, principalmente dalla famiglia e dagli amici, sia monetariamente che emotivamente."
+    },
+    "3": {
+      "title": "Tendenza Occulta 3",
+      "data": "È il desiderio di autoespressione. C'è una tendenza alla vanità, all'impazienza, alla presunzione, a disperdere energie, a vivere senza obiettivi concreti e a cercare sempre divertimenti e feste, senza preoccuparsi molto del domani."
+    },
+    "4": {
+      "title": "Tendenza Occulta 4",
+      "data": "È il desiderio di lavoro. C'è una tendenza a soffocare la propria personalità con un'eccessiva quantità di dettagli, perfezionismo, testardaggine, intolleranza e ostinazione."
+    },
+    "5": {
+      "title": "Tendenza Occulta 5",
+      "data": "È il desiderio di cambiamento e anche di libertà personale. C'è una tendenza a vivere a spese degli altri, ad abusare del sesso, di alcune droghe (sigarette e alcol), a cambiamenti senza motivo apparente e a precipitazione e impulsività."
+    },
+    "6": {
+      "title": "Tendenza Occulta 6",
+      "data": "È il desiderio di realizzazione e responsabilità. C'è una tendenza a preoccuparsi eccessivamente della famiglia, principalmente dei figli (se li ha), dei doveri professionali, tendenza alla testardaggine, perfezionismo e ad attaccarsi a modelli inflessibili e ostinati."
+    },
+    "7": {
+      "title": "Tendenza Occulta 7",
+      "data": "È il desiderio di saggezza e conoscenza. C'è una tendenza alla finzione, all'intrigo e persino all'alcolismo, poiché normalmente ci si sente una persona incompresa e persino respinta dai parenti, amici, coniuge o semplicemente conoscenti."
+    },
+    "8": {
+      "title": "Tendenza Occulta 8",
+      "data": "È il desiderio di materialismo. C'è una tendenza a preoccuparsi eccessivamente di come guadagnare denaro, ottenere beni materiali e anche potere."
+    },
+    "9": {
+      "title": "Tendenza Occulta 9",
+      "data": "È il desiderio di conoscenza e amore universale. C'è una tendenza a preoccuparsi eccessivamente dei problemi mondiali, trascurando i propri sentimenti e quelli della famiglia."
+    }
+  }
+}

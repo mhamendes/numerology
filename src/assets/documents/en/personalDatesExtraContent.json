@@ -1,0 +1,10 @@
+{
+  "month": "Month",
+  "monthPersonal": "Personal month",
+  "day": "Day",
+  "dayPersonal": "Personal day",
+  "endTitle": "{{title}} - {{date}} until the day {{endDate}}",
+  "startTitle": "{{title}} - {{date}} after the day {{startDate}}",
+  "baseTitle": "{{title}} - {{date}}",
+  "period": "Period: {{start}} to {{endText}}"
+}

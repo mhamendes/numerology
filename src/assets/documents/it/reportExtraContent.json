@@ -1,0 +1,27 @@
+{
+  "reportTitle": "Rapporto di Numerologia",
+  "birthday": "Data di Nascita: {{birthday}}",
+  "head1": [["Motivazione", "Impressione", "Espressione", "Giorno di Nascita"]],
+  "head2": [["Numero Psichico", "Destino", "Missione", "Talento Nascosto"]],
+  "head3": [
+    [
+      "Lezioni Karmiche",
+      "Debiti Karmici",
+      "Tendenze Occulte",
+      "Risposta Subconscia"
+    ]
+  ],
+  "head4": [
+    ["Cicli della Vita", "Sfide", "Momenti Decisivi", "Anno Personale"]
+  ],
+  "head4FirstRow": "1º - {{firstEnergyNumber}}\n2º - {{secondEnergyNumber}}\n3º - {{thirdEnergyNumber}}",
+  "head4SecondRow": "1º - {{firstNumber}}\n2º - {{secondNumber}}\nPrincipale - {{mainNumber}}",
+  "head4ThirdRow": "1º - {{firstDecisiveMomentNumber}}\n2º - {{secondDecisiveMomentNumber}}\n3º - {{thirdDecisiveMomentNumber}}\n4º - {{fourthDecisiveMomentNumber}}",
+  "ascensionDegree": "Grado di Ascensione",
+  "favorableNumbers": "Numeri Favoriti",
+  "favorableColors": "Colori Favoriti",
+  "favorableColorsDescription": "Colori che vibrano bene con il tuo nome: {{favorableColors}}",
+  "favorableDays": "Giorni Favoriti",
+  "more": "Altro",
+  "moreDescription": "Mese Personale; Giorno Personale; Numeri Compatibili; Vibrazione Coniugale; Studio Vocazionale; Triangolo Invertito della Vita e i Suoi Arcani"
+}

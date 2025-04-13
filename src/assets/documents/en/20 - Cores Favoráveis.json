@@ -1,0 +1,50 @@
+{
+  "title": "20 - Favorable Colors",
+  "description": "These are colors that resonate well with your name, not necessarily meaning you should use them in all aspects, but they are colors with good vibrations for you. Colors: White: symbolizes light, joy, the power of God, and purity. Yellow: symbolizes divine love, understanding, and charity. Blue: symbolizes eternity, wisdom, and will. Green: symbolizes life, growth, and hope. Violet: symbolizes dignity and knowledge. Red: symbolizes emotions. Black: symbolizes sadness and darkness.",
+  "items": {
+    "1": {
+      "title": "Expression 1",
+      "data": "all shades of yellow and orange, brown, gold, green, cream, and white."
+    },
+    "2": {
+      "title": "Expression 2",
+      "data": "all shades of green, cream, white, and gray."
+    },
+    "3": {
+      "title": "Expression 3",
+      "data": "violet, wine, purple, and red."
+    },
+    "4": {
+      "title": "Expression 4",
+      "data": "blue, gray, purple, and gold."
+    },
+    "5": {
+      "title": "Expression 5",
+      "data": "all light colors, gray, and silver."
+    },
+    "6": {
+      "title": "Expression 6",
+      "data": "pink, blue, and green."
+    },
+    "7": {
+      "title": "Expression 7",
+      "data": "green, yellow, white, gray, and light blue."
+    },
+    "8": {
+      "title": "Expression 8",
+      "data": "purple, gray, blue, black, and brown."
+    },
+    "9": {
+      "title": "Expression 9",
+      "data": "red, pink, coral, and wine."
+    },
+    "11": {
+      "title": "Expression 11",
+      "data": "white, violet, and light colors."
+    },
+    "22": {
+      "title": "Expression 22",
+      "data": "violet, white, and light colors."
+    }
+  }
+}
