@@ -9,7 +9,6 @@ import { BookingProvider } from './booking/(components)/context';
 
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
-import { ThemeProvider } from '(components)/theme-provider';
 import { getProducts } from '@/actions/stripe/getProductPrice';
 
 export default async function Layout({
@@ -29,15 +28,13 @@ export default async function Layout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <ThemeProvider>
-        <BookingProvider products={products}>
-          <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
-        </BookingProvider>
-      </ThemeProvider>
+      <BookingProvider products={products}>
+        <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
+      </BookingProvider>
     </NextIntlClientProvider>
   );
 }

@@ -3,14 +3,13 @@
 import React, { useState } from 'react';
 import { MenuIcon, MoonIcon, SunIcon, XIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
 
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { BRAND_FIRST_NAME, BRAND_LAST_NAME } from '@/lib/constants';
 
 import LocaleSwitcher from './locale-switcher';
-
-import { useTheme } from '(components)/theme-provider';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

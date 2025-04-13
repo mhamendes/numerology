@@ -2,6 +2,7 @@ import '@/globals.css';
 
 import React from 'react';
 import { setRequestLocale } from 'next-intl/server';
+import { ThemeProvider } from 'next-themes';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -18,11 +19,13 @@ export default async function Layout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
-        {children}
-        <FacebookPixel />
-        <Toaster />
+        <ThemeProvider attribute="class">
+          {children}
+          <FacebookPixel />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
