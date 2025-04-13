@@ -51,10 +51,10 @@ export async function createPersonalDaysReturnDocument({
       .default as typeof baseSectionTitles) ?? baseSectionTitles;
 
   const personalDayTextBase = (
-    await import(`src/assets/documents/pt-br/18 - Dia Pessoal.json`)
+    await import(`src/assets/documents/pt-br/18-personalDay.json`)
   ).default;
   const personalDayText =
-    ((await import(`src/assets/documents/${locale}/18 - Dia Pessoal.json`))
+    ((await import(`src/assets/documents/${locale}/18-personalDay.json`))
       .default as typeof personalDayTextBase) ?? personalDayTextBase;
 
   pdf = await createPersonalDaysSection({
