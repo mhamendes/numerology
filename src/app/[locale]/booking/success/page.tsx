@@ -1,18 +1,18 @@
 'use client';
-
 import React from 'react';
 import { CalendarIcon, CheckIcon } from 'lucide-react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-import { useBooking } from '../(components)/context';
-
 export default function BookingSuccess() {
   const t = useTranslations('booking');
-  const { selectedProduct } = useBooking();
+
+  const searchParams = useSearchParams();
+  const productId = searchParams.get('productId');
 
   return (
     <div className="w-full px-4 py-16">
@@ -88,14 +88,14 @@ export default function BookingSuccess() {
               <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
             </div>
             <CardTitle className="text-2xl">
-              {selectedProduct?.id === 'birth-map'
+              {productId === 'birth-map'
                 ? t('birthMapPaymentConfirmed')
                 : t('bookingConfirmed')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-6 text-gray-600 dark:text-gray-300">
-              {selectedProduct?.id === 'birth-map'
+              {productId === 'birth-map'
                 ? t('birthMapPaymentThankYou')
                 : t('bookingThankYou')}
             </p>
@@ -109,7 +109,7 @@ export default function BookingSuccess() {
                   </span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {selectedProduct?.id === 'birth-map'
+                  {productId === 'birth-map'
                     ? t('birthMapDelivery')
                     : t('numerologistContact')}
                 </p>
@@ -119,7 +119,7 @@ export default function BookingSuccess() {
                 className="bg-indigo-600 text-white hover:bg-indigo-700"
               >
                 <Link href="/booking">
-                  {selectedProduct?.id === 'birth-map'
+                  {productId === 'birth-map'
                     ? t('buyAnother')
                     : t('bookAnother')}
                 </Link>

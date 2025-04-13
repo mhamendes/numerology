@@ -267,7 +267,10 @@
     "birthMapDelivery": "Your Birth Map will be prepared and delivered to your email within 2 business days.",
     "numerologistContact": "Our numerologist will contact you within 24 hours to schedule your session.",
     "bookAnother": "Book Another Reading",
-    "buyAnother": "Buy Another Service"
+    "buyAnother": "Buy Another Service",
+    "paymentFailed": "Payment Failed!",
+    "paymentFailedDescription": "We're sorry, but your payment was not successful. Please try again or contact us for assistance.",
+    "tryAgain": "Try Again"
   },
   "form": {
     "name": {

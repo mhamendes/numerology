@@ -1,18 +1,13 @@
-'use client';
-
 import React from 'react';
-import { CalendarIcon, CheckIcon } from 'lucide-react';
+import { XIcon } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-import { useBooking } from '../(components)/context';
-
-export default function BookingSuccess() {
-  const t = useTranslations('booking');
-  const { selectedProduct } = useBooking();
+export default async function BookingFailure() {
+  const t = await getTranslations('booking');
 
   return (
     <div className="w-full px-4 py-16">
@@ -84,45 +79,23 @@ export default function BookingSuccess() {
 
         <Card className="text-center">
           <CardHeader>
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-              <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900">
+              <XIcon className="h-8 w-8 text-red-600 dark:text-red-400" />
             </div>
-            <CardTitle className="text-2xl">
-              {selectedProduct?.id === 'birth-map'
-                ? t('birthMapPaymentConfirmed')
-                : t('bookingConfirmed')}
-            </CardTitle>
+            <CardTitle className="text-2xl">{t('paymentFailed')}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-6 text-gray-600 dark:text-gray-300">
-              {selectedProduct?.id === 'birth-map'
-                ? t('birthMapPaymentThankYou')
-                : t('bookingThankYou')}
+              {t('paymentFailedDescription')}
             </p>
-            <div className="mb-6 inline-block rounded-lg bg-indigo-50 p-6 dark:bg-gray-800">
-              <div className="mb-2 flex items-center justify-center">
-                <CalendarIcon className="mr-2 h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-
-                <span className="font-medium text-indigo-700 dark:text-indigo-300">
-                  {t('nextSteps')}
-                </span>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                {selectedProduct?.id === 'birth-map'
-                  ? t('birthMapDelivery')
-                  : t('numerologistContact')}
-              </p>
+            <div className="flex flex-col gap-2">
+              <Button
+                asChild
+                className="bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                <Link href="/booking">{t('tryAgain')}</Link>
+              </Button>
             </div>
-            <Button
-              asChild
-              className="bg-indigo-600 text-white hover:bg-indigo-700"
-            >
-              <Link href="/booking">
-                {selectedProduct?.id === 'birth-map'
-                  ? t('buyAnother')
-                  : t('bookAnother')}
-              </Link>
-            </Button>
           </CardContent>
         </Card>
       </div>

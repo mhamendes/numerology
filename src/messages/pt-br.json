@@ -267,7 +267,10 @@
     "birthMapDelivery": "Seu Mapa de Nascimento será preparado e entregue em seu email dentro de 2 dias úteis.",
     "numerologistContact": "Nosso numerólogo entrará em contato com você dentro de 24 horas para agendar sua sessão.",
     "bookAnother": "Agendar Outra Leitura",
-    "buyAnother": "Adquirir Outro Serviço"
+    "buyAnother": "Adquirir Outro Serviço",
+    "paymentFailed": "Pagamento Falhou!",
+    "paymentFailedDescription": "Sentimos muito, mas seu pagamento não foi bem-sucedido. Por favor, tente novamente ou entre em contato conosco para assistência.",
+    "tryAgain": "Tentar Novamente"
   },
   "form": {
     "name": {
