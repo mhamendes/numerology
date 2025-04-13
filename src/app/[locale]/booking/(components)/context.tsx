@@ -149,6 +149,11 @@ export function BookingProvider({
               tBirthMap('invertedTriangle'),
               tBirthMap('personalYears'),
               tBirthMap('monthlyGuidance'),
+              tServices('lifePathNumber'),
+              tServices('destinyNumber'),
+              tServices('soulUrgeNumber'),
+              tServices('personalityNumber'),
+              tServices('currentYearForecast'),
             ],
             icon: <BookIcon className="h-6 w-6 text-purple-500" />,
           };
@@ -158,12 +163,8 @@ export function BookingProvider({
             title: tBooking('personalReading'),
             description: tBooking('personalReadingDescription'),
             features: [
-              tServices('lifePathNumber'),
-              tServices('destinyNumber'),
-              tServices('soulUrgeNumber'),
-              tServices('personalityNumber'),
-              tServices('currentYearForecast'),
-              tServices('sixtyMinuteConsultation'),
+              tServices('allBirthMapFeatures'),
+              tServices('ninetyMinuteConsultation'),
             ],
             icon: <StarIcon className="h-6 w-6 text-indigo-500" />,
           };
