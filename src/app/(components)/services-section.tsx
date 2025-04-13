@@ -117,11 +117,14 @@ export function ServicesSection() {
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                       : 'border border-indigo-600 bg-white text-indigo-600 hover:bg-gray-50 dark:border-indigo-500 dark:bg-gray-800 dark:text-indigo-400 dark:hover:bg-gray-700'
                   }`}
+                  asChild
                   id={`pyggwy_${index}`}
                 >
-                  {service.title === t('birthMap')
-                    ? t('calculateNow')
-                    : t('bookNow')}
+                  <Link href={`/booking?productId=${service.id}`}>
+                    {service.title === t('birthMap')
+                      ? t('calculateNow')
+                      : t('bookNow')}
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
