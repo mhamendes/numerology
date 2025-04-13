@@ -130,7 +130,7 @@ export async function createPersonalDaysSection({
 
   pdf = await createTitle({
     pdf,
-    title: 'Descrição dos Dias Pessoais',
+    title: personalDatesExtraContent.title,
     startHeight: NEW_PAGE_START_HEIGHT,
   });
 

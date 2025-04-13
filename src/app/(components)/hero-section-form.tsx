@@ -63,7 +63,7 @@ export function HeroSectionForm() {
 
     setIsLoading(true);
     try {
-      const response = sendPersonalDaysDocumentEmail(data);
+      const response = await sendPersonalDaysDocumentEmail(data);
 
       if (!response) throw new Error('Personal Days email failed to be sent');
 
