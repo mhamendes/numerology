@@ -76,9 +76,6 @@ export async function createPersonalDaysSection({
     })),
   });
 
-  const months = getMonths(results, locale);
-  console.log({ months });
-
   pdf.autoTable({
     head: [
       [personalDatesExtraContent.month, ...getMonths(results, locale)],
