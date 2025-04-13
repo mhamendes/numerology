@@ -44,10 +44,10 @@ export async function createSections({
       .default as typeof baseSectionTitles) ?? baseSectionTitles;
 
   const motivationNumberTextBase = (
-    await import(`src/assets/documents/pt-br/01 - Motivação.json`)
+    await import(`src/assets/documents/pt-br/01-motivation.json`)
   ).default;
   const motivationNumberText =
-    ((await import(`src/assets/documents/${locale}/01 - Motivação.json`))
+    ((await import(`src/assets/documents/${locale}/01-motivation.json`))
       .default as typeof motivationNumberTextBase) ?? motivationNumberTextBase;
 
   pdf = await createSection({
@@ -58,10 +58,10 @@ export async function createSections({
   });
 
   const impressionNumberTextBase = (
-    await import(`src/assets/documents/pt-br/02 - Impressão.json`)
+    await import(`src/assets/documents/pt-br/02-impression.json`)
   ).default;
   const impressionNumberText =
-    ((await import(`src/assets/documents/${locale}/02 - Impressão.json`))
+    ((await import(`src/assets/documents/${locale}/02-impression.json`))
       .default as typeof impressionNumberTextBase) ?? impressionNumberTextBase;
 
   pdf = await createSection({
@@ -72,10 +72,10 @@ export async function createSections({
   });
 
   const expressionNumberTextBase = (
-    await import(`src/assets/documents/pt-br/03 - Expressão.json`)
+    await import(`src/assets/documents/pt-br/03-expression.json`)
   ).default;
   const expressionNumberText =
-    ((await import(`src/assets/documents/${locale}/03 - Expressão.json`))
+    ((await import(`src/assets/documents/${locale}/03-expression.json`))
       .default as typeof expressionNumberTextBase) ?? expressionNumberTextBase;
 
   pdf = await createSection({
@@ -86,10 +86,10 @@ export async function createSections({
   });
 
   const birthdayVibrationTextBase = (
-    await import(`src/assets/documents/pt-br/04 - Dia Natalício.json`)
+    await import(`src/assets/documents/pt-br/04-birthDate.json`)
   ).default;
   const birthdayVibrationText =
-    ((await import(`src/assets/documents/${locale}/04 - Dia Natalício.json`))
+    ((await import(`src/assets/documents/${locale}/04-birthDate.json`))
       .default as typeof birthdayVibrationTextBase) ??
     birthdayVibrationTextBase;
 
@@ -101,12 +101,11 @@ export async function createSections({
   });
 
   const psychicNumberTextBase = (
-    await import(`src/assets/documents/pt-br/05 - Números Psíquicos.json`)
+    await import(`src/assets/documents/pt-br/05-psychicNumbers.json`)
   ).default;
   const psychicNumberText =
-    ((
-      await import(`src/assets/documents/${locale}/05 - Números Psíquicos.json`)
-    ).default as typeof psychicNumberTextBase) ?? psychicNumberTextBase;
+    ((await import(`src/assets/documents/${locale}/05-psychicNumbers.json`))
+      .default as typeof psychicNumberTextBase) ?? psychicNumberTextBase;
 
   pdf = await createSection({
     pdf,
@@ -116,10 +115,10 @@ export async function createSections({
   });
 
   const destinyNumberTextBase = (
-    await import(`src/assets/documents/pt-br/06 - Destino.json`)
+    await import(`src/assets/documents/pt-br/06-destiny.json`)
   ).default;
   const destinyNumberText =
-    ((await import(`src/assets/documents/${locale}/06 - Destino.json`))
+    ((await import(`src/assets/documents/${locale}/06-destiny.json`))
       .default as typeof destinyNumberTextBase) ?? destinyNumberTextBase;
 
   pdf = await createSection({
@@ -130,10 +129,10 @@ export async function createSections({
   });
 
   const missionNumberTextBase = (
-    await import(`src/assets/documents/pt-br/07 - Missão.json`)
+    await import(`src/assets/documents/pt-br/07-mission.json`)
   ).default;
   const missionNumberText =
-    ((await import(`src/assets/documents/${locale}/07 - Missão.json`))
+    ((await import(`src/assets/documents/${locale}/07-mission.json`))
       .default as typeof missionNumberTextBase) ?? missionNumberTextBase;
 
   pdf = await createSection({
@@ -144,10 +143,10 @@ export async function createSections({
   });
 
   const hiddenTalentNumberTextBase = (
-    await import(`src/assets/documents/pt-br/08 - Talento Oculto.json`)
+    await import(`src/assets/documents/pt-br/08-hiddenTalent.json`)
   ).default;
   const hiddenTalentNumberText =
-    ((await import(`src/assets/documents/${locale}/08 - Talento Oculto.json`))
+    ((await import(`src/assets/documents/${locale}/08-hiddenTalent.json`))
       .default as typeof hiddenTalentNumberTextBase) ??
     hiddenTalentNumberTextBase;
 
@@ -159,10 +158,10 @@ export async function createSections({
   });
 
   const karmicLessonsTextBase = (
-    await import(`src/assets/documents/pt-br/09 - Lições Cármicas.json`)
+    await import(`src/assets/documents/pt-br/09-karmicLessons.json`)
   ).default;
   const karmicLessonsText =
-    ((await import(`src/assets/documents/${locale}/09 - Lições Cármicas.json`))
+    ((await import(`src/assets/documents/${locale}/09-karmicLessons.json`))
       .default as typeof karmicLessonsTextBase) ?? karmicLessonsTextBase;
 
   pdf = await createSectionWithMultipleResults({
@@ -173,10 +172,10 @@ export async function createSections({
   });
 
   const karmicDebtsTextBase = (
-    await import(`src/assets/documents/pt-br/10 - Dívidas Cármicas.json`)
+    await import(`src/assets/documents/pt-br/10-karmicDebts.json`)
   ).default;
   const karmicDebtsText =
-    ((await import(`src/assets/documents/${locale}/10 - Dívidas Cármicas.json`))
+    ((await import(`src/assets/documents/${locale}/10-karmicDebts.json`))
       .default as typeof karmicDebtsTextBase) ?? karmicDebtsTextBase;
 
   pdf = await createSectionWithMultipleResults({
@@ -187,14 +186,11 @@ export async function createSections({
   });
 
   const hiddenTendenciesTextBase = (
-    await import(`src/assets/documents/pt-br/11 - Tendências Ocultas.json`)
+    await import(`src/assets/documents/pt-br/11-hiddenTrends.json`)
   ).default;
   const hiddenTendenciesText =
-    ((
-      await import(
-        `src/assets/documents/${locale}/11 - Tendências Ocultas.json`
-      )
-    ).default as typeof hiddenTendenciesTextBase) ?? hiddenTendenciesTextBase;
+    ((await import(`src/assets/documents/${locale}/11-hiddenTrends.json`))
+      .default as typeof hiddenTendenciesTextBase) ?? hiddenTendenciesTextBase;
 
   pdf = await createSectionWithMultipleResults({
     pdf,
@@ -204,12 +200,12 @@ export async function createSections({
   });
 
   const subconsciousResponseTextBase = (
-    await import(`src/assets/documents/pt-br/12 - Resposta Subconsciente.json`)
+    await import(`src/assets/documents/pt-br/12-subconsciousResponse.json`)
   ).default;
   const subconsciousResponseText =
     ((
       await import(
-        `src/assets/documents/${locale}/12 - Resposta Subconsciente.json`
+        `src/assets/documents/${locale}/12-subconsciousResponse.json`
       )
     ).default as typeof subconsciousResponseTextBase) ??
     subconsciousResponseTextBase;
@@ -222,10 +218,10 @@ export async function createSections({
   });
 
   const lifeCyclesTextBase = (
-    await import(`src/assets/documents/pt-br/13 - Ciclos da Vida.json`)
+    await import(`src/assets/documents/pt-br/13-lifeCycles.json`)
   ).default;
   const lifeCyclesText =
-    ((await import(`src/assets/documents/${locale}/13 - Ciclos da Vida.json`))
+    ((await import(`src/assets/documents/${locale}/13-lifeCycles.json`))
       .default as typeof lifeCyclesTextBase) ?? lifeCyclesTextBase;
 
   pdf = await createLifeCycleSection({
@@ -237,10 +233,10 @@ export async function createSections({
   });
 
   const challengesTextBase = (
-    await import(`src/assets/documents/pt-br/14 - Desafio.json`)
+    await import(`src/assets/documents/pt-br/14-challenge.json`)
   ).default;
   const challengesText =
-    ((await import(`src/assets/documents/${locale}/14 - Desafio.json`))
+    ((await import(`src/assets/documents/${locale}/14-challenge.json`))
       .default as typeof challengesTextBase) ?? challengesTextBase;
 
   pdf = await createChallengesSection({
@@ -252,14 +248,11 @@ export async function createSections({
   });
 
   const decisiveMomentsTextBase = (
-    await import(`src/assets/documents/pt-br/15 - Momentos Decisivos.json`)
+    await import(`src/assets/documents/pt-br/15-decisiveMoments.json`)
   ).default;
   const decisiveMomentsText =
-    ((
-      await import(
-        `src/assets/documents/${locale}/15 - Momentos Decisivos.json`
-      )
-    ).default as typeof decisiveMomentsTextBase) ?? decisiveMomentsTextBase;
+    ((await import(`src/assets/documents/${locale}/15-decisiveMoments.json`))
+      .default as typeof decisiveMomentsTextBase) ?? decisiveMomentsTextBase;
 
   pdf = await createDecisiveMomentsSection({
     pdf,
@@ -270,10 +263,10 @@ export async function createSections({
   });
 
   const personalYearTextBase = (
-    await import(`src/assets/documents/pt-br/16 - Ano Pessoal.json`)
+    await import(`src/assets/documents/pt-br/16-personalYear.json`)
   ).default;
   const personalYearText =
-    ((await import(`src/assets/documents/${locale}/16 - Ano Pessoal.json`))
+    ((await import(`src/assets/documents/${locale}/16-personalYear.json`))
       .default as typeof personalYearTextBase) ?? personalYearTextBase;
 
   pdf = await createPersonalYearSection({
@@ -286,10 +279,10 @@ export async function createSections({
   });
 
   const personalMonthTextBase = (
-    await import(`src/assets/documents/pt-br/17 - Mês Pessoal.json`)
+    await import(`src/assets/documents/pt-br/17-personalMonth.json`)
   ).default;
   const personalMonthText =
-    ((await import(`src/assets/documents/${locale}/17 - Mês Pessoal.json`))
+    ((await import(`src/assets/documents/${locale}/17-personalMonth.json`))
       .default as typeof personalMonthTextBase) ?? personalMonthTextBase;
 
   pdf = await createPersonalMonthSection({
@@ -301,10 +294,10 @@ export async function createSections({
   });
 
   const personalDayTextBase = (
-    await import(`src/assets/documents/pt-br/18 - Dia Pessoal.json`)
+    await import(`src/assets/documents/pt-br/18-personalDay.json`)
   ).default;
   const personalDayText =
-    ((await import(`src/assets/documents/${locale}/18 - Dia Pessoal.json`))
+    ((await import(`src/assets/documents/${locale}/18-personalDay.json`))
       .default as typeof personalDayTextBase) ?? personalDayTextBase;
 
   pdf = await createPersonalDaysSection({
@@ -316,14 +309,12 @@ export async function createSections({
   });
 
   const compatibleNumbersTextBase = (
-    await import(`src/assets/documents/pt-br/22 - Números Compatíveis.json`)
+    await import(`src/assets/documents/pt-br/22-compatibleNumbers.json`)
   ).default;
   const compatibleNumbersText =
-    ((
-      await import(
-        `src/assets/documents/${locale}/22 - Números Compatíveis.json`
-      )
-    ).default as typeof compatibleNumbersTextBase) ?? compatibleNumbersTextBase;
+    ((await import(`src/assets/documents/${locale}/22-compatibleNumbers.json`))
+      .default as typeof compatibleNumbersTextBase) ??
+    compatibleNumbersTextBase;
 
   pdf = await createSectionWithListOfNumbers({
     pdf,
@@ -349,12 +340,12 @@ export async function createSections({
   });
 
   const conjugalVibrationTextBase = (
-    await import(`src/assets/documents/pt-br/23 - Vibração Conjugal.json`)
+    await import(`src/assets/documents/pt-br/23-conjugalVibration.json`)
   ).default;
   const conjugalVibrationText =
-    ((
-      await import(`src/assets/documents/${locale}/23 - Vibração Conjugal.json`)
-    ).default as typeof conjugalVibrationTextBase) ?? conjugalVibrationTextBase;
+    ((await import(`src/assets/documents/${locale}/23-conjugalVibration.json`))
+      .default as typeof conjugalVibrationTextBase) ??
+    conjugalVibrationTextBase;
 
   pdf = await createSectionWithListOfNumbers({
     pdf,
@@ -388,22 +379,17 @@ export async function createSections({
   });
 
   const invertedTriangleTextBase = (
-    await import(
-      `src/assets/documents/pt-br/24 - Triângulo Invertido e Sequências Negativas.json`
-    )
+    await import(`src/assets/documents/pt-br/24-invertedTriangle.json`)
   ).default;
   const invertedTriangleText =
-    ((
-      await import(
-        `src/assets/documents/${locale}/24 - Triângulo Invertido e Sequências Negativas.json`
-      )
-    ).default as typeof invertedTriangleTextBase) ?? invertedTriangleTextBase;
+    ((await import(`src/assets/documents/${locale}/24-invertedTriangle.json`))
+      .default as typeof invertedTriangleTextBase) ?? invertedTriangleTextBase;
 
   const arcanesTextBase = (
-    await import(`src/assets/documents/pt-br/25 - Arcanos.json`)
+    await import(`src/assets/documents/pt-br/25-arcanes.json`)
   ).default;
   const arcanesText =
-    ((await import(`src/assets/documents/${locale}/25 - Arcanos.json`))
+    ((await import(`src/assets/documents/${locale}/25-arcanes.json`))
       .default as typeof arcanesTextBase) ?? arcanesTextBase;
 
   pdf = await createInvertedTriangleSection({
