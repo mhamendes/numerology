@@ -13,7 +13,7 @@ import LocaleSwitcher from './locale-switcher';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   const t = useTranslations('header');
 
   const toggleMenu = () => {
@@ -86,14 +86,13 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() =>
+              setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+            }
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? (
-              <SunIcon className="h-5 w-5" />
-            ) : (
-              <MoonIcon className="h-5 w-5" />
-            )}
+            <SunIcon className="hidden h-5 w-5 dark:block" />
+            <MoonIcon className="h-5 w-5 dark:hidden" />
           </Button>
         </nav>
 
@@ -105,14 +104,13 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() =>
+              setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+            }
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? (
-              <SunIcon className="h-5 w-5" />
-            ) : (
-              <MoonIcon className="h-5 w-5" />
-            )}
+            <SunIcon className="hidden h-5 w-5 dark:block" />
+            <MoonIcon className="h-5 w-5 dark:hidden" />
           </Button>
           <Button variant="ghost" size="icon" onClick={toggleMenu}>
             {isMenuOpen ? (
