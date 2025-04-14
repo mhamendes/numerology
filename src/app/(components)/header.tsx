@@ -40,7 +40,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-4 md:flex">
+        <nav className="hidden items-center space-x-4 lg:flex">
           <Link
             href="/"
             className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
@@ -97,21 +97,24 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 md:hidden">
+        <div className="flex items-center space-x-4 lg:hidden">
           {/* Mobile Language Selector */}
-          <LocaleSwitcher />
+          <div className="hidden space-x-4 sm:flex">
+            <LocaleSwitcher />
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() =>
-              setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
-            }
-            aria-label="Toggle theme"
-          >
-            <SunIcon className="hidden h-5 w-5 dark:block" />
-            <MoonIcon className="h-5 w-5 dark:hidden" />
-          </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() =>
+                setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+              }
+              aria-label="Toggle theme"
+            >
+              <SunIcon className="hidden h-5 w-5 dark:block" />
+              <MoonIcon className="h-5 w-5 dark:hidden" />
+            </Button>
+          </div>
+
           <Button variant="ghost" size="icon" onClick={toggleMenu}>
             {isMenuOpen ? (
               <XIcon className="h-6 w-6" />
@@ -124,8 +127,24 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white md:hidden dark:border-indigo-900 dark:bg-gray-900">
+        <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white lg:hidden dark:border-indigo-900 dark:bg-gray-900">
           <div className="flex flex-col space-y-4 p-4">
+            <div className="flex space-x-4 sm:hidden">
+              <LocaleSwitcher />
+
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() =>
+                  setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+                }
+                aria-label="Toggle theme"
+              >
+                <SunIcon className="hidden h-5 w-5 dark:block" />
+                <MoonIcon className="h-5 w-5 dark:hidden" />
+              </Button>
+            </div>
+
             <Link
               href="/"
               className="cursor-pointer py-2 text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"

@@ -37,45 +37,26 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <>
-      {/* Mobile Language Selector */}
-      <div className="flex md:hidden">
-        <Select
-          disabled={isPending}
-          value={locale}
-          onValueChange={onSelectChange}
-        >
-          <SelectTrigger className="h-9 w-fit gap-2 border-indigo-200 dark:border-indigo-800">
+    <div className="flex">
+      <Select
+        disabled={isPending}
+        value={locale}
+        onValueChange={onSelectChange}
+      >
+        <SelectTrigger className="h-9 w-fit gap-2 border-indigo-200 dark:border-indigo-800">
+          <div className="flex items-center gap-2 pr-2">
             <GlobeIcon className="h-4 w-4" />
-          </SelectTrigger>
-          <SelectContent className="bg-background">
-            {routing.locales.map((cur) => (
-              <SelectItem key={cur} value={cur}>
-                {t('locale', { locale: cur.replaceAll('-', '_') })}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* Desktop Language Selector */}
-      <div className="hidden md:flex">
-        <Select value={locale} onValueChange={onSelectChange}>
-          <SelectTrigger className="h-9 w-fit border-indigo-200 dark:border-indigo-800">
-            <div className="flex items-center gap-2 pr-2">
-              <GlobeIcon className="h-4 w-4" />
-              <SelectValue placeholder={t('label')} />
-            </div>
-          </SelectTrigger>
-          <SelectContent className="bg-background">
-            {routing.locales.map((cur) => (
-              <SelectItem key={cur} value={cur}>
-                {t('locale', { locale: cur.replaceAll('-', '_') })}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-    </>
+            <SelectValue placeholder={t('label')} />
+          </div>
+        </SelectTrigger>
+        <SelectContent className="bg-background">
+          {routing.locales.map((cur) => (
+            <SelectItem key={cur} value={cur}>
+              {t('locale', { locale: cur.replaceAll('-', '_') })}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   );
 }
