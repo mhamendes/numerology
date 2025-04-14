@@ -76,11 +76,11 @@ export function BookingProvider({
       (product) => product.id === searchParams.get('productId')
     );
 
-    if (productId) {
+    if (productId && step < 2) {
       setSelectedProduct(productId);
       setStep(2);
     }
-  }, [searchParams, products]);
+  }, [searchParams, products, step]);
 
   function handleProductSelection(productId: string) {
     const product = products.find((product) => product.id === productId);
@@ -113,11 +113,11 @@ export function BookingProvider({
         productId: selectedProduct.id,
       });
       setClientSecret(client_secret);
+      setStep(3);
     } catch (error) {
       console.error(error);
       toast.error(t('error.somethingWentWrong'));
     } finally {
-      setStep(3);
       setIsLoading(false);
     }
   }
