@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import { cn } from '@/lib/utils';
@@ -11,18 +11,33 @@ import { useBooking } from './(components)/context';
 export default function Layout({ children }: { children: React.ReactNode }) {
   const t = useTranslations('booking');
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const { step } = useBooking();
+  const { step, selectedProduct } = useBooking();
 
   const isLastStep =
     pathname.includes('success') || pathname.includes('failure');
+
+  const productId = selectedProduct?.id ?? searchParams.get('productId');
+
+  function getTitle() {
+    if (!productId) {
+      return t('selectYourProduct');
+    }
+
+    if (productId === 'birth-map') {
+      return t('buyYourMap');
+    }
+
+    return t('bookYourReading');
+  }
 
   return (
     <div className="w-full px-4 py-16">
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">
-            {t('bookYourReading')}
+            {getTitle()}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
             {t('bookingDescription')}

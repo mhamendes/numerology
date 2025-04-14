@@ -123,6 +123,10 @@ export function BookingProvider({
   }
 
   function handleBack() {
+    if (step === 2) {
+      setSelectedProduct(null);
+    }
+
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
   }
 
