@@ -339,5 +339,10 @@
     },
     "back": "Voltar",
     "continueToPayment": "Continuar para Pagamento"
+  },
+  "error": {
+    "title": "Erro",
+    "description": "Algo deu errado. Por favor, tente novamente.",
+    "button": "Voltar"
   }
 }

@@ -31,7 +31,7 @@ export default async function Layout({
       <BookingProvider products={products}>
         <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="flex flex-grow">{children}</main>
           <Footer />
         </div>
       </BookingProvider>
