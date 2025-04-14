@@ -1,7 +1,7 @@
 export const PHONE_NUMBER = '+351935625353';
 export const CONTACT_EMAIL = 'contact@drcosmicnumbers.com';
-export const BRAND_NAME = 'Dr Cosmic° Numbêr °1';
-export const [BRAND_FIRST_NAME, BRAND_LAST_NAME] = ['DrCosmic°', 'Number°1'];
+export const BRAND_NAME = 'Dr Cosmic° Numbēr °1';
+export const [BRAND_FIRST_NAME, BRAND_LAST_NAME] = ['DrCosmic°', 'Numbēr°1'];
 export const BRAND_ADDRESS = [
   'Praça Camilo Castelo Branco, 31 – Centro',
   'Comercial da Estação – Sala 36',

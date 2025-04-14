@@ -29,7 +29,7 @@ export const PALETTE = {
   lightGreen: '#E3EFD9',
   red: '#FF0000',
   purple: '#4F39F6',
-  lightPurple: '#A3B3FF',
+  lightPurple: '#C6D2FF',
 };
 
 export async function getConfiguredPdf() {
@@ -253,7 +253,7 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
   Array.from({ length: numberOfPages }).forEach((_, index) => {
     pdf.setPage(index + 1);
 
-    pdf.addImage(logoBase64, 'WEBP', 20, 5, 24, 15);
+    pdf.addImage(logoBase64, 'WEBP', 15, 11, 48, 8);
     pdf.setFontSize(20);
     pdf.setTextColor(PALETTE.purple);
     pdf.setFont('zapfino', 'normal');
