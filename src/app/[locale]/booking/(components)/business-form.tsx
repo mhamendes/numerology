@@ -62,7 +62,11 @@ export default function BusinessForm() {
                 <FormItem className="flex flex-col">
                   <FormLabel>{t('email.label')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('email.placeholder')} {...field} />
+                    <Input
+                      type="email"
+                      placeholder={t('email.placeholder')}
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>{t('email.description')}</FormDescription>
                   <FormMessage />

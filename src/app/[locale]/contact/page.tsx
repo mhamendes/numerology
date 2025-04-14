@@ -123,7 +123,11 @@ export default function Contact() {
                     <FormItem className="flex flex-col">
                       <FormLabel>{t('emailAddress')}</FormLabel>
                       <FormControl>
-                        <Input placeholder={t('enterYourEmail')} {...field} />
+                        <Input
+                          type="email"
+                          placeholder={t('enterYourEmail')}
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

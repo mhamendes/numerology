@@ -142,6 +142,7 @@ export default function BirthMap() {
                             <FormLabel>{tForm('email.label')}</FormLabel>
                             <FormControl>
                               <Input
+                                type="email"
                                 placeholder={tForm('email.placeholder')}
                                 {...field}
                               />

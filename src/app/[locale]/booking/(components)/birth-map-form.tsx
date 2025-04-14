@@ -73,7 +73,11 @@ export default function BirthMapForm() {
                 <FormItem className="flex flex-col">
                   <FormLabel>{t('email.label')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('email.placeholder')} {...field} />
+                    <Input
+                      placeholder={t('email.placeholder')}
+                      {...field}
+                      type="email"
+                    />
                   </FormControl>
                   <FormDescription>{t('email.description')}</FormDescription>
                   <FormMessage />
