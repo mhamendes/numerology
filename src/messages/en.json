@@ -332,6 +332,9 @@
       "placeholder": "Is there anything specific you'd like us to address in your reading?"
     },
     "error": {
+      "title": "Error",
+      "description": "Something went wrong. Please try again.",
+      "button": "Go back",
       "somethingWentWrong": "Something went wrong. Please try again."
     },
     "back": "Back",

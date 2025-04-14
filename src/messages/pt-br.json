@@ -332,6 +332,9 @@
       "placeholder": "Há algo específico que você gostaria que abordássemos em sua leitura?"
     },
     "error": {
+      "title": "Erro",
+      "description": "Algo deu errado. Por favor, tente novamente.",
+      "button": "Voltar",
       "somethingWentWrong": "Algo deu errado. Por favor, tente novamente."
     },
     "back": "Voltar",

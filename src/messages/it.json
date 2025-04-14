@@ -332,6 +332,9 @@
       "placeholder": "C'è qualcosa di specifico che vorresti che affrontassimo nella tua lettura?"
     },
     "error": {
+      "title": "Errore",
+      "description": "Qualcosa è andato storto. Per favore, riprova.",
+      "button": "Indietro",
       "somethingWentWrong": "Qualcosa è andato storto. Per favore, riprova."
     },
     "back": "Indietro",
