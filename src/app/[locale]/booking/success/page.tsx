@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { CalendarIcon, CheckIcon } from 'lucide-react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -115,14 +114,10 @@ export default function BookingSuccess() {
                 </p>
               </div>
               <Button
-                asChild
+                to="/booking"
                 className="bg-indigo-600 text-white hover:bg-indigo-700"
               >
-                <Link href="/booking">
-                  {productId === 'birth-map'
-                    ? t('buyAnother')
-                    : t('bookAnother')}
-                </Link>
+                {productId === 'birth-map' ? t('buyAnother') : t('bookAnother')}
               </Button>
             </div>
           </CardContent>

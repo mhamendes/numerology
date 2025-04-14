@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Link } from '@/i18n/navigation';
 
 import { useBooking } from '../[locale]/booking/(components)/context';
 
@@ -117,14 +116,12 @@ export function ServicesSection() {
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                       : 'border border-indigo-600 bg-white text-indigo-600 hover:bg-gray-50 dark:border-indigo-500 dark:bg-gray-800 dark:text-indigo-400 dark:hover:bg-gray-700'
                   }`}
-                  asChild
+                  to={`/booking?productId=${service.id}`}
                   id={`pyggwy_${index}`}
                 >
-                  <Link href={`/booking?productId=${service.id}`}>
-                    {service.title === t('birthMap')
-                      ? t('calculateNow')
-                      : t('bookNow')}
-                  </Link>
+                  {service.title === t('birthMap')
+                    ? t('calculateNow')
+                    : t('bookNow')}
                 </Button>
               </CardContent>
             </Card>
@@ -141,9 +138,9 @@ export function ServicesSection() {
           <Button
             variant="outline"
             className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950"
-            asChild
+            to="/contact"
           >
-            <Link href="/contact">{t('contactCustom')}</Link>
+            {t('contactCustom')}
           </Button>
         </div>
       </div>

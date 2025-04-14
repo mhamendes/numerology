@@ -73,9 +73,9 @@ export function Header() {
           </Link>
           <Button
             className="bg-indigo-600 text-white hover:bg-indigo-700"
-            asChild
+            to="/booking"
           >
-            <Link href="/booking">{t('bookReading')}</Link>
+            {t('bookReading')}
           </Button>
 
           {/* Language Selector */}
@@ -163,10 +163,10 @@ export function Header() {
             </Link>
             <Button
               className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
-              asChild
+              to="/booking"
               onClick={() => closeMenu()}
             >
-              <Link href="/booking">{t('bookReading')}</Link>
+              {t('bookReading')}
             </Button>
           </div>
         </div>

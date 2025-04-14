@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { SearchIcon } from 'lucide-react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import {
@@ -120,10 +119,10 @@ export default function QA() {
             {t('cantFindAnswer')}
           </p>
           <Button
-            asChild
             className="bg-indigo-600 text-white hover:bg-indigo-700"
+            to="/contact"
           >
-            <Link href="/contact">{t('contactUs')}</Link>
+            {t('contactUs')}
           </Button>
         </div>
       </div>

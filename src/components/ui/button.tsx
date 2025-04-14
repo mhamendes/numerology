@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
 import { LoadingSpinner } from './loading-spinner';
@@ -43,16 +44,26 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: true;
+  asChild?: boolean;
+  to?: string;
   isLoading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, isLoading, variant, size, asChild = false, onClick, ...props },
+    {
+      className,
+      isLoading,
+      variant,
+      size,
+      asChild = false,
+      onClick,
+      to,
+      ...props
+    },
     ref
   ) => {
-    const Comp = asChild ? Slot : 'button';
+    const Comp = asChild || to ? Slot : 'button';
     const [isClicked, setIsClicked] = React.useState(false);
 
     React.useEffect(() => {
@@ -65,22 +76,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       onClick?.(e);
     };
 
-    const child = asChild ? (
-      props.children
-    ) : (
-      <div className="relative flex w-full items-center justify-center">
-        <div
-          className={cn(
-            buttonVariants({ variant, className }),
-            'absolute hidden w-full items-center justify-center',
-            isLoading && 'flex'
-          )}
-        >
-          <LoadingSpinner />
+    function getChild() {
+      if (asChild) return props.children;
+      if (to) return <Link href={to}>{props.children}</Link>;
+      return (
+        <div className="relative flex w-full items-center justify-center">
+          <div
+            className={cn(
+              buttonVariants({ variant, className }),
+              'absolute hidden w-full items-center justify-center',
+              isLoading && 'flex'
+            )}
+          >
+            <LoadingSpinner />
+          </div>
+          {props.children}
         </div>
-        {props.children}
-      </div>
-    );
+      );
+    }
 
     return (
       <Comp
@@ -89,7 +102,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {child}
+        {getChild()}
       </Comp>
     );
   }

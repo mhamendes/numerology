@@ -1,6 +1,5 @@
 import React from 'react';
 import { XIcon } from 'lucide-react';
-import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
 import { Button } from '@/components/ui/button';
@@ -90,10 +89,10 @@ export default async function BookingFailure() {
             </p>
             <div className="flex flex-col gap-2">
               <Button
-                asChild
                 className="bg-indigo-600 text-white hover:bg-indigo-700"
+                to="/booking"
               >
-                <Link href="/booking">{t('tryAgain')}</Link>
+                {t('tryAgain')}
               </Button>
             </div>
           </CardContent>
