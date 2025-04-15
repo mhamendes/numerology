@@ -34,7 +34,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
 import { sendPersonalDaysDocumentEmail } from '@/actions/createPersonalDaysReturnDocument';
@@ -93,6 +92,7 @@ export function HeroSectionForm() {
                     <FormLabel>{tForm('email.label')}</FormLabel>
                     <FormControl>
                       <Input
+                        type="email"
                         placeholder={tForm('email.placeholder')}
                         {...field}
                       />
@@ -209,10 +209,10 @@ function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
               {t('description')}
             </DialogDescription>
             <Button
-              asChild
               className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+              to="/booking"
             >
-              <Link href="/booking">{t('button')}</Link>
+              {t('button')}
             </Button>
           </div>
         </DialogHeader>
