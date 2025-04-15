@@ -38,7 +38,6 @@ export default function GlobalError({
                 </CardDescription>
                 <Button
                   className="bg-indigo-600 text-white hover:bg-indigo-700"
-                  to="/"
                   onClick={reset}
                 >
                   Try again
