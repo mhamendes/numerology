@@ -15,7 +15,6 @@ type CreateCheckoutSessionProps = {
   partnerBirthday?: string | null;
   businessName?: string | null;
   businessType?: string | null;
-  specificQuestions?: string | null;
 };
 
 export async function createCheckoutSession({
@@ -26,7 +25,6 @@ export async function createCheckoutSession({
   partnerBirthday = null,
   businessName = null,
   businessType = null,
-  specificQuestions = null,
   productServerId,
   productId,
 }: CreateCheckoutSessionProps) {
@@ -77,7 +75,6 @@ export async function createCheckoutSession({
       partnerBirthday,
       businessName,
       businessType,
-      specificQuestions,
       locale,
     },
   });
