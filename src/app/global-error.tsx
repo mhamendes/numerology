@@ -1,6 +1,5 @@
 'use client';
 import { useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,8 +17,6 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const t = useTranslations('error');
-
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error);
@@ -33,18 +30,18 @@ export default function GlobalError({
           <div className="mx-auto w-4xl max-w-4xl">
             <Card className="text-center">
               <CardHeader>
-                <CardTitle className="text-2xl">{t('title')}</CardTitle>
+                <CardTitle className="text-2xl">ERROR</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="mb-6 text-gray-600 dark:text-gray-300">
-                  {t('description')}
+                  Something went wrong. Please try again.
                 </CardDescription>
                 <Button
                   className="bg-indigo-600 text-white hover:bg-indigo-700"
                   to="/"
                   onClick={reset}
                 >
-                  {t('button')}
+                  Try again
                 </Button>
               </CardContent>
             </Card>
