@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
@@ -33,9 +32,7 @@ import { useBooking } from './context';
 
 export default function BirthMapForm() {
   const t = useTranslations('form');
-  const { onSubmit, handleBack, isLoading } = useBooking();
-
-  const searchParams = useSearchParams();
+  const { onSubmit, handleBack, isLoading, prefilledData } = useBooking();
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
@@ -48,11 +45,11 @@ export default function BirthMapForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      fullName: searchParams.get('fullName') ?? undefined,
-      birthday: searchParams.get('birthday')
-        ? new Date(searchParams.get('birthday') as string)
+      fullName: prefilledData?.fullName ?? undefined,
+      birthday: prefilledData?.birthday
+        ? new Date(prefilledData.birthday)
         : undefined,
-      email: searchParams.get('email') ?? undefined,
+      email: prefilledData?.email ?? undefined,
     },
   });
 

@@ -32,7 +32,7 @@ import { useBooking } from './context';
 
 export default function RelationshipForm() {
   const t = useTranslations('form');
-  const { onSubmit, handleBack, isLoading } = useBooking();
+  const { onSubmit, handleBack, isLoading, prefilledData } = useBooking();
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
@@ -50,6 +50,17 @@ export default function RelationshipForm() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      fullName: prefilledData?.fullName ?? undefined,
+      birthday: prefilledData?.birthday
+        ? new Date(prefilledData.birthday)
+        : undefined,
+      email: prefilledData?.email ?? undefined,
+      partnerFullName: prefilledData?.partnerFullName ?? undefined,
+      partnerBirthday: prefilledData?.partnerBirthday
+        ? new Date(prefilledData.partnerBirthday)
+        : undefined,
+    },
   });
 
   return (

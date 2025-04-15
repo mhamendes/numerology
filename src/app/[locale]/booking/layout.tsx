@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import { cn } from '@/lib/utils';
@@ -10,13 +10,9 @@ import { useBooking } from './(components)/context';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const t = useTranslations('booking');
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const { step, selectedProduct } = useBooking();
-
-  const isLastStep =
-    pathname.includes('success') || pathname.includes('failure');
+  const { step, selectedProduct, isLastStep } = useBooking();
 
   const productId = selectedProduct?.id ?? searchParams.get('productId');
 

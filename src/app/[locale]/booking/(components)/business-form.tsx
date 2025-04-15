@@ -30,7 +30,7 @@ import { useBooking } from './context';
 
 export default function BusinessForm() {
   const t = useTranslations('form');
-  const { onSubmit, handleBack, isLoading } = useBooking();
+  const { onSubmit, handleBack, isLoading, prefilledData } = useBooking();
 
   const FormSchema = z.object({
     businessName: z.string().min(2, {
@@ -44,6 +44,11 @@ export default function BusinessForm() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      businessName: prefilledData?.businessName ?? undefined,
+      businessType: prefilledData?.businessType ?? undefined,
+      email: prefilledData?.email ?? undefined,
+    },
   });
 
   return (

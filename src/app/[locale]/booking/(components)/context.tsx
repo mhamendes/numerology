@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -41,6 +41,8 @@ type BookingContextType = {
   step: number;
   isLoading: boolean;
   clientSecret: string | null;
+  prefilledData: BaseFormSchema | null;
+  isLastStep: boolean;
 };
 
 const BookingContext = createContext<BookingContextType>({
@@ -52,6 +54,8 @@ const BookingContext = createContext<BookingContextType>({
   isLoading: false,
   onSubmit: () => {},
   clientSecret: null,
+  prefilledData: null,
+  isLastStep: false,
 });
 export function BookingProvider({
   children,
@@ -61,6 +65,10 @@ export function BookingProvider({
   products: Product[];
 }) {
   const t = useTranslations('form');
+  const tBooking = useTranslations('booking');
+  const tBirthMap = useTranslations('birthMap');
+  const tServices = useTranslations('services');
+
   const pathname = usePathname();
   const router = useRouter();
 
@@ -68,9 +76,9 @@ export function BookingProvider({
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
-  const tBooking = useTranslations('booking');
-  const tBirthMap = useTranslations('birthMap');
-  const tServices = useTranslations('services');
+  const [prefilledData, setPrefilledData] = useState<BaseFormSchema | null>(
+    null
+  );
 
   function handleProductSelection(productId: string) {
     const product = products.find((product) => product.id === productId);
@@ -87,6 +95,8 @@ export function BookingProvider({
   async function onSubmit(data: BaseFormSchema) {
     'server-only';
     if (isLoading || !selectedProduct) return;
+
+    sessionStorage.setItem('bookingData', JSON.stringify(data));
 
     setIsLoading(true);
     try {
@@ -205,6 +215,23 @@ export function BookingProvider({
     })
     .filter((product) => product !== null);
 
+  const isLastStep =
+    pathname.includes('success') || pathname.includes('failure');
+
+  useEffect(() => {
+    const data = sessionStorage.getItem('bookingData');
+    if (data) {
+      setPrefilledData(JSON.parse(data) as BaseFormSchema);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isLastStep) {
+      sessionStorage.removeItem('bookingData');
+      setPrefilledData(null);
+    }
+  }, [isLastStep]);
+
   return (
     <BookingContext.Provider
       value={{
@@ -216,6 +243,8 @@ export function BookingProvider({
         clientSecret,
         isLoading,
         onSubmit,
+        prefilledData,
+        isLastStep,
       }}
     >
       {children}
