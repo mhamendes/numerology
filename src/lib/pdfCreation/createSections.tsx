@@ -452,7 +452,7 @@ type CreateSectionArgs<T extends AllPossibleNumbers> = {
   locale: string;
 };
 
-async function createSection<T extends AllPossibleNumbers>({
+export async function createSection<T extends AllPossibleNumbers>({
   pdf,
   skipTitle,
   skipEndLine,

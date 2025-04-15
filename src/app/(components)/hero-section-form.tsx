@@ -36,7 +36,7 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 
-import { sendPersonalDaysDocumentEmail } from '@/actions/createPersonalDaysReturnDocument';
+import { sendBirthDayDocumentEmail } from '@/actions/createBirthDayReturnDocument';
 
 export function HeroSectionForm() {
   const t = useTranslations('hero');
@@ -62,7 +62,7 @@ export function HeroSectionForm() {
 
     setIsLoading(true);
     try {
-      const response = await sendPersonalDaysDocumentEmail(data);
+      const response = await sendBirthDayDocumentEmail(data);
 
       if (!response) throw new Error('Personal Days email failed to be sent');
 

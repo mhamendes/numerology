@@ -1,1 +1,1 @@
-export type DocType = 'fullMap' | 'personalDays';
+export type DocType = 'fullMap' | 'birthDay';

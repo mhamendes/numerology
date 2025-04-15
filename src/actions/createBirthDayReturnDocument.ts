@@ -1,12 +1,13 @@
 'use server';
 import 'server-only';
 
+import { getDate } from 'date-fns';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 
 import { DEFAULT_LOCALE, LocalesType } from '@/i18n/routing';
 import { logger } from '@/lib/logger';
-import { getPersonalDays } from '@/lib/numerology/numbers';
+import { DefaultNumbers } from '@/lib/numerology/types';
 import {
   createContactPage,
   createFooter,
@@ -15,7 +16,7 @@ import {
   createMainPage,
   getConfiguredPdf,
 } from '@/lib/pdfCreation';
-import { createPersonalDaysSection } from '@/lib/pdfCreation/createPersonalDaysSection';
+import { createSection } from '@/lib/pdfCreation/createSections';
 
 import { sendEmail } from '@/actions/email/sendEmail';
 
@@ -25,13 +26,11 @@ const _schema = z.object({
   birthday: z.date({ required_error: 'birthday' }),
 });
 
-export async function createPersonalDaysReturnDocument({
+export async function createBirthDayReturnDocument({
   fullName,
   birthday,
   locale,
 }: Omit<z.infer<typeof _schema>, 'email'> & { locale: LocalesType }) {
-  const personalDays = getPersonalDays({ birthday });
-
   let pdf = await getConfiguredPdf();
 
   pdf = await createIntroductionPage(pdf, locale);
@@ -49,23 +48,24 @@ export async function createPersonalDaysReturnDocument({
     ((await import(`src/assets/documents/${locale}/sectionTitles.json`))
       .default as typeof baseSectionTitles) ?? baseSectionTitles;
 
-  const personalDayTextBase = (
-    await import(`src/assets/documents/pt-br/18-personalDay.json`)
+  const birthdayVibrationTextBase = (
+    await import(`src/assets/documents/pt-br/04-birthDate.json`)
   ).default;
-  const personalDayText =
-    ((await import(`src/assets/documents/${locale}/18-personalDay.json`))
-      .default as typeof personalDayTextBase) ?? personalDayTextBase;
+  const birthdayVibrationText =
+    ((await import(`src/assets/documents/${locale}/04-birthDate.json`))
+      .default as typeof birthdayVibrationTextBase) ??
+    birthdayVibrationTextBase;
 
-  pdf = await createPersonalDaysSection({
+  pdf = await createSection({
     pdf,
-    title: sectionTitles.personalDays,
-    results: personalDays,
-    text: personalDayText,
+    title: sectionTitles.birthdayVibration,
+    result: String(getDate(birthday)) as DefaultNumbers,
+    text: birthdayVibrationText,
     locale,
   });
 
   pdf = await createContactPage(pdf, locale);
-  pdf = await createHeader(pdf, locale, 'personalDays');
+  pdf = await createHeader(pdf, locale, 'birthDay');
   pdf = await createFooter(pdf);
 
   const baseBase = (await import(`src/assets/documents/pt-br/base.json`))
@@ -74,7 +74,7 @@ export async function createPersonalDaysReturnDocument({
     ((await import(`src/assets/documents/${locale}/base.json`))
       .default as typeof baseBase) ?? baseBase;
 
-  const subject = base.personalDaysSubject.replace('{{fullName}}', fullName);
+  const subject = base.birthDaySubject.replace('{{fullName}}', fullName);
   const filename = `${subject}.pdf`;
   const uri = pdf.output('datauristring', {
     filename,
@@ -85,9 +85,9 @@ export async function createPersonalDaysReturnDocument({
   return { uri, content, subject, filename };
 }
 
-const log = logger.child({ module: 'sendPersonalDaysDocumentEmail' });
+const log = logger.child({ module: 'sendBirthDayDocumentEmail' });
 
-export async function sendPersonalDaysDocumentEmail({
+export async function sendBirthDayDocumentEmail({
   email,
   fullName,
   ...props
@@ -97,12 +97,11 @@ export async function sendPersonalDaysDocumentEmail({
     DEFAULT_LOCALE;
 
   try {
-    const { content, filename, subject } =
-      await createPersonalDaysReturnDocument({
-        fullName,
-        locale,
-        ...props,
-      });
+    const { content, filename, subject } = await createBirthDayReturnDocument({
+      fullName,
+      locale,
+      ...props,
+    });
 
     await sendEmail({
       to: email,
@@ -115,7 +114,7 @@ export async function sendPersonalDaysDocumentEmail({
 
     return true;
   } catch (error) {
-    log.error(error, 'sendPersonalDaysDocumentEmail error');
+    log.error(error, 'sendBirthDayDocumentEmail error');
     return false;
   }
 }

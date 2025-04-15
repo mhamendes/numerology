@@ -247,7 +247,7 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
 
   const title: Record<DocType, string> = {
     fullMap: base.birthMapTitle,
-    personalDays: base.personalDaysTitle,
+    birthDay: base.birthDayTitle,
   };
 
   Array.from({ length: numberOfPages }).forEach((_, index) => {

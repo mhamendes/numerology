@@ -36,7 +36,7 @@
   "mentorName": "Mentore/Numerologa:",
   "doneAt": "Realizzato il:",
   "birthMapTitle": "Mappa di Nascita",
-  "personalDaysTitle": "Giorni Personali",
+  "birthDayTitle": "Giorno Personale",
   "birthMapSubject": "Mappa di Nascita di {{fullName}}",
-  "personalDaysSubject": "Giorni Personali di {{fullName}}"
+  "birthDaySubject": "Giorno Personale di {{fullName}}"
 }
