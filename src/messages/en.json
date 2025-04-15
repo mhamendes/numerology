@@ -3,6 +3,9 @@
     "label": "Language",
     "locale": "{locale, select, en {English} it {Italiano} pt_br {Português Brasileiro} pt {Português} other {Unknown}}"
   },
+  "currencySwitcher": {
+    "label": "Currency"
+  },
   "header": {
     "home": "Home",
     "services": "Services",

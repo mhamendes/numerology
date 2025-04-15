@@ -1,23 +1,15 @@
 'use server';
 
-import { LOCALES, LocalesType } from '@/i18n/routing';
+import { cookies } from 'next/headers';
+
+import { LocalesType } from '@/i18n/routing';
 import { stripe } from '@/lib/stripe/stripe';
-
-type CurrencyOptions = Record<(typeof LOCALES)[number], string>;
-
-const currencyOptions: CurrencyOptions = {
-  'pt-br': 'brl',
-  pt: 'eur',
-  it: 'eur',
-  en: 'usd',
-};
 
 type GetProductPriceProps = {
   productId: string;
-  locale: string;
 };
 
-async function getProductPrice({ productId, locale }: GetProductPriceProps) {
+async function getProductPrice({ productId }: GetProductPriceProps) {
   if (!productId) {
     throw new Error('Product ID not found');
   }
@@ -27,19 +19,24 @@ async function getProductPrice({ productId, locale }: GetProductPriceProps) {
     expand: ['currency_options'],
   });
 
-  const currencyToUse = currencyOptions[locale as LocalesType];
-  const priceInCurrency = price.currency_options?.[currencyToUse];
+  const currency = (await cookies()).get('CURRENCY')?.value?.toLowerCase();
+
+  if (!currency) {
+    throw new Error('Currency not found');
+  }
+
+  const priceInCurrency = price.currency_options?.[currency];
 
   if (!priceInCurrency) {
     throw new Error(
-      `Price for product ${productId} in currency ${currencyToUse} not found`
+      `Price for product ${productId} in currency ${currency} not found`
     );
   }
 
   return {
     id: price.id,
     amount: priceInCurrency?.unit_amount,
-    currency: currencyToUse,
+    currency,
   };
 }
 
@@ -100,7 +97,6 @@ export async function getProducts(locale: string): Promise<Product[]> {
       .map(async (product) => {
         const price = await getProductPrice({
           productId: product.serverId,
-          locale,
         });
 
         if (!price.amount) {

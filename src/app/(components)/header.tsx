@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { BRAND_FIRST_NAME, BRAND_LAST_NAME } from '@/lib/constants';
 
+import CurrencySwitcher from './currency-switcher';
 import LocaleSwitcher from './locale-switcher';
 
 export function Header() {
@@ -40,7 +41,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-4 lg:flex">
+        <nav className="hidden items-center space-x-4 xl:flex">
           <Link
             href="/"
             className="cursor-pointer text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
@@ -83,6 +84,10 @@ export function Header() {
             <LocaleSwitcher />
           </div>
 
+          <div className="relative flex items-center">
+            <CurrencySwitcher />
+          </div>
+
           <Button
             variant="ghost"
             size="icon"
@@ -97,11 +102,11 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 lg:hidden">
+        <div className="flex items-center space-x-4 xl:hidden">
           {/* Mobile Language Selector */}
-          <div className="hidden space-x-4 sm:flex">
+          <div className="hidden space-x-4 md:flex">
             <LocaleSwitcher />
-
+            <CurrencySwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -127,11 +132,11 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white lg:hidden dark:border-indigo-900 dark:bg-gray-900">
+        <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white xl:hidden dark:border-indigo-900 dark:bg-gray-900">
           <div className="flex flex-col space-y-4 p-4">
-            <div className="flex space-x-4 sm:hidden">
+            <div className="flex space-x-4 md:hidden">
               <LocaleSwitcher />
-
+              <CurrencySwitcher />
               <Button
                 variant="ghost"
                 size="icon"
