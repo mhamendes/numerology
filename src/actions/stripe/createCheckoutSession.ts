@@ -58,9 +58,15 @@ export async function createCheckoutSession({
   }
 
   const locale = (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;
+  const currency = (await cookies()).get('CURRENCY')?.value;
+
+  if (!currency) {
+    throw new Error('Currency not found');
+  }
 
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: price.id, quantity: 1 }],
+    currency,
     mode: 'payment',
     ui_mode: 'embedded',
     return_url: getReturnUrl(productId),
