@@ -33,7 +33,12 @@ import { useBooking } from '../booking/(components)/context';
 export default function BirthMap() {
   const t = useTranslations('birthMap');
   const tForm = useTranslations('form');
-  const { products } = useBooking();
+  const {
+    products,
+    isLoading,
+    onSubmit: onBookingSubmit,
+    handleProductSelection,
+  } = useBooking();
   const router = useRouter();
   const birthMapProduct = products.find(
     (product) => product.id === 'birth-map'
@@ -52,14 +57,10 @@ export default function BirthMap() {
   });
 
   const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    const searchParams = new URLSearchParams({
-      fullName: data.fullName,
-      birthday: data.birthday.toISOString(),
-      email: data.email,
-      productId: birthMapProduct?.id as string,
-    });
+    if (!birthMapProduct) return;
 
-    router.push(`/booking?${searchParams.toString()}`);
+    handleProductSelection(birthMapProduct.id);
+    onBookingSubmit(data);
   };
 
   useEffect(() => {
@@ -217,7 +218,8 @@ export default function BirthMap() {
                     </div>
                     <Button
                       type="submit"
-                      className="mt-4 w-full bg-indigo-600 py-5 text-white hover:bg-indigo-700"
+                      className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+                      isLoading={isLoading}
                     >
                       {t('continueToPayment')}
                     </Button>

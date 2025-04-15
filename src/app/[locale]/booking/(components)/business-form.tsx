@@ -18,7 +18,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { PhoneInput } from '@/components/ui/input-phone';
 import {
   Select,
   SelectContent,
@@ -26,7 +25,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
 
 import { useBooking } from './context';
 
@@ -42,8 +40,6 @@ export default function BusinessForm() {
       message: t('businessType.errorMessage'),
     }),
     email: z.string().email({ message: t('email.errorMessage') }),
-    phone: z.string().min(1, { message: t('phone.errorMessage') }),
-    specificQuestions: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -54,43 +50,24 @@ export default function BusinessForm() {
     <CardContent>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>{t('email.label')}</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder={t('email.placeholder')}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>{t('email.description')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>{t('phone.label')}</FormLabel>
-                  <FormControl>
-                    <PhoneInput
-                      placeholder={t('phone.placeholder')}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>{t('phone.description')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel>{t('email.label')}</FormLabel>
+                <FormControl>
+                  <Input
+                    type="email"
+                    placeholder={t('email.placeholder')}
+                    {...field}
+                  />
+                </FormControl>
+                <FormDescription>{t('email.description')}</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <div className="mt-6 border-t border-gray-200 pt-6 dark:border-gray-700">
             <h3 className="mb-4 text-lg font-medium text-indigo-700 dark:text-indigo-300">
@@ -158,24 +135,6 @@ export default function BusinessForm() {
               />
             </div>
           </div>
-
-          <FormField
-            control={form.control}
-            name="specificQuestions"
-            render={({ field }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>{t('specificQuestions.label')}</FormLabel>
-                <FormControl>
-                  <Textarea
-                    className="mb-1 min-h-[100px] border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                    placeholder={t('specificQuestions.placeholder')}
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
 
           <div className="flex justify-between pt-4">
             <Button

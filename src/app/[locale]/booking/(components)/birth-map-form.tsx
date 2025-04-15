@@ -22,13 +22,11 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { PhoneInput } from '@/components/ui/input-phone';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
@@ -45,8 +43,6 @@ export default function BirthMapForm() {
     }),
     birthday: z.date({ required_error: t('birthday.errorMessage') }),
     email: z.string().email({ message: t('email.errorMessage') }),
-    phone: z.string().min(1, { message: t('phone.errorMessage') }),
-    specificQuestions: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -57,7 +53,6 @@ export default function BirthMapForm() {
         ? new Date(searchParams.get('birthday') as string)
         : undefined,
       email: searchParams.get('email') ?? undefined,
-      phone: searchParams.get('phone') ?? undefined,
     },
   });
 
@@ -66,41 +61,6 @@ export default function BirthMapForm() {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>{t('email.label')}</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder={t('email.placeholder')}
-                      {...field}
-                      type="email"
-                    />
-                  </FormControl>
-                  <FormDescription>{t('email.description')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>{t('phone.label')}</FormLabel>
-                  <FormControl>
-                    <PhoneInput
-                      placeholder={t('phone.placeholder')}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>{t('phone.description')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <FormField
               control={form.control}
               name="fullName"
@@ -161,17 +121,18 @@ export default function BirthMapForm() {
 
           <FormField
             control={form.control}
-            name="specificQuestions"
+            name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col">
-                <FormLabel>{t('specificQuestions.label')}</FormLabel>
+                <FormLabel>{t('email.label')}</FormLabel>
                 <FormControl>
-                  <Textarea
-                    className="mb-1 min-h-[100px] border-indigo-200 focus:ring-indigo-500 dark:border-indigo-800"
-                    placeholder={t('specificQuestions.placeholder')}
+                  <Input
+                    placeholder={t('email.placeholder')}
                     {...field}
+                    type="email"
                   />
                 </FormControl>
+                <FormDescription>{t('email.description')}</FormDescription>
                 <FormMessage />
               </FormItem>
             )}

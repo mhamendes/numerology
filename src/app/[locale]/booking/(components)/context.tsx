@@ -1,11 +1,12 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { z } from 'zod';
+
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 import { createCheckoutSession } from '@/actions/stripe/createCheckoutSession';
 import { Product } from '@/actions/stripe/getProductPrice';
@@ -20,15 +21,13 @@ type PopulatedProduct = Product & {
 };
 
 const _baseFormSchema = z.object({
-  fullName: z.string().optional(),
-  birthday: z.date().optional(),
-  email: z.string().email().optional(),
-  phone: z.string().min(10).optional(),
-  partnerFullName: z.string().optional(),
-  partnerBirthday: z.date().optional(),
-  businessName: z.string().optional(),
-  businessType: z.string().optional(),
-  specificQuestions: z.string().optional(),
+  fullName: z.string().optional().nullable(),
+  birthday: z.date().optional().nullable(),
+  email: z.string().email().optional().nullable(),
+  partnerFullName: z.string().optional().nullable(),
+  partnerBirthday: z.date().optional().nullable(),
+  businessName: z.string().optional().nullable(),
+  businessType: z.string().optional().nullable(),
 });
 
 type BaseFormSchema = z.infer<typeof _baseFormSchema>;
@@ -41,7 +40,7 @@ type BookingContextType = {
   products: PopulatedProduct[];
   step: number;
   isLoading: boolean;
-  clientSecret?: string;
+  clientSecret: string | null;
 };
 
 const BookingContext = createContext<BookingContextType>({
@@ -52,6 +51,7 @@ const BookingContext = createContext<BookingContextType>({
   step: 1,
   isLoading: false,
   onSubmit: () => {},
+  clientSecret: null,
 });
 export function BookingProvider({
   children,
@@ -61,26 +61,16 @@ export function BookingProvider({
   products: Product[];
 }) {
   const t = useTranslations('form');
+  const pathname = usePathname();
+  const router = useRouter();
+
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [clientSecret, setClientSecret] = useState('');
+  const [clientSecret, setClientSecret] = useState<string | null>(null);
   const tBooking = useTranslations('booking');
   const tBirthMap = useTranslations('birthMap');
   const tServices = useTranslations('services');
-
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const productId = products.find(
-      (product) => product.id === searchParams.get('productId')
-    );
-
-    if (productId && step < 2) {
-      setSelectedProduct(productId);
-      setStep(2);
-    }
-  }, [searchParams, products, step]);
 
   function handleProductSelection(productId: string) {
     const product = products.find((product) => product.id === productId);
@@ -104,7 +94,6 @@ export function BookingProvider({
         fullName: data.fullName,
         birthday: data.birthday?.toISOString(),
         email: data.email,
-        phone: data.phone,
         partnerFullName: data.partnerFullName,
         partnerBirthday: data.partnerBirthday?.toISOString(),
         businessName: data.businessName,
@@ -114,6 +103,10 @@ export function BookingProvider({
       });
       setClientSecret(client_secret);
       setStep(3);
+
+      if (pathname !== '/booking') {
+        router.push('/booking');
+      }
     } catch (error) {
       console.error(error);
       toast.error(t('error.somethingWentWrong'));
@@ -125,6 +118,10 @@ export function BookingProvider({
   function handleBack() {
     if (step === 2) {
       setSelectedProduct(null);
+    }
+
+    if (clientSecret) {
+      setClientSecret(null);
     }
 
     setStep((prev) => (prev > 1 ? prev - 1 : prev));

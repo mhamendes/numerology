@@ -11,7 +11,6 @@ type CreateCheckoutSessionProps = {
   fullName?: string | null;
   birthday?: string | null;
   email?: string | null;
-  phone?: string | null;
   partnerFullName?: string | null;
   partnerBirthday?: string | null;
   businessName?: string | null;
@@ -23,7 +22,6 @@ export async function createCheckoutSession({
   fullName = null,
   birthday = null,
   email = null,
-  phone = null,
   partnerFullName = null,
   partnerBirthday = null,
   businessName = null,
@@ -36,8 +34,8 @@ export async function createCheckoutSession({
     throw new Error('Product ID not found');
   }
 
-  if (!email || !phone) {
-    throw new Error('Email and phone are required');
+  if (!email) {
+    throw new Error('Email is required');
   }
 
   if (productId === 'business-numerology' && (!businessName || !businessType)) {
@@ -74,7 +72,6 @@ export async function createCheckoutSession({
       fullName,
       birthday,
       email,
-      phone,
       productId,
       partnerFullName,
       partnerBirthday,
