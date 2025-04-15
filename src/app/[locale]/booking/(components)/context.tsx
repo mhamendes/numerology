@@ -130,10 +130,6 @@ export function BookingProvider({
       setSelectedProduct(null);
     }
 
-    if (clientSecret) {
-      setClientSecret(null);
-    }
-
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
   }
 
@@ -231,6 +227,12 @@ export function BookingProvider({
       setPrefilledData(null);
     }
   }, [isLastStep]);
+
+  useEffect(() => {
+    if (clientSecret && (pathname !== '/booking' || step !== 3)) {
+      setClientSecret(null);
+    }
+  }, [pathname, step, clientSecret]);
 
   return (
     <BookingContext.Provider
