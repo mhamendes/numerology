@@ -14,6 +14,7 @@ import {
 import { useRouter } from '@/i18n/navigation';
 
 import { changeCurrency, getCurrency } from '@/actions/changeCurrency';
+import { useBooking } from '@/app/[locale]/booking/(components)/context';
 
 const Currencies = [
   {
@@ -35,6 +36,7 @@ const Currencies = [
 export default function CurrencySwitcher() {
   const t = useTranslations('currencySwitcher');
   const router = useRouter();
+  const { updateCheckoutSession } = useBooking();
   const [isPending, startTransition] = useTransition();
 
   const [currency, setCurrency] = useState<string | undefined>(undefined);
@@ -52,6 +54,7 @@ export default function CurrencySwitcher() {
     startTransition(() => {
       changeCurrency(currency).then(() => {
         getLatestCurrency();
+        updateCheckoutSession();
         router.refresh();
       });
     });

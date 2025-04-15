@@ -43,6 +43,7 @@ type BookingContextType = {
   clientSecret: string | null;
   prefilledData: BaseFormSchema | null;
   isLastStep: boolean;
+  updateCheckoutSession: () => void;
 };
 
 const BookingContext = createContext<BookingContextType>({
@@ -56,6 +57,7 @@ const BookingContext = createContext<BookingContextType>({
   clientSecret: null,
   prefilledData: null,
   isLastStep: false,
+  updateCheckoutSession: () => {},
 });
 export function BookingProvider({
   children,
@@ -132,6 +134,45 @@ export function BookingProvider({
 
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
   }
+
+  function updateCheckoutSession() {
+    if (clientSecret && prefilledData) {
+      setClientSecret(null);
+      onSubmit(prefilledData as BaseFormSchema);
+    }
+  }
+
+  const isLastStep =
+    pathname.includes('success') || pathname.includes('failure');
+
+  useEffect(() => {
+    const data = sessionStorage.getItem('bookingData');
+    if (data) {
+      const parsedData = JSON.parse(data);
+      setPrefilledData({
+        ...parsedData,
+        birthday: parsedData.birthday
+          ? new Date(parsedData.birthday)
+          : undefined,
+        partnerBirthday: parsedData.partnerBirthday
+          ? new Date(parsedData.partnerBirthday)
+          : undefined,
+      } as BaseFormSchema);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isLastStep) {
+      sessionStorage.removeItem('bookingData');
+      setPrefilledData(null);
+    }
+  }, [isLastStep]);
+
+  useEffect(() => {
+    if (clientSecret && (pathname !== '/booking' || step !== 3)) {
+      setClientSecret(null);
+    }
+  }, [pathname, step, clientSecret]);
 
   const populatedProducts = products
     .map((product) => {
@@ -211,29 +252,6 @@ export function BookingProvider({
     })
     .filter((product) => product !== null);
 
-  const isLastStep =
-    pathname.includes('success') || pathname.includes('failure');
-
-  useEffect(() => {
-    const data = sessionStorage.getItem('bookingData');
-    if (data) {
-      setPrefilledData(JSON.parse(data) as BaseFormSchema);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isLastStep) {
-      sessionStorage.removeItem('bookingData');
-      setPrefilledData(null);
-    }
-  }, [isLastStep]);
-
-  useEffect(() => {
-    if (clientSecret && (pathname !== '/booking' || step !== 3)) {
-      setClientSecret(null);
-    }
-  }, [pathname, step, clientSecret]);
-
   return (
     <BookingContext.Provider
       value={{
@@ -247,6 +265,7 @@ export function BookingProvider({
         onSubmit,
         prefilledData,
         isLastStep,
+        updateCheckoutSession,
       }}
     >
       {children}
