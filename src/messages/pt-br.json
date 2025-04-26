@@ -15,13 +15,13 @@
     "bookReading": "Agendar Leitura"
   },
   "hero": {
-    "calculateLifePath": "Seu Mapa Numerológico Aguarda",
-    "fullName": "Nome Completo",
+    "calculateLifePath": "Seu Número do Dia de Nascimento revela seus talentos únicos e desafios. Desbloqueie-os hoje.",
+    "fullName": "Nome completo como registrado no seu certificado de nascimento",
     "birthDate": "Data de Nascimento",
     "enterFullName": "Digite seu nome completo de nascimento",
-    "revealNumbers": "Revelar Meus Números",
-    "discoverDestiny": "Descubra como sua data de nascimento e nome influenciam seu destino",
-    "unlockDestiny": "Desbloqueie Seu Destino Através da",
+    "revealNumbers": "Descubra GRÁTIS",
+    "discoverDestiny": "Descubra como o seu Número do Dia de Nascimento molda seus talentos naturais e desafios.",
+    "unlockDestiny": "Desbloqueie o Seu Destino Através de",
     "numerology": "Numerologia",
     "discoverHidden": "Descubra os significados ocultos por trás dos seus números e como eles influenciam todos os aspectos da sua jornada de vida.",
     "premiumAnalysis": "Análise Numerológica Premium",
@@ -38,9 +38,9 @@
     "ourNumerologyServices": "Nossos Serviços de Numerologia",
     "servicesDescription": "Explore nossa gama de serviços numerológicos personalizados projetados para fornecer clareza, orientação e insights para a jornada da sua vida.",
     "birthMap": "Mapa de Nascimento",
-    "birthMapDescription": "Uma análise personalizada de sua energia pessoal, baseada nos Sete Princípios Herméticos, que revelam seu verdadeiro potencial para que você se conheça profundamente e comece a viver sua real missão de vida.",
-    "personalReading": "Sessão on-line com Numerólogo",
-    "personalReadingDescription": "Uma análise abrangente dos seus números principais e como eles influenciam sua personalidade, pontos fortes, desafios e caminho de vida para compreensão profunda do seu Mapa de Nascimento.",
+    "birthMapDescription": "Report completo com todos os seus números baseados nos Sete Princípios Herméticos, revelando os padrões energéticos que influenciam sua jornada.",
+    "personalReading": "Leitura Numerológica Pessoal",
+    "personalReadingDescription": "Análise completa dos seus números principais e como influenciam sua personalidade, pontos fortes, desafios e caminho de vida.",
     "relationshipCompatibility": "Compatibilidade de Relacionamento",
     "relationshipCompatibilityDescription": "Descubra como seus números interagem com os do seu parceiro e obtenha insights sobre os pontos fortes e desafios do seu relacionamento.",
     "businessNumerology": "Numerologia Empresarial",
@@ -153,13 +153,13 @@
     }
   },
   "birthMap": {
-    "fullName": "Nome Completo",
+    "fullName": "Nome completo como registrado no seu certificado de nascimento",
     "birthDate": "Data de Nascimento",
     "enterFullName": "Digite seu nome completo de nascimento",
     "emailAddress": "Endereço de Email",
     "enterYourEmail": "Digite seu endereço de email",
     "birthMap": "Mapa de Nascimento",
-    "birthMapDescription": "Uma análise personalizada de sua energia pessoal, baseada nos Sete Princípios Herméticos, que revelam seu verdadeiro potencial para que você se conheça profundamente e comece a viver sua real missão de vida.",
+    "birthMapDescription": "Relatório completo com todos os seus números baseados nos Sete Princípios Herméticos, revelando os padrões energéticos que influenciam sua jornada.",
     "yourBirthMap": "Seu Mapa de Nascimento",
     "birthMapPageDescription": "Descubra os padrões ocultos em sua vida com nossa análise abrangente do Mapa de Nascimento",
     "getBirthMapTitle": "Obtenha Seu Mapa de Nascimento",
@@ -222,16 +222,16 @@
     "journeyText": "Seja você novo na numerologia ou tenha explorado sua sabedoria por anos, convidamos você a descobrir os profundos insights que seus números contêm."
   },
   "booking": {
-    "fullName": "Nome Completo",
+    "fullName": "Nome completo como registrado no seu certificado de nascimento",
     "birthDate": "Data de Nascimento",
     "enterFullName": "Digite seu nome completo de nascimento",
     "emailAddress": "Endereço de Email",
     "enterYourEmail": "Digite seu endereço de email",
     "continueToPayment": "Continuar para Pagamento",
     "birthMap": "Mapa de Nascimento",
-    "birthMapDescription": "Uma análise personalizada de sua energia pessoal, baseada nos Sete Princípios Herméticos, que revelam seu verdadeiro potencial para que você se conheça profundamente e comece a viver sua real missão de vida.",
-    "personalReading": "Sessão on-line com Numerólogo",
-    "personalReadingDescription": "Uma análise abrangente dos seus números principais e como eles influenciam sua personalidade, pontos fortes, desafios e caminho de vida para compreensão profunda do seu Mapa de Nascimento.",
+    "birthMapDescription": "Relatório completo com todos os seus números baseados nos Sete Princípios Herméticos, revelando os padrões energéticos que influenciam sua jornada.",
+    "personalReading": "Leitura Numerológica Pessoal",
+    "personalReadingDescription": "Análise completa dos seus números principais e como influenciam sua personalidade, pontos fortes, desafios e caminho de vida.",
     "relationshipCompatibility": "Compatibilidade de Relacionamento",
     "relationshipCompatibilityDescription": "Descubra como seus números interagem com os do seu parceiro e obtenha insights sobre os pontos fortes e desafios do seu relacionamento.",
     "businessNumerology": "Numerologia Empresarial",
@@ -280,8 +280,8 @@
   "form": {
     "name": {
       "label": "Nome completo",
-      "placeholder": "Nome completo",
-      "description": "Atenção: certifique-se que escreveu todas as letras do seu nome e sobrenome e se os acentuou (se for o caso), antes de validar seu envio.",
+      "placeholder": "Nome completo como registrado no seu certificado de nascimento",
+      "description": "Atenção: Certifique-se de escrever todos os seus nomes corretamente e com as acentuações.",
       "errorMessage": "Nome completo é obrigatório"
     },
     "birthday": {
@@ -300,12 +300,12 @@
       "label": "Número de telefone",
       "placeholder": "Digite seu número de telefone",
       "description": "Este número será usado para enviar seu Mapa de Nascimento.",
-      "errorMessage": "Número de telefone inválido"
+      "errorMessage": "Número de telefone é obrigatório"
     },
     "partnerInformation": "Informações do Parceiro",
     "partnerName": {
       "label": "Nome completo do parceiro",
-      "placeholder": "Nome completo do parceiro",
+      "placeholder": "Nome completo do parceiro como registrado no seu certificado de nascimento",
       "description": "Este nome será usado para enviar seu Mapa de Nascimento.",
       "errorMessage": "Nome completo do parceiro é obrigatório"
     },

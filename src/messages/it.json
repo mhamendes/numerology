@@ -15,13 +15,13 @@
     "bookReading": "Prenota una Lettura"
   },
   "hero": {
-    "calculateLifePath": "La Tua Mappa Numerologica Ti Attende",
-    "fullName": "Nome Completo",
+    "calculateLifePath": "Il tuo Numero del Giorno di Nascita rivela i tuoi talenti unici e le sfide. Sbloccali oggi.",
+    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
-    "revealNumbers": "Rivela i Miei Numeri",
-    "discoverDestiny": "Scopri come la tua data di nascita e il tuo nome influenzano il tuo destino",
-    "unlockDestiny": "Sblocca il Tuo Destino Attraverso la",
+    "revealNumbers": "Scopri GRATIS",
+    "discoverDestiny": "Scopri come il tuo Numero del Giorno di Nascita forma i tuoi talenti naturali e le sfide.",
+    "unlockDestiny": "Sblocca il Tuo Destino Attraverso",
     "numerology": "Numerologia",
     "discoverHidden": "Scopri i significati nascosti dietro i tuoi numeri e come influenzano ogni aspetto del tuo percorso di vita.",
     "premiumAnalysis": "Analisi Numerologica Premium",
@@ -38,9 +38,9 @@
     "ourNumerologyServices": "I Nostri Servizi di Numerologia",
     "servicesDescription": "Esplora la nostra gamma di servizi numerologici personalizzati progettati per fornire chiarezza, guida e intuizione nel viaggio della tua vita.",
     "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita per una comprensione profonda del tuo Mapa di Nascimento.",
-    "personalReading": "Sessione on-line con Numerologo",
-    "personalReadingDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita per una comprensione profonda del tuo Mapa di Nascimento.",
+    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "personalReading": "Lettura Numerologica Personale",
+    "personalReadingDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita.",
     "relationshipCompatibility": "Compatibilità di Relazione",
     "relationshipCompatibilityDescription": "Scopri come i tuoi numeri interagiscono con quelli del tuo partner e ottieni informazioni sui punti di forza e le sfide della tua relazione.",
     "businessNumerology": "Numerologia Aziendale",
@@ -153,13 +153,13 @@
     }
   },
   "birthMap": {
-    "fullName": "Nome Completo",
+    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
     "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita per una comprensione profonda del tuo Mapa di Nascimento.",
+    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
     "yourBirthMap": "La Tua Mappa di Nascita",
     "birthMapPageDescription": "Scopri i modelli nascosti nella tua vita con la nostra analisi completa della Mappa di Nascita",
     "getBirthMapTitle": "Ottieni la Tua Mappa di Nascita",
@@ -222,16 +222,16 @@
     "journeyText": "Che tu sia nuovo alla numerologia o che tu abbia esplorato la sua saggezza per anni, ti invitiamo a scoprire le profonde intuizioni che i tuoi numeri contengono."
   },
   "booking": {
-    "fullName": "Nome Completo",
+    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
     "continueToPayment": "Continua al Pagamento",
     "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita per una comprensione profonda del tuo Mapa di Nascimento.",
-    "personalReading": "Sessione on-line con Numerologo",
-    "personalReadingDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita per una comprensione profonda del tuo Mapa di Nascimento.",
+    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "personalReading": "Lettura Numerologica Personale",
+    "personalReadingDescription": "Analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita.",
     "relationshipCompatibility": "Compatibilità di Relazione",
     "relationshipCompatibilityDescription": "Scopri come i tuoi numeri interagiscono con quelli del tuo partner e ottieni informazioni sui punti di forza e le sfide della tua relazione.",
     "businessNumerology": "Numerologia Aziendale",
@@ -280,8 +280,8 @@
   "form": {
     "name": {
       "label": "Nome completo",
-      "placeholder": "Nome completo",
-      "description": "Attenzione: assicurati di aver scritto tutte le lettere del tuo nome e cognome e di averle accentate (se applicabile) prima di inviare.",
+      "placeholder": "Nome completo come registrato sul tuo certificato di nascita",
+      "description": "Attenzione: Assicurati di scrivere tutti i tuoi nomi correttamente e con le accentazioni.",
       "errorMessage": "Il nome completo è obbligatorio"
     },
     "birthday": {
@@ -300,12 +300,12 @@
       "label": "Numero di telefono",
       "placeholder": "Inserisci il tuo numero di telefono",
       "description": "Questo numero sarà utilizzato per inviare la tua Mappa di Nascita.",
-      "errorMessage": "Numero di telefono non valido"
+      "errorMessage": "Il numero di telefono è obbligatorio"
     },
     "partnerInformation": "Informazioni del Partner",
     "partnerName": {
       "label": "Nome completo del partner",
-      "placeholder": "Nome completo del partner",
+      "placeholder": "Nome completo del partner come registrato sul suo certificato di nascita",
       "description": "Questo nome sarà utilizzato per inviare la tua Mappa di Nascita.",
       "errorMessage": "Il nome completo del partner è obbligatorio"
     },
