@@ -113,8 +113,8 @@ export function BookingProvider({
         productServerId: selectedProduct.serverId,
         productId: selectedProduct.id,
       });
-      setClientSecret(client_secret);
       setStep(3);
+      setClientSecret(client_secret);
 
       if (pathname !== '/booking') {
         router.push('/booking');
@@ -130,6 +130,9 @@ export function BookingProvider({
   function handleBack() {
     if (step === 2) {
       setSelectedProduct(null);
+    }
+    if (clientSecret) {
+      setClientSecret(null);
     }
 
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
@@ -169,10 +172,11 @@ export function BookingProvider({
   }, [isLastStep]);
 
   useEffect(() => {
-    if (clientSecret && (pathname !== '/booking' || step !== 3)) {
+    if (pathname !== '/booking') {
       setClientSecret(null);
+      setStep(1);
     }
-  }, [pathname, step, clientSecret]);
+  }, [pathname]);
 
   const populatedProducts = products
     .map((product) => {
