@@ -68,7 +68,7 @@ export async function createNumerologyReturnDocument({
     ((await import(`src/assets/documents/${locale}/base.json`))
       .default as typeof baseBase) ?? baseBase;
 
-  const subject = base.birthMapSubject.replace('{{fullName}}', fullName);
+  const subject = base.lifeMapSubject.replace('{{fullName}}', fullName);
   const filename = `${subject}.pdf`;
   const uri = pdf.output('datauristring', {
     filename,

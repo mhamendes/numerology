@@ -2,9 +2,9 @@ import { CONTACT_EMAIL } from '@/lib/constants';
 
 const pt_br = [
   {
-    question: 'O que é o Mapa de Nascimento?',
+    question: 'O que é o Mapa da Vida?',
     answerList: [
-      'O Mapa de Nascimento é um estudo numerológico profundo, baseado nos Sete Princípios Herméticos descritos no Kybalion, utilizando seu nome completo e data de nascimento. Revela padrões energéticos que influenciam sua jornada, trazendo clareza sobre sua missão de vida, desafios, talentos e ciclos importantes que você atravessará.',
+      'O Mapa da Vida é um estudo numerológico profundo, baseado nos Sete Princípios Herméticos descritos no Kybalion, utilizando seu nome completo e data de nascimento. Revela padrões energéticos que influenciam sua jornada, trazendo clareza sobre sua missão de vida, desafios, talentos e ciclos importantes que você atravessará.',
       'Diferente do mapa astral, que é baseado na posição das estrelas e pode ser atualizado anualmente, o mapa de nascimento é feito apenas uma vez na vida, pois calcula 90 anos de existência e traz informações para toda a sua trajetória. O que muda ao longo do tempo são os anos pessoais, meses e dias, que apontam para energias temporárias.',
     ],
     list: [
@@ -27,7 +27,7 @@ const pt_br = [
     ],
   },
   {
-    question: 'Por que você deveria obter seu Mapa de Nascimento?',
+    question: 'Por que você deveria obter seu Mapa da Vida?',
     answerList: [
       'O mapa de nascimento é uma poderosa ferramenta para autoconhecimento, planejamento e evolução pessoal. Pode te ajudar a:',
     ],
@@ -44,7 +44,7 @@ const pt_br = [
   {
     question: 'Quanto tempo levará para receber meu mapa de nascimento?',
     answerList: [
-      'O tempo de entrega do Mapa de Nascimento pode variar de acordo com a demanda e a complexidade da análise. Em média, a entrega ocorre dentro de 2 dias úteis após a confirmação do pagamento. No entanto, como sabemos o quanto seu Mapa de Nascimento impactará positivamente sua vida, faremos o possível para entregá-lo o mais rápido possível.',
+      'O tempo de entrega do Mapa da Vida pode variar de acordo com a demanda e a complexidade da análise. Em média, a entrega ocorre dentro de 2 dias úteis após a confirmação do pagamento. No entanto, como sabemos o quanto seu Mapa da Vida impactará positivamente sua vida, faremos o possível para entregá-lo o mais rápido possível.',
     ],
   },
   {
@@ -95,16 +95,16 @@ const pt_br = [
   {
     question: 'Recebi meu mapa, mas não me reconheci nele. O que aconteceu?',
     answerList: [
-      `Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
+      `Se você não se identificou com seu Mapa da Vida, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
     ],
   },
 ];
 
 const pt = [
   {
-    question: 'O que é o Mapa de Nascimento?',
+    question: 'O que é o Mapa da Vida?',
     answerList: [
-      'O Mapa de Nascimento é um estudo numerológico profundo, baseado nos Sete Princípios Herméticos descritos no Kybalion, utilizando seu nome completo e data de nascimento. Revela padrões energéticos que influenciam sua jornada, trazendo clareza sobre sua missão de vida, desafios, talentos e ciclos importantes que você atravessará.',
+      'O Mapa da Vida é um estudo numerológico profundo, baseado nos Sete Princípios Herméticos descritos no Kybalion, utilizando seu nome completo e data de nascimento. Revela padrões energéticos que influenciam sua jornada, trazendo clareza sobre sua missão de vida, desafios, talentos e ciclos importantes que você atravessará.',
       'Diferente do mapa astral, que é baseado na posição das estrelas e pode ser atualizado anualmente, o mapa de nascimento é feito apenas uma vez na vida, pois calcula 90 anos de existência e traz informações para toda a sua trajetória. O que muda ao longo do tempo são os anos pessoais, meses e dias, que apontam para energias temporárias.',
     ],
     list: [
@@ -127,7 +127,7 @@ const pt = [
     ],
   },
   {
-    question: 'Por que você deveria obter seu Mapa de Nascimento?',
+    question: 'Por que você deveria obter seu Mapa da Vida?',
     answerList: [
       'O mapa de nascimento é uma poderosa ferramenta para autoconhecimento, planejamento e evolução pessoal. Pode te ajudar a:',
     ],
@@ -144,7 +144,7 @@ const pt = [
   {
     question: 'Quanto tempo levará para receber meu mapa de nascimento?',
     answerList: [
-      'O tempo de entrega do Mapa de Nascimento pode variar de acordo com a demanda e a complexidade da análise. Em média, a entrega ocorre dentro de 2 dias úteis após a confirmação do pagamento. No entanto, como sabemos o quanto seu Mapa de Nascimento impactará positivamente sua vida, faremos o possível para entregá-lo o mais rápido possível.',
+      'O tempo de entrega do Mapa da Vida pode variar de acordo com a demanda e a complexidade da análise. Em média, a entrega ocorre dentro de 2 dias úteis após a confirmação do pagamento. No entanto, como sabemos o quanto seu Mapa da Vida impactará positivamente sua vida, faremos o possível para entregá-lo o mais rápido possível.',
     ],
   },
   {
@@ -195,16 +195,16 @@ const pt = [
   {
     question: 'Recebi meu mapa, mas não me reconheci nele. O que aconteceu?',
     answerList: [
-      `Se você não se identificou com seu Mapa de Nascimento, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
+      `Se você não se identificou com seu Mapa da Vida, pode ter ocorrido um erro no preenchimento dos seus dados. Recomendamos que você verifique sua certidão de nascimento e confirme se escreveu corretamente seu nome completo e data de nascimento ao fazer a solicitação. Se encontrar algum erro, entre em contato conosco pelo email ${CONTACT_EMAIL} para analisarmos a situação e corrigirmos se necessário.`,
     ],
   },
 ];
 
 const en = [
   {
-    question: 'What is the Birth Map?',
+    question: 'What is the Life Map?',
     answerList: [
-      "The Birth Map is a deep numerological study, based on the Seven Hermetic Principles described in The Kybalion, using your full name and birth date. It reveals energy patterns that influence your journey, bringing clarity about your life mission, challenges, talents, and important cycles you'll go through. ",
+      "The Life Map is a deep numerological study, based on the Seven Hermetic Principles described in The Kybalion, using your full name and birth date. It reveals energy patterns that influence your journey, bringing clarity about your life mission, challenges, talents, and important cycles you'll go through. ",
       'Unlike the astral map, which is based on the position of the stars and can be updated annually, the birth map is made only once in a lifetime, as it calculates 90 years of existence and brings information for your entire trajectory. What changes over time are the personal years, months, and days, which point to temporary energies.',
       'In the map, you will receive detailed information about:',
     ],
@@ -229,7 +229,7 @@ const en = [
     ],
   },
   {
-    question: 'Why should you get your Birth Map?',
+    question: 'Why should you get your Life Map?',
     answerList: [
       'The birth map is a powerful tool for self-knowledge, planning, and personal evolution. It can help you:',
     ],
@@ -246,7 +246,7 @@ const en = [
   {
     question: 'How long will it take to receive my birth map?',
     answerList: [
-      'The delivery time of the Birth Map can vary based on the question and the complexity of the analysis. In general, delivery occurs within 2 business days after the confirmation of the payment. However, since we know how much your Birth Map will positively influence your life, we will do our best to get it to you as soon as possible.',
+      'The delivery time of the Life Map can vary based on the question and the complexity of the analysis. In general, delivery occurs within 2 business days after the confirmation of the payment. However, since we know how much your Life Map will positively influence your life, we will do our best to get it to you as soon as possible.',
     ],
   },
   {
@@ -297,16 +297,16 @@ const en = [
     question:
       "I received my map, but I didn't recognize myself in it. What happened?",
     answerList: [
-      `If you didn't identify with your Birth Map, there may have been an error in filling out your data. We recommend that you check your birth certificate and verify that you wrote your full name and date of birth correctly when requesting. If you find any mistake, contact us by email at ${CONTACT_EMAIL} to analyze the situation and correct it if necessary.`,
+      `If you didn't identify with your Life Map, there may have been an error in filling out your data. We recommend that you check your birth certificate and verify that you wrote your full name and date of birth correctly when requesting. If you find any mistake, contact us by email at ${CONTACT_EMAIL} to analyze the situation and correct it if necessary.`,
     ],
   },
 ];
 
 const it = [
   {
-    question: "Che cos'è la Mappa di Nascita?",
+    question: "Che cos'è la Mappa della Vita?",
     answerList: [
-      'La Mappa di Nascita è uno studio numerologico profondo, basato sui Sette Principi Ermetici descritti nel Kybalion, utilizzando il tuo nome completo e la data di nascita. Rivela modelli energetici che influenzano il tuo viaggio, portando chiarezza sulla tua missione di vita, sfide, talenti e cicli importanti che attraverserai.',
+      'La Mappa della Vita è uno studio numerologico profondo, basato sui Sette Principi Ermetici descritti nel Kybalion, utilizzando il tuo nome completo e la data di nascita. Rivela modelli energetici che influenzano il tuo viaggio, portando chiarezza sulla tua missione di vita, sfide, talenti e cicli importanti che attraverserai.',
       "A differenza della mappa astrale, che si basa sulla posizione delle stelle e può essere aggiornata annualmente, la mappa di nascita viene fatta solo una volta nella vita, poiché calcola 90 anni di esistenza e porta informazioni per l'intera traiettoria. Ciò che cambia nel tempo sono gli anni personali, i mesi e i giorni, che indicano energie temporanee.",
       'Nella mappa, riceverai informazioni dettagliate su:',
     ],
@@ -331,7 +331,7 @@ const it = [
     ],
   },
   {
-    question: 'Perché dovresti ottenere la tua Mappa di Nascita?',
+    question: 'Perché dovresti ottenere la tua Mappa della Vita?',
     answerList: [
       "La mappa di nascita è un potente strumento per la conoscenza di sé, la pianificazione e l'evoluzione personale. Può aiutarti a:",
     ],
@@ -348,7 +348,7 @@ const it = [
   {
     question: 'Quanto tempo ci vorrà per ricevere la mia mappa di nascita?',
     answerList: [
-      "Il tempo di consegna della Mappa di Nascita può variare in base alla domanda e alla complessità dell'analisi. In media, la consegna avviene entro 2 giorni lavorativi dopo la conferma del pagamento. Tuttavia, poiché sappiamo quanto la tua Mappa di Nascita influenzerà positivamente la tua vita, faremo del nostro meglio per fartela avere il prima possibile.",
+      "Il tempo di consegna della Mappa della Vita può variare in base alla domanda e alla complessità dell'analisi. In media, la consegna avviene entro 2 giorni lavorativi dopo la conferma del pagamento. Tuttavia, poiché sappiamo quanto la tua Mappa della Vita influenzerà positivamente la tua vita, faremo del nostro meglio per fartela avere il prima possibile.",
     ],
   },
   {
@@ -400,7 +400,7 @@ const it = [
     question:
       'Ho ricevuto la mia mappa, ma non mi sono riconosciuto in essa. Cosa è successo?',
     answerList: [
-      `Se non ti sei identificato con la tua Mappa di Nascita, potrebbe esserci stato un errore nella compilazione dei tuoi dati. Ti consigliamo di controllare il tuo certificato di nascita e verificare di aver scritto correttamente il tuo nome completo e la data di nascita quando hai fatto la richiesta. Se trovi qualche errore, contattaci via email a ${CONTACT_EMAIL} per analizzare la situazione e correggerla se necessario.`,
+      `Se non ti sei identificato con la tua Mappa della Vita, potrebbe esserci stato un errore nella compilazione dei tuoi dati. Ti consigliamo di controllare il tuo certificato di nascita e verificare di aver scritto correttamente il tuo nome completo e la data di nascita quando hai fatto la richiesta. Se trovi qualche errore, contattaci via email a ${CONTACT_EMAIL} per analizzare la situazione e correggerla se necessario.`,
     ],
   },
 ];

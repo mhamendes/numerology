@@ -51,7 +51,7 @@ export function TestimonialsSection() {
       image:
         'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
       rating: 5,
-      text: 'The Birth Map reading was life-changing! I finally understand my recurring patterns and how to work with my natural strengths. The personal year forecast has been spot-on with predicting major life events.',
+      text: 'The Life Map reading was life-changing! I finally understand my recurring patterns and how to work with my natural strengths. The personal year forecast has been spot-on with predicting major life events.',
     },
     {
       name: 'Robert Wilson',

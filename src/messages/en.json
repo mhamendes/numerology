@@ -25,20 +25,20 @@
     "numerology": "Numerology",
     "discoverHidden": "Discover the hidden meanings behind your numbers and how they influence every aspect of your life journey.",
     "premiumAnalysis": "Premium Number Analysis",
-    "getBirthMap": "Learn More",
+    "getLifeMap": "Learn More",
     "discoverPath": "Discover Your Life Path",
     "numerologyDesc": "Numerology is the mystical study of numbers and their influence on human life. Each number carries a unique vibration that can reveal insights about your personality, talents, obstacles, and opportunities."
   },
   "personal-days-success": {
     "title": "Request completed!",
-    "description": "Congratulations on taking the first step to discover your numerology profile. You will soon receive your Birth Day Numerology Profile in your email. Also, get your complete Birth Map by clicking the button below!",
-    "button": "I want my Birth Map"
+    "description": "Congratulations on taking the first step to discover your numerology profile. You will soon receive your Birth Day Numerology Profile in your email. Also, get your complete Life Map by clicking the button below!",
+    "button": "I want my Life Map"
   },
   "services": {
     "ourNumerologyServices": "Our Numerology Services",
     "servicesDescription": "Explore our range of personalized numerology services designed to provide clarity, guidance, and insight into your life's journey.",
-    "birthMap": "Birth Map",
-    "birthMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
+    "lifeMap": "Life Map",
+    "lifeMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
     "personalReading": "Personal Numerology Reading",
     "personalReadingDescription": "A comprehensive analysis of your core numbers and how they influence your personality, strengths, challenges, and life path.",
     "relationshipCompatibility": "Relationship Compatibility",
@@ -54,7 +54,7 @@
     "session": "session",
     "personalityNumber": "Personality Number Reading",
     "currentYearForecast": "Current Year Forecast",
-    "ninetyMinuteConsultation": "90-minute explanatory consultation on each point of the Birth Map",
+    "ninetyMinuteConsultation": "90-minute explanatory consultation on each point of the Life Map",
     "individualNumberAnalysis": "Individual Number Analysis for Both Partners",
     "compatibilityAssessment": "Compatibility Assessment",
     "relationshipStrengths": "Relationship Strengths & Challenges",
@@ -70,7 +70,7 @@
     "lifePathNumber": "Life Path Number",
     "destinyNumber": "Destiny Number",
     "soulUrgeNumber": "Soul Urge Number",
-    "allBirthMapFeatures": "Complete Birth Map"
+    "allLifeMapFeatures": "Complete Life Map"
   },
   "footer": {
     "unlockingSecrets": "Unlocking the secrets of numerology to guide you on your life's journey.",
@@ -100,7 +100,7 @@
   },
   "qa": {
     "frequentlyAskedQuestions": "Frequently Asked Questions",
-    "qaDescription": "Find answers to common questions about our numerology services and the Birth Map.",
+    "qaDescription": "Find answers to common questions about our numerology services and the Life Map.",
     "searchQuestions": "Search questions...",
     "noQuestionsFound": "No questions found matching your search.",
     "clearSearch": "Clear Search",
@@ -152,27 +152,27 @@
       "closebutton": "Close"
     }
   },
-  "birthMap": {
+  "lifeMap": {
     "fullName": "Full name as recorded on your birth certificate",
     "birthDate": "Birth Date",
     "enterFullName": "Enter your full birth name",
     "emailAddress": "Email Address",
     "enterYourEmail": "Enter your email address",
-    "birthMap": "Birth Map",
-    "birthMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
-    "yourBirthMap": "Your Birth Map",
-    "birthMapPageDescription": "Discover the hidden patterns in your life with our comprehensive Birth Map analysis",
-    "getBirthMapTitle": "Get Your Birth Map",
+    "lifeMap": "Life Map",
+    "lifeMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
+    "yourLifeMap": "Your Life Map",
+    "lifeMapPageDescription": "Discover the hidden patterns in your life with our comprehensive Life Map analysis",
+    "getLifeMapTitle": "Get Your Life Map",
     "continueToPayment": "Continue to Payment",
     "orderThankYou": "Thank You for Your Order!",
-    "orderReceived": "Your Birth Map order has been received and is being processed. We'll deliver your personalized Birth Map to",
+    "orderReceived": "Your Life Map order has been received and is being processed. We'll deliver your personalized Life Map to",
     "withinHours": "within a couple of hours.",
     "expectedDelivery": "Expected Delivery",
     "deliveryTime": "Usually within a couple of hours, but no later than 24 hours from now",
-    "orderAnother": "Order Another Birth Map",
-    "whatsIncluded": "What's Included in Your Birth Map",
+    "orderAnother": "Order Another Life Map",
+    "whatsIncluded": "What's Included in Your Life Map",
     "oneTimePayment": "one-time payment",
-    "deliveryNotice": "Your Birth Map will be delivered within a couple of hours after purchase",
+    "deliveryNotice": "Your Life Map will be delivered within a couple of hours after purchase",
     "motivationNumber": "Motivation Number",
     "motivationDesc": "Represents your deepest desires, what drives you and makes you feel fulfilled.",
     "expressionNumber": "Expression & Impression Number",
@@ -228,8 +228,8 @@
     "emailAddress": "Email Address",
     "enterYourEmail": "Enter your email address",
     "continueToPayment": "Continue to Payment",
-    "birthMap": "Birth Map",
-    "birthMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
+    "lifeMap": "Life Map",
+    "lifeMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
     "personalReading": "Personal Numerology Reading",
     "personalReadingDescription": "A comprehensive analysis of your core numbers and how they influence your personality, strengths, challenges, and life path.",
     "relationshipCompatibility": "Relationship Compatibility",
@@ -237,7 +237,7 @@
     "businessNumerology": "Business Numerology",
     "businessNumerologyDescription": "Optimize your business decisions with numerological insights into timing, naming, and strategic planning.",
     "selectYourProduct": "Select Your Product",
-    "buyYourMap": "Buy Your Birth Map",
+    "buyYourMap": "Buy Your Life Map",
     "bookYourReading": "Book Your Numerology Reading",
     "bookingDescription": "Take the first step towards understanding your numerological blueprint and unlocking your potential.",
     "selectService": "Select Service",
@@ -267,9 +267,9 @@
     "bookingConfirmed": "Booking Confirmed!",
     "bookingThankYou": "Thank you for booking your numerology reading with us. We've sent a confirmation email with all the details to your inbox.",
     "nextSteps": "Next Steps",
-    "birthMapPaymentConfirmed": "Payment Confirmed!",
-    "birthMapPaymentThankYou": "Thank you for purchasing your Birth Map. We've sent a confirmation email with all the payment details to your inbox.",
-    "birthMapDelivery": "Your Birth Map will be prepared and delivered to your email within 2 business days.",
+    "lifeMapPaymentConfirmed": "Payment Confirmed!",
+    "lifeMapPaymentThankYou": "Thank you for purchasing your Life Map. We've sent a confirmation email with all the payment details to your inbox.",
+    "lifeMapDelivery": "Your Life Map will be prepared and delivered to your email within 2 business days.",
     "numerologistContact": "Our numerologist will contact you within 24 hours to schedule your session.",
     "bookAnother": "Book Another Reading",
     "buyAnother": "Buy Another Service",
@@ -293,20 +293,20 @@
     "email": {
       "label": "Email address",
       "placeholder": "Enter your email address",
-      "description": "This email will be used to send your Birth Map.",
+      "description": "This email will be used to send your Life Map.",
       "errorMessage": "Email address is required"
     },
     "phone": {
       "label": "Phone number",
       "placeholder": "Enter your phone number",
-      "description": "This number will be used to send your Birth Map.",
+      "description": "This number will be used to send your Life Map.",
       "errorMessage": "Phone number is required"
     },
     "partnerInformation": "Partner Information",
     "partnerName": {
       "label": "Partner's Full Name",
       "placeholder": "Partner's Full name as recorded on your birth certificate",
-      "description": "This name will be used to send your Birth Map.",
+      "description": "This name will be used to send your Life Map.",
       "errorMessage": "Partner's Full Name is required"
     },
     "partnerBirthday": {
@@ -319,13 +319,13 @@
     "businessName": {
       "label": "Business Name",
       "placeholder": "Business Name",
-      "description": "This name will be used to send your Birth Map.",
+      "description": "This name will be used to send your Life Map.",
       "errorMessage": "Business Name is required"
     },
     "businessType": {
       "label": "Business Type",
       "placeholder": "Select Business Type",
-      "description": "This type of business will be used to send your Birth Map.",
+      "description": "This type of business will be used to send your Life Map.",
       "errorMessage": "Business Type is required",
       "startup": "Startup",
       "smallBusiness": "Small Business",

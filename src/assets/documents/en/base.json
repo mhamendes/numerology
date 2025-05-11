@@ -35,8 +35,8 @@
   "address": "Address:",
   "mentorName": "Mentor/Numerologist:",
   "doneAt": "Completed on:",
-  "birthMapTitle": "Birth Map",
+  "lifeMapTitle": "Life Map",
   "birthDayTitle": "Birth Day",
-  "birthMapSubject": "Birth Map of {{fullName}}",
+  "lifeMapSubject": "Life Map of {{fullName}}",
   "birthDaySubject": "Birth Day of {{fullName}}"
 }

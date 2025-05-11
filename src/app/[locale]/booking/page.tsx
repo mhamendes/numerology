@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl';
 
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
-import BirthMapForm from './(components)/birth-map-form';
 import BusinessForm from './(components)/business-form';
 import { useBooking } from './(components)/context';
+import LifeMapForm from './(components)/life-map-form';
 import Payment from './(components)/payment';
 import RelationshipForm from './(components)/relationship-form';
 import ServiceSelection from './(components)/service-selection';
@@ -26,10 +26,10 @@ export default function Booking() {
         <CardHeader>
           <CardTitle>{t('yourInformation')}</CardTitle>
         </CardHeader>
-        {['birth-map', 'personal-reading'].includes(
+        {['life-map', 'personal-reading'].includes(
           selectedProduct?.id ?? ''
         ) ? (
-          <BirthMapForm />
+          <LifeMapForm />
         ) : null}
         {selectedProduct?.id === 'relationship-compatibility' ? (
           <RelationshipForm />

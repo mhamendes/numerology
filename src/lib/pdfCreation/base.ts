@@ -246,7 +246,7 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
   const numberOfPages = pdf.getNumberOfPages();
 
   const title: Record<DocType, string> = {
-    fullMap: base.birthMapTitle,
+    fullMap: base.lifeMapTitle,
     birthDay: base.birthDayTitle,
   };
 

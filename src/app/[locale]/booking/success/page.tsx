@@ -27,15 +27,15 @@ export default function BookingSuccess() {
           <CheckIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
         </div>
         <CardTitle className="text-2xl">
-          {productId === 'birth-map'
-            ? t('birthMapPaymentConfirmed')
+          {productId === 'life-map'
+            ? t('lifeMapPaymentConfirmed')
             : t('bookingConfirmed')}
         </CardTitle>
       </CardHeader>
       <CardContent>
         <p className="mb-6 text-gray-600 dark:text-gray-300">
-          {productId === 'birth-map'
-            ? t('birthMapPaymentThankYou')
+          {productId === 'life-map'
+            ? t('lifeMapPaymentThankYou')
             : t('bookingThankYou')}
         </p>
         <div className="flex flex-col gap-2">
@@ -48,8 +48,8 @@ export default function BookingSuccess() {
               </span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              {productId === 'birth-map'
-                ? t('birthMapDelivery')
+              {productId === 'life-map'
+                ? t('lifeMapDelivery')
                 : t('numerologistContact')}
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function BookingSuccess() {
             to="/booking"
             className="bg-indigo-600 text-white hover:bg-indigo-700"
           >
-            {productId === 'birth-map' ? t('buyAnother') : t('bookAnother')}
+            {productId === 'life-map' ? t('buyAnother') : t('bookAnother')}
           </Button>
         </div>
       </CardContent>

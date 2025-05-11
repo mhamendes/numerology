@@ -30,8 +30,8 @@ import { cn } from '@/lib/utils';
 
 import { useBooking } from '../booking/(components)/context';
 
-export default function BirthMap() {
-  const t = useTranslations('birthMap');
+export default function LifeMap() {
+  const t = useTranslations('lifeMap');
   const tForm = useTranslations('form');
   const {
     products,
@@ -40,9 +40,7 @@ export default function BirthMap() {
     handleProductSelection,
   } = useBooking();
   const router = useRouter();
-  const birthMapProduct = products.find(
-    (product) => product.id === 'birth-map'
-  );
+  const lifeMapProduct = products.find((product) => product.id === 'life-map');
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
@@ -54,22 +52,27 @@ export default function BirthMap() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      fullName: 'Matheus Henrique Araújo Mendes',
+      birthday: new Date('1995-07-13'),
+      email: 'omatheusmendes@gmail.com',
+    },
   });
 
   const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    if (!birthMapProduct) return;
+    if (!lifeMapProduct) return;
 
-    handleProductSelection(birthMapProduct.id);
+    handleProductSelection(lifeMapProduct.id);
     onBookingSubmit(data);
   };
 
   useEffect(() => {
-    if (!birthMapProduct) {
+    if (!lifeMapProduct) {
       router.push('/');
     }
-  }, [birthMapProduct, router]);
+  }, [lifeMapProduct, router]);
 
-  if (!birthMapProduct) {
+  if (!lifeMapProduct) {
     return null;
   }
 
@@ -78,10 +81,10 @@ export default function BirthMap() {
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">
-            {t('yourBirthMap')}
+            {t('yourLifeMap')}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
-            {t('birthMapPageDescription')}
+            {t('lifeMapPageDescription')}
           </p>
         </div>
 
@@ -93,21 +96,21 @@ export default function BirthMap() {
                   <BookIcon className="mr-2 h-6 w-6 text-purple-500" />
 
                   <CardTitle className="text-2xl text-indigo-800 dark:text-indigo-300">
-                    {t('birthMap')}
+                    {t('lifeMap')}
                   </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t('birthMapDescription')}
+                  {t('lifeMapDescription')}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t('birthMapDescription')}
+                  {t('lifeMapDescription')}
                 </p>
                 <div className="pt-4">
                   <div className="mb-2 flex items-center">
                     <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
-                      {birthMapProduct?.price}
+                      {lifeMapProduct?.price}
                     </span>
                     <span className="ml-2 text-gray-500 dark:text-gray-400">
                       {t('oneTimePayment')}
@@ -125,7 +128,7 @@ export default function BirthMap() {
             <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
               <CardHeader>
                 <CardTitle className="text-xl text-indigo-800 dark:text-indigo-300">
-                  {t('getBirthMapTitle')}
+                  {t('getLifeMapTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent>

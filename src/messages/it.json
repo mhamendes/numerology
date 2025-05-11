@@ -25,20 +25,20 @@
     "numerology": "Numerologia",
     "discoverHidden": "Scopri i significati nascosti dietro i tuoi numeri e come influenzano ogni aspetto del tuo percorso di vita.",
     "premiumAnalysis": "Analisi Numerologica Premium",
-    "getBirthMap": "Scopri di Più",
+    "getLifeMap": "Scopri di Più",
     "discoverPath": "Scopri il Tuo Percorso di Vita",
     "numerologyDesc": "La numerologia è lo studio mistico dei numeri e della loro influenza sulla vita umana. Ogni numero porta una vibrazione unica che può rivelare intuizioni sulla tua personalità, talenti, ostacoli e opportunità."
   },
   "personal-days-success": {
     "title": "Richiesta completata!",
-    "description": "Congratulazioni per il primo passo per scoprire il tuo profilo numerologico. Presto riceverai il tuo Profilo Numerologico del Giorno di Nascita nella tua email. Acquista anche la tua Mappa di Nascita completa cliccando sul pulsante qui sotto!",
-    "button": "Voglio la mia Mappa di Nascita"
+    "description": "Congratulazioni per il primo passo per scoprire il tuo profilo numerologico. Presto riceverai il tuo Profilo Numerologico del Giorno di Nascita nella tua email. Acquista anche la tua Mappa della Vita completa cliccando sul pulsante qui sotto!",
+    "button": "Voglio la mia Mappa della Vita"
   },
   "services": {
     "ourNumerologyServices": "I Nostri Servizi di Numerologia",
     "servicesDescription": "Esplora la nostra gamma di servizi numerologici personalizzati progettati per fornire chiarezza, guida e intuizione nel viaggio della tua vita.",
-    "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "lifeMap": "Mappa della Vita",
+    "lifeMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
     "personalReading": "Lettura Numerologica Personale",
     "personalReadingDescription": "Un'analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita.",
     "relationshipCompatibility": "Compatibilità di Relazione",
@@ -54,7 +54,7 @@
     "session": "sessione",
     "personalityNumber": "Lettura del Numero di Personalità",
     "currentYearForecast": "Previsione dell'Anno Corrente",
-    "ninetyMinuteConsultation": "Consultazione esplicativa di 90 minuti su ogni punto della Mappa di Nascita",
+    "ninetyMinuteConsultation": "Consultazione esplicativa di 90 minuti su ogni punto della Mappa della Vita",
     "individualNumberAnalysis": "Analisi Numerica Individuale per Entrambi i Partner",
     "compatibilityAssessment": "Valutazione della Compatibilità",
     "relationshipStrengths": "Punti di Forza e Sfide della Relazione",
@@ -70,7 +70,7 @@
     "lifePathNumber": "Numero del Percorso di Vita",
     "destinyNumber": "Numero del Destino",
     "soulUrgeNumber": "Numero del Desiderio dell'Anima",
-    "allBirthMapFeatures": "Mappa di Nascita Completa"
+    "allLifeMapFeatures": "Mappa della Vita Completa"
   },
   "footer": {
     "unlockingSecrets": "Svelando i segreti della numerologia per guidarti nel viaggio della tua vita.",
@@ -100,7 +100,7 @@
   },
   "qa": {
     "frequentlyAskedQuestions": "Domande Frequenti",
-    "qaDescription": "Trova risposte alle domande comuni sui nostri servizi di numerologia e sulla Mappa di Nascita.",
+    "qaDescription": "Trova risposte alle domande comuni sui nostri servizi di numerologia e sulla Mappa della Vita.",
     "searchQuestions": "Cerca domande...",
     "noQuestionsFound": "Nessuna domanda trovata corrispondente alla tua ricerca.",
     "clearSearch": "Cancella Ricerca",
@@ -152,27 +152,27 @@
       "closebutton": "Chiudi"
     }
   },
-  "birthMap": {
+  "lifeMap": {
     "fullName": "Nome completo come registrato sul tuo certificato di nascita",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
-    "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
-    "yourBirthMap": "La Tua Mappa di Nascita",
-    "birthMapPageDescription": "Scopri i modelli nascosti nella tua vita con la nostra analisi completa della Mappa di Nascita",
-    "getBirthMapTitle": "Ottieni la Tua Mappa di Nascita",
+    "lifeMap": "Mappa della Vita",
+    "lifeMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "yourLifeMap": "La Tua Mappa della Vita",
+    "lifeMapPageDescription": "Scopri i modelli nascosti nella tua vita con la nostra analisi completa della Mappa della Vita",
+    "getLifeMapTitle": "Ottieni la Tua Mappa della Vita",
     "continueToPayment": "Continua al Pagamento",
     "orderThankYou": "Grazie per il Tuo Ordine!",
-    "orderReceived": "Il tuo ordine della Mappa di Nascita è stato ricevuto ed è in fase di elaborazione. Consegneremo la tua Mappa di Nascita personalizzata a",
+    "orderReceived": "Il tuo ordine della Mappa della Vita è stato ricevuto ed è in fase di elaborazione. Consegneremo la tua Mappa della Vita personalizzata a",
     "withinHours": "entro un paio d'ore.",
     "expectedDelivery": "Consegna Prevista",
     "deliveryTime": "Di solito entro un paio d'ore, ma non oltre 24 ore da ora",
-    "orderAnother": "Ordina un'Altra Mappa di Nascita",
-    "whatsIncluded": "Cosa è Incluso nella Tua Mappa di Nascita",
+    "orderAnother": "Ordina un'Altra Mappa della Vita",
+    "whatsIncluded": "Cosa è Incluso nella Tua Mappa della Vita",
     "oneTimePayment": "pagamento unico",
-    "deliveryNotice": "La tua Mappa di Nascita sarà consegnata entro un paio d'ore dopo l'acquisto",
+    "deliveryNotice": "La tua Mappa della Vita sarà consegnata entro un paio d'ore dopo l'acquisto",
     "motivationNumber": "Numero di Motivazione",
     "motivationDesc": "Rappresenta i tuoi desideri più profondi, ciò che ti spinge e ti fa sentire realizzato.",
     "expressionNumber": "Numero di Espressione e Impressione",
@@ -228,8 +228,8 @@
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
     "continueToPayment": "Continua al Pagamento",
-    "birthMap": "Mappa di Nascita",
-    "birthMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "lifeMap": "Mappa della Vita",
+    "lifeMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
     "personalReading": "Lettura Numerologica Personale",
     "personalReadingDescription": "Analisi completa dei tuoi numeri principali e come influenzano la tua personalità, i tuoi punti di forza, i tuoi sfide e il tuo percorso di vita.",
     "relationshipCompatibility": "Compatibilità di Relazione",
@@ -237,7 +237,7 @@
     "businessNumerology": "Numerologia Aziendale",
     "businessNumerologyDescription": "Ottimizza le tue decisioni aziendali con intuizioni numerologiche su tempistica, denominazione e pianificazione strategica.",
     "selectYourProduct": "Seleziona il Tuo Prodotto",
-    "buyYourMap": "Acquista la Tua Mappa di Nascita",
+    "buyYourMap": "Acquista la Tua Mappa della Vita",
     "bookYourReading": "Prenota la Tua Lettura Numerologica",
     "bookingDescription": "Fai il primo passo verso la comprensione del tuo schema numerologico e lo sblocco del tuo potenziale.",
     "selectService": "Seleziona Servizio",
@@ -267,9 +267,9 @@
     "bookingConfirmed": "Prenotazione Confermata!",
     "bookingThankYou": "Grazie per aver prenotato la tua lettura numerologica con noi. Abbiamo inviato un'email di conferma con tutti i dettagli alla tua casella di posta.",
     "nextSteps": "Prossimi Passi",
-    "birthMapPaymentConfirmed": "Pagamento Confermato!",
-    "birthMapPaymentThankYou": "Grazie per aver acquistato il tuo Mappa di Nascita. Abbiamo inviato un'email di conferma con tutti i dettagli del pagamento alla tua casella di posta.",
-    "birthMapDelivery": "La tua Mappa di Nascita sarà preparata e consegnata alla tua email entro 2 giorni lavorativi.",
+    "lifeMapPaymentConfirmed": "Pagamento Confermato!",
+    "lifeMapPaymentThankYou": "Grazie per aver acquistato il tuo Mappa della Vita. Abbiamo inviato un'email di conferma con tutti i dettagli del pagamento alla tua casella di posta.",
+    "lifeMapDelivery": "La tua Mappa della Vita sarà preparata e consegnata alla tua email entro 2 giorni lavorativi.",
     "numerologistContact": "Il nostro numerologo ti contatterà entro 24 ore per programmare la tua sessione.",
     "bookAnother": "Prenota un'Altra Lettura",
     "buyAnother": "Acquista un Altro Servizio",
@@ -293,20 +293,20 @@
     "email": {
       "label": "Indirizzo email",
       "placeholder": "Inserisci il tuo indirizzo email",
-      "description": "Questa email sarà utilizzata per inviare la tua Mappa di Nascita.",
+      "description": "Questa email sarà utilizzata per inviare la tua Mappa della Vita.",
       "errorMessage": "L'indirizzo email è obbligatorio"
     },
     "phone": {
       "label": "Numero di telefono",
       "placeholder": "Inserisci il tuo numero di telefono",
-      "description": "Questo numero sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "description": "Questo numero sarà utilizzato per inviare la tua Mappa della Vita.",
       "errorMessage": "Il numero di telefono è obbligatorio"
     },
     "partnerInformation": "Informazioni del Partner",
     "partnerName": {
       "label": "Nome completo del partner",
       "placeholder": "Nome completo del partner come registrato sul suo certificato di nascita",
-      "description": "Questo nome sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "description": "Questo nome sarà utilizzato per inviare la tua Mappa della Vita.",
       "errorMessage": "Il nome completo del partner è obbligatorio"
     },
     "partnerBirthday": {
@@ -319,13 +319,13 @@
     "businessName": {
       "label": "Nome dell'azienda",
       "placeholder": "Nome dell'azienda",
-      "description": "Questo nome sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "description": "Questo nome sarà utilizzato per inviare la tua Mappa della Vita.",
       "errorMessage": "Il nome dell'azienda è obbligatorio"
     },
     "businessType": {
       "label": "Tipo di azienda",
       "placeholder": "Seleziona il tipo di azienda",
-      "description": "Questo tipo di azienda sarà utilizzato per inviare la tua Mappa di Nascita.",
+      "description": "Questo tipo di azienda sarà utilizzato per inviare la tua Mappa della Vita.",
       "errorMessage": "Il tipo di azienda è obbligatorio",
       "startup": "Startup",
       "smallBusiness": "Piccola Impresa",

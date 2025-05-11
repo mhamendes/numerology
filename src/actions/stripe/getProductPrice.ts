@@ -41,7 +41,7 @@ async function getProductPrice({ productId }: GetProductPriceProps) {
 }
 
 export type ProductId =
-  | 'birth-map'
+  | 'life-map'
   | 'personal-reading'
   | 'relationship-compatibility'
   | 'business-numerology';
@@ -59,7 +59,7 @@ export async function getProducts(locale: string): Promise<Product[]> {
   const products: Omit<Product, 'price'>[] = [
     {
       serverId: process.env.BIRTH_MAP_PRODUCT_ID as string,
-      id: 'birth-map' as const,
+      id: 'life-map' as const,
       popular: true,
       isActive: !!process.env.BIRTH_MAP_PRODUCT_ID,
       allowedLocales: ['pt-br', 'pt', 'en', 'it'],

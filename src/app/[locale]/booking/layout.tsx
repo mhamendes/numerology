@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       return t('selectYourProduct');
     }
 
-    if (productId === 'birth-map') {
+    if (productId === 'life-map') {
       return t('buyYourMap');
     }
 

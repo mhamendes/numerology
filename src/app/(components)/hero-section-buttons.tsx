@@ -17,9 +17,9 @@ export function HeroSectionButtons() {
       <Button
         className="rounded-full border-indigo-600 px-8 py-6 text-lg text-indigo-600 hover:bg-indigo-50 dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-950"
         variant="outline"
-        to="/birth-map"
+        to="/life-map"
       >
-        {t('getBirthMap')}
+        {t('getLifeMap')}
       </Button>
     </div>
   );

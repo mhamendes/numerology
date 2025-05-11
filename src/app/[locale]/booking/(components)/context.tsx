@@ -69,7 +69,7 @@ export function BookingProvider({
 }) {
   const t = useTranslations('form');
   const tBooking = useTranslations('booking');
-  const tBirthMap = useTranslations('birthMap');
+  const tLifeMap = useTranslations('lifeMap');
   const tServices = useTranslations('services');
 
   const pathname = usePathname();
@@ -186,26 +186,26 @@ export function BookingProvider({
   const populatedProducts = products
     .map((product) => {
       switch (product.id) {
-        case 'birth-map':
+        case 'life-map':
           return {
             ...product,
-            title: tBooking('birthMap'),
-            description: tBooking('birthMapDescription'),
+            title: tBooking('lifeMap'),
+            description: tBooking('lifeMapDescription'),
             features: [
-              tBirthMap('motivationNumber'),
-              tBirthMap('expressionNumber'),
-              tBirthMap('birthDayNumber'),
-              tBirthMap('hiddenTalent'),
-              tBirthMap('conjugalVibration'),
-              tBirthMap('hiddenTendency'),
-              tBirthMap('destinyNumberTitle'),
-              tBirthMap('missionNumber'),
-              tBirthMap('karmicLessons'),
-              tBirthMap('lifeCycles'),
-              tBirthMap('decisiveMoments'),
-              tBirthMap('invertedTriangle'),
-              tBirthMap('personalYears'),
-              tBirthMap('monthlyGuidance'),
+              tLifeMap('motivationNumber'),
+              tLifeMap('expressionNumber'),
+              tLifeMap('birthDayNumber'),
+              tLifeMap('hiddenTalent'),
+              tLifeMap('conjugalVibration'),
+              tLifeMap('hiddenTendency'),
+              tLifeMap('destinyNumberTitle'),
+              tLifeMap('missionNumber'),
+              tLifeMap('karmicLessons'),
+              tLifeMap('lifeCycles'),
+              tLifeMap('decisiveMoments'),
+              tLifeMap('invertedTriangle'),
+              tLifeMap('personalYears'),
+              tLifeMap('monthlyGuidance'),
               tServices('lifePathNumber'),
               tServices('destinyNumber'),
               tServices('soulUrgeNumber'),
@@ -220,7 +220,7 @@ export function BookingProvider({
             title: tBooking('personalReading'),
             description: tBooking('personalReadingDescription'),
             features: [
-              tServices('allBirthMapFeatures'),
+              tServices('allLifeMapFeatures'),
               tServices('ninetyMinuteConsultation'),
             ],
             icon: <StarIcon className="h-6 w-6 text-indigo-500" />,

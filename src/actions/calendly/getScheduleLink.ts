@@ -14,7 +14,7 @@ type CalendlyResponse = {
 };
 
 const eventTypes: Record<ProductId, string | null> = {
-  'birth-map': null,
+  'life-map': null,
   'personal-reading': '28bb79d2-7e09-486a-ac84-f6fba80d07e7',
   'relationship-compatibility': null,
   'business-numerology': null,

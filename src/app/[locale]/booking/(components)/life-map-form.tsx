@@ -30,7 +30,7 @@ import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
 
-export default function BirthMapForm() {
+export default function LifeMapForm() {
   const t = useTranslations('form');
   const { onSubmit, handleBack, isLoading, prefilledData } = useBooking();
 

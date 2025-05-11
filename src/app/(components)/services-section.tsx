@@ -21,10 +21,10 @@ export function ServicesSection() {
 
   // Services are now defined inside the component to access the t function
 
-  // Reorder services to make Birth Map first
+  // Reorder services to make Life Map first
   const orderedServices = [...products].sort((a, b) => {
-    if (a.title === t('birthMap')) return -1;
-    if (b.title === t('birthMap')) return 1;
+    if (a.title === t('lifeMap')) return -1;
+    if (b.title === t('lifeMap')) return 1;
     return 0;
   });
 
@@ -119,7 +119,7 @@ export function ServicesSection() {
                   to={`/booking?productId=${service.id}`}
                   id={`pyggwy_${index}`}
                 >
-                  {service.title === t('birthMap')
+                  {service.title === t('lifeMap')
                     ? t('calculateNow')
                     : t('bookNow')}
                 </Button>

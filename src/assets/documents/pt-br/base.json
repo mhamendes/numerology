@@ -35,8 +35,8 @@
   "address": "Endereço:",
   "mentorName": "Mentora/Numeróloga:",
   "doneAt": "Realizado em:",
-  "birthMapTitle": "Mapa de Nascimento",
+  "lifeMapTitle": "Mapa da Vida",
   "birthDayTitle": "Dia Natalício",
-  "birthMapSubject": "Mapa de Nascimento de {{fullName}}",
+  "lifeMapSubject": "Mapa da Vida de {{fullName}}",
   "birthDaySubject": "Dia Natalício de {{fullName}}"
 }
