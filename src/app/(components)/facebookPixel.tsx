@@ -25,7 +25,6 @@ const FacebookPixelProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (!isLoaded) return;
 
-    console.log('pageview');
     pixel.pageview();
   }, [pathname, isLoaded]);
 
