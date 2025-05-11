@@ -50,13 +50,15 @@ export type Product = {
   id: ProductId;
   serverId: string;
   price: string;
+  rawPrice: number;
+  currency: string;
   popular: boolean;
   isActive: boolean;
   allowedLocales: LocalesType[];
 };
 
 export async function getProducts(locale: string): Promise<Product[]> {
-  const products: Omit<Product, 'price'>[] = [
+  const products: Omit<Product, 'price' | 'rawPrice' | 'currency'>[] = [
     {
       serverId: process.env.BIRTH_MAP_PRODUCT_ID as string,
       id: 'life-map' as const,
@@ -109,7 +111,12 @@ export async function getProducts(locale: string): Promise<Product[]> {
           minimumFractionDigits: 2,
         }).format(price.amount / 100);
 
-        return { ...product, price: formattedPrice };
+        return {
+          ...product,
+          price: formattedPrice,
+          rawPrice: price.amount / 100,
+          currency: price.currency,
+        };
       })
   );
 

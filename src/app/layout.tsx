@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes';
 
 import { Toaster } from '@/components/ui/toaster';
 
-import FacebookPixel from '@/app/(components)/facebookPixel';
+import FacebookPixelProvider from '@/app/(components)/facebookPixel';
 
 export default async function Layout({
   children,
@@ -22,8 +22,7 @@ export default async function Layout({
     <html lang={locale} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class">
-          {children}
-          <FacebookPixel />
+          <FacebookPixelProvider>{children}</FacebookPixelProvider>
           <Toaster />
         </ThemeProvider>
       </body>

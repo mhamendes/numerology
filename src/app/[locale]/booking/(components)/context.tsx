@@ -7,10 +7,10 @@ import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { event } from '@/lib/fpixel';
 
 import { createCheckoutSession } from '@/actions/stripe/createCheckoutSession';
 import { Product } from '@/actions/stripe/getProductPrice';
+import { useFacebookPixel } from '@/app/(components)/facebookPixel';
 
 type PopulatedProduct = Product & {
   title: string;
@@ -82,6 +82,7 @@ export function BookingProvider({
   const [prefilledData, setPrefilledData] = useState<BaseFormSchema | null>(
     null
   );
+  const { trackEvent, isLoaded } = useFacebookPixel();
 
   function handleProductSelection(productId: string) {
     const product = products.find((product) => product.id === productId);
@@ -99,9 +100,13 @@ export function BookingProvider({
     'server-only';
     if (isLoading || !selectedProduct) return;
 
-    event('AddToCart', {
-      content_ids: [selectedProduct.id],
-    });
+    if (isLoaded) {
+      trackEvent('AddToCart', {
+        content_ids: [selectedProduct.id],
+        value: selectedProduct.rawPrice,
+        currency: selectedProduct.currency,
+      });
+    }
 
     sessionStorage.setItem('bookingData', JSON.stringify(data));
 

@@ -6,19 +6,32 @@ import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { event } from '@/lib/fpixel';
+
+import { useBooking } from '../(components)/context';
+
+import { useFacebookPixel } from '@/app/(components)/facebookPixel';
 
 export default function BookingSuccess() {
   const t = useTranslations('booking');
+  const { trackEvent, isLoaded } = useFacebookPixel();
+  const { products } = useBooking();
 
   const searchParams = useSearchParams();
   const productId = searchParams.get('productId');
 
   useEffect(() => {
-    event('Purchase', {
-      content_ids: [productId],
-    });
-  }, [productId]);
+    if (isLoaded) {
+      const product = products.find((p) => p.id === productId);
+
+      if (product) {
+        trackEvent('Purchase', {
+          content_ids: [product.id],
+          value: product.rawPrice,
+          currency: product.currency,
+        });
+      }
+    }
+  }, [productId, trackEvent, isLoaded, products]);
 
   return (
     <Card className="text-center">
