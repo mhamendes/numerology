@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
+import { event } from '@/lib/fpixel';
 
 import { createCheckoutSession } from '@/actions/stripe/createCheckoutSession';
 import { Product } from '@/actions/stripe/getProductPrice';
@@ -97,6 +98,10 @@ export function BookingProvider({
   async function onSubmit(data: BaseFormSchema) {
     'server-only';
     if (isLoading || !selectedProduct) return;
+
+    event('AddToCart', {
+      content_ids: [selectedProduct.id],
+    });
 
     sessionStorage.setItem('bookingData', JSON.stringify(data));
 
