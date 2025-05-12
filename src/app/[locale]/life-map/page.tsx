@@ -59,10 +59,13 @@ export default function LifeMap() {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    if (!lifeMapProduct) return;
+  useEffect(() => {
+    if (lifeMapProduct) {
+      handleProductSelection(lifeMapProduct.id);
+    }
+  }, [lifeMapProduct, handleProductSelection]);
 
-    handleProductSelection(lifeMapProduct.id);
+  const onSubmit = (data: z.infer<typeof FormSchema>) => {
     onBookingSubmit(data);
   };
 
