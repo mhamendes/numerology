@@ -7,8 +7,6 @@ import {
   MailIcon,
   MapPinIcon,
   PhoneIcon,
-  TwitterIcon,
-  YoutubeIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -21,8 +19,6 @@ import {
   BRAND_INSTAGRAM_PAGE,
   BRAND_LAST_NAME,
   BRAND_NAME,
-  BRAND_TWITTER_PAGE,
-  BRAND_YOUTUBE_PAGE,
   CONTACT_EMAIL,
   JOINED_BRAND_ADDRESS,
   PHONE_NUMBER,
@@ -57,18 +53,6 @@ export function Footer() {
                 className="text-indigo-200 transition-colors hover:text-white"
               >
                 <InstagramIcon className="h-6 w-6" />
-              </Link>
-              <Link
-                href={BRAND_TWITTER_PAGE}
-                className="text-indigo-200 transition-colors hover:text-white"
-              >
-                <TwitterIcon className="h-6 w-6" />
-              </Link>
-              <Link
-                href={BRAND_YOUTUBE_PAGE}
-                className="text-indigo-200 transition-colors hover:text-white"
-              >
-                <YoutubeIcon className="h-6 w-6" />
               </Link>
             </div>
           </div>

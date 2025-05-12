@@ -9,11 +9,11 @@ export const BRAND_ADDRESS = [
 ];
 export const JOINED_BRAND_ADDRESS = BRAND_ADDRESS.join(', ');
 export const BRAND_WEBSITE = 'https://www.drcosmicnumbers.com';
-export const BRAND_FACEBOOK_PAGE = 'https://www.facebook.com/drcosmicnumbers';
-export const BRAND_INSTAGRAM_PAGE = 'https://www.instagram.com/drcosmicnumbers';
-export const BRAND_INSTAGRAM_USERNAME = '@drcosmicnumbers';
-export const BRAND_TWITTER_PAGE = 'https://www.twitter.com/drcosmicnumbers';
-export const BRAND_YOUTUBE_PAGE = 'https://www.youtube.com/drcosmicnumbers';
+export const BRAND_FACEBOOK_PAGE =
+  'https://www.facebook.com/people/Dr-Cosmic-Number-1/61576339460848/';
+export const BRAND_INSTAGRAM_PAGE =
+  'https://www.instagram.com/drcosmicnumber1/';
+export const BRAND_INSTAGRAM_USERNAME = '@drcosmicnumber1';
 
 export function getWhatsAppLink(message: string) {
   return `https://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${message}`;
