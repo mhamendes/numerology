@@ -7,12 +7,12 @@ import { logger } from '@/lib/logger';
 import { EduzzEvent } from './types';
 
 import { createNumerologyReturnDocument } from '@/actions/createNumerologyReturnDocument';
+import { ProductId } from '@/actions/eduzz/getProducts';
 import { sendEmail } from '@/actions/email/sendEmail';
-import { ProductId } from '@/actions/stripe/getProductPrice';
 import { updateSaleByTrackerCode } from '@/db/migrations';
 import { getSaleByTrackerCode } from '@/db/queries';
 
-const log = logger.child({ module: 'api/webhooks/stripe' });
+const log = logger.child({ module: 'api/webhooks/eduzz' });
 export async function POST(req: Request) {
   let event: EduzzEvent;
 
