@@ -64,17 +64,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const Comp = asChild || to ? Slot : 'button';
-    const [isClicked, setIsClicked] = React.useState(false);
-
-    React.useEffect(() => {
-      if (!isLoading) setIsClicked(false);
-    }, [isLoading]);
-
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (isClicked) return;
-      if (isLoading !== undefined) setIsClicked(true);
-      onClick?.(e);
-    };
 
     function getChild() {
       if (asChild) return props.children;
@@ -98,8 +87,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
-        onClick={handleClick}
+        onClick={onClick}
         ref={ref}
+        disabled={isLoading}
         {...props}
       >
         {getChild()}
