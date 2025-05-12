@@ -96,7 +96,7 @@ export async function POST(req: Request) {
     log.info(`Email sent to ${customerEmail}`);
 
     await updateSaleByTrackerCode({
-      status: 'paid',
+      status: 'completed',
       updatedAt: new Date(),
       trackerCode,
     });
