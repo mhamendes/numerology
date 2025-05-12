@@ -9,7 +9,7 @@ import { BookingProvider } from './booking/(components)/context';
 
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
-import { getProducts } from '@/actions/stripe/getProductPrice';
+import { getProducts } from '@/actions/eduzz/getProducts';
 
 export default async function Layout({
   children,
