@@ -108,7 +108,7 @@ export function BookingProvider({
 
     const queryParams = new URLSearchParams({
       currency: currency ?? 'BRL',
-      tracker_code1: trackerCode,
+      trk: trackerCode,
     });
 
     const url = new URL(paymentUrl);
