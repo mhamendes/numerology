@@ -138,7 +138,6 @@ export function BookingProvider({
         birthDay: data.birthday?.toISOString() ?? '',
         fullName: data.fullName ?? '',
         email: data.email ?? '',
-        createdAt: new Date(),
         updatedAt: new Date(),
         productId: selectedProduct.id,
       });
