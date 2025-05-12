@@ -52,11 +52,6 @@ export default function LifeMap() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      fullName: 'Matheus Henrique Araújo Mendes',
-      birthday: new Date('1995-07-13'),
-      email: 'omatheusmendes@gmail.com',
-    },
   });
 
   useEffect(() => {
