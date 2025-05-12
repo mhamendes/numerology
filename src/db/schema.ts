@@ -1,7 +1,5 @@
 import { date, integer, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
-console.log('vercelenv', process.env.VERCEL_ENV);
-
 export const prodSalesTable = pgTable('prod_sales', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
