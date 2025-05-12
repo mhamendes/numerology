@@ -16,7 +16,7 @@
   },
   "hero": {
     "calculateLifePath": "Il tuo Numero del Giorno di Nascita rivela i tuoi talenti unici e le sfide. Sbloccali oggi.",
-    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
+    "fullName": "Inserisci il tuo nome completo da celibe/nubile, esattamente come appare sul Certificato di Nascita, inclusi gli accenti, se presenti.",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
     "revealNumbers": "Scopri GRATIS",
@@ -153,7 +153,7 @@
     }
   },
   "lifeMap": {
-    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
+    "fullName": "Inserisci il tuo nome completo da celibe/nubile, esattamente come appare sul Certificato di Nascita, inclusi gli accenti, se presenti.",
     "birthDate": "Data di Nascita",
     "enterFullName": "Inserisci il tuo nome completo di nascita",
     "emailAddress": "Indirizzo Email",
@@ -222,9 +222,9 @@
     "journeyText": "Che tu sia nuovo alla numerologia o che tu abbia esplorato la sua saggezza per anni, ti invitiamo a scoprire le profonde intuizioni che i tuoi numeri contengono."
   },
   "booking": {
-    "fullName": "Nome completo come registrato sul tuo certificato di nascita",
+    "fullName": "Nome completo",
     "birthDate": "Data di Nascita",
-    "enterFullName": "Inserisci il tuo nome completo di nascita",
+    "enterFullName": "Inserisci il tuo nome completo da celibe/nubile, esattamente come appare sul Certificato di Nascita, inclusi gli accenti, se presenti.",
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
     "continueToPayment": "Continua al Pagamento",
@@ -280,14 +280,14 @@
   "form": {
     "name": {
       "label": "Nome completo",
-      "placeholder": "Nome completo come registrato sul tuo certificato di nascita",
-      "description": "Attenzione: Assicurati di scrivere tutti i tuoi nomi correttamente e con le accentazioni.",
+      "placeholder": "Nome completo",
+      "description": "Inserisci il tuo nome completo da celibe/nubile, esattamente come appare sul Certificato di Nascita, inclusi gli accenti, se presenti.",
       "errorMessage": "Il nome completo è obbligatorio"
     },
     "birthday": {
       "label": "Data di nascita",
       "placeholder": "GG/MM/AAAA",
-      "description": "Questo campo è obbligatorio. Assicurati di inserire la data di nascita esattamente come è registrata sul tuo certificato di nascita.",
+      "description": "Inserisci la tua data di nascita esattamente come è registrata sul tuo Certificato di Nascita.",
       "errorMessage": "La data di nascita è obbligatoria"
     },
     "email": {
