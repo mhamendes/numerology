@@ -50,12 +50,6 @@ export default function Contact() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      email: 'omatheusmendes@gmail.com',
-      fullName: 'Matheus Henrique Araújo Mendes',
-      subject: 'Test',
-      message: 'testando mensagem',
-    },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
