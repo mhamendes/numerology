@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     log.error(error, 'Webhook Error on event formatting');
     return NextResponse.json(
       { message: `Webhook Error on event formatting: ${errorMessage}` },
-      { status: 400 }
+      { status: 200 }
     );
   }
 
@@ -113,7 +113,7 @@ export async function POST(req: Request) {
     logError.error(error, 'Webhook Error on document creation');
     return NextResponse.json(
       { message: 'Webhook handler failed' },
-      { status: 500 }
+      { status: 200 }
     );
   }
 }
