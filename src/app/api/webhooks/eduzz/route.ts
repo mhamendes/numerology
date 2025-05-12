@@ -53,7 +53,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const trackerCode = event.data.tracker.code1;
+    const trackerCode = event.data.tracker?.code1;
     if (!trackerCode) throw new Error('Tracker code not found');
 
     const sale = await getSaleByTrackerCode(trackerCode);

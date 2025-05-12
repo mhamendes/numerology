@@ -9,18 +9,18 @@ export type EduzzEvent = {
       name: string;
       document: string;
       email: string;
-      phone: string;
-      phone2: string;
-      cellPhone: string;
+      phone?: string;
+      phone2?: string;
+      cellPhone?: string;
       address: {
-        street: string;
-        number: string;
-        neighborhood: string;
-        complement: string;
-        city: string;
-        state: string;
-        country: string;
-        zipCode: string;
+        street?: string;
+        number?: string;
+        neighborhood?: string;
+        complement?: string;
+        city?: string;
+        state?: string;
+        country?: string;
+        zipCode?: string;
       };
     };
     producer: {
@@ -29,20 +29,20 @@ export type EduzzEvent = {
       email: string;
       originSecret: string;
     };
-    utm: {
-      source: string;
-      campaign: string;
-      medium: string;
-      content: string;
+    utm?: {
+      source?: string;
+      campaign?: string;
+      medium?: string;
+      content?: string;
     };
-    tracker: {
-      code1: string;
-      code2: string;
-      code3: string;
+    tracker?: {
+      code1?: string;
+      code2?: string;
+      code3?: string;
     };
     createdAt: string;
     dueDate: string;
-    barcode: string;
+    barcode?: string;
     price: {
       currency: string;
       value: number;
@@ -55,7 +55,7 @@ export type EduzzEvent = {
     items: {
       productId: string;
       name: string;
-      parentId: string;
+      parentId?: string;
       refundPeriod: {
         durationType: string;
         value: number;
@@ -63,48 +63,48 @@ export type EduzzEvent = {
       price: {
         currency: string;
         value: number;
-        coupon: {
-          id: string;
-          key: string;
-          discount: {
-            currency: string;
-            value: number;
+        coupon?: {
+          id?: string;
+          key?: string;
+          discount?: {
+            currency?: string;
+            value?: number;
           };
         };
       };
-      partnerId: string;
+      partnerId?: string;
       billingType: string;
       skuReference: string;
     }[];
     totalItems: number;
-    billetUrl: string;
+    billetUrl?: string;
     checkoutUrl: string;
-    bankslipUrl: string;
+    bankslipUrl?: string;
     affiliate: {
       id: string;
       name: string;
       email: string;
     };
-    paidAt: string;
+    paidAt?: string;
     paymentMethod: string;
-    transaction: {
+    transaction?: {
       id: string;
       key: string;
     };
-    student: {
+    student?: {
       id: string;
       name: string;
-      document: string;
+      document?: string;
       email: string;
-      phone: string;
-      phone2: string;
-      cellPhone: string;
+      phone?: string;
+      phone2?: string;
+      cellPhone?: string;
     };
-    chargeback: {
+    chargeback?: {
       status: string;
       createdAt: string;
-      limitDate: string;
-      finishedAt: string;
+      limitDate?: string;
+      finishedAt?: string;
     };
   };
   sentDate: string;
