@@ -1,6 +1,13 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -83,76 +90,85 @@ export function BookingProvider({
   );
   const { trackEvent, isLoaded } = useFacebookPixel();
 
-  function handleProductSelection(productId: string) {
-    const product = products.find((product) => product.id === productId);
+  const handleProductSelection = useCallback(
+    (productId: string) => {
+      const product = products.find((product) => product.id === productId);
 
-    if (!product) {
-      toast.error('Product not found');
-      return;
-    }
+      if (!product) {
+        toast.error('Product not found');
+        return;
+      }
 
-    setSelectedProduct(product);
-    setStep(2);
-  }
+      setSelectedProduct(product);
+      setStep(2);
+    },
+    [products]
+  );
 
-  function buildPaymentUrl({ trackerCode }: { trackerCode: string }) {
-    const { paymentUrl, currency } = selectedProduct ?? {};
+  const buildPaymentUrl = useCallback(
+    ({ trackerCode }: { trackerCode: string }) => {
+      const { paymentUrl, currency } = selectedProduct ?? {};
 
-    if (!paymentUrl) {
-      throw new Error('Payment URL not found');
-    }
+      if (!paymentUrl) {
+        throw new Error('Payment URL not found');
+      }
 
-    if (!trackerCode) {
-      throw new Error('Missing required parameters');
-    }
+      if (!trackerCode) {
+        throw new Error('Missing required parameters');
+      }
 
-    const queryParams = new URLSearchParams({
-      currency: currency ?? 'BRL',
-      trk: trackerCode,
-    });
-
-    const url = new URL(paymentUrl);
-    url.search = queryParams.toString();
-
-    return url.toString();
-  }
-
-  async function onSubmit(data: BaseFormSchema) {
-    'server-only';
-    if (isLoading || !selectedProduct) return;
-
-    if (isLoaded) {
-      trackEvent('AddToCart', {
-        content_ids: [selectedProduct.id],
-        value: selectedProduct.rawPrice,
-        currency: selectedProduct.currency,
-      });
-    }
-
-    sessionStorage.setItem('bookingData', JSON.stringify(data));
-
-    setIsLoading(true);
-    try {
-      const trackerCode = await createSale({
-        status: 'pending',
-        birthDay: data.birthday?.toISOString() ?? '',
-        fullName: data.fullName ?? '',
-        email: data.email ?? '',
-        updatedAt: new Date(),
-        productId: selectedProduct.id,
+      const queryParams = new URLSearchParams({
+        currency: currency ?? 'BRL',
+        trk: trackerCode,
       });
 
-      const paymentUrl = buildPaymentUrl({ trackerCode });
-      window.open(paymentUrl, '_self');
-    } catch (error) {
-      console.error(error);
-      toast.error(t('error.somethingWentWrong'));
-    } finally {
-      setIsLoading(false);
-    }
-  }
+      const url = new URL(paymentUrl);
+      url.search = queryParams.toString();
 
-  function handleBack() {
+      return url.toString();
+    },
+    [selectedProduct]
+  );
+
+  const onSubmit = useCallback(
+    async (data: BaseFormSchema) => {
+      'server-only';
+      if (isLoading || !selectedProduct) return;
+
+      if (isLoaded) {
+        trackEvent('AddToCart', {
+          content_ids: [selectedProduct.id],
+          value: selectedProduct.rawPrice,
+          currency: selectedProduct.currency,
+        });
+      }
+
+      sessionStorage.setItem('bookingData', JSON.stringify(data));
+
+      setIsLoading(true);
+      try {
+        const trackerCode = await createSale({
+          status: 'pending',
+          birthDay: data.birthday?.toISOString() ?? '',
+          fullName: data.fullName ?? '',
+          email: data.email ?? '',
+          updatedAt: new Date(),
+          productId: selectedProduct.id,
+        });
+
+        const paymentUrl = buildPaymentUrl({ trackerCode });
+        window.open(paymentUrl, '_self');
+      } catch (error) {
+        console.error(error);
+        toast.error(t('error.somethingWentWrong'));
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [isLoading, selectedProduct, t, trackEvent, isLoaded, buildPaymentUrl]
+  );
+
+  const handleBack = useCallback(() => {
     if (step === 2) {
       setSelectedProduct(null);
     }
@@ -161,14 +177,14 @@ export function BookingProvider({
     }
 
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
-  }
+  }, [clientSecret, step]);
 
-  function updateCheckoutSession() {
+  const updateCheckoutSession = useCallback(() => {
     if (clientSecret && prefilledData) {
       setClientSecret(null);
       onSubmit(prefilledData as BaseFormSchema);
     }
-  }
+  }, [clientSecret, onSubmit, prefilledData]);
 
   const isLastStep =
     pathname.includes('success') || pathname.includes('failure');
@@ -203,83 +219,87 @@ export function BookingProvider({
     }
   }, [pathname]);
 
-  const populatedProducts = products
-    .map((product) => {
-      switch (product.id) {
-        case 'life-map':
-          return {
-            ...product,
-            title: tBooking('lifeMap'),
-            description: tBooking('lifeMapDescription'),
-            features: [
-              tLifeMap('motivationNumber'),
-              tLifeMap('expressionNumber'),
-              tLifeMap('birthDayNumber'),
-              tLifeMap('hiddenTalent'),
-              tLifeMap('conjugalVibration'),
-              tLifeMap('hiddenTendency'),
-              tLifeMap('destinyNumberTitle'),
-              tLifeMap('missionNumber'),
-              tLifeMap('karmicLessons'),
-              tLifeMap('lifeCycles'),
-              tLifeMap('decisiveMoments'),
-              tLifeMap('invertedTriangle'),
-              tLifeMap('personalYears'),
-              tLifeMap('monthlyGuidance'),
-              tServices('lifePathNumber'),
-              tServices('destinyNumber'),
-              tServices('soulUrgeNumber'),
-              tServices('personalityNumber'),
-              tServices('currentYearForecast'),
-            ],
-            icon: <BookIcon className="h-6 w-6 text-purple-500" />,
-          };
-        case 'personal-reading':
-          return {
-            ...product,
-            title: tBooking('personalReading'),
-            description: tBooking('personalReadingDescription'),
-            features: [
-              tServices('allLifeMapFeatures'),
-              tServices('ninetyMinuteConsultation'),
-            ],
-            icon: <StarIcon className="h-6 w-6 text-indigo-500" />,
-          };
-        case 'relationship-compatibility':
-          return {
-            ...product,
-            title: tBooking('relationshipCompatibility'),
-            description: tBooking('relationshipCompatibilityDescription'),
-            features: [
-              tServices('individualNumberAnalysis'),
-              tServices('compatibilityAssessment'),
-              tServices('relationshipStrengths'),
-              tServices('communicationStyle'),
-              tServices('relationshipForecast'),
-              tServices('ninetyMinuteJointConsultation'),
-            ],
-            icon: <HeartIcon className="h-6 w-6 text-pink-500" />,
-          };
-        case 'business-numerology':
-          return {
-            ...product,
-            title: tBooking('businessNumerology'),
-            description: tBooking('businessNumerologyDescription'),
-            features: [
-              tServices('businessNameAnalysis'),
-              tServices('optimalLaunchDate'),
-              tServices('teamCompatibility'),
-              tServices('strategicTiming'),
-              tServices('growthOpportunity'),
-              tServices('oneHundredTwentyMinuteConsultation'),
-            ],
-            icon: <GlobeIcon className="h-6 w-6 text-blue-500" />,
-          };
-        default:
-          return null;
-      }
-    })
-    .filter((product) => product !== null);
+  const populatedProducts = useMemo(
+    () =>
+      products
+        .map((product) => {
+          switch (product.id) {
+            case 'life-map':
+              return {
+                ...product,
+                title: tBooking('lifeMap'),
+                description: tBooking('lifeMapDescription'),
+                features: [
+                  tLifeMap('motivationNumber'),
+                  tLifeMap('expressionNumber'),
+                  tLifeMap('birthDayNumber'),
+                  tLifeMap('hiddenTalent'),
+                  tLifeMap('conjugalVibration'),
+                  tLifeMap('hiddenTendency'),
+                  tLifeMap('destinyNumberTitle'),
+                  tLifeMap('missionNumber'),
+                  tLifeMap('karmicLessons'),
+                  tLifeMap('lifeCycles'),
+                  tLifeMap('decisiveMoments'),
+                  tLifeMap('invertedTriangle'),
+                  tLifeMap('personalYears'),
+                  tLifeMap('monthlyGuidance'),
+                  tServices('lifePathNumber'),
+                  tServices('destinyNumber'),
+                  tServices('soulUrgeNumber'),
+                  tServices('personalityNumber'),
+                  tServices('currentYearForecast'),
+                ],
+                icon: <BookIcon className="h-6 w-6 text-purple-500" />,
+              };
+            case 'personal-reading':
+              return {
+                ...product,
+                title: tBooking('personalReading'),
+                description: tBooking('personalReadingDescription'),
+                features: [
+                  tServices('allLifeMapFeatures'),
+                  tServices('ninetyMinuteConsultation'),
+                ],
+                icon: <StarIcon className="h-6 w-6 text-indigo-500" />,
+              };
+            case 'relationship-compatibility':
+              return {
+                ...product,
+                title: tBooking('relationshipCompatibility'),
+                description: tBooking('relationshipCompatibilityDescription'),
+                features: [
+                  tServices('individualNumberAnalysis'),
+                  tServices('compatibilityAssessment'),
+                  tServices('relationshipStrengths'),
+                  tServices('communicationStyle'),
+                  tServices('relationshipForecast'),
+                  tServices('ninetyMinuteJointConsultation'),
+                ],
+                icon: <HeartIcon className="h-6 w-6 text-pink-500" />,
+              };
+            case 'business-numerology':
+              return {
+                ...product,
+                title: tBooking('businessNumerology'),
+                description: tBooking('businessNumerologyDescription'),
+                features: [
+                  tServices('businessNameAnalysis'),
+                  tServices('optimalLaunchDate'),
+                  tServices('teamCompatibility'),
+                  tServices('strategicTiming'),
+                  tServices('growthOpportunity'),
+                  tServices('oneHundredTwentyMinuteConsultation'),
+                ],
+                icon: <GlobeIcon className="h-6 w-6 text-blue-500" />,
+              };
+            default:
+              return null;
+          }
+        })
+        .filter((product) => product !== null),
+    [products, tBooking, tLifeMap, tServices]
+  );
 
   return (
     <BookingContext.Provider

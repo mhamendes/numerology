@@ -54,15 +54,15 @@ export default function LifeMap() {
     resolver: zodResolver(FormSchema),
   });
 
+  const onSubmit = (data: z.infer<typeof FormSchema>) => {
+    onBookingSubmit(data);
+  };
+
   useEffect(() => {
     if (lifeMapProduct) {
       handleProductSelection(lifeMapProduct.id);
     }
-  }, [lifeMapProduct, handleProductSelection]);
-
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    onBookingSubmit(data);
-  };
+  }, [handleProductSelection, lifeMapProduct]);
 
   useEffect(() => {
     if (!lifeMapProduct) {
