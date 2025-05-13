@@ -188,7 +188,7 @@ export function BookingProvider({
 
   useEffect(() => {
     const data = sessionStorage.getItem('bookingData');
-    if (data) {
+    if (data && !prefilledData) {
       const parsedData = JSON.parse(data);
       setPrefilledData({
         ...parsedData,
@@ -200,7 +200,7 @@ export function BookingProvider({
           : undefined,
       } as BaseFormSchema);
     }
-  }, []);
+  }, [pathname, prefilledData]);
 
   useEffect(() => {
     if (isLastStep) {

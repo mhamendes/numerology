@@ -37,12 +37,14 @@ import { formatDate } from '@/lib/date';
 import { cn } from '@/lib/utils';
 
 import { sendBirthDayDocumentEmail } from '@/actions/createBirthDayReturnDocument';
+import { useBooking } from '@/app/[locale]/booking/(components)/context';
 
 export function HeroSectionForm() {
   const t = useTranslations('hero');
   const tForm = useTranslations('form');
   const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { prefilledData } = useBooking();
 
   const FormSchema = z.object({
     email: z.string().email({ message: tForm('email.errorMessage') }),
@@ -54,14 +56,22 @@ export function HeroSectionForm() {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      email: prefilledData?.email ?? undefined,
+      fullName: prefilledData?.fullName ?? undefined,
+      birthday: prefilledData?.birthday
+        ? new Date(prefilledData.birthday)
+        : undefined,
+    },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    'server-only';
     if (isLoading) return;
 
     setIsLoading(true);
     try {
+      sessionStorage.setItem('bookingData', JSON.stringify(data));
+
       const response = await sendBirthDayDocumentEmail(data);
 
       if (!response) throw new Error('Personal Days email failed to be sent');
