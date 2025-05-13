@@ -16,7 +16,7 @@
   },
   "hero": {
     "calculateLifePath": "Seu Número do Dia de Nascimento revela seus talentos únicos e desafios. Desbloqueie-os hoje.",
-    "fullName": "Nome completo como registrado no seu certificado de nascimento",
+    "fullName": "Informe seu nome completo de solteiro(a), exatamente como consta no Registro de Nascimento, incluindo acentos, se houver.",
     "birthDate": "Data de Nascimento",
     "enterFullName": "Digite seu nome completo de nascimento",
     "revealNumbers": "Descubra GRÁTIS",
@@ -153,7 +153,7 @@
     }
   },
   "lifeMap": {
-    "fullName": "Nome completo como registrado no seu certificado de nascimento",
+    "fullName": "Informe seu nome completo de solteiro(a), exatamente como consta no Registro de Nascimento, incluindo acentos, se houver.",
     "birthDate": "Data de Nascimento",
     "enterFullName": "Digite seu nome completo de nascimento",
     "emailAddress": "Endereço de Email",
@@ -222,9 +222,9 @@
     "journeyText": "Seja você novo na numerologia ou tenha explorado sua sabedoria por anos, convidamos você a descobrir os profundos insights que seus números contêm."
   },
   "booking": {
-    "fullName": "Nome completo como registrado no seu certificado de nascimento",
+    "fullName": "Nome completo",
     "birthDate": "Data de Nascimento",
-    "enterFullName": "Digite seu nome completo de nascimento",
+    "enterFullName": "Informe seu nome completo de solteiro(a), exatamente como consta no Registro de Nascimento, incluindo acentos, se houver.",
     "emailAddress": "Endereço de Email",
     "enterYourEmail": "Digite seu endereço de email",
     "continueToPayment": "Continuar para Pagamento",
@@ -280,14 +280,14 @@
   "form": {
     "name": {
       "label": "Nome completo",
-      "placeholder": "Nome completo como registrado no seu certificado de nascimento",
-      "description": "Atenção: Certifique-se de escrever todos os seus nomes corretamente e com as acentuações.",
+      "placeholder": "Nome completo",
+      "description": "Informe seu nome completo de solteiro(a), exatamente como consta no Registro de Nascimento, incluindo acentos, se houver.",
       "errorMessage": "Nome completo é obrigatório"
     },
     "birthday": {
       "label": "Data de nascimento",
       "placeholder": "DD/MM/YYYY",
-      "description": "Este campo é obrigatório. Certifique-se de digitar a data de nascimento exatamente como está registrada em sua certidão de nascimento.",
+      "description": "Informe sua data de nascimento exatamente como consta no Registro de Nascimento.",
       "errorMessage": "Data de nascimento é obrigatória"
     },
     "email": {

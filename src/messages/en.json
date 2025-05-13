@@ -16,7 +16,7 @@
   },
   "hero": {
     "calculateLifePath": "Your Birth Day Number reveals your unique talents and challenges. Unlock yours today.",
-    "fullName": "Full name as recorded on your birth certificate",
+    "fullName": "Enter your full birth name exactly as it appears on your Birth Certificate, including accents if any.",
     "birthDate": "Birth Date",
     "enterFullName": "Enter your full birth name",
     "revealNumbers": "Find Out FREE",
@@ -153,7 +153,7 @@
     }
   },
   "lifeMap": {
-    "fullName": "Full name as recorded on your birth certificate",
+    "fullName": "Enter your full birth name exactly as it appears on your Birth Certificate, including accents if any.",
     "birthDate": "Birth Date",
     "enterFullName": "Enter your full birth name",
     "emailAddress": "Email Address",
@@ -224,7 +224,7 @@
   "booking": {
     "fullName": "Full Name",
     "birthDate": "Birth Date",
-    "enterFullName": "Enter your full name as recorded on your birth certificate",
+    "enterFullName": "Enter your full birth name exactly as it appears on your Birth Certificate, including accents if any.",
     "emailAddress": "Email Address",
     "enterYourEmail": "Enter your email address",
     "continueToPayment": "Continue to Payment",
@@ -280,14 +280,14 @@
   "form": {
     "name": {
       "label": "Full name",
-      "placeholder": "Full name as recorded on your birth certificate",
-      "description": "Attention: Make sure all your names are fully written and correctly accented before submitting.",
+      "placeholder": "Full name",
+      "description": "Enter your full birth name exactly as it appears on your Birth Certificate, including accents if any.",
       "errorMessage": "Full name is required"
     },
     "birthday": {
       "label": "Date of birth",
       "placeholder": "MM/DD/YYYY",
-      "description": "This field is required. Make sure to enter the date of birth exactly as it is registered on your birth certificate.",
+      "description": "Enter your date of birth exactly as it is registered on your Birth Certificate.",
       "errorMessage": "Date of birth is required"
     },
     "email": {
