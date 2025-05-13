@@ -13,33 +13,19 @@ const currencyOptions: CurrencyOptions = {
 };
 
 export default async function middleware(request: NextRequest) {
-  // Step 1: Use the incoming request (example)
-  const acceptLanguageHeader =
-    request.headers.get('Accept-Language')?.split(',')[0] ?? '';
-  const acceptLanguageDefaultLocale = LOCALES.includes(
-    acceptLanguageHeader as LocalesType
-  )
-    ? acceptLanguageHeader
-    : 'pt-br';
+  const handleI18nRouting = createMiddleware(routing);
+  const response = handleI18nRouting(request);
 
-  const defaultLocale = (
-    request.cookies.get('NEXT_LOCALE')?.value ?? acceptLanguageDefaultLocale
-  ).toLowerCase();
+  const locale = response.headers.get(
+    'x-middleware-request-x-next-intl-locale'
+  ) as LocalesType | null;
 
-  const defaultCurrency = LOCALES.includes(defaultLocale as LocalesType)
-    ? currencyOptions[defaultLocale as LocalesType]
-    : 'brl';
+  const defaultCurrency =
+    locale && LOCALES.includes(locale) ? currencyOptions[locale] : 'brl';
 
   const currency = (
     request.cookies.get('CURRENCY')?.value ?? defaultCurrency
   ).toLowerCase();
-
-  // Step 2: Create and call the next-intl middleware (example)
-  const handleI18nRouting = createMiddleware(routing);
-  const response = handleI18nRouting(request);
-
-  // Step 3: Alter the response (example)
-  response.cookies.set('NEXT_LOCALE', defaultLocale);
   response.cookies.set('CURRENCY', currency);
 
   return response;
