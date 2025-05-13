@@ -7,7 +7,6 @@ import { BookIcon, CalendarIcon, CheckIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-import { formatDate } from '@/lib/date';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -26,6 +25,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useRouter } from '@/i18n/navigation';
+import { formatDate } from '@/lib/date';
 import { cn } from '@/lib/utils';
 
 import { useBooking } from '../booking/(components)/context';

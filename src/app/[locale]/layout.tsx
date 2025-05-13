@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 
 import { routing } from '@/i18n/routing';
 
@@ -10,13 +10,8 @@ import { BookingProvider } from './booking/(components)/context';
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
 import { getProducts } from '@/actions/eduzz/getProducts';
-import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export async function generateMetadata() {
   const t = await getTranslations('metadata');
 
   return {

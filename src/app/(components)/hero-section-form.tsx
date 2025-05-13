@@ -8,7 +8,6 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
-import { formatDate } from '@/lib/date';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent } from '@/components/ui/card';
@@ -34,6 +33,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { formatDate } from '@/lib/date';
 import { cn } from '@/lib/utils';
 
 import { sendBirthDayDocumentEmail } from '@/actions/createBirthDayReturnDocument';

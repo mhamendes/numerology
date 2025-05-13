@@ -1,10 +1,11 @@
-import { DEFAULT_LOCALE } from '@/i18n/routing';
 import { format } from 'date-fns';
 import { enUS } from 'date-fns/locale/en-US';
 import { it } from 'date-fns/locale/it';
 import { pt } from 'date-fns/locale/pt';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import Cookies from 'js-cookie';
+
+import { DEFAULT_LOCALE } from '@/i18n/routing';
 
 const LOCALES = {
   pt,

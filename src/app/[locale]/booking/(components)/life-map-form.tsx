@@ -7,7 +7,6 @@ import { CalendarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-import { formatDate } from '@/lib/date';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { CardContent } from '@/components/ui/card';
@@ -26,6 +25,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { formatDate } from '@/lib/date';
 import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
