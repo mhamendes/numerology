@@ -44,29 +44,34 @@ export async function sendEmail({
   if (!type)
     throw new Error(`No email type provided, failed to send email to ${to}`);
 
-  const htmlForType: Record<EmailType, string> = {
-    free: getFreeEmailReact({ fullName, locale }),
-    'life-map': getLifeMapEmailReact({ fullName, locale }),
-    'personal-reading': await getPersonalReadingEmailReact({
-      fullName,
-      locale,
-    }),
-    'relationship-compatibility': await getRelationshipCompatibilityEmailReact({
-      fullName,
-      locale,
-    }),
-    'business-numerology': await getBusinessNumerologyEmailReact({
-      fullName,
-      locale,
-    }),
-    contact: `${fullName} de email ${to} enviou a mensagem: ${html}`,
+  console.log('type', type);
+
+  const getEmailHtml = async (type: EmailType) => {
+    switch (type) {
+      case 'free':
+        return getFreeEmailReact({ fullName, locale });
+      case 'life-map':
+        return getLifeMapEmailReact({ fullName, locale });
+      case 'personal-reading':
+        return getPersonalReadingEmailReact({ fullName, locale });
+      case 'relationship-compatibility':
+        return getRelationshipCompatibilityEmailReact({ fullName, locale });
+      case 'business-numerology':
+        return getBusinessNumerologyEmailReact({ fullName, locale });
+      case 'contact':
+        return `${fullName} de email ${to} enviou a mensagem: ${html}`;
+      default:
+        throw new Error(
+          `No email type provided, failed to send email to ${to}`
+        );
+    }
   };
 
   const { data, error } = await resend.emails.send({
     from: 'contact@drcosmicnumber.com',
     to,
     subject,
-    html: htmlForType[type],
+    html: await getEmailHtml(type),
     attachments: attachments?.map((attachment) => ({
       content: attachment.content,
       filename: attachment.filename,

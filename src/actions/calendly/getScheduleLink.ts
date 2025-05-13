@@ -1,6 +1,8 @@
 'use server';
 'server-only';
 
+import { LocalesType } from '@/i18n/routing';
+
 import { ProductId } from '@/actions/stripe/getProductPrice';
 
 const BASE_URL = 'https://api.calendly.com';
@@ -20,12 +22,28 @@ const eventTypes: Record<ProductId, string | null> = {
   'business-numerology': null,
 };
 
-export async function getCalendlySingleUseSchedulingLink(type: ProductId) {
+type GetCalendlySingleUseSchedulingLinkProps = {
+  type: ProductId;
+  locale: LocalesType;
+};
+
+export async function getCalendlySingleUseSchedulingLink({
+  type,
+  locale,
+}: GetCalendlySingleUseSchedulingLinkProps) {
   const calendlyToken = process.env.CALENDLY_TOKEN;
   if (!calendlyToken) throw new Error('No Calendly Token Provided');
 
+  const fallbackLink = {
+    'pt-br':
+      'Link não disponível, entre em contato conosco no email contact@drcosmicnumber.com',
+    pt: 'Link não disponível, entre em contato conosco no email contact@drcosmicnumber.com',
+    it: "Link non disponibile, contattaci all'email contact@drcosmicnumber.com",
+    en: 'Link not available, contact us at contact@drcosmicnumber.com',
+  };
+
   const eventType = eventTypes[type];
-  if (!eventType) throw new Error('No Event Type Provided');
+  if (!eventType) return fallbackLink[locale];
 
   const response = await fetch(`${BASE_URL}/scheduling_links`, {
     method: 'POST',

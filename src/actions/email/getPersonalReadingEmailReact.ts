@@ -11,8 +11,10 @@ export async function getPersonalReadingEmailReact({
   fullName,
   locale,
 }: PersonalReadingEmailReactProps) {
-  const calendlyScheduleLink =
-    await getCalendlySingleUseSchedulingLink('personal-reading');
+  const calendlyScheduleLink = await getCalendlySingleUseSchedulingLink({
+    type: 'personal-reading',
+    locale,
+  });
 
   const textCopy: Record<LocalesType, string> = {
     'pt-br': `Segue em anexo o seu Mapa da Vida, ${fullName}. Obrigado pela compra! O link de marcação da consulta a seguir só poderá ser utilizado uma única vez, não compartilhe-o com terceiros: ${calendlyScheduleLink}. Caso tenha algum problema, entre em contato conosco no email contact@drcosmicnumber.com.`,
