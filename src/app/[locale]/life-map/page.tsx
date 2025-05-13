@@ -3,11 +3,11 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { format } from 'date-fns';
 import { BookIcon, CalendarIcon, CheckIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
+import { formatDate } from '@/lib/date';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -185,7 +185,7 @@ export default function LifeMap() {
                                     )}
                                   >
                                     {field.value ? (
-                                      format(field.value, 'P')
+                                      formatDate(field.value)
                                     ) : (
                                       <span>
                                         {tForm('birthday.placeholder')}

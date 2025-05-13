@@ -10,6 +10,20 @@ import { BookingProvider } from './booking/(components)/context';
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
 import { getProducts } from '@/actions/eduzz/getProducts';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const t = await getTranslations('metadata');
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function Layout({
   children,

@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "DrCosmic°Numbēr°1",
+    "description": "Desbloqueie o seu destino através da numerologia"
+  },
   "localeSwitcher": {
     "label": "Idioma",
     "locale": "{locale, select, en {English} it {Italiano} pt_br {Português Brasileiro} pt {Português} other {Unknown}}"
@@ -21,7 +25,7 @@
     "enterFullName": "Digite seu nome completo de nascimento",
     "revealNumbers": "Descubra GRÁTIS",
     "discoverDestiny": "Descubra como o seu Número do Dia de Nascimento molda seus talentos naturais e desafios.",
-    "unlockDestiny": "Desbloqueie o Seu Destino Através de",
+    "unlockDestiny": "Desbloqueie o Seu Destino Através da",
     "numerology": "Numerologia",
     "discoverHidden": "Descubra os significados ocultos por trás dos seus números e como eles influenciam todos os aspectos da sua jornada de vida.",
     "premiumAnalysis": "Análise Numerológica Premium",
