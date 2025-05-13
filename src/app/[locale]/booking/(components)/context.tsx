@@ -13,11 +13,11 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname } from '@/i18n/navigation';
 
-import { createCheckoutSession } from '@/actions/stripe/createCheckoutSession';
-import { Product } from '@/actions/stripe/getProductPrice';
+import { Product } from '@/actions/eduzz/getProducts';
 import { useFacebookPixel } from '@/app/(components)/facebookPixel';
+import { createSale } from '@/db/migrations';
 
 type PopulatedProduct = Product & {
   title: string;
@@ -80,7 +80,6 @@ export function BookingProvider({
   const tServices = useTranslations('services');
 
   const pathname = usePathname();
-  const router = useRouter();
 
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [step, setStep] = useState(1);
@@ -101,15 +100,38 @@ export function BookingProvider({
       }
 
       setSelectedProduct(product);
-
       setStep(2);
     },
     [products]
   );
 
+  const buildPaymentUrl = useCallback(
+    ({ trackerCode }: { trackerCode: string }) => {
+      const { paymentUrl, currency } = selectedProduct ?? {};
+
+      if (!paymentUrl) {
+        throw new Error('Payment URL not found');
+      }
+
+      if (!trackerCode) {
+        throw new Error('Missing required parameters');
+      }
+
+      const queryParams = new URLSearchParams({
+        currency: currency ?? 'BRL',
+        trk: trackerCode,
+      });
+
+      const url = new URL(paymentUrl);
+      url.search = queryParams.toString();
+
+      return url.toString();
+    },
+    [selectedProduct]
+  );
+
   const onSubmit = useCallback(
     async (data: BaseFormSchema) => {
-      'server-only';
       if (isLoading || !selectedProduct) return;
 
       if (isLoaded) {
@@ -124,23 +146,15 @@ export function BookingProvider({
 
       setIsLoading(true);
       try {
-        const { client_secret } = await createCheckoutSession({
-          fullName: data.fullName,
-          birthday: data.birthday?.toISOString(),
-          email: data.email,
-          partnerFullName: data.partnerFullName,
-          partnerBirthday: data.partnerBirthday?.toISOString(),
-          businessName: data.businessName,
-          businessType: data.businessType,
-          productServerId: selectedProduct.serverId,
+        const trackerCode = await createSale({
+          birthDay: data.birthday?.toISOString() ?? '',
+          fullName: data.fullName ?? '',
+          email: data.email ?? '',
           productId: selectedProduct.id,
         });
-        setStep(3);
-        setClientSecret(client_secret);
 
-        if (pathname !== '/booking') {
-          router.push('/booking');
-        }
+        const paymentUrl = buildPaymentUrl({ trackerCode });
+        window.open(paymentUrl, '_self');
       } catch (error) {
         console.error(error);
         toast.error(t('error.somethingWentWrong'));
@@ -148,7 +162,7 @@ export function BookingProvider({
         setIsLoading(false);
       }
     },
-    [isLoading, pathname, router, selectedProduct, t, trackEvent, isLoaded]
+    [isLoading, selectedProduct, t, trackEvent, isLoaded, buildPaymentUrl]
   );
 
   const handleBack = useCallback(() => {
