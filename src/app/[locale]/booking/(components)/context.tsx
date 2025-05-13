@@ -132,7 +132,6 @@ export function BookingProvider({
 
   const onSubmit = useCallback(
     async (data: BaseFormSchema) => {
-      'server-only';
       if (isLoading || !selectedProduct) return;
 
       if (isLoaded) {
@@ -148,11 +147,9 @@ export function BookingProvider({
       setIsLoading(true);
       try {
         const trackerCode = await createSale({
-          status: 'pending',
           birthDay: data.birthday?.toISOString() ?? '',
           fullName: data.fullName ?? '',
           email: data.email ?? '',
-          updatedAt: new Date(),
           productId: selectedProduct.id,
         });
 

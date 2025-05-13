@@ -11,15 +11,25 @@ import { db } from '.';
 type Sale = typeof salesTable.$inferInsert;
 
 export async function createSale(
-  saleData: Omit<Sale, 'trackerCode' | 'locale'>
+  saleData: Omit<Sale, 'trackerCode' | 'locale' | 'updatedAt' | 'status'>
 ) {
-  const trackerCode = hash(JSON.stringify(saleData));
-  const locale = (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;
+  'server-only';
+
+  const newSaleContent = {
+    ...saleData,
+    status: 'pending',
+    locale: (await cookies()).get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE,
+  };
+  const trackerCode = hash(
+    JSON.stringify({
+      ...newSaleContent,
+      updatedAt: new Date(),
+    })
+  );
 
   await db.insert(salesTable).values({
-    ...saleData,
+    ...newSaleContent,
     trackerCode,
-    locale,
   });
 
   return trackerCode;
@@ -28,10 +38,10 @@ export async function createSale(
 export async function updateSaleByTrackerCode(
   saleData: Partial<Omit<Sale, 'trackerCode'>> & { trackerCode: string }
 ) {
-  const updatedSale = await db
+  'server-only';
+
+  return await db
     .update(salesTable)
     .set(saleData)
     .where(eq(salesTable.trackerCode, saleData.trackerCode));
-
-  return updatedSale;
 }

@@ -9,6 +9,8 @@ type Sale = typeof salesTable.$inferSelect;
 export async function getSaleByTrackerCode(
   trackerCode: string
 ): Promise<Sale | null> {
+  'server-only';
+
   const sale = await db
     .select()
     .from(salesTable)
