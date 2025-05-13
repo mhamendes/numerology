@@ -6,6 +6,7 @@ import { Resend } from 'resend';
 import { LocalesType } from '@/i18n/routing';
 
 import { getBusinessNumerologyEmailReact } from './getBusinessNumerologyEmailReact';
+import { getFreeEmailReact } from './getFreeEmailReact';
 import { getLifeMapEmailReact } from './getLifeMapEmailReact';
 import { getPersonalReadingEmailReact } from './getPersonalReadingEmailReact';
 import { getRelationshipCompatibilityEmailReact } from './getRelationshipCompatibilityEmailReact';
@@ -38,17 +39,26 @@ export async function sendEmail({
   html,
   attachments,
   type,
+  locale,
 }: SendEmailProps) {
   if (!type)
     throw new Error(`No email type provided, failed to send email to ${to}`);
 
   const htmlForType: Record<EmailType, string> = {
-    free: 'Segue em anexo os seus dias Pessoais! Caso deseje o Mapa da Vida completo faça a compra pelo site https://drcosmicnumber.com/booking.',
-    'life-map': getLifeMapEmailReact(fullName),
-    'personal-reading': await getPersonalReadingEmailReact(fullName),
-    'relationship-compatibility':
-      await getRelationshipCompatibilityEmailReact(fullName),
-    'business-numerology': await getBusinessNumerologyEmailReact(fullName),
+    free: getFreeEmailReact({ fullName, locale }),
+    'life-map': getLifeMapEmailReact({ fullName, locale }),
+    'personal-reading': await getPersonalReadingEmailReact({
+      fullName,
+      locale,
+    }),
+    'relationship-compatibility': await getRelationshipCompatibilityEmailReact({
+      fullName,
+      locale,
+    }),
+    'business-numerology': await getBusinessNumerologyEmailReact({
+      fullName,
+      locale,
+    }),
     contact: `${fullName} de email ${to} enviou a mensagem: ${html}`,
   };
 
