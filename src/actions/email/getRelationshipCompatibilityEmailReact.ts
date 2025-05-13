@@ -11,9 +11,10 @@ export async function getRelationshipCompatibilityEmailReact({
   fullName,
   locale,
 }: RelationshipCompatibilityEmailReactProps) {
-  const calendlyScheduleLink = await getCalendlySingleUseSchedulingLink(
-    'relationship-compatibility'
-  );
+  const calendlyScheduleLink = await getCalendlySingleUseSchedulingLink({
+    type: 'relationship-compatibility',
+    locale,
+  });
 
   const textCopy: Record<LocalesType, string> = {
     'pt-br': `Segue em anexo o seu Mapa de Relacionamento, ${fullName}. O link de marcação da consulta a seguir só poderá ser utilizado uma única vez, não compartilhe-o com terceiros: ${calendlyScheduleLink}.`,
