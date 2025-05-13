@@ -16,6 +16,8 @@ import { DocType } from './types';
 import { centuryGothic } from '@/assets/fonts/centuryGothic';
 import { centuryGothicBold } from '@/assets/fonts/centuryGothicBold';
 import { zapfino } from '@/assets/fonts/zapfino';
+import { birthDayCoverBase64 } from '@/assets/images/birthDayCoverBase64';
+import { lifeMapCoverBase64 } from '@/assets/images/lifeMapCoverBase64';
 import { logoBase64 } from '@/assets/images/logoBase64';
 
 export const START_WIDTH = 15;
@@ -57,6 +59,7 @@ export async function createIntroductionPage(pdf: jsPDF, locale: string) {
     ((await import(`src/assets/documents/${locale}/introduction.json`))
       .default as typeof baseIntroduction) ?? baseIntroduction;
 
+  pdf.addPage();
   pdf.setFont('zapfino', 'normal');
   pdf.setFontSize(11);
   pdf.setTextColor(PALETTE.black);
@@ -250,8 +253,8 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
     birthDay: base.birthDayTitle,
   };
 
-  Array.from({ length: numberOfPages }).forEach((_, index) => {
-    pdf.setPage(index + 1);
+  for (let index = 2; index < numberOfPages; index++) {
+    pdf.setPage(index);
 
     pdf.addImage(logoBase64, 'WEBP', 15, 11, 48, 8);
     pdf.setFontSize(20);
@@ -261,7 +264,7 @@ export async function createHeader(pdf: jsPDF, locale: string, type: DocType) {
     pdf.setDrawColor(PALETTE.purple);
     pdf.setLineWidth(0.7);
     pdf.line(START_WIDTH, 22, 190, 22);
-  });
+  }
   return pdf;
 }
 
@@ -269,16 +272,28 @@ export async function createFooter(pdf: jsPDF) {
   const pageHeight = pdf.internal.pageSize.getHeight();
   const numberOfPages = pdf.getNumberOfPages();
 
-  Array.from({ length: numberOfPages }).forEach((_, index) => {
-    pdf.setPage(index + 1);
+  for (let index = 2; index < numberOfPages; index++) {
+    pdf.setPage(index);
     pdf.setDrawColor(PALETTE.purple);
     pdf.setLineWidth(0.7);
     pdf.line(START_WIDTH, pageHeight - 15, 190, pageHeight - 15);
     pdf.setFontSize(12);
     pdf.setTextColor(PALETTE.purple);
     pdf.setFont('CenturyGothic', 'normal');
-    pdf.text(`${index + 1}`, 185, pageHeight - 10);
-  });
+    pdf.text(`${index}`, 185, pageHeight - 10);
+  }
+  return pdf;
+}
+
+export async function createDocumentCover(pdf: jsPDF, type: DocType) {
+  const cover: Record<DocType, string> = {
+    fullMap: lifeMapCoverBase64,
+    birthDay: birthDayCoverBase64,
+  };
+
+  const width = pdf.internal.pageSize.getWidth();
+  const height = pdf.internal.pageSize.getHeight();
+  pdf.addImage(cover[type], 'WEBP', 0, 0, width, height);
 
   return pdf;
 }

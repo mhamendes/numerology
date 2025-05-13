@@ -1,5 +1,6 @@
 export {
   createContactPage,
+  createDocumentCover,
   createFooter,
   createHeader,
   createIntroductionPage,

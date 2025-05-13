@@ -10,6 +10,7 @@ import { logger } from '@/lib/logger';
 import { DefaultNumbers } from '@/lib/numerology/types';
 import {
   createContactPage,
+  createDocumentCover,
   createFooter,
   createHeader,
   createIntroductionPage,
@@ -33,6 +34,7 @@ export async function createBirthDayReturnDocument({
 }: Omit<z.infer<typeof _schema>, 'email'> & { locale: LocalesType }) {
   let pdf = await getConfiguredPdf();
 
+  pdf = await createDocumentCover(pdf, 'birthDay');
   pdf = await createIntroductionPage(pdf, locale);
   pdf = await createMainPage({
     pdf,

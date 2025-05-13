@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { LocalesType } from '@/i18n/routing';
 import {
   createContactPage,
+  createDocumentCover,
   createFooter,
   createHeader,
   createIntroductionPage,
@@ -40,6 +41,7 @@ export async function createNumerologyReturnDocument({
 
   let pdf = await getConfiguredPdf();
 
+  pdf = await createDocumentCover(pdf, 'fullMap');
   pdf = await createIntroductionPage(pdf, locale);
   pdf = await createMainPage({ pdf, fullName, birthday, locale });
 
