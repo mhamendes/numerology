@@ -1,3 +1,4 @@
+import { UTCDate } from '@date-fns/utc';
 import crypto from 'crypto';
 import { NextResponse } from 'next/server';
 
@@ -79,7 +80,7 @@ export async function POST(req: Request) {
     const { content, filename, subject } = await createNumerologyReturnDocument(
       {
         fullName,
-        birthday: new Date(birthday),
+        birthday: new UTCDate(birthday),
         locale,
       }
     );

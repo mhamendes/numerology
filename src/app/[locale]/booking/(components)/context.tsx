@@ -146,10 +146,20 @@ export function BookingProvider({
 
       setIsLoading(true);
       try {
+        if (!data.birthday) {
+          throw new Error('Birthday is required');
+        }
+        if (!data.fullName) {
+          throw new Error('Full name is required');
+        }
+        if (!data.email) {
+          throw new Error('Email is required');
+        }
+
         const trackerCode = await createSale({
-          birthDay: data.birthday?.toISOString() ?? '',
-          fullName: data.fullName ?? '',
-          email: data.email ?? '',
+          birthDay: data.birthday.toISOString(),
+          fullName: data.fullName,
+          email: data.email,
           productId: selectedProduct.id,
         });
 

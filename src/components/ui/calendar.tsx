@@ -147,6 +147,7 @@ function Calendar({
         ),
       }}
       numberOfMonths={columnsDisplayed}
+      timeZone="UTC"
       {...props}
     />
   );
