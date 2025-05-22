@@ -4,13 +4,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { UTCDate } from '@date-fns/utc';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CalendarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
 import { CardContent } from '@/components/ui/card';
+import { DateInput } from '@/components/ui/date-input';
 import {
   Form,
   FormControl,
@@ -21,13 +20,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
-import { formatDate } from '@/lib/date';
-import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
 
@@ -39,8 +31,11 @@ export default function LifeMapForm() {
     fullName: z.string().min(2, {
       message: t('name.errorMessage'),
     }),
-    birthday: z.date({ required_error: t('birthday.errorMessage') }),
     email: z.string().email({ message: t('email.errorMessage') }),
+    birthday: z.date({
+      required_error: t('birthday.errorMessage'),
+      invalid_type_error: t('birthday.invalidMessage'),
+    }),
   });
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -79,38 +74,11 @@ export default function LifeMapForm() {
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>{t('birthday.label')}</FormLabel>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant="calendar"
-                          className={cn(
-                            !field.value && 'text-muted-foreground'
-                          )}
-                        >
-                          {field.value ? (
-                            formatDate(field.value)
-                          ) : (
-                            <span>{t('birthday.placeholder')}</span>
-                          )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) =>
-                          date > new UTCDate() ||
-                          date < new UTCDate('1900-01-01')
-                        }
-                        autoFocus
-                        endMonth={new UTCDate()}
-                      />
-                    </PopoverContent>
-                  </Popover>
+                  <DateInput
+                    onSelect={field.onChange}
+                    setError={form.setError}
+                    clearError={form.clearErrors}
+                  />
                   <FormDescription>{t('birthday.description')}</FormDescription>
                   <FormMessage />
                 </FormItem>

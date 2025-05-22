@@ -292,7 +292,8 @@
       "label": "Data de nascimento",
       "placeholder": "DD/MM/YYYY",
       "description": "Informe sua data de nascimento exatamente como consta no Registro de Nascimento.",
-      "errorMessage": "Data de nascimento é obrigatória"
+      "errorMessage": "Data de nascimento é obrigatória",
+      "invalidMessage": "Data de nascimento inválida"
     },
     "email": {
       "label": "Endereço de email",
@@ -317,7 +318,8 @@
       "label": "Data de nascimento do parceiro",
       "placeholder": "DD/MM/YYYY",
       "description": "Este campo é obrigatório. Certifique-se de digitar a data de nascimento exatamente como está registrada em sua certidão de nascimento.",
-      "errorMessage": "Data de nascimento do parceiro é obrigatória"
+      "errorMessage": "Data de nascimento do parceiro é obrigatória",
+      "invalidMessage": "Data de nascimento do parceiro inválida"
     },
     "businessInformation": "Informações da Empresa",
     "businessName": {

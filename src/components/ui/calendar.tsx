@@ -17,7 +17,7 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { CURRENT_YEAR } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
-const timeZone = 'UTC';
+export const timeZone = 'UTC';
 
 export type CalendarProps = PropsBase &
   PropsSingle & {

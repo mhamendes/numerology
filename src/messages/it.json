@@ -292,7 +292,8 @@
       "label": "Data di nascita",
       "placeholder": "GG/MM/AAAA",
       "description": "Inserisci la tua data di nascita esattamente come è registrata sul tuo Certificato di Nascita.",
-      "errorMessage": "La data di nascita è obbligatoria"
+      "errorMessage": "La data di nascita è obbligatoria",
+      "invalidMessage": "Data di nascita non valida"
     },
     "email": {
       "label": "Indirizzo email",
@@ -317,7 +318,8 @@
       "label": "Data di nascita del partner",
       "placeholder": "GG/MM/AAAA",
       "description": "Questo campo è obbligatorio. Assicurati di digitare la data di nascita esattamente come è registrata sul tuo certificato di nascita.",
-      "errorMessage": "La data di nascita del partner è obbligatoria"
+      "errorMessage": "La data di nascita del partner è obbligatoria",
+      "invalidMessage": "Data di nascita del partner non valida"
     },
     "businessInformation": "Informazioni sull'Azienda",
     "businessName": {

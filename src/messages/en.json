@@ -290,9 +290,10 @@
     },
     "birthday": {
       "label": "Date of birth",
-      "placeholder": "MM/DD/YYYY",
+      "placeholder": "DD/MM/YYYY",
       "description": "Enter your date of birth exactly as it is registered on your Birth Certificate.",
-      "errorMessage": "Date of birth is required"
+      "errorMessage": "Date of birth is required",
+      "invalidMessage": "Invalid date of birth"
     },
     "email": {
       "label": "Email address",
@@ -315,9 +316,10 @@
     },
     "partnerBirthday": {
       "label": "Partner's Date of Birth",
-      "placeholder": "MM/DD/YYYY",
+      "placeholder": "DD/MM/YYYY",
       "description": "This field is required. Make sure to enter the date of birth exactly as it is registered on your birth certificate.",
-      "errorMessage": "Partner's Date of Birth is required"
+      "errorMessage": "Partner's date of birth is required",
+      "invalidMessage": "Invalid partner's date of birth"
     },
     "businessInformation": "Business Information",
     "businessName": {
