@@ -20,13 +20,13 @@ import {
   BRAND_LAST_NAME,
   BRAND_NAME,
   CONTACT_EMAIL,
+  CURRENT_YEAR,
   JOINED_BRAND_ADDRESS,
   PHONE_NUMBER,
 } from '@/lib/constants';
 
 export function Footer() {
   const t = useTranslations('footer');
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-indigo-900 px-4 pt-16 pb-8 text-white dark:bg-gray-950">
@@ -197,7 +197,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-indigo-800 pt-6 text-center text-sm text-indigo-300">
           <p>
-            &copy; {currentYear} {BRAND_NAME}. {t('allRightsReserved')}
+            &copy; {CURRENT_YEAR} {BRAND_NAME}. {t('allRightsReserved')}
           </p>
         </div>
       </div>

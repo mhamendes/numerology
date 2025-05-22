@@ -1,4 +1,5 @@
 'use server';
+import { UTCDate } from '@date-fns/utc';
 import { eq } from 'drizzle-orm';
 import { cookies } from 'next/headers';
 import hash from 'object-hash';
@@ -23,7 +24,7 @@ export async function createSale(
   const trackerCode = hash(
     JSON.stringify({
       ...newSaleContent,
-      updatedAt: new Date(),
+      updatedAt: new UTCDate(),
     })
   );
 

@@ -98,7 +98,7 @@ export async function POST(req: Request) {
 
     await updateSaleByTrackerCode({
       status: 'completed',
-      updatedAt: new Date(),
+      updatedAt: new UTCDate(),
       trackerCode,
     });
 

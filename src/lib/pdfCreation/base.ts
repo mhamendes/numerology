@@ -8,6 +8,7 @@ import {
   BRAND_WEBSITE,
   CONTACT_EMAIL,
   PHONE_NUMBER,
+  TODAY_FULL_DATE,
 } from '@/lib/constants';
 
 import { createSectionWithBulletPoints } from './createSectionWithBulletPoints';
@@ -121,7 +122,7 @@ export async function createMainPage({
 
   pdf.setFontSize(12);
   pdf.text(
-    `${base.doneAt} ${new Date().toLocaleDateString(locale)}`,
+    `${base.doneAt} ${TODAY_FULL_DATE.toLocaleDateString(locale)}`,
     pageWidth / 2,
     pageHeight - 35,
     {

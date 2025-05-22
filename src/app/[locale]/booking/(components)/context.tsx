@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from 'react';
+import { UTCDate } from '@date-fns/utc';
 import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -203,10 +204,10 @@ export function BookingProvider({
       setPrefilledData({
         ...parsedData,
         birthday: parsedData.birthday
-          ? new Date(parsedData.birthday)
+          ? new UTCDate(parsedData.birthday)
           : undefined,
         partnerBirthday: parsedData.partnerBirthday
-          ? new Date(parsedData.partnerBirthday)
+          ? new UTCDate(parsedData.partnerBirthday)
           : undefined,
       } as BaseFormSchema);
     }

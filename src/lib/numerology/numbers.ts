@@ -1,3 +1,4 @@
+import { UTCDate } from '@date-fns/utc';
 import { getDate, getMonth, getYear } from 'date-fns';
 
 import { ChallengesNumbers, DefaultNumbers, OneToNineNumbers } from './types';
@@ -597,7 +598,7 @@ export function getPersonalYear({
 }
 
 export function getPersonalYears({ birthday }: { birthday: Date }) {
-  const today = new Date();
+  const today = new UTCDate();
 
   const dayToday = today.getDate();
   const monthToday = today.getMonth() + 1;
@@ -614,7 +615,7 @@ export function getPersonalYears({ birthday }: { birthday: Date }) {
     const currentPersonalYear = getPersonalYear({
       birthday,
       baseYear: yearToday,
-      dateToCheck: new Date(`${year}-${monthToday}-${dayToday}`),
+      dateToCheck: new UTCDate(`${year}-${monthToday}-${dayToday}`),
     }).map((data) => {
       return {
         ...data,
@@ -707,7 +708,7 @@ export function getPersonalMonth({
 }
 
 export function getPersonalMonths({ birthday }: { birthday: Date }) {
-  const today = new Date();
+  const today = new UTCDate();
 
   const dayToday = today.getDate();
   const monthToday = today.getMonth() + 1;
@@ -729,7 +730,7 @@ export function getPersonalMonths({ birthday }: { birthday: Date }) {
       birthday,
       baseYear: yearToday,
       desiredMonth,
-      dateToCheck: new Date(`${yearToUse}-${desiredMonth}-${dayToday}`),
+      dateToCheck: new UTCDate(`${yearToUse}-${desiredMonth}-${dayToday}`),
     });
 
     personalMonths.push(...personalMonth);

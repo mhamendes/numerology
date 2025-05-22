@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { UTCDate } from '@date-fns/utc';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CalendarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -47,7 +48,7 @@ export default function LifeMapForm() {
     defaultValues: {
       fullName: prefilledData?.fullName ?? undefined,
       birthday: prefilledData?.birthday
-        ? new Date(prefilledData.birthday)
+        ? new UTCDate(prefilledData.birthday)
         : undefined,
       email: prefilledData?.email ?? undefined,
     },
@@ -102,10 +103,11 @@ export default function LifeMapForm() {
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) =>
-                          date > new Date() || date < new Date('1900-01-01')
+                          date > new UTCDate() ||
+                          date < new UTCDate('1900-01-01')
                         }
                         autoFocus
-                        endMonth={new Date()}
+                        endMonth={new UTCDate()}
                       />
                     </PopoverContent>
                   </Popover>

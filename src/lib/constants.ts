@@ -1,3 +1,5 @@
+import { UTCDate } from '@date-fns/utc';
+
 export const PHONE_NUMBER = '+351935625353';
 export const CONTACT_EMAIL = 'contact@drcosmicnumbers.com';
 export const BRAND_NAME = 'Dr Cosmic° Numbēr °1';
@@ -18,3 +20,8 @@ export const BRAND_INSTAGRAM_USERNAME = '@drcosmicnumber1';
 export function getWhatsAppLink(message: string) {
   return `https://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${message}`;
 }
+
+export const TODAY_FULL_DATE = new UTCDate();
+export const CURRENT_YEAR = TODAY_FULL_DATE.getFullYear();
+export const CURRENT_MONTH = TODAY_FULL_DATE.getMonth() + 1;
+export const CURRENT_DAY = TODAY_FULL_DATE.getDate();

@@ -1,3 +1,4 @@
+import { UTCDate } from '@date-fns/utc';
 import { describe, expect, test, vi } from 'vitest';
 
 import {
@@ -91,12 +92,12 @@ describe('Numerology', () => {
   );
 
   test.each([
-    { birthday: new Date('1970-04-08'), expected: 11 },
-    { birthday: new Date('1940-06-11'), expected: 22 },
-    { birthday: new Date('1966-03-17'), expected: 6 },
-    { birthday: new Date('1962-09-22'), expected: 22 },
-    { birthday: new Date('1976-05-21'), expected: 4 },
-    { birthday: new Date('1991-05-18'), expected: 7 },
+    { birthday: new UTCDate('1970-04-08'), expected: 11 },
+    { birthday: new UTCDate('1940-06-11'), expected: 22 },
+    { birthday: new UTCDate('1966-03-17'), expected: 6 },
+    { birthday: new UTCDate('1962-09-22'), expected: 22 },
+    { birthday: new UTCDate('1976-05-21'), expected: 4 },
+    { birthday: new UTCDate('1991-05-18'), expected: 7 },
   ])(
     'should return the destiny number for birthday $birthday',
     ({ birthday, expected }) => {
@@ -106,32 +107,32 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1970-04-08'),
+      birthday: new UTCDate('1970-04-08'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: 22,
     },
     {
-      birthday: new Date('1940-06-11'),
+      birthday: new UTCDate('1940-06-11'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: 6,
     },
     {
-      birthday: new Date('1966-03-17'),
+      birthday: new UTCDate('1966-03-17'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: 8,
     },
     {
-      birthday: new Date('1962-09-22'),
+      birthday: new UTCDate('1962-09-22'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: 6,
     },
     {
-      birthday: new Date('1976-05-21'),
+      birthday: new UTCDate('1976-05-21'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: 6,
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       fullName: 'Marcelo Azevedo da Trindade',
       expected: 8,
     },
@@ -144,27 +145,27 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1970-04-16'),
+      birthday: new UTCDate('1970-04-16'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: [16, 16, 19],
     },
     {
-      birthday: new Date('1940-06-11'),
+      birthday: new UTCDate('1940-06-11'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: [16],
     },
     {
-      birthday: new Date('1966-03-13'),
+      birthday: new UTCDate('1966-03-13'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: [13, 16],
     },
     {
-      birthday: new Date('1976-05-21'),
+      birthday: new UTCDate('1976-05-21'),
       fullName: 'Yara Araújo D`Alessandro',
       expected: [13, 16],
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       fullName: 'Marcelo Azevedo da Trindade',
       expected: [16, 19],
     },
@@ -197,7 +198,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-18'),
+      birthday: new UTCDate('1992-06-18'),
       expected: {
         first: {
           energyNumber: '6',
@@ -216,7 +217,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       expected: {
         first: {
           energyNumber: '5',
@@ -243,7 +244,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-18'),
+      birthday: new UTCDate('1992-06-18'),
       expected: {
         first: {
           end: 2020,
@@ -263,7 +264,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       expected: {
         first: {
           end: 2021,
@@ -291,7 +292,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-18'),
+      birthday: new UTCDate('1992-06-18'),
       expected: {
         first: {
           number: '6',
@@ -315,7 +316,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       expected: {
         first: {
           number: '5',
@@ -347,7 +348,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-01-18'),
+      birthday: new UTCDate('1992-01-18'),
       yearToday: 2024,
       monthToday: 2,
       expected: [
@@ -390,7 +391,7 @@ describe('Numerology', () => {
       ],
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       yearToday: 2024,
       monthToday: 2,
       expected: [
@@ -438,7 +439,7 @@ describe('Numerology', () => {
       ],
     },
     {
-      birthday: new Date('1992-06-22'),
+      birthday: new UTCDate('1992-06-22'),
       monthToday: 8,
       yearToday: 2024,
       expected: [
@@ -483,7 +484,7 @@ describe('Numerology', () => {
   ])(
     'should return correct personal year for $birthday',
     ({ birthday, yearToday, monthToday, expected }) => {
-      const mockedToday = new Date(yearToday, monthToday, 19);
+      const mockedToday = new UTCDate(yearToday, monthToday, 19);
 
       vi.useFakeTimers();
       vi.setSystemTime(mockedToday);
@@ -494,7 +495,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-22'),
+      birthday: new UTCDate('1992-06-22'),
       dayToday: 23,
       monthToday: 7,
       yearToday: 2024,
@@ -570,7 +571,7 @@ describe('Numerology', () => {
   ])(
     'should return correct personal month for $birthday',
     ({ birthday, yearToday, monthToday, dayToday, expected }) => {
-      const mockedToday = new Date(yearToday, monthToday, dayToday);
+      const mockedToday = new UTCDate(yearToday, monthToday, dayToday);
 
       vi.useFakeTimers();
       vi.setSystemTime(mockedToday);
@@ -581,7 +582,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-22'),
+      birthday: new UTCDate('1992-06-22'),
       dayToday: 23,
       monthToday: 7,
       yearToday: 2024,
@@ -699,7 +700,7 @@ describe('Numerology', () => {
   ])(
     'should return correct personal day for $birthday',
     ({ birthday, yearToday, monthToday, dayToday, expected }) => {
-      const mockedToday = new Date(yearToday, monthToday, dayToday);
+      const mockedToday = new UTCDate(yearToday, monthToday, dayToday);
 
       vi.useFakeTimers();
       vi.setSystemTime(mockedToday);
@@ -709,15 +710,15 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-18'),
+      birthday: new UTCDate('1992-06-18'),
       expected: [5, 6, 12, 17, 23, 28],
     },
     {
-      birthday: new Date('1992-02-15'),
+      birthday: new UTCDate('1992-02-15'),
       expected: [3, 6, 12, 15, 21, 24, 30],
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       expected: [5, 6, 12, 17, 23, 28],
     },
   ])(
@@ -729,7 +730,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1992-06-26'),
+      birthday: new UTCDate('1992-06-26'),
       expectedNumber: 8,
       expectedInfo: {
         info: {
@@ -741,7 +742,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       expectedNumber: 9,
       expectedInfo: {
         info: {
@@ -762,7 +763,7 @@ describe('Numerology', () => {
 
   test.each([
     {
-      birthday: new Date('1970-04-08'),
+      birthday: new UTCDate('1970-04-08'),
       fullName: exampleFullName,
       expectedNumber: 4,
       expectedInfo: {
@@ -777,7 +778,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1940-06-11'),
+      birthday: new UTCDate('1940-06-11'),
       fullName: exampleFullName,
       expectedNumber: 6,
       expectedInfo: {
@@ -792,7 +793,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1966-03-17'),
+      birthday: new UTCDate('1966-03-17'),
       fullName: exampleFullName,
       expectedNumber: 8,
       expectedInfo: {
@@ -807,7 +808,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1962-09-22'),
+      birthday: new UTCDate('1962-09-22'),
       fullName: exampleFullName,
       expectedNumber: 6,
       expectedInfo: {
@@ -822,7 +823,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1976-05-21'),
+      birthday: new UTCDate('1976-05-21'),
       fullName: exampleFullName,
       expectedNumber: 6,
       expectedInfo: {
@@ -837,7 +838,7 @@ describe('Numerology', () => {
       },
     },
     {
-      birthday: new Date('1991-05-18'),
+      birthday: new UTCDate('1991-05-18'),
       fullName: 'Marcelo Azevedo da Trindade',
       expectedNumber: 8,
       expectedInfo: {

@@ -1,5 +1,7 @@
 import { getDate, getMonth, getYear } from 'date-fns';
 
+import { CURRENT_DAY, CURRENT_MONTH, CURRENT_YEAR } from '@/lib/constants';
+
 import { LetterValues, sumDigitsToSingleDigit } from './numbers';
 import { ArcaneNumbers, NegativeSequences } from './types';
 
@@ -178,19 +180,15 @@ function getCurrentAge(birthday: Date) {
   const day = getDate(birthday);
   const month = getMonth(birthday) + 1;
   const year = getYear(birthday);
-  const currentYear = new Date().getFullYear();
 
-  const currentMonth = new Date().getMonth() + 1;
-  const currentDay = new Date().getDate();
+  if (CURRENT_MONTH > month) return CURRENT_YEAR - year;
 
-  if (currentMonth > month) return currentYear - year;
-
-  if (currentMonth === month) {
-    if (currentDay >= day) return currentYear - year;
-    return currentYear - year - 1;
+  if (CURRENT_MONTH === month) {
+    if (CURRENT_DAY >= day) return CURRENT_YEAR - year;
+    return CURRENT_YEAR - year - 1;
   }
 
-  return currentYear - year - 1;
+  return CURRENT_YEAR - year - 1;
 }
 
 function getCurrentArcane(

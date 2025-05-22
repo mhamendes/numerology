@@ -3,30 +3,36 @@
 import * as React from 'react';
 import {
   DayPicker,
-  type DayPickerProps,
   labelNext,
   labelPrevious,
+  type PropsBase,
+  type PropsSingle,
+  TZDate,
   useDayPicker,
 } from 'react-day-picker';
 import { differenceInCalendarDays } from 'date-fns';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { Button, buttonVariants } from '@/components/ui/button';
+import { CURRENT_YEAR } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
-export type CalendarProps = DayPickerProps & {
-  /**
-   * In the year view, the number of years to display at once.
-   * @default 12
-   */
-  yearRange?: number;
+const timeZone = 'UTC';
 
-  /**
-   * Wether to show the year switcher in the caption.
-   * @default true
-   */
-  showYearSwitcher?: boolean;
-};
+export type CalendarProps = PropsBase &
+  PropsSingle & {
+    /**
+     * In the year view, the number of years to display at once.
+     * @default 12
+     */
+    yearRange?: number;
+
+    /**
+     * Wether to show the year switcher in the caption.
+     * @default true
+     */
+    showYearSwitcher?: boolean;
+  };
 
 type NavView = 'days' | 'years';
 
@@ -50,10 +56,9 @@ function Calendar({
     to: number;
   }>(
     React.useMemo(() => {
-      const currentYear = new Date().getFullYear();
       return {
-        from: currentYear - Math.floor(yearRange / 2 - 1),
-        to: currentYear + Math.ceil(yearRange / 2),
+        from: CURRENT_YEAR - Math.floor(yearRange / 2 - 1),
+        to: CURRENT_YEAR + Math.ceil(yearRange / 2),
       };
     }, [yearRange])
   );
@@ -147,8 +152,9 @@ function Calendar({
         ),
       }}
       numberOfMonths={columnsDisplayed}
-      timeZone="UTC"
       {...props}
+      mode="single"
+      timeZone={timeZone}
     />
   );
 }
@@ -182,12 +188,12 @@ function Nav({
       return (
         (startMonth &&
           differenceInCalendarDays(
-            new Date(displayYears.from - 1, 0, 1),
+            new TZDate(displayYears.from - 1, 0, 1, timeZone),
             startMonth
           ) < 0) ||
         (endMonth &&
           differenceInCalendarDays(
-            new Date(displayYears.from - 1, 0, 1),
+            new TZDate(displayYears.from - 1, 0, 1, timeZone),
             endMonth
           ) > 0)
       );
@@ -200,12 +206,12 @@ function Nav({
       return (
         (startMonth &&
           differenceInCalendarDays(
-            new Date(displayYears.to + 1, 0, 1),
+            new TZDate(displayYears.to + 1, 0, 1, timeZone),
             startMonth
           ) < 0) ||
         (endMonth &&
           differenceInCalendarDays(
-            new Date(displayYears.to + 1, 0, 1),
+            new TZDate(displayYears.to + 1, 0, 1, timeZone),
             endMonth
           ) > 0)
       );
@@ -221,10 +227,11 @@ function Nav({
         to: prev.to - (prev.to - prev.from + 1),
       }));
       onPrevClick?.(
-        new Date(
+        new TZDate(
           displayYears.from - (displayYears.to - displayYears.from),
           0,
-          1
+          1,
+          timeZone
         )
       );
       return;
@@ -248,10 +255,11 @@ function Nav({
         to: prev.to + (prev.to - prev.from + 1),
       }));
       onNextClick?.(
-        new Date(
+        new TZDate(
           displayYears.from + (displayYears.to - displayYears.from),
           0,
-          1
+          1,
+          timeZone
         )
       );
       return;
@@ -395,13 +403,13 @@ function YearGrid({
         (_, i) => {
           const isBefore =
             differenceInCalendarDays(
-              new Date(displayYears.from + i, 11, 31),
+              new TZDate(displayYears.from + i, 11, 31, timeZone),
               startMonth!
             ) < 0;
 
           const isAfter =
             differenceInCalendarDays(
-              new Date(displayYears.from + i, 0, 0),
+              new TZDate(displayYears.from + i, 0, 0, timeZone),
               endMonth!
             ) > 0;
 
@@ -411,16 +419,17 @@ function YearGrid({
               key={i}
               className={cn(
                 'text-foreground h-7 w-full text-sm font-normal',
-                displayYears.from + i === new Date().getFullYear() &&
+                displayYears.from + i === CURRENT_YEAR &&
                   'bg-accent text-accent-foreground font-medium'
               )}
               variant="ghost"
               onClick={() => {
                 setNavView('days');
                 goToMonth(
-                  new Date(
+                  new TZDate(
                     displayYears.from + i,
-                    (selected as Date | undefined)?.getMonth() ?? 0
+                    (selected as Date | undefined)?.getMonth() ?? 0,
+                    timeZone
                   )
                 );
               }}

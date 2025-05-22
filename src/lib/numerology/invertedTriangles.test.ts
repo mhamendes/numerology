@@ -1,3 +1,4 @@
+import { UTCDate } from '@date-fns/utc';
 import { describe, expect, test } from 'vitest';
 
 import { invertedTriangles } from './invertedTriangles';
@@ -7,7 +8,7 @@ describe('Inverted Triangles', () => {
     expect(
       invertedTriangles({
         fullName: 'Paula Sofia Martins Bota Gonçalves',
-        birthday: new Date('1992-06-22'),
+        birthday: new UTCDate('1992-06-22'),
       })
     ).toEqual({
       singleDigitArcane: 5,
