@@ -28,6 +28,10 @@ export default async function middleware(request: NextRequest) {
   ).toLowerCase();
   response.cookies.set('CURRENCY', currency);
 
+  if (!request.cookies.get('NEXT_LOCALE')?.value && locale) {
+    response.cookies.set('NEXT_LOCALE', locale);
+  }
+
   return response;
 }
 
