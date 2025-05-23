@@ -301,6 +301,13 @@
       "description": "Este email será usado para enviar seu Mapa da Vida.",
       "errorMessage": "Endereço de email é obrigatório"
     },
+    "password": {
+      "label": "Senha",
+      "placeholder": "Digite sua senha",
+      "description": "Esta senha é obrigatória para acessar a página interna.",
+      "errorMessage": "Senha é obrigatória",
+      "wrongPassword": "Senha incorreta"
+    },
     "phone": {
       "label": "Número de telefone",
       "placeholder": "Digite seu número de telefone",
@@ -345,6 +352,7 @@
     "error": {
       "somethingWentWrong": "Algo deu errado. Por favor, tente novamente."
     },
+    "submit": "Enviar",
     "back": "Voltar",
     "continueToPayment": "Continuar para Pagamento"
   },

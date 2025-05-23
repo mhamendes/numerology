@@ -1,6 +1,8 @@
 'use server';
 import 'server-only';
 
+import { UTCDate } from '@date-fns/utc';
+import { cookies } from 'next/headers';
 import { z } from 'zod';
 
 import { LocalesType } from '@/i18n/routing';
@@ -91,9 +93,18 @@ export async function actionCreateNumerologyReturnDocument({
   fullName,
   birthday,
   password,
-  locale,
-}: z.infer<typeof _schemaWithPassword> & { locale: LocalesType }) {
-  if (password !== 'braga341314') throw new Error('wrong-password');
+}: z.infer<typeof _schemaWithPassword>) {
+  if (password !== process.env.INTERNAL_PASSWORD) {
+    throw new Error('wrong-password');
+  }
 
-  return createNumerologyReturnDocument({ fullName, birthday, locale });
+  const locale =
+    ((await cookies()).get('NEXT_LOCALE')?.value as LocalesType | null) ??
+    'pt-br';
+
+  return createNumerologyReturnDocument({
+    fullName,
+    birthday: new UTCDate(birthday.toISOString()),
+    locale,
+  });
 }

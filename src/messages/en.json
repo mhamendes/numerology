@@ -301,6 +301,13 @@
       "description": "This email will be used to send your Life Map.",
       "errorMessage": "Email address is required"
     },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "description": "This password is required to access the internal page.",
+      "errorMessage": "Password is required",
+      "wrongPassword": "Wrong password"
+    },
     "phone": {
       "label": "Phone number",
       "placeholder": "Enter your phone number",
@@ -345,6 +352,7 @@
     "error": {
       "somethingWentWrong": "Something went wrong. Please try again."
     },
+    "submit": "Submit",
     "back": "Back",
     "continueToPayment": "Continue to Payment"
   },

@@ -48,7 +48,7 @@ export function DateInput({ onSelect, setError, clearError }: DateInputProps) {
       throw new Error('Invalid Date');
     }
 
-    const parsedDate = new TZDate(`${year}-${month}-${day}`);
+    const parsedDate = new TZDate(`${year}-${month}-${day}`, timeZone);
 
     if (parsedDate.toString() === 'Invalid Date') {
       onSelect(new TZDate('Invalid Date'));

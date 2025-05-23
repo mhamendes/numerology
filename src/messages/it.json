@@ -301,6 +301,13 @@
       "description": "Questa email sarà utilizzata per inviare la tua Mappa della Vita.",
       "errorMessage": "L'indirizzo email è obbligatorio"
     },
+    "password": {
+      "label": "Password",
+      "placeholder": "Inserisci la tua password",
+      "description": "Questa password è obbligatoria per accedere alla pagina interna.",
+      "errorMessage": "Password è obbligatoria",
+      "wrongPassword": "Password errata"
+    },
     "phone": {
       "label": "Numero di telefono",
       "placeholder": "Inserisci il tuo numero di telefono",
@@ -345,6 +352,7 @@
     "error": {
       "somethingWentWrong": "Qualcosa è andato storto. Per favore, riprova."
     },
+    "submit": "Invia",
     "back": "Indietro",
     "continueToPayment": "Continua al Pagamento"
   },
