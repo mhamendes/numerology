@@ -40,11 +40,11 @@ export async function getProducts(locale: string): Promise<Product[]> {
         },
         {
           currency: 'USD',
-          amount: 55,
+          amount: 55.7,
         },
         {
           currency: 'EUR',
-          amount: 50,
+          amount: 49.4,
         },
       ],
     },
@@ -61,11 +61,11 @@ export async function getProducts(locale: string): Promise<Product[]> {
         },
         {
           currency: 'USD',
-          amount: 110,
+          amount: 107,
         },
         {
           currency: 'EUR',
-          amount: 100,
+          amount: 98,
         },
       ],
     },
