@@ -38,6 +38,26 @@ export function DateInput({ onSelect, setError, clearError }: DateInputProps) {
     },
   });
 
+  function getParsedDate(day: string, month: string, year: string) {
+    const isValidDay = day.length === 2 && parseInt(day) <= 31;
+    const isValidMonth = month.length === 2 && parseInt(month) <= 12;
+    const isValidYear = year.length === 4 && parseInt(year) >= 1900;
+
+    if (!isValidDay || !isValidMonth || !isValidYear) {
+      onSelect(new TZDate('Invalid Date'));
+      throw new Error('Invalid Date');
+    }
+
+    const parsedDate = new TZDate(`${year}-${month}-${day}`);
+
+    if (parsedDate.toString() === 'Invalid Date') {
+      onSelect(new TZDate('Invalid Date'));
+      throw new Error('Invalid Date');
+    }
+
+    return parsedDate;
+  }
+
   return (
     <Popover>
       <div className="relative">
@@ -51,20 +71,11 @@ export function DateInput({ onSelect, setError, clearError }: DateInputProps) {
             setStringDate(e.currentTarget.value);
             try {
               const [day, month, year] = e.currentTarget.value.split('/');
-              if (day.length !== 2 || month.length !== 2 || year.length !== 4) {
-                onSelect(new TZDate('Invalid Date'));
-                throw new Error('Invalid Date');
-              }
-              const parsedDate = new TZDate(`${year}-${month}-${day}`);
-
-              if (parsedDate.toString() === 'Invalid Date') {
-                onSelect(new TZDate('Invalid Date'));
-                throw new Error('Invalid Date');
-              }
+              const parsedDate = getParsedDate(day, month, year);
 
               onSelect(parsedDate);
-              clearError('birthday');
               setDate(parsedDate);
+              clearError('birthday');
             } catch {
               setError(
                 'birthday',

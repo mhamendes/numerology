@@ -4,9 +4,6 @@ import { it } from 'date-fns/locale/it';
 import { pt } from 'date-fns/locale/pt';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { formatInTimeZone } from 'date-fns-tz';
-import Cookies from 'js-cookie';
-
-import { DEFAULT_LOCALE } from '@/i18n/routing';
 
 const LOCALES = {
   pt,
@@ -29,9 +26,5 @@ export const getMonthString = (month: number, locale: string) => {
 };
 
 export const formatDate = (date: Date) => {
-  const locale = Cookies.get('NEXT_LOCALE') ?? DEFAULT_LOCALE;
-
-  return formatInTimeZone(date, 'UTC', 'P', {
-    locale: LOCALES[locale as keyof typeof LOCALES],
-  });
+  return formatInTimeZone(date, 'UTC', 'dd/MM/yyyy');
 };
