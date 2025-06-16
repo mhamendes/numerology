@@ -76,6 +76,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "esbuild": ">=0.25.0",
     "@tailwindcss/postcss": "^4.0.14",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20.17.24",
