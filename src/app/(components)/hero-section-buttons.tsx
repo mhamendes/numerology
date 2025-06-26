@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 export function HeroSectionButtons() {
   const t = useTranslations('hero');
   return (
-    <div className="flex h-full flex-col justify-center gap-4 sm:flex-row md:justify-start">
+    <div className="flex h-full flex-col justify-center gap-4 sm:flex-row lg:justify-start">
       <Button
         className="rounded-full bg-indigo-600 px-8 py-6 text-lg text-white hover:bg-indigo-700"
         to="/booking"

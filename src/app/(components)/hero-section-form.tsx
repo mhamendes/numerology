@@ -83,7 +83,7 @@ export function HeroSectionForm() {
   }
 
   return (
-    <div className="md:w-1/2 md:pl-12">
+    <div className="lg:w-1/2 lg:pl-12">
       <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
         <CardContent className="p-6 md:p-8">
           <h3 className="mb-6 text-center text-2xl font-semibold text-indigo-800 dark:text-indigo-300">

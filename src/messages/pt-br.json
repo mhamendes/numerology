@@ -39,6 +39,8 @@
     "button": "Quero meu Mapa da Vida"
   },
   "services": {
+    "installmentPrice": "{maxInstallments}x de <big>{installmentsPrice}</big>",
+    "fullPrice": "ou {price} à vista",
     "ourNumerologyServices": "Nossos Serviços de Numerologia",
     "servicesDescription": "Explore nossa gama de serviços numerológicos personalizados projetados para fornecer clareza, orientação e insights para a jornada da sua vida.",
     "lifeMap": "Mapa da Vida",

@@ -45,15 +45,15 @@ export async function HeroSection() {
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row md:px-8">
-        <div className="mb-12 text-center md:mb-0 md:w-1/2 md:text-left">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 lg:flex-row lg:px-8">
+        <div className="mb-12 text-center lg:mb-0 lg:w-1/2 lg:text-left">
           <h1 className="mb-6 text-4xl font-bold text-indigo-900 md:text-5xl lg:text-6xl dark:text-indigo-100">
             {t('unlockDestiny')}{' '}
             <span className="text-indigo-600 dark:text-indigo-400">
               {t('numerology')}
             </span>
           </h1>
-          <p className="mx-auto mb-8 max-w-xl text-xl text-gray-600 md:mx-0 dark:text-gray-300">
+          <p className="mx-auto mb-8 max-w-xl text-xl text-gray-600 lg:mx-0 dark:text-gray-300">
             {t('discoverHidden')}
           </p>
           <HeroSectionButtons />

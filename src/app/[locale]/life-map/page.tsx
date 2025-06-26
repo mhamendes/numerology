@@ -26,6 +26,7 @@ import { useBooking } from '../booking/(components)/context';
 export default function LifeMap() {
   const t = useTranslations('lifeMap');
   const tForm = useTranslations('form');
+  const tServices = useTranslations('services');
   const {
     products,
     isLoading,
@@ -102,13 +103,35 @@ export default function LifeMap() {
                   {t('lifeMapDescription')}
                 </p>
                 <div className="pt-4">
-                  <div className="mb-2 flex items-center">
-                    <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
-                      {lifeMapProduct?.price}
-                    </span>
-                    <span className="ml-2 text-gray-500 dark:text-gray-400">
-                      {t('oneTimePayment')}
-                    </span>
+                  <div className="mb-2 flex flex-col sm:flex-row sm:items-baseline">
+                    <div className="flex flex-col">
+                      {lifeMapProduct.maxInstallments &&
+                      lifeMapProduct.installmentsPrice ? (
+                        <div className="flex flex-col">
+                          <span className="items-baseline font-normal text-gray-600 dark:text-gray-400">
+                            {tServices.rich('installmentPrice', {
+                              installmentsPrice:
+                                lifeMapProduct.installmentsPrice,
+                              maxInstallments: lifeMapProduct.maxInstallments,
+                              big: (chunks) => (
+                                <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
+                                  {chunks}
+                                </span>
+                              ),
+                            })}
+                          </span>
+                          <span className="text-gray-500 dark:text-gray-400">
+                            {tServices('fullPrice', {
+                              price: lifeMapProduct.price,
+                            })}
+                          </span>
+                        </div>
+                      ) : (
+                        <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
+                          {lifeMapProduct.price}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <p className="text-sm text-indigo-600 dark:text-indigo-400">
                     {t('deliveryNotice')}

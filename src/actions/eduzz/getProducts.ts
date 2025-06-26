@@ -15,9 +15,13 @@ export type Product = {
   priceList: {
     currency: string;
     amount: number;
+    maxInstallments?: number;
+    maxInstallmentAmount?: number;
   }[];
   paymentUrl: string;
   price: string;
+  installmentsPrice: string | null;
+  maxInstallments: number | null;
   currency: string;
   rawPrice: number;
   popular: boolean;
@@ -26,7 +30,10 @@ export type Product = {
 };
 
 export async function getProducts(locale: string): Promise<Product[]> {
-  const products: Omit<Product, 'price' | 'rawPrice' | 'currency'>[] = [
+  const products: Omit<
+    Product,
+    'price' | 'rawPrice' | 'currency' | 'installmentsPrice' | 'maxInstallments'
+  >[] = [
     {
       id: 'life-map' as const,
       popular: true,
@@ -37,6 +44,8 @@ export async function getProducts(locale: string): Promise<Product[]> {
         {
           currency: 'BRL',
           amount: 296,
+          maxInstallments: 12,
+          maxInstallmentAmount: 30.25,
         },
         {
           currency: 'USD',
@@ -58,6 +67,8 @@ export async function getProducts(locale: string): Promise<Product[]> {
         {
           currency: 'BRL',
           amount: 593,
+          maxInstallments: 12,
+          maxInstallmentAmount: 60.61,
         },
         {
           currency: 'USD',
@@ -136,9 +147,18 @@ export async function getProducts(locale: string): Promise<Product[]> {
         currency: price.currency,
       }).format(price.amount);
 
+      const formattedInstallmentsPrice = price.maxInstallmentAmount
+        ? new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: price.currency,
+          }).format(price.maxInstallmentAmount ?? 0)
+        : null;
+
       return {
         ...product,
         price: formattedPrice,
+        installmentsPrice: formattedInstallmentsPrice,
+        maxInstallments: price.maxInstallments ?? null,
         rawPrice: price.amount,
         currency: price.currency,
       };

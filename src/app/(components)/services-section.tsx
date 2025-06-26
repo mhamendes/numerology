@@ -75,19 +75,30 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent id={`cunpd1_${index}`}>
                 <div className="mb-6" id={`454msx_${index}`}>
-                  <span
-                    className="text-3xl font-bold text-indigo-700 dark:text-indigo-400"
-                    id={`f9clfl_${index}`}
-                  >
-                    {service.price}
-                  </span>
-                  <span
-                    className="text-gray-500 dark:text-gray-400"
-                    id={`mhgo78_${index}`}
-                  >
-                    {' '}
-                    / {t('session')}
-                  </span>
+                  {service.maxInstallments && service.installmentsPrice ? (
+                    <div className="flex flex-col">
+                      <span className="items-baseline font-normal text-gray-600 dark:text-gray-400">
+                        {t.rich('installmentPrice', {
+                          installmentsPrice: service.installmentsPrice,
+                          maxInstallments: service.maxInstallments,
+                          big: (chunks) => (
+                            <span className="text-3xl font-bold text-indigo-700 dark:text-indigo-400">
+                              {chunks}
+                            </span>
+                          ),
+                        })}
+                      </span>
+                      <span className="text-gray-500 dark:text-gray-400">
+                        {t('fullPrice', {
+                          price: service.price,
+                        })}
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="text-3xl font-bold text-indigo-700 dark:text-indigo-400">
+                      {service.price}
+                    </span>
+                  )}
                 </div>
                 <ul className="mb-8 space-y-3" id={`qjhhx8_${index}`}>
                   {service.features.map((feature, idx) => (

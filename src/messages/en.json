@@ -39,6 +39,8 @@
     "button": "I want my Life Map"
   },
   "services": {
+    "installmentPrice": "<big>{installmentsPrice}</big> in {maxInstallments} installments",
+    "fullPrice": "or {price} full price",
     "ourNumerologyServices": "Our Numerology Services",
     "servicesDescription": "Explore our range of personalized numerology services designed to provide clarity, guidance, and insight into your life's journey.",
     "lifeMap": "Life Map",

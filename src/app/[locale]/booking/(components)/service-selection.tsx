@@ -6,8 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
+import { useTranslations } from 'next-intl';
 
 export default function ServiceSelection() {
+  const tServices = useTranslations('services');
   const { selectedProduct, handleProductSelection, products } = useBooking();
 
   return (
@@ -26,16 +28,36 @@ export default function ServiceSelection() {
         >
           <CardHeader className="pb-2" id={`wl3b9m_${index}`}>
             <CardTitle
-              className="flex items-center justify-between"
+              className="flex items-start justify-between"
               id={`yeps0e_${index}`}
             >
               <span id={`sbhdks_${index}`}>{product.title}</span>
-              <span
-                className="text-indigo-600 dark:text-indigo-400"
-                id={`zm60j3_${index}`}
-              >
-                {product.price}
-              </span>
+              <div className="flex flex-col items-end">
+                {product.maxInstallments && product.installmentsPrice ? (
+                  <div className="flex flex-col">
+                    <span className="items-baseline text-end text-sm font-normal text-gray-500 dark:text-gray-400">
+                      {tServices.rich('installmentPrice', {
+                        installmentsPrice: product.installmentsPrice,
+                        maxInstallments: product.maxInstallments,
+                        big: (chunks) => (
+                          <span className="text-base font-semibold text-indigo-600 dark:text-indigo-400">
+                            {chunks}
+                          </span>
+                        ),
+                      })}
+                    </span>
+                    <span className="text-end text-sm font-normal text-gray-500 dark:text-gray-400">
+                      {tServices('fullPrice', {
+                        price: product.price,
+                      })}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-base font-semibold text-indigo-600 dark:text-indigo-400">
+                    {product.price}
+                  </span>
+                )}
+              </div>
             </CardTitle>
           </CardHeader>
           <CardContent id={`2sac82_${index}`}>
