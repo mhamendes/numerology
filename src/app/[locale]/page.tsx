@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import { HeroSection } from '(components)/hero-section';
 import { ServicesSection } from '(components)/services-section';
-import { TestimonialsSection } from '(components)/testimonials-section';
+import Testimonials from '@/app/[locale]/testimonials/page';
 import QA from '@/app/[locale]/qa/page';
 
 export default async function Home() {
@@ -80,7 +80,11 @@ export default async function Home() {
       </section>
 
       <ServicesSection />
-      <TestimonialsSection />
+
+      {/* Testimonials Section on Home Page */}
+      <div>
+        <Testimonials />
+      </div>
 
       {/* FAQ Section on Home Page */}
       <div>

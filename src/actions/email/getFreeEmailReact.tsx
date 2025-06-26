@@ -10,10 +10,10 @@ export function getFreeEmailReact({
   locale,
 }: LifeMapEmailReactProps) {
   const textCopy: Record<LocalesType, string> = {
-    'pt-br': `Segue em anexo os seus dias Pessoais, ${fullName}! Caso deseje o Mapa da Vida completo faça a compra pelo site https://drcosmicnumber.com/booking.`,
-    pt: `Segue em anexo os seus dias Pessoais, ${fullName}! Caso deseje o Mapa da Vida completo faça a compra pelo site https://drcosmicnumber.com/booking.`,
-    it: `Segue in allegato i tuoi Giorni Personali, ${fullName}! Se desideri acquistare il Mappa della Vita completo, visita il sito https://drcosmicnumber.com/booking.`,
-    en: `Attached are your Personal Days, ${fullName}! If you wish to purchase the complete Life Map, please visit https://drcosmicnumber.com/booking.`,
+    'pt-br': `Segue anexo a vibração do Dia do Nascimento de ${fullName}! Caso queira conhecer seu Mapa da Vida completo, faça a compra pelo site https://drcosmicnumber.com/life-map.`,
+    pt: `Segue anexo a vibração do Dia do Nascimento de ${fullName}! Caso queira conhecer seu Mapa da Vida completo, faça a compra pelo site https://drcosmicnumber.com/life-map.`,
+    it: `Allegata è la vibrazione del Giorno di Nascita di ${fullName}! Se desideri conoscere la tua Mappa della Vita completa, effettua l'acquisto sul sito https://drcosmicnumber.com/life-map.`,
+    en: `Attached is the vibration of ${fullName}'s Birth Day! If you want to know your complete Life Map, make the purchase on the website https://drcosmicnumber.com/life-map.`,
   };
 
   return textCopy[locale];

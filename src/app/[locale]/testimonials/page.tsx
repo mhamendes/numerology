@@ -4,68 +4,27 @@ import React, { useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import clientTestimonials from './content.json';
 
-export function TestimonialsSection() {
+const content = new Map([
+  ['pt_br', clientTestimonials.pt_br],
+  ['pt', clientTestimonials.pt],
+  ['en', clientTestimonials.en],
+  ['it', clientTestimonials.it],
+]);
+
+export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const t = useTranslations('testimonials');
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      location: 'New York, NY',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 5,
-      text: "My numerology reading was incredibly accurate and insightful. It helped me understand why I've been drawn to certain career paths and provided clarity on my life purpose. I'm now making decisions with more confidence!",
-    },
-    {
-      name: 'Michael Chen',
-      location: 'San Francisco, CA',
-      image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 5,
-      text: "I was skeptical at first, but my business numerology consultation was eye-opening. The insights about optimal timing for my product launch were spot on, and we've seen tremendous success as a result.",
-    },
-    {
-      name: 'Emily Rodriguez',
-      location: 'Chicago, IL',
-      image:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 5,
-      text: "The relationship compatibility reading helped my partner and I understand our communication patterns and why we approach problems differently. It's been transformative for our relationship.",
-    },
-    {
-      name: 'David Thompson',
-      location: 'Austin, TX',
-      image:
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 4,
-      text: "I've had several numerology readings before, but this one was by far the most detailed and accurate. The insights about my life path challenges were particularly helpful in navigating a recent career transition.",
-    },
-    {
-      name: 'Jennifer Adams',
-      location: 'Seattle, WA',
-      image:
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 5,
-      text: 'The Life Map reading was life-changing! I finally understand my recurring patterns and how to work with my natural strengths. The personal year forecast has been spot-on with predicting major life events.',
-    },
-    {
-      name: 'Robert Wilson',
-      location: 'Denver, CO',
-      image:
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80',
-      rating: 5,
-      text: "As a business owner, the numerology insights about optimal timing and team dynamics have been invaluable. I've implemented several recommendations and seen measurable improvements in our operations.",
-    },
-  ];
+  const testimonials = content.get(t('locale')) ?? [];
 
   const nextTestimonial = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      prevIndex === testimonials?.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -76,7 +35,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="px-4 py-20">
+    <section className="w-full px-4 py-16">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">
@@ -102,12 +61,6 @@ export function TestimonialsSection() {
                     id={`1sj34l_${index}`}
                   >
                     <Avatar className="mr-4 h-12 w-12" id={`y489dt_${index}`}>
-                      <AvatarImage
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        id={`a0zft0_${index}`}
-                      />
-
                       <AvatarFallback id={`gdsqoc_${index}`}>
                         {testimonial.name
                           .split(' ')
@@ -122,12 +75,6 @@ export function TestimonialsSection() {
                       >
                         {testimonial.name}
                       </h4>
-                      <p
-                        className="text-sm text-gray-500 dark:text-gray-400"
-                        id={`p8jmhu_${index}`}
-                      >
-                        {testimonial.location}
-                      </p>
                     </div>
                   </div>
                   <div className="mb-4 flex" id={`g1gg59_${index}`}>
@@ -161,11 +108,6 @@ export function TestimonialsSection() {
               <CardContent className="p-6">
                 <div className="mb-4 flex items-center">
                   <Avatar className="mr-4 h-12 w-12">
-                    <AvatarImage
-                      src={testimonials[activeIndex].image}
-                      alt={testimonials[activeIndex].name}
-                    />
-
                     <AvatarFallback>
                       {testimonials[activeIndex].name
                         .split(' ')
@@ -177,9 +119,6 @@ export function TestimonialsSection() {
                     <h4 className="font-semibold text-indigo-800 dark:text-indigo-300">
                       {testimonials[activeIndex].name}
                     </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {testimonials[activeIndex].location}
-                    </p>
                   </div>
                 </div>
                 <div className="mb-4 flex">
