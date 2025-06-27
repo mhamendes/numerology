@@ -20,13 +20,15 @@ export default async function middleware(request: NextRequest) {
     'x-middleware-request-x-next-intl-locale'
   ) as LocalesType | null;
 
-  const defaultCurrency =
-    locale && LOCALES.includes(locale) ? currencyOptions[locale] : 'brl';
+  const currentCurrency = request.cookies.get('CURRENCY')?.value?.toLowerCase();
+  const localeCurrency =
+    locale && LOCALES.includes(locale) ? currencyOptions[locale] : undefined;
 
-  const currency = (
-    request.cookies.get('CURRENCY')?.value ?? defaultCurrency
-  ).toLowerCase();
-  response.cookies.set('CURRENCY', currency);
+  const currency = currentCurrency ?? localeCurrency;
+
+  if (currency) {
+    response.cookies.set('CURRENCY', currency);
+  }
 
   if (!request.cookies.get('NEXT_LOCALE')?.value && locale) {
     response.cookies.set('NEXT_LOCALE', locale);

@@ -26,7 +26,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-indigo-100 bg-white/80 px-6 py-4 backdrop-blur-md dark:border-indigo-900 dark:bg-gray-900/80">
+    <header className="sticky top-0 z-50 w-full border-b border-indigo-100 bg-white px-6 py-4 backdrop-blur-md dark:border-indigo-900 dark:bg-gray-900">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center">
           <Link
@@ -134,20 +134,22 @@ export function Header() {
       {isMenuOpen && (
         <div className="absolute top-full right-0 left-0 border-b border-indigo-100 bg-white xl:hidden dark:border-indigo-900 dark:bg-gray-900">
           <div className="flex flex-col space-y-4 p-4">
-            <div className="flex space-x-4 md:hidden">
+            <div className="flex flex-col gap-2 md:hidden">
               <LocaleSwitcher />
-              <CurrencySwitcher />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() =>
-                  setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
-                }
-                aria-label="Toggle theme"
-              >
-                <SunIcon className="hidden h-5 w-5 dark:block" />
-                <MoonIcon className="h-5 w-5 dark:hidden" />
-              </Button>
+              <div className="flex space-x-4">
+                <CurrencySwitcher />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() =>
+                    setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+                  }
+                  aria-label="Toggle theme"
+                >
+                  <SunIcon className="hidden h-5 w-5 dark:block" />
+                  <MoonIcon className="h-5 w-5 dark:hidden" />
+                </Button>
+              </div>
             </div>
 
             <Link
