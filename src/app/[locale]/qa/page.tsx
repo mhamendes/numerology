@@ -34,7 +34,7 @@ export default function QA() {
   );
 
   return (
-    <div className="w-full px-4 py-16">
+    <div className="w-full">
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">

@@ -70,7 +70,7 @@ export default function InternalPage() {
   }
 
   return (
-    <div className="flex w-full justify-center py-12">
+    <div className="flex w-full justify-center">
       <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
         <CardContent className="h-full p-6 md:p-8">
           <Form {...form}>

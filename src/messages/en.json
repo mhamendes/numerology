@@ -5,7 +5,7 @@
   },
   "localeSwitcher": {
     "label": "Language",
-    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português Brasileiro} pt {Português} other {Unknown}}"
+    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português (BR)} pt {Português (PT)} other {Unknown}}"
   },
   "currencySwitcher": {
     "label": "Currency"
@@ -166,7 +166,7 @@
     "emailAddress": "Email Address",
     "enterYourEmail": "Enter your email address",
     "lifeMap": "Life Map",
-    "lifeMapDescription": "Complete report with all your numbers based on the Seven Hermetic Principles, revealing energy patterns that influence your journey.",
+    "lifeMapDescription": "The Life Map is a deep numerological study, based on the Seven Hermetic Principles described in The Kybalion, using your full name and birth date. It reveals energy patterns that influence your journey, bringing clarity about your life mission, challenges, talents, and important cycles you'll go through.<br></br><br></br>Unlike the astral map, which is based on the position of the stars and can be updated annually, the life map is made only once in a lifetime, as it calculates 90 years of existence and brings information for your entire trajectory. What changes over time are the personal years, months, and days, which point to temporary energies.",
     "yourLifeMap": "Your Life Map",
     "lifeMapPageDescription": "Discover the hidden patterns in your life with our comprehensive Life Map analysis",
     "getLifeMapTitle": "Get Your Life Map",

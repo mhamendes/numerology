@@ -31,7 +31,9 @@ export default function ServiceSelection() {
               className="flex items-start justify-between"
               id={`yeps0e_${index}`}
             >
-              <span id={`sbhdks_${index}`}>{product.title}</span>
+              <span id={`sbhdks_${index}`} className="w-1/2">
+                {product.title}
+              </span>
               <div className="flex flex-col items-end">
                 {product.maxInstallments && product.installmentsPrice ? (
                   <div className="flex flex-col">

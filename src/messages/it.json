@@ -5,7 +5,7 @@
   },
   "localeSwitcher": {
     "label": "Lingua",
-    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português Brasileiro} pt {Português} other {Unknown}}"
+    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português (BR)} pt {Português (PT)} other {Unknown}}"
   },
   "currencySwitcher": {
     "label": "Valuta"
@@ -166,7 +166,7 @@
     "emailAddress": "Indirizzo Email",
     "enterYourEmail": "Inserisci il tuo indirizzo email",
     "lifeMap": "Mappa della Vita",
-    "lifeMapDescription": "Report completo con tutti i tuoi numeri basati sui Sette Principi Ermetici, rivelando i modelli energetici che influenzano il tuo viaggio.",
+    "lifeMapDescription": "La Mappa della Vita è uno studio numerologico profondo, basato sui Sette Principi Ermetici descritti nel Kybalion, utilizzando il tuo nome completo e la data di nascita. Rivela modelli energetici che influenzano il tuo viaggio, portando chiarezza sulla tua missione di vita, sfide, talenti e cicli importanti che attraverserai.<br></br><br></br>A differenza della mappa astrale, che si basa sulla posizione delle stelle e può essere aggiornata annualmente, la mappa della vita viene fatta solo una volta nella vita, poiché calcola 90 anni di esistenza e porta informazioni per l'intera traiettoria. Ciò che cambia nel tempo sono gli anni personali, i mesi e i giorni, che indicano energie temporanee.",
     "yourLifeMap": "La Tua Mappa della Vita",
     "lifeMapPageDescription": "Scopri i modelli nascosti nella tua vita con la nostra analisi completa della Mappa della Vita",
     "getLifeMapTitle": "Ottieni la Tua Mappa della Vita",

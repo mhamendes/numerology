@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="w-full px-4 py-16">
+    <section className="w-full">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">

@@ -73,7 +73,7 @@ export default function LifeMap() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4 py-16">
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-indigo-800 md:text-4xl dark:text-indigo-300">
@@ -83,7 +83,8 @@ export default function LifeMap() {
             {t('lifeMapPageDescription')}
           </p>
         </div>
-        <div className="mb-12">
+
+        <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
             <Card className="h-full border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
               <CardHeader>
@@ -97,14 +98,127 @@ export default function LifeMap() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t.rich('lifeMapDescription', {
-                    br: () => <br />,
-                  })}
+                  {t('lifeMapDescription')}
                 </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {t('lifeMapDescription')}
+                </p>
+                <div className="pt-4">
+                  <div className="mb-2 flex flex-col sm:flex-row sm:items-baseline">
+                    <div className="flex flex-col">
+                      {lifeMapProduct.maxInstallments &&
+                      lifeMapProduct.installmentsPrice ? (
+                        <div className="flex flex-col">
+                          <span className="items-baseline font-normal text-gray-600 dark:text-gray-400">
+                            {tServices.rich('installmentPrice', {
+                              installmentsPrice:
+                                lifeMapProduct.installmentsPrice,
+                              maxInstallments: lifeMapProduct.maxInstallments,
+                              big: (chunks) => (
+                                <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
+                                  {chunks}
+                                </span>
+                              ),
+                            })}
+                          </span>
+                          <span className="text-gray-500 dark:text-gray-400">
+                            {tServices('fullPrice', {
+                              price: lifeMapProduct.price,
+                            })}
+                          </span>
+                        </div>
+                      ) : (
+                        <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
+                          {lifeMapProduct.price}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-sm text-indigo-600 dark:text-indigo-400">
+                    {t('deliveryNotice')}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div>
+            <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
+              <CardHeader>
+                <CardTitle className="text-xl text-indigo-800 dark:text-indigo-300">
+                  {t('getLifeMapTitle')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-6"
+                  >
+                    <div className="flex flex-col gap-4">
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('email.label')}</FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                placeholder={tForm('email.placeholder')}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="fullName"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('name.label')}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={tForm('name.placeholder')}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="birthday"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>{tForm('birthday.label')}</FormLabel>
+                            <DateInput
+                              onSelect={field.onChange}
+                              setError={form.setError}
+                              clearError={form.clearErrors}
+                            />
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <Button
+                      type="submit"
+                      className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
+                      isLoading={isLoading}
+                    >
+                      {t('continueToPayment')}
+                    </Button>
+                  </form>
+                </Form>
               </CardContent>
             </Card>
           </div>
         </div>
+
         <div className="mt-12">
           <h3 className="mb-6 text-2xl font-semibold text-indigo-800 dark:text-indigo-300">
             {t('whatsIncluded')}
@@ -228,117 +342,6 @@ export default function LifeMap() {
             </div>
           </div>
         </div>
-        <div className="mt-12">
-          <Card className="border border-indigo-100 bg-white/90 shadow-xl backdrop-blur-sm dark:border-indigo-900 dark:bg-gray-800/90">
-            <CardHeader>
-              <CardTitle className="text-xl text-indigo-800 dark:text-indigo-300">
-                {t('getLifeMapTitle')}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6"
-                >
-                  <div className="flex flex-col gap-4">
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col">
-                          <FormLabel>{tForm('email.label')}</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder={tForm('email.placeholder')}
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col">
-                          <FormLabel>{tForm('name.label')}</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder={tForm('name.placeholder')}
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="birthday"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col">
-                          <FormLabel>{tForm('birthday.label')}</FormLabel>
-                          <DateInput
-                            onSelect={field.onChange}
-                            setError={form.setError}
-                            clearError={form.clearErrors}
-                          />
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div>
-                    <div className="mb-2 flex flex-col sm:flex-row sm:items-baseline">
-                      <div className="flex flex-col">
-                        {lifeMapProduct.maxInstallments &&
-                        lifeMapProduct.installmentsPrice ? (
-                          <div className="flex flex-col">
-                            <span className="items-baseline font-normal text-gray-600 dark:text-gray-400">
-                              {tServices.rich('installmentPrice', {
-                                installmentsPrice:
-                                  lifeMapProduct.installmentsPrice,
-                                maxInstallments: lifeMapProduct.maxInstallments,
-                                big: (chunks) => (
-                                  <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
-                                    {chunks}
-                                  </span>
-                                ),
-                              })}
-                            </span>
-                            <span className="text-gray-500 dark:text-gray-400">
-                              {tServices('fullPrice', {
-                                price: lifeMapProduct.price,
-                              })}
-                            </span>
-                          </div>
-                        ) : (
-                          <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">
-                            {lifeMapProduct.price}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <p className="text-sm text-indigo-600 dark:text-indigo-400">
-                      {t('deliveryNotice')}
-                    </p>
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
-                    isLoading={isLoading}
-                  >
-                    {t('continueToPayment')}
-                  </Button>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </div>
-
         <div>
           <QA />
         </div>

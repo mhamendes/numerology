@@ -5,7 +5,7 @@
   },
   "localeSwitcher": {
     "label": "Idioma",
-    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português Brasileiro} pt {Português} other {Unknown}}"
+    "locale": "{locale, select, en {English} it {Italiano} pt_br {Português (BR)} pt {Português (PT)} other {Unknown}}"
   },
   "currencySwitcher": {
     "label": "Moeda"
@@ -166,7 +166,7 @@
     "emailAddress": "Endereço de Email",
     "enterYourEmail": "Digite seu endereço de email",
     "lifeMap": "Mapa da Vida",
-    "lifeMapDescription": "Relatório completo com todos os seus números baseados nos Sete Princípios Herméticos, revelando os padrões energéticos que influenciam sua jornada.",
+    "lifeMapDescription": "O Mapa da Vida é um estudo numerológico profundo, baseado nos Sete Princípios Herméticos descritos no Kybalion, utilizando seu nome completo e data de nascimento. Revela padrões energéticos que influenciam sua jornada, trazendo clareza sobre sua missão de vida, desafios, talentos e ciclos importantes que você atravessará.<br></br><br></br>Diferente do mapa astral, que é baseado na posição das estrelas e pode ser atualizado anualmente, o mapa da vida é feito apenas uma vez na vida, pois calcula 90 anos de existência e traz informações para toda a sua trajetória. O que muda ao longo do tempo são os anos pessoais, meses e dias, que apontam para energias temporárias.",
     "yourLifeMap": "Seu Mapa da Vida",
     "lifeMapPageDescription": "Descubra os padrões ocultos em sua vida com nossa análise abrangente do Mapa da Vida",
     "getLifeMapTitle": "Obtenha Seu Mapa da Vida",
