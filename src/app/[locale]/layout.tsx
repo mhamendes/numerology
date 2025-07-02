@@ -9,8 +9,8 @@ import { BookingProvider } from './booking/(components)/context';
 
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
-import { getProducts } from '@/actions/eduzz/getProducts';
 import { getCurrency } from '@/actions/changeCurrency';
+import { getProducts } from '@/actions/eduzz/getProducts';
 import { CurrencyProvider } from '@/app/(components)/currency/provider';
 
 export async function generateMetadata() {

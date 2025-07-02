@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
 import clientTestimonials from './content.json';
 
 const content = new Map([

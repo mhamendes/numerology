@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { GlobeIcon } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import { Locale, useLocale, useTranslations } from 'next-intl';
@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { routing, LocalesType } from '@/i18n/routing';
+import { LocalesType, routing } from '@/i18n/routing';
 
 const icons: Record<LocalesType, string> = {
   'pt-br': '🇧🇷',

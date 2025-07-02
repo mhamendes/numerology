@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
+import { useEffect, useState } from 'react';
 import { CircleDollarSignIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -11,10 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useRouter } from '@/i18n/navigation';
 
-import { changeCurrency, getCurrency } from '@/actions/changeCurrency';
-import { useBooking } from '@/app/[locale]/booking/(components)/context';
 import { useCurrency } from './provider';
 
 const Currencies = [

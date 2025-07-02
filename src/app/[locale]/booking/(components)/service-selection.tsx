@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 import { useBooking } from './context';
-import { useTranslations } from 'next-intl';
 
 export default function ServiceSelection() {
   const tServices = useTranslations('services');

@@ -7,8 +7,8 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import { HeroSection } from '(components)/hero-section';
 import { ServicesSection } from '(components)/services-section';
-import Testimonials from '@/app/[locale]/testimonials/page';
 import QA from '@/app/[locale]/qa/page';
+import Testimonials from '@/app/[locale]/testimonials/page';
 
 export default async function Home() {
   const t = await getTranslations('home');
