@@ -15,6 +15,7 @@ import { useRouter } from '@/i18n/navigation';
 
 import { changeCurrency, getCurrency } from '@/actions/changeCurrency';
 import { useBooking } from '@/app/[locale]/booking/(components)/context';
+import { useCurrency } from './provider';
 
 const Currencies = [
   {
@@ -33,39 +34,25 @@ const Currencies = [
     icon: '🇧🇷',
   },
 ];
+
 export default function CurrencySwitcher() {
   const t = useTranslations('currencySwitcher');
-  const router = useRouter();
-  const { updateCheckoutSession } = useBooking();
-  const [isPending, startTransition] = useTransition();
+  const { updateCurrency, currency, isPending } = useCurrency();
 
-  const [currency, setCurrency] = useState<string | undefined>(undefined);
-
-  async function getLatestCurrency() {
-    const currency = await getCurrency();
-    setCurrency(currency);
-  }
+  const [currentCurrency, setCurrentCurrency] = useState<string | undefined>(
+    undefined
+  );
 
   useEffect(() => {
-    getLatestCurrency();
-  }, []);
-
-  function onSelectChange(currency: string) {
-    startTransition(() => {
-      changeCurrency(currency).then(() => {
-        getLatestCurrency();
-        updateCheckoutSession();
-        router.refresh();
-      });
-    });
-  }
+    setCurrentCurrency(currency);
+  }, [currency]);
 
   return (
     <div className="flex">
       <Select
         disabled={isPending}
-        value={currency}
-        onValueChange={onSelectChange}
+        value={currentCurrency}
+        onValueChange={updateCurrency}
       >
         <SelectTrigger className="h-9 w-fit gap-2 border-indigo-200 dark:border-indigo-800">
           <SelectValue

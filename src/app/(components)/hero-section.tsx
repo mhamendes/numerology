@@ -18,7 +18,7 @@ export async function HeroSection() {
   const t = await getTranslations('hero');
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative overflow-hidden md:py-8">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10">
         <div className="absolute top-20 left-1/4 h-64 w-64 rounded-full bg-indigo-300 blur-3xl dark:bg-indigo-700"></div>

@@ -10,6 +10,8 @@ import { BookingProvider } from './booking/(components)/context';
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
 import { getProducts } from '@/actions/eduzz/getProducts';
+import { getCurrency } from '@/actions/changeCurrency';
+import { CurrencyProvider } from '@/app/(components)/currency/provider';
 
 export async function generateMetadata() {
   const t = await getTranslations('metadata');
@@ -30,6 +32,7 @@ export default async function Layout({
   const { locale } = await params;
   const messages = await getMessages();
   const products = await getProducts(locale);
+  const currency = await getCurrency();
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -38,11 +41,15 @@ export default async function Layout({
   return (
     <NextIntlClientProvider messages={messages}>
       <BookingProvider products={products}>
-        <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
-          <Header />
-          <main className="flex flex-grow">{children}</main>
-          <Footer />
-        </div>
+        <CurrencyProvider baseCurrency={currency}>
+          <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
+            <Header />
+            <main className="flex flex-grow px-4 py-8 md:py-16">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </CurrencyProvider>
       </BookingProvider>
     </NextIntlClientProvider>
   );
