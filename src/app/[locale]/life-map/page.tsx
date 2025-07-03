@@ -339,7 +339,7 @@ export default function LifeMap() {
           </Card>
         </div>
 
-        <div>
+        <div className="mt-12">
           <QA />
         </div>
       </div>
