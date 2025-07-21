@@ -244,9 +244,8 @@ export async function createInvertedTriangleSection({
     margin: { top: TOP_MARGIN },
   });
 
-  Array.from(new Set(result.arcanePairs))
-    .sort()
-    .map((arcane, idx) => {
+  Array.from(new Set([result.singleDigitArcane, ...result.arcanePairs])).map(
+    (arcane, idx) => {
       const currentText = arcanesText.items[arcane];
       const sum = idx === 0 ? 5 : 2;
       pdf.autoTable({
@@ -278,7 +277,8 @@ export async function createInvertedTriangleSection({
         tableWidth: 180,
         margin: { top: TOP_MARGIN },
       });
-    });
+    }
+  );
 
   return pdf;
 }

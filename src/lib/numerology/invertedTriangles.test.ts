@@ -1,9 +1,14 @@
 import { UTCDate } from '@date-fns/utc';
-import { describe, expect, test } from 'vitest';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import { invertedTriangles } from './invertedTriangles';
 
 describe('Inverted Triangles', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2025-01-01'));
+  });
+
   test('should return the inverted triangles for the name', () => {
     expect(
       invertedTriangles({
@@ -11,12 +16,12 @@ describe('Inverted Triangles', () => {
         birthday: new UTCDate('1992-06-22'),
       })
     ).toEqual({
-      singleDigitArcane: 5,
+      singleDigitArcane: '5',
       negativeSequences: ['111', '222', '333', '444', '777', '888'],
       numberOfArcanes: 29,
       timeOfEachArcane: { years: 3, months: 1 },
-      currentAge: 32,
-      currentArcane: '41',
+      currentAge: 33,
+      currentArcane: '31',
       currentArcaneEndAge: 34,
       arcanePairs: [
         '81',
@@ -48,7 +53,7 @@ describe('Inverted Triangles', () => {
         '36',
         '65',
         '53',
-      ],
+      ].sort(),
       allTriangleSums: [
         [
           'P',

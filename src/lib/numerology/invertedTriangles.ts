@@ -88,13 +88,13 @@ function sumTriangleValues({
   negativeSequences: string[];
   allTriangleSums: number[][];
 }): {
-  singleDigitArcane: number;
+  singleDigitArcane: ArcaneNumbers;
   negativeSequences: string[];
   allTriangleSums: number[][];
 } {
   if (triangle.length === 1)
     return {
-      singleDigitArcane: triangle[0],
+      singleDigitArcane: `${triangle[0]}` as ArcaneNumbers,
       negativeSequences,
       allTriangleSums,
     };
@@ -160,7 +160,7 @@ function getArcanesPairs(triangle: number[]): string[] {
     pairs.push(`${triangle[i]}${triangle[i + 1]}`);
   }
 
-  return pairs;
+  return pairs.sort();
 }
 
 function getNegativeSequences(array: number[]): string[] {
