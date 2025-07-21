@@ -284,7 +284,6 @@ export async function createSections({
   pdf = await createPersonalYearSection({
     pdf,
     title: sectionTitles.personalYears,
-    birthday,
     results: numerologyResponse.personalYears,
     text: personalYearText,
     locale,

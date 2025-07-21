@@ -567,24 +567,28 @@ export function getPersonalYear({
 }) {
   const day = getDate(birthday);
   const month = getMonth(birthday) + 1;
+  const parsedMonth = month < 10 ? `0${month}` : month;
 
   const dayToday = getDate(dateToCheck);
   const monthToday = getMonth(dateToCheck) + 1;
   const yearToday = getYear(dateToCheck);
 
-  if (
-    yearToday <= baseYear &&
-    (monthToday < month || (monthToday === month && dayToday > day))
-  ) {
+  const hadBirthdayThisYear =
+    monthToday > month || (monthToday === month && dayToday >= day);
+
+  if (yearToday <= baseYear && !hadBirthdayThisYear) {
     return [
       {
-        year: yearToday,
+        year: yearToday - 1,
         number: sumDigitsToSingleDigit(day + month + (yearToday - 1)),
-        end: `${day - 1}/0${month}/${yearToday}`,
+        start: `${day}/${parsedMonth}/${yearToday - 1}`,
+        end: `${getEndDate(day, month)}/${yearToday}`,
       },
       {
         year: yearToday,
         number: sumDigitsToSingleDigit(day + month + yearToday),
+        start: `${day}/${parsedMonth}/${yearToday}`,
+        end: `${getEndDate(day, month)}/${yearToday + 1}`,
       },
     ];
   }
@@ -593,9 +597,28 @@ export function getPersonalYear({
     {
       year: yearToday,
       number: sumDigitsToSingleDigit(day + month + yearToday),
+      start: `${day}/${parsedMonth}/${yearToday}`,
+      end: `${getEndDate(day, month)}/${yearToday + 1}`,
     },
   ];
 }
+
+const getEndDate = (day: number, month: number) => {
+  if (day !== 1) {
+    return `${day - 1}/${month < 10 ? `0${month}` : month}`;
+  }
+
+  const previousMonth = month === 1 ? 12 : month - 1;
+
+  if (previousMonth === 2) {
+    return `28/${previousMonth < 10 ? `0${previousMonth}` : previousMonth}`;
+  }
+  if ([4, 6, 9, 11].includes(previousMonth)) {
+    return `30/${previousMonth < 10 ? `0${previousMonth}` : previousMonth}`;
+  }
+
+  return `31/${previousMonth < 10 ? `0${previousMonth}` : previousMonth}`;
+};
 
 export function getPersonalYears({ birthday }: { birthday: Date }) {
   const today = new UTCDate();
@@ -607,7 +630,8 @@ export function getPersonalYears({ birthday }: { birthday: Date }) {
   const yearNumbers: {
     year: number;
     number: OneToNineNumbers;
-    end?: string;
+    start: string;
+    end: string;
   }[] = [];
 
   Array.from({ length: 9 }).forEach((_, idx) => {

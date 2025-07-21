@@ -1,4 +1,3 @@
-import { getDate, getMonth } from 'date-fns';
 import { jsPDF } from 'jspdf';
 
 import { getPersonalYears } from '@/lib/numerology/numbers';
@@ -27,7 +26,6 @@ type Text = {
 
 type CreateSectionArgs = {
   pdf: jsPDF;
-  birthday: Date;
   title: string;
   results: ReturnType<typeof getPersonalYears>;
   text: Text;
@@ -36,7 +34,6 @@ type CreateSectionArgs = {
 
 export async function createPersonalYearSection({
   pdf,
-  birthday,
   title,
   results,
   text,
@@ -74,9 +71,6 @@ export async function createPersonalYearSection({
     margin: { top: TOP_MARGIN },
   });
 
-  const day = getDate(birthday);
-  const month = getMonth(birthday) + 1;
-
   for (let i = 0; i < results.length; i++) {
     const result = results[i];
     const item = text.items[result.number];
@@ -89,11 +83,8 @@ export async function createPersonalYearSection({
       head: [
         [
           personalDatesExtraContent.period
-            .replace('{{start}}', `${day}/${month}/${result.year}`)
-            .replace(
-              '{{endText}}',
-              `${getEndDate(day, month)}/${result.year + 1}`
-            ),
+            .replace('{{start}}', result.start)
+            .replace('{{endText}}', result.end),
         ],
       ],
       startY: (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 2,
@@ -186,20 +177,3 @@ export async function createPersonalYearSection({
 
   return pdf;
 }
-
-const getEndDate = (day: number, month: number) => {
-  if (day !== 1) {
-    return `${day - 1}/${month}`;
-  }
-
-  const previousMonth = month === 1 ? 12 : month - 1;
-
-  if (previousMonth === 2) {
-    return `28/${previousMonth}`;
-  }
-  if ([4, 6, 9, 11].includes(previousMonth)) {
-    return `30/${previousMonth}`;
-  }
-
-  return `31/${previousMonth}`;
-};
