@@ -44,8 +44,6 @@ export async function sendEmail({
   if (!type)
     throw new Error(`No email type provided, failed to send email to ${to}`);
 
-  console.log('type', type);
-
   const getEmailHtml = async (type: EmailType) => {
     switch (type) {
       case 'free':
