@@ -160,7 +160,7 @@ function getArcanesPairs(triangle: number[]): string[] {
     pairs.push(`${triangle[i]}${triangle[i + 1]}`);
   }
 
-  return pairs.sort();
+  return pairs;
 }
 
 function getNegativeSequences(array: number[]): string[] {
