@@ -135,6 +135,12 @@ export function getExpressionNumber({
     return acc + sum;
   }, 0);
 
+  if (
+    reducedNamesCount === 11 ||
+    reducedNamesCount === 22 ||
+    reducedNamesCount < 10
+  )
+    return reducedNamesCount;
   return sumDigits(reducedNamesCount);
 }
 
