@@ -36,11 +36,11 @@ import {
 
 const _schema = z.object({
   fullName: z.string().min(2, {
-    message: 'fullName',
+    error: 'fullName',
   }),
-  birthday: z.date({ required_error: 'birthday' }),
+  birthday: z.date({ error: 'birthday' }),
   password: z.string().min(8, {
-    message: 'password',
+    error: 'password',
   }),
 });
 

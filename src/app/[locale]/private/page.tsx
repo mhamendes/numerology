@@ -29,14 +29,21 @@ export default function InternalPage() {
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
-      message: tForm('name.errorMessage'),
+      error: tForm('name.errorMessage'),
     }),
     birthday: z.date({
-      required_error: tForm('birthday.errorMessage'),
-      invalid_type_error: tForm('birthday.invalidMessage'),
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return tForm('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return tForm('birthday.invalidMessage');
+        }
+        return tForm('birthday.errorMessage');
+      },
     }),
     password: z.string().min(8, {
-      message: tForm('password.errorMessage'),
+      error: tForm('password.errorMessage'),
     }),
   });
 

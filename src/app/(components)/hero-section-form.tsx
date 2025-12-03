@@ -41,13 +41,20 @@ export function HeroSectionForm() {
   const { prefilledData } = useBooking();
 
   const FormSchema = z.object({
-    email: z.string().email({ message: tForm('email.errorMessage') }),
+    email: z.email({ error: tForm('email.errorMessage') }),
     fullName: z.string().min(2, {
-      message: tForm('name.errorMessage'),
+      error: tForm('name.errorMessage'),
     }),
     birthday: z.date({
-      required_error: tForm('birthday.errorMessage'),
-      invalid_type_error: tForm('birthday.invalidMessage'),
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return tForm('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return tForm('birthday.invalidMessage');
+        }
+        return tForm('birthday.errorMessage');
+      },
     }),
   });
 

@@ -42,8 +42,15 @@ export default function LifeMap() {
       message: tForm('name.errorMessage'),
     }),
     birthday: z.date({
-      required_error: tForm('birthday.errorMessage'),
-      invalid_type_error: tForm('birthday.invalidMessage'),
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return tForm('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return tForm('birthday.invalidMessage');
+        }
+        return tForm('birthday.errorMessage');
+      },
     }),
     email: z.string().email({ message: tForm('email.errorMessage') }),
   });
@@ -112,7 +119,7 @@ export default function LifeMap() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-4">
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('motivationNumber')}</span>{' '}
@@ -120,7 +127,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('expressionNumber')}</span>{' '}
@@ -128,7 +135,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('birthDayNumber')}</span>{' '}
@@ -136,7 +143,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('hiddenTalent')}</span>{' '}
@@ -144,7 +151,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('conjugalVibration')}</span>{' '}
@@ -152,7 +159,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('hiddenTendency')}</span>{' '}
@@ -160,7 +167,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('destinyNumberTitle')}</span>{' '}
@@ -170,7 +177,7 @@ export default function LifeMap() {
             </div>
             <div className="space-y-4">
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('missionNumber')}</span>{' '}
@@ -178,7 +185,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('karmicLessons')}</span>{' '}
@@ -186,7 +193,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('lifeCycles')}</span>{' '}
@@ -194,7 +201,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('decisiveMoments')}</span>{' '}
@@ -202,7 +209,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('invertedTriangle')}</span>{' '}
@@ -210,7 +217,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('personalYears')}</span>{' '}
@@ -218,7 +225,7 @@ export default function LifeMap() {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
+                <CheckIcon className="mt-0.5 mr-2 h-5 w-5 shrink-0 text-green-500" />
 
                 <p className="flex flex-col text-gray-600 dark:text-gray-300">
                   <span className="font-medium">{t('monthlyGuidance')}</span>{' '}

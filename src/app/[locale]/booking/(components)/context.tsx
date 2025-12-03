@@ -32,7 +32,7 @@ type PopulatedProduct = Product & {
 const _baseFormSchema = z.object({
   fullName: z.string().optional().nullable(),
   birthday: z.date().optional().nullable(),
-  email: z.string().email().optional().nullable(),
+  email: z.email().optional().nullable(),
   partnerFullName: z.string().optional().nullable(),
   partnerBirthday: z.date().optional().nullable(),
   businessName: z.string().optional().nullable(),

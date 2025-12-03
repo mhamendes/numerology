@@ -29,19 +29,33 @@ export default function RelationshipForm() {
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
-      message: t('name.errorMessage'),
+      error: t('name.errorMessage'),
     }),
     birthday: z.date({
-      required_error: t('birthday.errorMessage'),
-      invalid_type_error: t('birthday.invalidMessage'),
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return t('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return t('birthday.invalidMessage');
+        }
+        return t('birthday.errorMessage');
+      },
     }),
-    email: z.string().email({ message: t('email.errorMessage') }),
+    email: z.email({ error: t('email.errorMessage') }),
     partnerFullName: z.string().min(2, {
-      message: t('partnerName.errorMessage'),
+      error: t('partnerName.errorMessage'),
     }),
-    partnerBirthday: z.date({
-      required_error: t('partnerBirthday.errorMessage'),
-      invalid_type_error: t('partnerBirthday.invalidMessage'),
+    partnerBirthday:z.date({
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return t('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return t('birthday.invalidMessage');
+        }
+        return t('birthday.errorMessage');
+      },
     }),
   });
 

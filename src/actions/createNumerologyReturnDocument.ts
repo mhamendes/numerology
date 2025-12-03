@@ -23,9 +23,9 @@ import { getNumerologyResponse } from './getNumerologyResponse';
 
 const schema = z.object({
   fullName: z.string().min(2, {
-    message: 'fullName',
+    error: 'fullName',
   }),
-  birthday: z.date({ required_error: 'birthday' }),
+  birthday: z.date({ error: 'birthday' }),
 });
 
 export async function createNumerologyReturnDocument({

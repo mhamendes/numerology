@@ -29,12 +29,19 @@ export default function LifeMapForm() {
 
   const FormSchema = z.object({
     fullName: z.string().min(2, {
-      message: t('name.errorMessage'),
+      error: t('name.errorMessage'),
     }),
-    email: z.string().email({ message: t('email.errorMessage') }),
+    email: z.email({ error: t('email.errorMessage') }),
     birthday: z.date({
-      required_error: t('birthday.errorMessage'),
-      invalid_type_error: t('birthday.invalidMessage'),
+      error: (issue) => {
+        if (issue.input === undefined) {
+          return t('birthday.errorMessage');
+        }
+        if (issue.code === 'invalid_type') {
+          return t('birthday.invalidMessage');
+        }
+        return t('birthday.errorMessage');
+      },
     }),
   });
 

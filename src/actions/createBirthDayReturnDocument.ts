@@ -22,9 +22,9 @@ import { createSection } from '@/lib/pdfCreation/createSections';
 import { sendEmail } from '@/actions/email/sendEmail';
 
 const _schema = z.object({
-  email: z.string().email({ message: 'email' }),
-  fullName: z.string().min(2, { message: 'fullName' }),
-  birthday: z.date({ required_error: 'birthday' }),
+  email: z.email({ error: 'email' }),
+  fullName: z.string().min(2, { error: 'fullName' }),
+  birthday: z.date({ error: 'birthday' }),
 });
 
 export async function createBirthDayReturnDocument({
