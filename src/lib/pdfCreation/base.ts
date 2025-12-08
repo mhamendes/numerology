@@ -1,5 +1,4 @@
-import 'jspdf-autotable';
-
+import { applyPlugin } from 'jspdf-autotable';
 import jsPDF from 'jspdf';
 
 import {
@@ -20,6 +19,8 @@ import { zapfino } from '@/assets/fonts/zapfino';
 import { birthDayCoverBase64 } from '@/assets/images/birthDayCoverBase64';
 import { lifeMapCoverBase64 } from '@/assets/images/lifeMapCoverBase64';
 import { logoBase64 } from '@/assets/images/logoBase64';
+
+applyPlugin(jsPDF);
 
 export const START_WIDTH = 15;
 export const START_HEIGHT = 35;
