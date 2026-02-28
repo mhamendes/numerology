@@ -78,6 +78,8 @@ export function sumDigitsToSingleDigit(value: number): number {
 }
 
 export function sumDigits(value: number): number {
+  if (value === 11 || value === 22 || value < 10) return value;
+
   const newValue = value
     .toString()
     .split('')
@@ -486,9 +488,9 @@ export function getChallenges({ birthday }: { birthday: Date }) {
   const month = getMonth(birthday) + 1;
   const year = getYear(birthday);
 
-  const reducedDay = sumDigits(day);
-  const reducedMonth = sumDigits(month);
-  const reducedYear = sumDigits(year);
+  const reducedDay = sumDigitsToSingleDigit(day);
+  const reducedMonth = sumDigitsToSingleDigit(month);
+  const reducedYear = sumDigitsToSingleDigit(year);
 
   const firstCycleEnd = year + 37 - destinyNumber;
   const secondCycleEnd = firstCycleEnd + 27;
@@ -669,11 +671,11 @@ export function getPersonalMonth({
   desiredMonth: number;
   dateToCheck: Date;
 }) {
-  const day = getDate(birthday);
-  const month = getMonth(birthday) + 1;
+  const birthdayDay = getDate(birthday);
+  const birthdayMonth = getMonth(birthday) + 1;
   const yearToCheck = getYear(dateToCheck);
 
-  if (month > desiredMonth && yearToCheck > baseYear) {
+  if (birthdayMonth > desiredMonth && yearToCheck > baseYear) {
     const personalYear = getPersonalYear({
       birthday,
       baseYear: baseYear + 1,
@@ -690,51 +692,41 @@ export function getPersonalMonth({
     ];
   }
 
-  const personalYear = getPersonalYear({ birthday, baseYear, dateToCheck });
+  const personalYear = getPersonalYear({ birthday, baseYear, dateToCheck })[0];
 
-  const personalMonth = personalYear.map((year, idx) => {
-    if (personalYear.length === 2 && idx === 0) {
-      return {
+  if (birthdayMonth > desiredMonth && yearToCheck > baseYear) {
+    const sum = personalYear.number + 1 + desiredMonth;
+
+    return [
+      {
         year: yearToCheck,
         month: desiredMonth,
-        number: sumDigits(year.number - 1 + desiredMonth),
-        end: `${day - 1}/0${month}/${year.year}`,
-      };
-    }
-    if (month > desiredMonth && yearToCheck > baseYear) {
-      const sum = year.number + 1 + desiredMonth;
-
-      return [
-        {
-          year: yearToCheck,
-          month: desiredMonth,
-          number: sum === 11 || sum === 22 ? sum : sumDigits(sum),
-        },
-      ];
-    }
-    if (month === desiredMonth) {
-      return [
-        {
-          year: yearToCheck,
-          month: desiredMonth,
-          number: sumDigits(year.number - 1 + desiredMonth),
-          end: `${day}/0${month}/${year.year}`,
-        },
-        {
-          year: yearToCheck,
-          month: desiredMonth,
-          number: sumDigits(year.number + desiredMonth),
-        },
-      ];
-    }
-    return {
+        number: sum === 11 || sum === 22 ? sum : sumDigits(sum),
+      },
+    ];
+  }
+  if (birthdayMonth === desiredMonth) {
+    return [
+      {
+        year: yearToCheck,
+        month: desiredMonth,
+        number: sumDigits(personalYear.number - 1 + desiredMonth),
+        end: `${birthdayDay}/0${birthdayMonth}/${personalYear.year}`,
+      },
+      {
+        year: yearToCheck,
+        month: desiredMonth,
+        number: sumDigits(personalYear.number + desiredMonth),
+      },
+    ];
+  }
+  return [
+    {
       year: yearToCheck,
       month: desiredMonth,
-      number: sumDigits(year.number + desiredMonth),
-    };
-  });
-
-  return personalMonth.flat();
+      number: sumDigits(personalYear.number + desiredMonth),
+    },
+  ];
 }
 
 export function getPersonalMonths({ birthday }: { birthday: Date }) {
