@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "exec eslint .",
-    "test": "vitest run",
-    "reset": "find * -type d -name node_modules -exec rm -rf {} + && rm -f pnpm-lock.yaml && pnpm install"
+    "test": "vitest run"
   },
   "dependencies": {
     "@date-fns/utc": "^2.1.1",
@@ -101,6 +100,5 @@
     "typescript-eslint": "^8.48.1",
     "vite": "^7.2.6",
     "vitest": "^4.0.15"
-  },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  }
 }
