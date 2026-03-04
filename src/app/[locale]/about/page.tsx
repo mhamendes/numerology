@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { SparklesIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 import { Card, CardContent } from '@/components/ui/card';
 

@@ -1,5 +1,5 @@
-import React from 'react';
 import { getTranslations } from 'next-intl/server';
+import React from 'react';
 
 import { HeroSectionButtons } from './hero-section-buttons';
 import { HeroSectionForm } from './hero-section-form';

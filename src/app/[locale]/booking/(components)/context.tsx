@@ -1,5 +1,8 @@
 'use client';
 
+import { UTCDate } from '@date-fns/utc';
+import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import {
   createContext,
   useCallback,
@@ -8,17 +11,13 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { UTCDate } from '@date-fns/utc';
-import { BookIcon, GlobeIcon, HeartIcon, StarIcon } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { z } from 'zod';
-
-import { usePathname } from '@/i18n/navigation';
 
 import { Product } from '@/actions/eduzz/getProducts';
 import { useFacebookPixel } from '@/app/(components)/facebookPixel';
 import { createSale } from '@/db/migrations';
+import { usePathname } from '@/i18n/navigation';
 
 type PopulatedProduct = Product & {
   title: string;

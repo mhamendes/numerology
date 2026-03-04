@@ -1,15 +1,14 @@
 'use client';
-import React, { useEffect } from 'react';
 import { CalendarIcon, CheckIcon } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import React, { useEffect } from 'react';
 
+import { useFacebookPixel } from '@/app/(components)/facebookPixel';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 import { useBooking } from '../(components)/context';
-
-import { useFacebookPixel } from '@/app/(components)/facebookPixel';
 
 export default function BookingSuccess() {
   const t = useTranslations('booking');

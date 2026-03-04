@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { CheckIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 import { Button } from '@/components/ui/button';
 import {

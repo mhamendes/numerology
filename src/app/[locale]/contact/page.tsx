@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckIcon, MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
+import { sendEmail } from '@/actions/email/sendEmail';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -33,8 +34,6 @@ import {
   JOINED_BRAND_ADDRESS,
   PHONE_NUMBER,
 } from '@/lib/constants';
-
-import { sendEmail } from '@/actions/email/sendEmail';
 
 export default function Contact() {
   const t = useTranslations('contactUs');

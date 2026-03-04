@@ -1,6 +1,7 @@
 import { getDate } from 'date-fns';
 import { jsPDF } from 'jspdf';
 
+import { getNumerologyResponse } from '@/actions/getNumerologyResponse';
 import { AllPossibleNumbers, DefaultNumbers } from '@/lib/numerology/types';
 
 import {
@@ -19,8 +20,6 @@ import { createPersonalDaysSection } from './createPersonalDaysSection';
 import { createPersonalMonthSection } from './createPersonalMonthSection';
 import { createPersonalYearSection } from './createPersonalYearSection';
 import { createSectionWithListOfNumbers } from './createSectionWithListOfNumbers';
-
-import { getNumerologyResponse } from '@/actions/getNumerologyResponse';
 
 type CreateSectionsArgs = {
   pdf: jsPDF;

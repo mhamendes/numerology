@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { BookIcon, CheckIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { useBooking } from '@/app/[locale]/booking/(components)/context';
+import QA from '@/app/[locale]/qa/page';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { DateInput } from '@/components/ui/date-input';
@@ -20,9 +22,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useRouter } from '@/i18n/navigation';
-
-import { useBooking } from '@/app/[locale]/booking/(components)/context';
-import QA from '@/app/[locale]/qa/page';
 
 export default function LifeMap() {
   const t = useTranslations('lifeMap');

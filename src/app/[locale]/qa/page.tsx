@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
 import { SearchIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
 
 import {
   Accordion,

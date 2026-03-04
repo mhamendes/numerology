@@ -26,7 +26,7 @@ export default function GlobalError({
     // global-error must include html and body tags
     <html>
       <body>
-        <div className="flex w-full flex-grow-1 items-center justify-center px-4 py-16">
+        <div className="flex w-full grow items-center justify-center px-4 py-16">
           <div className="mx-auto w-4xl max-w-4xl">
             <Card className="text-center">
               <CardHeader>

@@ -1,14 +1,13 @@
-import React from 'react';
 import { SparklesIcon, StarIcon } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import React from 'react';
 
 import { HeroSection } from '(components)/hero-section';
 import { ServicesSection } from '(components)/services-section';
 import QA from '@/app/[locale]/qa/page';
 import Testimonials from '@/app/[locale]/testimonials/page';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default async function Home() {
   const t = await getTranslations('home');

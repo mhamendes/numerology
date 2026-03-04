@@ -3,7 +3,6 @@ import { jsPDF } from 'jspdf';
 import { getDecisiveMoments } from '@/lib/numerology/numbers';
 
 import { DefaultNumbers } from '../numerology/types';
-
 import { createPeriodicalSection } from './createPeriodicalSection';
 
 type Text = {

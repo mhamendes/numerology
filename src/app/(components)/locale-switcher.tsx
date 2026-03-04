@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
 import { GlobeIcon } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import { Locale, useLocale, useTranslations } from 'next-intl';
+import { useEffect, useState, useTransition } from 'react';
 
 import {
   Select,

@@ -1,6 +1,6 @@
-import React from 'react';
 import { XIcon } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import React from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

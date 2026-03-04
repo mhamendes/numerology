@@ -1,6 +1,12 @@
-import { applyPlugin } from 'jspdf-autotable';
 import jsPDF from 'jspdf';
+import { applyPlugin } from 'jspdf-autotable';
 
+import { centuryGothic } from '@/assets/fonts/centuryGothic';
+import { centuryGothicBold } from '@/assets/fonts/centuryGothicBold';
+import { zapfino } from '@/assets/fonts/zapfino';
+import { birthDayCoverBase64 } from '@/assets/images/birthDayCoverBase64';
+import { lifeMapCoverBase64 } from '@/assets/images/lifeMapCoverBase64';
+import { logoBase64 } from '@/assets/images/logoBase64';
 import {
   BRAND_ADDRESS,
   BRAND_INSTAGRAM_USERNAME,
@@ -12,13 +18,6 @@ import {
 
 import { createSectionWithBulletPoints } from './createSectionWithBulletPoints';
 import { DocType } from './types';
-
-import { centuryGothic } from '@/assets/fonts/centuryGothic';
-import { centuryGothicBold } from '@/assets/fonts/centuryGothicBold';
-import { zapfino } from '@/assets/fonts/zapfino';
-import { birthDayCoverBase64 } from '@/assets/images/birthDayCoverBase64';
-import { lifeMapCoverBase64 } from '@/assets/images/lifeMapCoverBase64';
-import { logoBase64 } from '@/assets/images/logoBase64';
 
 applyPlugin(jsPDF);
 

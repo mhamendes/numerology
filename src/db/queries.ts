@@ -1,8 +1,8 @@
 'use server';
 import { eq } from 'drizzle-orm';
 
-import { salesTable } from './schema';
 import { db } from '.';
+import { salesTable } from './schema';
 
 type Sale = typeof salesTable.$inferSelect;
 

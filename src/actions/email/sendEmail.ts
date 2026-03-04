@@ -3,6 +3,7 @@
 
 import { Resend } from 'resend';
 
+import { ProductId } from '@/actions/stripe/getProductPrice';
 import { LocalesType } from '@/i18n/routing';
 
 import { getBusinessNumerologyEmailReact } from './getBusinessNumerologyEmailReact';
@@ -10,8 +11,6 @@ import { getFreeEmailReact } from './getFreeEmailReact';
 import { getLifeMapEmailReact } from './getLifeMapEmailReact';
 import { getPersonalReadingEmailReact } from './getPersonalReadingEmailReact';
 import { getRelationshipCompatibilityEmailReact } from './getRelationshipCompatibilityEmailReact';
-
-import { ProductId } from '@/actions/stripe/getProductPrice';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

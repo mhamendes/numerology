@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 import { cn } from '@/lib/utils';
 

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
 
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';

@@ -1,12 +1,11 @@
 import '@/globals.css';
 
-import React from 'react';
 import { getLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
-
-import { Toaster } from '@/components/ui/toaster';
+import React from 'react';
 
 import FacebookPixelProvider from '@/app/(components)/facebookPixel';
+import { Toaster } from '@/components/ui/toaster';
 
 export default async function Layout({
   children,

@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
 import {
   EmbeddedCheckout,
   EmbeddedCheckoutProvider,
 } from '@stripe/react-stripe-js';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

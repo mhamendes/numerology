@@ -1,17 +1,16 @@
-import React from 'react';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
-
-import { routing } from '@/i18n/routing';
-
-import { BookingProvider } from './booking/(components)/context';
+import React from 'react';
 
 import { Footer } from '(components)/footer';
 import { Header } from '(components)/header';
 import { getCurrency } from '@/actions/changeCurrency';
 import { getProducts } from '@/actions/eduzz/getProducts';
 import { CurrencyProvider } from '@/app/(components)/currency/provider';
+import { routing } from '@/i18n/routing';
+
+import { BookingProvider } from './booking/(components)/context';
 
 export async function generateMetadata() {
   const t = await getTranslations('metadata');
@@ -42,9 +41,9 @@ export default async function Layout({
     <NextIntlClientProvider messages={messages}>
       <BookingProvider products={products}>
         <CurrencyProvider baseCurrency={currency}>
-          <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
+          <div className="flex min-h-screen flex-col bg-linear-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
             <Header />
-            <main className="flex flex-grow px-4 py-8 md:py-16">
+            <main className="flex grow px-4 py-8 md:py-16">
               {children}
             </main>
             <Footer />

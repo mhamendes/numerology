@@ -6,8 +6,8 @@ import hash from 'object-hash';
 
 import { DEFAULT_LOCALE } from '@/i18n/routing';
 
-import { salesTable } from './schema';
 import { db } from '.';
+import { salesTable } from './schema';
 
 type Sale = typeof salesTable.$inferInsert;
 

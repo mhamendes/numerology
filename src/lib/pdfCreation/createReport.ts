@@ -2,9 +2,9 @@ import { getDate } from 'date-fns';
 import { jsPDF } from 'jspdf';
 import { UserOptions } from 'jspdf-autotable';
 
-import { PALETTE, START_HEIGHT, START_WIDTH } from './base';
-
 import { getNumerologyResponse } from '@/actions/getNumerologyResponse';
+
+import { PALETTE, START_HEIGHT, START_WIDTH } from './base';
 
 type CreateReportArgs = {
   pdf: jsPDF;

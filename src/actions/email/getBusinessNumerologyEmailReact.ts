@@ -1,6 +1,5 @@
-import { LocalesType } from '@/i18n/routing';
-
 import { getCalendlySingleUseSchedulingLink } from '@/actions/calendly/getScheduleLink';
+import { LocalesType } from '@/i18n/routing';
 
 type BusinessNumerologyEmailReactProps = {
   fullName: string;

@@ -5,6 +5,7 @@ import { getDate } from 'date-fns';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 
+import { sendEmail } from '@/actions/email/sendEmail';
 import { DEFAULT_LOCALE, LocalesType } from '@/i18n/routing';
 import { logger } from '@/lib/logger';
 import { DefaultNumbers } from '@/lib/numerology/types';
@@ -18,8 +19,6 @@ import {
   getConfiguredPdf,
 } from '@/lib/pdfCreation';
 import { createSection } from '@/lib/pdfCreation/createSections';
-
-import { sendEmail } from '@/actions/email/sendEmail';
 
 const _schema = z.object({
   email: z.email({ error: 'email' }),

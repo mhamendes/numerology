@@ -1,6 +1,6 @@
 'use client';
-import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -26,7 +26,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="flex w-full flex-grow-1 items-center justify-center px-4 py-16">
+    <div className="flex w-full grow items-center justify-center px-4 py-16">
       <div className="mx-auto w-4xl max-w-4xl">
         <Card className="text-center">
           <CardHeader>

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
 import { MenuIcon, MoonIcon, SunIcon, XIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
+import React, { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';

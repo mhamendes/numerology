@@ -2,9 +2,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 import * as pixel from '@/lib/fpixel';
 
