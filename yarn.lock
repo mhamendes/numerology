@@ -3542,10 +3542,10 @@ drizzle-kit@^1.0.0-beta.15-859cf75:
     esbuild "^0.25.10"
     jiti "^2.6.1"
 
-drizzle-orm@^1.0.0-beta.15-859cf75:
-  version "1.0.0-beta.15-859cf75"
-  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-1.0.0-beta.15-859cf75.tgz#619040f168ad4089f683c0db83527e60a1128157"
-  integrity sha512-dGVb2Q70H2AV6513hkOXR3Ud0FeGXLdugVq3YehoqkGIVTJrkuo0gRnCcW/dfI00O07t3T4HSh4clF/D/o/IsQ==
+drizzle-orm@^1.0.0-beta.20:
+  version "1.0.0-beta.20"
+  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-1.0.0-beta.20.tgz#37e1fb95a6463ac6065e264a8a2415eb18f3cc90"
+  integrity sha512-7qiuw+Z6yGr+ywt3PS5dP6UCfdymIuFT/ni6GnPGzLhkBIolNBTo4ByMBWTxJ7dW/Ya6d73GtkeuKfcVcriVHA==
 
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
