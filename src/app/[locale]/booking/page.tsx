@@ -27,7 +27,7 @@ export default function Booking() {
           <CardTitle>{t('yourInformation')}</CardTitle>
         </CardHeader>
         {['life-map', 'personal-reading'].includes(
-          selectedProduct?.id ?? ''
+          selectedProduct?.id ?? '',
         ) ? (
           <LifeMapForm />
         ) : null}

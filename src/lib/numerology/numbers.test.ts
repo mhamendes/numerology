@@ -41,7 +41,7 @@ describe('Numerology', () => {
     `should return the impression number for $fullName}`,
     ({ fullName, expected }) => {
       expect(getImpressionNumber({ fullName })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -51,7 +51,7 @@ describe('Numerology', () => {
     'should return the motivation number for $fullName',
     ({ fullName, expected }) => {
       expect(getMotivationNumber({ fullName })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -61,7 +61,7 @@ describe('Numerology', () => {
     'should return the expression number for $fullName',
     ({ fullName, expected }) => {
       expect(getExpressionNumber({ fullName })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -71,7 +71,7 @@ describe('Numerology', () => {
     'should return the hidden talent number for $fullName',
     ({ fullName, expected }) => {
       expect(getHiddenTalentNumber({ fullName })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -88,7 +88,7 @@ describe('Numerology', () => {
     'should return the ascension degree for $fullName',
     ({ fullName, expected }) => {
       expect(getAscensionDegree({ fullName })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -102,7 +102,7 @@ describe('Numerology', () => {
     'should return the destiny number for birthday $birthday',
     ({ birthday, expected }) => {
       expect(getDestinyNumber({ birthday })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -140,7 +140,7 @@ describe('Numerology', () => {
     'should return the mission number for birthday $birthday and fullName $fullName',
     ({ birthday, fullName, expected }) => {
       expect(getMissionNumber({ fullName, birthday })).toBe(expected);
-    }
+    },
   );
 
   test.each([
@@ -173,7 +173,7 @@ describe('Numerology', () => {
     'should return the karmic debts number for birthday $birthday and fullName $fullName',
     ({ birthday, fullName, expected }) => {
       expect(getKarmicDebts({ fullName, birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -183,7 +183,7 @@ describe('Numerology', () => {
     'should return the correct hidden tendencies for $fullName',
     ({ fullName, expected }) => {
       expect(getHiddenTendencies({ fullName })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -193,7 +193,7 @@ describe('Numerology', () => {
     'should return the correct subconcious response for $fullName',
     ({ fullName, expected }) => {
       expect(getSubconsciousResponse({ fullName })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -239,7 +239,7 @@ describe('Numerology', () => {
     'should return the correct life cycles $birthday',
     ({ birthday, expected }) => {
       expect(getLifeCycles({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -287,7 +287,7 @@ describe('Numerology', () => {
     'should return the correct challenge numbers for $birthday',
     ({ birthday, expected }) => {
       expect(getChallenges({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -343,7 +343,7 @@ describe('Numerology', () => {
     'should return the correct decisive moments for $birthday',
     ({ birthday, expected }) => {
       expect(getDecisiveMoments({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -490,7 +490,7 @@ describe('Numerology', () => {
       vi.setSystemTime(mockedToday);
 
       expect(getPersonalYears({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -577,7 +577,7 @@ describe('Numerology', () => {
       vi.setSystemTime(mockedToday);
 
       expect(getPersonalMonths({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -705,7 +705,7 @@ describe('Numerology', () => {
       vi.useFakeTimers();
       vi.setSystemTime(mockedToday);
       expect(getPersonalDays({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -725,7 +725,7 @@ describe('Numerology', () => {
     `should return the correct favorable days for birthday $birthday`,
     ({ birthday, expected }) => {
       expect(getFavorableDays({ birthday })).toEqual(expected);
-    }
+    },
   );
 
   test.each([
@@ -758,7 +758,7 @@ describe('Numerology', () => {
     ({ birthday, expectedNumber, expectedInfo }) => {
       expect(getCompatibleNumbersValue({ birthday })).toBe(expectedNumber);
       expect(getCompatibleNumbersInfo({ birthday })).toEqual(expectedInfo);
-    }
+    },
   );
 
   test.each([
@@ -856,12 +856,12 @@ describe('Numerology', () => {
     'should return the correct conjugal vibration for birthday $birthday',
     ({ birthday, fullName, expectedNumber, expectedInfo }) => {
       expect(getConjugalVibrationNumber({ fullName, birthday })).toBe(
-        expectedNumber
+        expectedNumber,
       );
       expect(getConjugalVibrationInfo({ fullName, birthday })).toEqual(
-        expectedInfo
+        expectedInfo,
       );
-    }
+    },
   );
 
   test.each([
@@ -877,6 +877,6 @@ describe('Numerology', () => {
     'should return favorable colors for $fullName',
     ({ fullName, expected }) => {
       expect(getFavorableColors({ fullName })).toBe(expected);
-    }
+    },
   );
 });

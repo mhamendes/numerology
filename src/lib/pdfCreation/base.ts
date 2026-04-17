@@ -72,7 +72,7 @@ export async function createIntroductionPage(pdf: jsPDF, locale: string) {
       maxWidth: 180,
       lineHeightFactor: 3.5,
     },
-    undefined
+    undefined,
   );
   return pdf;
 }
@@ -117,7 +117,7 @@ export async function createMainPage({
       baseline: 'middle',
       align: 'center',
     },
-    'center'
+    'center',
   );
 
   pdf.setFontSize(12);
@@ -130,7 +130,7 @@ export async function createMainPage({
       baseline: 'middle',
       align: 'center',
     },
-    'center'
+    'center',
   );
 
   pdf.text(
@@ -142,7 +142,7 @@ export async function createMainPage({
       baseline: 'middle',
       align: 'center',
     },
-    'center'
+    'center',
   );
   return pdf;
 }

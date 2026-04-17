@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       await (await req.blob()).text(),
       req.headers.get('stripe-signature') as string,
-      process.env.STRIPE_WEBHOOK_SECRET as string
+      process.env.STRIPE_WEBHOOK_SECRET as string,
     );
   } catch (error) {
     const errorMessage =
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     log.error(error, 'Webhook Error on event formatting');
     return NextResponse.json(
       { message: `Webhook Error on event formatting: ${errorMessage}` },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -85,7 +85,7 @@ export async function POST(req: Request) {
       logError.error(error, 'Webhook Error on document creation');
       return NextResponse.json(
         { message: 'Webhook handler failed' },
-        { status: 500 }
+        { status: 500 },
       );
     }
   }

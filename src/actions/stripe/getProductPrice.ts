@@ -29,7 +29,7 @@ async function getProductPrice({ productId }: GetProductPriceProps) {
 
   if (!priceInCurrency) {
     throw new Error(
-      `Price for product ${productId} in currency ${currency} not found`
+      `Price for product ${productId} in currency ${currency} not found`,
     );
   }
 
@@ -94,7 +94,7 @@ export async function getProducts(locale: string): Promise<Product[]> {
       .filter(
         (product) =>
           product.isActive &&
-          product.allowedLocales.includes(locale as LocalesType)
+          product.allowedLocales.includes(locale as LocalesType),
       )
       .map(async (product) => {
         const price = await getProductPrice({
@@ -117,7 +117,7 @@ export async function getProducts(locale: string): Promise<Product[]> {
           rawPrice: price.amount / 100,
           currency: price.currency,
         };
-      })
+      }),
   );
 
   return productsWithPrice.filter((item): item is Product => item !== null);

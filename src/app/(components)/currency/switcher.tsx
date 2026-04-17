@@ -37,7 +37,7 @@ export default function CurrencySwitcher() {
   const { updateCurrency, currency, isPending } = useCurrency();
 
   const [currentCurrency, setCurrentCurrency] = useState<string | undefined>(
-    undefined
+    undefined,
   );
 
   useEffect(() => {

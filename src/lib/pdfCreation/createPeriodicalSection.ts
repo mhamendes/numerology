@@ -83,7 +83,7 @@ export async function createPeriodicalSection<T extends AllPossibleNumbers>({
     const endText = result.end
       ? periodicalExtraContent.endText1.replace(
           '{{endAge}}',
-          result.end.toString()
+          result.end.toString(),
         )
       : periodicalExtraContent.endText2;
     pdf.autoTable({
@@ -134,7 +134,7 @@ export async function createPeriodicalSection<T extends AllPossibleNumbers>({
     START_WIDTH,
     (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     190,
-    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
   );
 
   return pdf;

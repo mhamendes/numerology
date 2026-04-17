@@ -46,7 +46,7 @@ export default function RelationshipForm() {
     partnerFullName: z.string().min(2, {
       error: t('partnerName.errorMessage'),
     }),
-    partnerBirthday:z.date({
+    partnerBirthday: z.date({
       error: (issue) => {
         if (issue.input === undefined) {
           return t('birthday.errorMessage');

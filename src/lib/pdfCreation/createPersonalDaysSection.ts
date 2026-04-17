@@ -173,7 +173,7 @@ export async function createPersonalDaysSection({
     START_WIDTH,
     (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     190,
-    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
   );
 
   return pdf;
@@ -183,7 +183,7 @@ const getMonths = (
   data: {
     month: number;
   }[],
-  locale: string
+  locale: string,
 ) => {
   return data.map((item) => {
     return getMonthString(item.month, locale);
@@ -198,7 +198,7 @@ type MatrixArgs = {
 
 const invertMatrix = ({ matrix }: MatrixArgs) => {
   const inverted = matrix[0].days.map((_, index) =>
-    matrix.map((row) => row.days[index] ?? '⠀⠀⠀')
+    matrix.map((row) => row.days[index] ?? '⠀⠀⠀'),
   );
   return inverted;
 };

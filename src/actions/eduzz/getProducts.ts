@@ -131,11 +131,11 @@ export async function getProducts(locale: string): Promise<Product[]> {
     .filter(
       (product) =>
         product.isActive &&
-        product.allowedLocales.includes(locale as LocalesType)
+        product.allowedLocales.includes(locale as LocalesType),
     )
     .map((product) => {
       const price = product.priceList.find(
-        (price) => price.currency.toLowerCase() === currency
+        (price) => price.currency.toLowerCase() === currency,
       );
 
       if (!price) {

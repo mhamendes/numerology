@@ -90,8 +90,11 @@ export function sumDigits(value: number): number {
   return sumDigits(newValue);
 }
 
-function getValue(name: string, base: Record<string, number>): number {
-  const value = name
+function getSumVowelsOrConsonants(
+  name: string,
+  base: Record<string, number>,
+): number {
+  return name
     .toLowerCase()
     .split('')
     .reduce((acc, letter) => {
@@ -101,6 +104,10 @@ function getValue(name: string, base: Record<string, number>): number {
 
       return acc;
     }, 0);
+}
+
+function getValue(name: string, base: Record<string, number>): number {
+  const value = getSumVowelsOrConsonants(name, base);
 
   if (value === 11 || value === 22 || value < 10) return value;
 
@@ -536,7 +543,7 @@ export function getDecisiveMoments({ birthday }: { birthday: Date }) {
   const firstDecisiveMoment = sumDigits(day + month);
   const secondDecisiveMoment = sumDigits(day + year);
   const thirdDecisiveMoment = sumDigits(
-    firstDecisiveMoment + secondDecisiveMoment
+    firstDecisiveMoment + secondDecisiveMoment,
   );
   const fourthDecisiveMoment = sumDigits(month + year);
 
@@ -770,7 +777,7 @@ export function getPersonalDays({ birthday }: { birthday: Date }) {
 
   const personalMonths = getPersonalMonths({ birthday });
   const birthdayMonthPersonalNumber = personalMonths.find(
-    (month) => !!month.end
+    (month) => !!month.end,
   );
 
   let initialPersonalMonthNumber: number | null = null;
@@ -824,10 +831,12 @@ export function getPersonalDays({ birthday }: { birthday: Date }) {
 }
 
 export function getAscensionDegree({ fullName }: { fullName: string }) {
-  const vowelsSum = getMotivationNumber({ fullName });
-  const consonantsSum = getImpressionNumber({ fullName });
+  const vowelsSum = getSumVowelsOrConsonants(fullName, Vowels);
+  const consonantsSum = getSumVowelsOrConsonants(fullName, Consonants);
 
-  if (vowelsSum === consonantsSum) return 'illuminated' as const;
+  if (vowelsSum === consonantsSum) {
+    return 'illuminated' as const;
+  }
   if (vowelsSum > consonantsSum) return 'descendent' as const;
   return 'ascendent' as const;
 }

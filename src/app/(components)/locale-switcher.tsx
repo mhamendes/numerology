@@ -38,13 +38,13 @@ export default function LocaleSwitcher() {
         // are used in combination with a given `pathname`. Since the two will
         // always match for the current route, we can skip runtime checks.
         { pathname, params },
-        { locale: nextLocale }
+        { locale: nextLocale },
       );
     });
   }
 
   const [currentLocale, setCurrentLocale] = useState<string | undefined>(
-    undefined
+    undefined,
   );
 
   useEffect(() => {

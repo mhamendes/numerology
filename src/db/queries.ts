@@ -7,7 +7,7 @@ import { salesTable } from './schema';
 type Sale = typeof salesTable.$inferSelect;
 
 export async function getSaleByTrackerCode(
-  trackerCode: string
+  trackerCode: string,
 ): Promise<Sale | null> {
   'server-only';
 

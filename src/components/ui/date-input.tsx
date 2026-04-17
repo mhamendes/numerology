@@ -23,7 +23,7 @@ type DateInputProps = {
     error: ErrorOption,
     options?: {
       shouldFocus: boolean;
-    }
+    },
   ) => void;
   clearError: (name: 'birthday') => void;
 };
@@ -84,7 +84,7 @@ export function DateInput({ onSelect, setError, clearError }: DateInputProps) {
                 },
                 {
                   shouldFocus: true,
-                }
+                },
               );
               setDate(undefined);
             }
@@ -95,7 +95,7 @@ export function DateInput({ onSelect, setError, clearError }: DateInputProps) {
             variant={'outline'}
             className={cn(
               'absolute top-[50%] right-0 translate-y-[-50%] rounded-l-none bg-transparent font-normal',
-              !date && 'text-muted-foreground'
+              !date && 'text-muted-foreground',
             )}
           >
             <CalendarIcon className="h-4 w-4" />

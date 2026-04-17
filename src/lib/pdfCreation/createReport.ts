@@ -40,10 +40,10 @@ export async function createReport({
   pdf.text(
     reportExtraContent.birthday.replace(
       '{{birthday}}',
-      birthday.toLocaleDateString(locale)
+      birthday.toLocaleDateString(locale),
     ),
     START_WIDTH,
-    START_HEIGHT + 10
+    START_HEIGHT + 10,
   );
 
   pdf.setTextColor(PALETTE.purple);
@@ -122,42 +122,42 @@ export async function createReport({
         reportExtraContent.head4FirstRow
           .replace(
             '{{firstEnergyNumber}}',
-            numerologyResponse.lifeCycles.first.energyNumber
+            numerologyResponse.lifeCycles.first.energyNumber,
           )
           .replace(
             '{{secondEnergyNumber}}',
-            numerologyResponse.lifeCycles.second.energyNumber
+            numerologyResponse.lifeCycles.second.energyNumber,
           )
           .replace(
             '{{thirdEnergyNumber}}',
-            numerologyResponse.lifeCycles.third.energyNumber
+            numerologyResponse.lifeCycles.third.energyNumber,
           ),
         reportExtraContent.head4SecondRow
           .replace(
             '{{firstNumber}}',
-            numerologyResponse.challenges.first.number
+            numerologyResponse.challenges.first.number,
           )
           .replace(
             '{{secondNumber}}',
-            numerologyResponse.challenges.second.number
+            numerologyResponse.challenges.second.number,
           )
           .replace('{{mainNumber}}', numerologyResponse.challenges.main.number),
         reportExtraContent.head4ThirdRow
           .replace(
             '{{firstDecisiveMomentNumber}}',
-            numerologyResponse.decisiveMoments.first.number
+            numerologyResponse.decisiveMoments.first.number,
           )
           .replace(
             '{{secondDecisiveMomentNumber}}',
-            numerologyResponse.decisiveMoments.second.number
+            numerologyResponse.decisiveMoments.second.number,
           )
           .replace(
             '{{thirdDecisiveMomentNumber}}',
-            numerologyResponse.decisiveMoments.third.number
+            numerologyResponse.decisiveMoments.third.number,
           )
           .replace(
             '{{fourthDecisiveMomentNumber}}',
-            numerologyResponse.decisiveMoments.fourth.number
+            numerologyResponse.decisiveMoments.fourth.number,
           ),
         numerologyResponse.personalYears[0].number,
       ],
@@ -187,7 +187,7 @@ export async function createReport({
     START_HEIGHT + 157,
     {
       maxWidth: 180,
-    }
+    },
   );
 
   pdf.setTextColor(PALETTE.purple);
@@ -206,13 +206,13 @@ export async function createReport({
   pdf.text(
     reportExtraContent.favorableColorsDescription.replace(
       '{{favorableColors}}',
-      favorableColors.items[numerologyResponse.favorableColors].data
+      favorableColors.items[numerologyResponse.favorableColors].data,
     ),
     START_WIDTH,
     START_HEIGHT + 179,
     {
       maxWidth: 180,
-    }
+    },
   );
 
   pdf.setTextColor(PALETTE.purple);
@@ -227,7 +227,7 @@ export async function createReport({
     START_HEIGHT + 201,
     {
       maxWidth: 180,
-    }
+    },
   );
 
   pdf.setTextColor(PALETTE.purple);
@@ -242,7 +242,7 @@ export async function createReport({
     START_HEIGHT + 218,
     {
       maxWidth: 180,
-    }
+    },
   );
   return pdf;
 }

@@ -60,7 +60,7 @@ function Calendar({
         from: CURRENT_YEAR - Math.floor(yearRange / 2 - 1),
         to: CURRENT_YEAR + Math.ceil(yearRange / 2),
       };
-    }, [yearRange])
+    }, [yearRange]),
   );
 
   const { onPrevClick, startMonth, endMonth } = props;
@@ -98,7 +98,7 @@ function Calendar({
         day: 'flex size-8 flex-1 items-center justify-center p-0 text-sm',
         day_button: cn(
           buttonVariants({ variant: 'ghost' }),
-          'size-8 rounded-md p-0 font-normal transition-none aria-selected:opacity-100'
+          'size-8 rounded-md p-0 font-normal transition-none aria-selected:opacity-100',
         ),
         range_start: cn(buttonRangeClassName, 'day-range-start rounded-s-md'),
         range_middle:
@@ -189,12 +189,12 @@ function Nav({
         (startMonth &&
           differenceInCalendarDays(
             new TZDate(displayYears.from - 1, 0, 1, timeZone),
-            startMonth
+            startMonth,
           ) < 0) ||
         (endMonth &&
           differenceInCalendarDays(
             new TZDate(displayYears.from - 1, 0, 1, timeZone),
-            endMonth
+            endMonth,
           ) > 0)
       );
     }
@@ -207,12 +207,12 @@ function Nav({
         (startMonth &&
           differenceInCalendarDays(
             new TZDate(displayYears.to + 1, 0, 1, timeZone),
-            startMonth
+            startMonth,
           ) < 0) ||
         (endMonth &&
           differenceInCalendarDays(
             new TZDate(displayYears.to + 1, 0, 1, timeZone),
-            endMonth
+            endMonth,
           ) > 0)
       );
     }
@@ -231,8 +231,8 @@ function Nav({
           displayYears.from - (displayYears.to - displayYears.from),
           0,
           1,
-          timeZone
-        )
+          timeZone,
+        ),
       );
       return;
     }
@@ -259,8 +259,8 @@ function Nav({
           displayYears.from + (displayYears.to - displayYears.from),
           0,
           1,
-          timeZone
-        )
+          timeZone,
+        ),
       );
       return;
     }
@@ -404,13 +404,13 @@ function YearGrid({
           const isBefore =
             differenceInCalendarDays(
               new TZDate(displayYears.from + i, 11, 31, timeZone),
-              startMonth!
+              startMonth!,
             ) < 0;
 
           const isAfter =
             differenceInCalendarDays(
               new TZDate(displayYears.from + i, 0, 0, timeZone),
-              endMonth!
+              endMonth!,
             ) > 0;
 
           const isDisabled = isBefore || isAfter;
@@ -420,7 +420,7 @@ function YearGrid({
               className={cn(
                 'text-foreground h-7 w-full text-sm font-normal',
                 displayYears.from + i === CURRENT_YEAR &&
-                  'bg-accent text-accent-foreground font-medium'
+                  'bg-accent text-accent-foreground font-medium',
               )}
               variant="ghost"
               onClick={() => {
@@ -429,8 +429,8 @@ function YearGrid({
                   new TZDate(
                     displayYears.from + i,
                     (selected as Date | undefined)?.getMonth() ?? 0,
-                    timeZone
-                  )
+                    timeZone,
+                  ),
                 );
               }}
               disabled={navView === 'years' ? isDisabled : undefined}
@@ -438,7 +438,7 @@ function YearGrid({
               {displayYears.from + i}
             </Button>
           );
-        }
+        },
       )}
     </div>
   );

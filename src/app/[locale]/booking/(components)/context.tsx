@@ -86,7 +86,7 @@ export function BookingProvider({
   const [isLoading, setIsLoading] = useState(false);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [prefilledData, setPrefilledData] = useState<BaseFormSchema | null>(
-    null
+    null,
   );
   const { trackEvent, isLoaded } = useFacebookPixel();
 
@@ -102,7 +102,7 @@ export function BookingProvider({
       setSelectedProduct(product);
       setStep(2);
     },
-    [products]
+    [products],
   );
 
   const buildPaymentUrl = useCallback(
@@ -127,7 +127,7 @@ export function BookingProvider({
 
       return url.toString();
     },
-    [selectedProduct]
+    [selectedProduct],
   );
 
   const onSubmit = useCallback(
@@ -172,7 +172,7 @@ export function BookingProvider({
         setIsLoading(false);
       }
     },
-    [isLoading, selectedProduct, t, trackEvent, isLoaded, buildPaymentUrl]
+    [isLoading, selectedProduct, t, trackEvent, isLoaded, buildPaymentUrl],
   );
 
   const handleBack = useCallback(() => {
@@ -305,7 +305,7 @@ export function BookingProvider({
           }
         })
         .filter((product) => product !== null),
-    [products, tBooking, tLifeMap, tServices]
+    [products, tBooking, tLifeMap, tServices],
   );
 
   return (

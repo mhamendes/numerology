@@ -38,11 +38,12 @@ const buttonVariants = cva(
       variant: 'default',
       size: 'default',
     },
-  }
+  },
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   to?: string;
@@ -61,7 +62,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       to,
       ...props
     },
-    ref
+    ref,
   ) => {
     const Comp = asChild || to ? Slot : 'button';
 
@@ -74,7 +75,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             className={cn(
               buttonVariants({ variant, className }),
               'absolute hidden w-full items-center justify-center',
-              isLoading && 'flex'
+              isLoading && 'flex',
             )}
           >
             <LoadingSpinner />
@@ -95,7 +96,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {getChild()}
       </Comp>
     );
-  }
+  },
 );
 Button.displayName = 'Button';
 

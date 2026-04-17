@@ -14,7 +14,7 @@ describe('Inverted Triangles', () => {
       invertedTriangles({
         fullName: 'Paula Sofia Martins Bota Gonçalves',
         birthday: new UTCDate('1992-06-22'),
-      })
+      }),
     ).toEqual({
       singleDigitArcane: '5',
       negativeSequences: ['111', '222', '333', '444', '777', '888'],

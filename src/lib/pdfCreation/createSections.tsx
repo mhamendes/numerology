@@ -636,7 +636,7 @@ export async function createSection<T extends AllPossibleNumbers>({
       START_WIDTH,
       (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
       190,
-      (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+      (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     );
   }
 

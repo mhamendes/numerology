@@ -43,9 +43,7 @@ export default async function Layout({
         <CurrencyProvider baseCurrency={currency}>
           <div className="flex min-h-screen flex-col bg-linear-to-b from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950">
             <Header />
-            <main className="flex grow px-4 py-8 md:py-16">
-              {children}
-            </main>
+            <main className="flex grow px-4 py-8 md:py-16">{children}</main>
             <Footer />
           </div>
         </CurrencyProvider>

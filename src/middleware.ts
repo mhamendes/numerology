@@ -17,7 +17,7 @@ export default async function middleware(request: NextRequest) {
   const response = handleI18nRouting(request);
 
   const locale = response.headers.get(
-    'x-middleware-request-x-next-intl-locale'
+    'x-middleware-request-x-next-intl-locale',
   ) as LocalesType | null;
 
   const currentCurrency = request.cookies.get('CURRENCY')?.value?.toLowerCase();

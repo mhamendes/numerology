@@ -21,7 +21,7 @@ export default function ServiceSelection() {
             'cursor-pointer transition-all hover:shadow-md',
             selectedProduct?.id === product.id
               ? 'ring-opacity-50 border-indigo-500 ring-2 ring-indigo-500'
-              : 'border-gray-200 dark:border-gray-700'
+              : 'border-gray-200 dark:border-gray-700',
           )}
           onClick={() => handleProductSelection(product.id)}
           id={`nzi12j_${index}`}

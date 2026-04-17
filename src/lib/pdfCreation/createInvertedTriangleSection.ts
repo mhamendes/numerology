@@ -148,7 +148,7 @@ export async function createInvertedTriangleSection({
       [
         invertedTriangleExtraContent.head2.replace(
           '{{arcane}}',
-          result.singleDigitArcane.toString()
+          result.singleDigitArcane.toString(),
         ),
       ],
     ],
@@ -197,7 +197,7 @@ export async function createInvertedTriangleSection({
       [
         invertedTriangleExtraContent.head4.replace(
           '{{arcaneDuration}}',
-          arcaneDuration
+          arcaneDuration,
         ),
       ],
     ],
@@ -220,7 +220,7 @@ export async function createInvertedTriangleSection({
     START_WIDTH,
     (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     190,
-    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
   );
 
   pdf = await createTitle({
@@ -277,7 +277,7 @@ export async function createInvertedTriangleSection({
         tableWidth: 180,
         margin: { top: TOP_MARGIN },
       });
-    }
+    },
   );
 
   return pdf;
@@ -350,7 +350,7 @@ function createInvertedTriangleImage({
         {
           maxWidth: 180,
         },
-        'center'
+        'center',
       );
       startWidth += 4;
     });

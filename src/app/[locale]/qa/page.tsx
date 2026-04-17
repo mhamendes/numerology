@@ -25,12 +25,12 @@ export default function QA() {
     (faq) =>
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answerList.some((child) =>
-        child.toLowerCase().includes(searchTerm.toLowerCase())
+        child.toLowerCase().includes(searchTerm.toLowerCase()),
       ) ||
       faq.list?.some((item) =>
-        item.toLowerCase().includes(searchTerm.toLowerCase())
+        item.toLowerCase().includes(searchTerm.toLowerCase()),
       ) ||
-      faq.footer?.toLowerCase().includes(searchTerm.toLowerCase())
+      faq.footer?.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (

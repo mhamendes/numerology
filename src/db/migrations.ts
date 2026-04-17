@@ -12,7 +12,7 @@ import { salesTable } from './schema';
 type Sale = typeof salesTable.$inferInsert;
 
 export async function createSale(
-  saleData: Omit<Sale, 'trackerCode' | 'locale' | 'updatedAt' | 'status'>
+  saleData: Omit<Sale, 'trackerCode' | 'locale' | 'updatedAt' | 'status'>,
 ) {
   'server-only';
 
@@ -25,7 +25,7 @@ export async function createSale(
     JSON.stringify({
       ...newSaleContent,
       updatedAt: new UTCDate(),
-    })
+    }),
   );
 
   await db.insert(salesTable).values({
@@ -37,7 +37,7 @@ export async function createSale(
 }
 
 export async function updateSaleByTrackerCode(
-  saleData: Partial<Omit<Sale, 'trackerCode'>> & { trackerCode: string }
+  saleData: Partial<Omit<Sale, 'trackerCode'>> & { trackerCode: string },
 ) {
   'server-only';
 

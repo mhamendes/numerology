@@ -26,8 +26,8 @@ export function invertedTriangles({
 
         return baseTriangleArray.push(
           sumDigitsToSingleDigit(
-            LetterValues[letter as keyof typeof LetterValues]
-          )
+            LetterValues[letter as keyof typeof LetterValues],
+          ),
         );
       }
     });
@@ -46,7 +46,7 @@ export function invertedTriangles({
 
   const yearsForEachArcane = Math.floor(90 / numberOfArcanes);
   const monthsForEachArcane = Math.round(
-    (90 / numberOfArcanes - yearsForEachArcane) * 12
+    (90 / numberOfArcanes - yearsForEachArcane) * 12,
   );
 
   const currentAge = getCurrentAge(birthday);
@@ -54,7 +54,7 @@ export function invertedTriangles({
   const { currentArcane, currentArcaneEndAge } = getCurrentArcane(
     currentAge,
     yearsForEachArcane + monthsForEachArcane / 12,
-    arcanePairs
+    arcanePairs,
   );
 
   return {
@@ -73,7 +73,7 @@ export function invertedTriangles({
       fullName.replace(/\s+/g, '').split(''),
       ...getTriangleSumWithNegativeSequences(
         allTriangleSums,
-        negativeSequences
+        negativeSequences,
       ),
     ],
   };
@@ -123,7 +123,7 @@ function sumTriangleValues({
 
 function getTriangleSumWithNegativeSequences(
   triangles: number[][],
-  negativeSequences: string[]
+  negativeSequences: string[],
 ): string[][] {
   return triangles.map((triangle) => {
     let triangleJoin = triangle.join('');
@@ -137,7 +137,7 @@ function getTriangleSumWithNegativeSequences(
       for (let i = triangleLength; i >= 3; i--) {
         const sequence = Array.from(
           { length: i },
-          (_) => negativeSequenceNumber
+          (_) => negativeSequenceNumber,
         ).join('');
 
         const split = triangleJoin.split(sequence);
@@ -194,14 +194,14 @@ function getCurrentAge(birthday: Date) {
 function getCurrentArcane(
   currentAge: number,
   yearsForEachArcane: number,
-  arcanePairs: string[]
+  arcanePairs: string[],
 ) {
   const currentArcaneIndex = Math.floor(currentAge / yearsForEachArcane);
 
   return {
     currentArcane: arcanePairs[currentArcaneIndex],
     currentArcaneEndAge: Math.ceil(
-      (currentArcaneIndex + 1) * yearsForEachArcane
+      (currentArcaneIndex + 1) * yearsForEachArcane,
     ),
   };
 }

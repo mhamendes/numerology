@@ -119,7 +119,7 @@ export async function createPersonalMonthSection({
     START_WIDTH,
     (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     190,
-    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
   );
 
   return pdf;
@@ -172,7 +172,7 @@ async function getTitle({
       .replace('{{title}}', baseTitle)
       .replace(
         '{{date}}',
-        `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`
+        `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`,
       )
       .replace('{{endDate}}', end);
   }
@@ -182,7 +182,7 @@ async function getTitle({
       .replace('{{title}}', baseTitle)
       .replace(
         '{{date}}',
-        `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`
+        `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`,
       )
       .replace('{{startDate}}', start);
   }
@@ -191,6 +191,6 @@ async function getTitle({
     .replace('{{title}}', baseTitle)
     .replace(
       '{{date}}',
-      `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`
+      `${NUMBER_TO_MONTH[month as keyof typeof NUMBER_TO_MONTH]}/${year}`,
     );
 }

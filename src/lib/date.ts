@@ -19,7 +19,7 @@ export const getMonthString = (month: number, locale: string) => {
     'MMM',
     {
       locale: LOCALES[locale as keyof typeof LOCALES],
-    }
+    },
   );
 
   return formattedMonth.charAt(0).toUpperCase() + formattedMonth.slice(1);

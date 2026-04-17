@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div
               className={cn(
                 'hidden items-center lg:flex',
-                step === 1 && !isLastStep ? 'flex' : 'hidden'
+                step === 1 && !isLastStep ? 'flex' : 'hidden',
               )}
             >
               <div
@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   'flex h-10 w-10 items-center justify-center rounded-full',
                   isLastStep || step >= 1
                     ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
+                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400',
                 )}
               >
                 1
@@ -68,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div
               className={cn(
                 'hidden items-center lg:flex',
-                step === 2 && !isLastStep ? 'flex' : 'hidden'
+                step === 2 && !isLastStep ? 'flex' : 'hidden',
               )}
             >
               <div
@@ -76,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   'flex h-10 w-10 items-center justify-center rounded-full',
                   isLastStep || step >= 2
                     ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
+                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400',
                 )}
               >
                 2
@@ -91,7 +91,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div
               className={cn(
                 'hidden items-center lg:flex',
-                step === 3 && !isLastStep ? 'flex' : 'hidden'
+                step === 3 && !isLastStep ? 'flex' : 'hidden',
               )}
             >
               <div
@@ -99,7 +99,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   'flex h-10 w-10 items-center justify-center rounded-full',
                   isLastStep || step >= 3
                     ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
+                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400',
                 )}
               >
                 3
@@ -114,7 +114,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div
               className={cn(
                 'hidden items-center lg:flex',
-                isLastStep ? 'flex' : 'hidden'
+                isLastStep ? 'flex' : 'hidden',
               )}
             >
               <div
@@ -122,7 +122,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   'flex h-10 w-10 items-center justify-center rounded-full',
                   isLastStep
                     ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
+                    : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400',
                 )}
               >
                 4

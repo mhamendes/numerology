@@ -96,13 +96,13 @@ export async function getNumerologyResponse({
     missionNumber: `${missionNumber}` as DefaultNumbers,
     hiddenTalentNumber: `${hiddenTalentNumber}` as DefaultNumbers,
     karmicLessons: karmicLessons.map(
-      (lesson) => `${lesson}` as OneToNineNumbers
+      (lesson) => `${lesson}` as OneToNineNumbers,
     ) as OneToNineNumbers[],
     karmicDebts: karmicDebts.map(
-      (lesson) => `${lesson}` as KarmicDebtNumbers
+      (lesson) => `${lesson}` as KarmicDebtNumbers,
     ) as KarmicDebtNumbers[],
     hiddenTendencies: hiddenTendencies.map(
-      (tendency) => `${tendency}` as OneToNineNumbers
+      (tendency) => `${tendency}` as OneToNineNumbers,
     ) as OneToNineNumbers[],
     subconsciousResponse: `${subconsciousResponse}` as OneToNineNumbers,
     lifeCycles,

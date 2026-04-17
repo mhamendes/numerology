@@ -116,7 +116,7 @@ export async function createSectionWithListOfNumbers<
     START_WIDTH,
     (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
     190,
-    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5
+    (pdf.lastAutoTable.finalY ?? START_HEIGHT) + 5,
   );
 
   return pdf;

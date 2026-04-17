@@ -59,7 +59,7 @@ export function useFacebookPixel() {
   const context = useContext(FacebookPixelContext);
   if (!context) {
     throw new Error(
-      'useFacebookPixel must be used within a FacebookPixelProvider'
+      'useFacebookPixel must be used within a FacebookPixelProvider',
     );
   }
 

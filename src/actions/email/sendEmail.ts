@@ -59,7 +59,7 @@ export async function sendEmail({
         return `${fullName} de email ${to} enviou a mensagem: ${html}`;
       default:
         throw new Error(
-          `No email type provided, failed to send email to ${to}`
+          `No email type provided, failed to send email to ${to}`,
         );
     }
   };
