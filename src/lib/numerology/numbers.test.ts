@@ -84,6 +84,7 @@ describe('Numerology', () => {
   test.each([
     { fullName: 'Yara Araújo D`Alessandro', expected: 'descendent' },
     { fullName: 'Marcelo Azevedo da Trindade', expected: 'ascendent' },
+    { fullName: 'Ana Marília Luzia Ribeiro', expected: 'illuminated' },
   ])(
     'should return the ascension degree for $fullName',
     ({ fullName, expected }) => {
@@ -95,7 +96,7 @@ describe('Numerology', () => {
     { birthday: new UTCDate('1970-04-08'), expected: 11 },
     { birthday: new UTCDate('1940-06-11'), expected: 22 },
     { birthday: new UTCDate('1966-03-17'), expected: 6 },
-    { birthday: new UTCDate('1962-09-22'), expected: 22 },
+    { birthday: new UTCDate('1962-09-22'), expected: 4 },
     { birthday: new UTCDate('1976-05-21'), expected: 4 },
     { birthday: new UTCDate('1991-05-18'), expected: 7 },
   ])(
