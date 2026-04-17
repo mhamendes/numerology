@@ -353,42 +353,15 @@ describe('Numerology', () => {
       yearToday: 2024,
       monthToday: 2,
       expected: [
-        {
-          year: 2024,
-          number: '9',
-        },
-        {
-          year: 2025,
-          number: '1',
-        },
-        {
-          year: 2026,
-          number: '2',
-        },
-        {
-          year: 2027,
-          number: '3',
-        },
-        {
-          year: 2028,
-          number: '4',
-        },
-        {
-          year: 2029,
-          number: '5',
-        },
-        {
-          year: 2030,
-          number: '6',
-        },
-        {
-          year: 2031,
-          number: '7',
-        },
-        {
-          year: 2032,
-          number: '8',
-        },
+        { year: 2024, number: '9', start: '18/01/2024', end: '17/01/2025' },
+        { year: 2025, number: '1', start: '18/01/2025', end: '17/01/2026' },
+        { year: 2026, number: '2', start: '18/01/2026', end: '17/01/2027' },
+        { year: 2027, number: '3', start: '18/01/2027', end: '17/01/2028' },
+        { year: 2028, number: '4', start: '18/01/2028', end: '17/01/2029' },
+        { year: 2029, number: '5', start: '18/01/2029', end: '17/01/2030' },
+        { year: 2030, number: '6', start: '18/01/2030', end: '17/01/2031' },
+        { year: 2031, number: '7', start: '18/01/2031', end: '17/01/2032' },
+        { year: 2032, number: '8', start: '18/01/2032', end: '17/01/2033' },
       ],
     },
     {
@@ -396,47 +369,16 @@ describe('Numerology', () => {
       yearToday: 2024,
       monthToday: 2,
       expected: [
-        {
-          year: 2024,
-          number: '3',
-          end: '17/05/2024',
-        },
-        {
-          year: 2024,
-          number: '4',
-        },
-        {
-          year: 2025,
-          number: '5',
-        },
-        {
-          year: 2026,
-          number: '6',
-        },
-        {
-          year: 2027,
-          number: '7',
-        },
-        {
-          year: 2028,
-          number: '8',
-        },
-        {
-          year: 2029,
-          number: '9',
-        },
-        {
-          year: 2030,
-          number: '1',
-        },
-        {
-          year: 2031,
-          number: '2',
-        },
-        {
-          year: 2032,
-          number: '3',
-        },
+        { year: 2023, number: '3', start: '18/05/2023', end: '17/05/2024' },
+        { year: 2024, number: '4', start: '18/05/2024', end: '17/05/2025' },
+        { year: 2025, number: '5', start: '18/05/2025', end: '17/05/2026' },
+        { year: 2026, number: '6', start: '18/05/2026', end: '17/05/2027' },
+        { year: 2027, number: '7', start: '18/05/2027', end: '17/05/2028' },
+        { year: 2028, number: '8', start: '18/05/2028', end: '17/05/2029' },
+        { year: 2029, number: '9', start: '18/05/2029', end: '17/05/2030' },
+        { year: 2030, number: '1', start: '18/05/2030', end: '17/05/2031' },
+        { year: 2031, number: '2', start: '18/05/2031', end: '17/05/2032' },
+        { year: 2032, number: '3', start: '18/05/2032', end: '17/05/2033' },
       ],
     },
     {
@@ -444,42 +386,15 @@ describe('Numerology', () => {
       monthToday: 8,
       yearToday: 2024,
       expected: [
-        {
-          year: 2024,
-          number: '9',
-        },
-        {
-          year: 2025,
-          number: '1',
-        },
-        {
-          year: 2026,
-          number: '2',
-        },
-        {
-          year: 2027,
-          number: '3',
-        },
-        {
-          year: 2028,
-          number: '4',
-        },
-        {
-          year: 2029,
-          number: '5',
-        },
-        {
-          year: 2030,
-          number: '6',
-        },
-        {
-          year: 2031,
-          number: '7',
-        },
-        {
-          year: 2032,
-          number: '8',
-        },
+        { year: 2024, number: '9', start: '22/06/2024', end: '21/06/2025' },
+        { year: 2025, number: '1', start: '22/06/2025', end: '21/06/2026' },
+        { year: 2026, number: '2', start: '22/06/2026', end: '21/06/2027' },
+        { year: 2027, number: '3', start: '22/06/2027', end: '21/06/2028' },
+        { year: 2028, number: '4', start: '22/06/2028', end: '21/06/2029' },
+        { year: 2029, number: '5', start: '22/06/2029', end: '21/06/2030' },
+        { year: 2030, number: '6', start: '22/06/2030', end: '21/06/2031' },
+        { year: 2031, number: '7', start: '22/06/2031', end: '21/06/2032' },
+        { year: 2032, number: '8', start: '22/06/2032', end: '21/06/2033' },
       ],
     },
   ])(
