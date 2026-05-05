@@ -91,7 +91,7 @@ export default async function Home() {
       </div>
 
       {/* Call to Action */}
-      <section className="bg-indigo-600 px-4 py-20 mt-20 -mx-4  dark:bg-indigo-800">
+      <section className="bg-indigo-600 px-4 py-20 mt-20 -mx-4 md:-mb-16 -mb-8  dark:bg-indigo-800">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             {t('beginJourney')}
