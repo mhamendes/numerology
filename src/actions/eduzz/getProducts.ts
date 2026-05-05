@@ -45,7 +45,7 @@ export async function getProducts(locale: string): Promise<Product[]> {
           currency: 'BRL',
           amount: 296,
           maxInstallments: 12,
-          maxInstallmentAmount: 30.25,
+          maxInstallmentAmount: 30.61,
         },
         {
           currency: 'USD',
@@ -68,7 +68,7 @@ export async function getProducts(locale: string): Promise<Product[]> {
           currency: 'BRL',
           amount: 593,
           maxInstallments: 12,
-          maxInstallmentAmount: 60.61,
+          maxInstallmentAmount: 61.33,
         },
         {
           currency: 'USD',
