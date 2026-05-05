@@ -8,7 +8,6 @@ import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import BusinessForm from './(components)/business-form';
 import { useBooking } from './(components)/context';
 import LifeMapForm from './(components)/life-map-form';
-import Payment from './(components)/payment';
 import RelationshipForm from './(components)/relationship-form';
 import ServiceSelection from './(components)/service-selection';
 
@@ -39,10 +38,6 @@ export default function Booking() {
         ) : null}
       </Card>
     );
-  }
-
-  if (step === 3) {
-    return <Payment />;
   }
 
   return null;

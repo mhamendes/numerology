@@ -48,7 +48,6 @@ type BookingContextType = {
   products: PopulatedProduct[];
   step: number;
   isLoading: boolean;
-  clientSecret: string | null;
   prefilledData: BaseFormSchema | null;
   isLastStep: boolean;
   updateCheckoutSession: () => void;
@@ -62,7 +61,6 @@ const BookingContext = createContext<BookingContextType>({
   step: 1,
   isLoading: false,
   onSubmit: () => {},
-  clientSecret: null,
   prefilledData: null,
   isLastStep: false,
   updateCheckoutSession: () => {},
@@ -84,7 +82,6 @@ export function BookingProvider({
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [prefilledData, setPrefilledData] = useState<BaseFormSchema | null>(
     null,
   );
@@ -179,19 +176,15 @@ export function BookingProvider({
     if (step === 2) {
       setSelectedProduct(null);
     }
-    if (clientSecret) {
-      setClientSecret(null);
-    }
 
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
-  }, [clientSecret, step]);
+  }, [step]);
 
   const updateCheckoutSession = useCallback(() => {
-    if (clientSecret && prefilledData) {
-      setClientSecret(null);
+    if (prefilledData) {
       onSubmit(prefilledData as BaseFormSchema);
     }
-  }, [clientSecret, onSubmit, prefilledData]);
+  }, [onSubmit, prefilledData]);
 
   const isLastStep =
     pathname.includes('success') || pathname.includes('failure');
@@ -221,7 +214,6 @@ export function BookingProvider({
 
   useEffect(() => {
     if (pathname !== '/booking') {
-      setClientSecret(null);
       setStep(1);
     }
   }, [pathname]);
@@ -316,7 +308,6 @@ export function BookingProvider({
         handleBack,
         products: populatedProducts,
         step,
-        clientSecret,
         isLoading,
         onSubmit,
         prefilledData,

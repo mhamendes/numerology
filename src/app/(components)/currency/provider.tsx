@@ -2,10 +2,9 @@
 
 import { createContext, useContext, useState, useTransition } from 'react';
 
-import { useRouter } from '@/i18n/navigation';
-
 import { changeCurrency } from '@/actions/changeCurrency';
 import { useBooking } from '@/app/[locale]/booking/(components)/context';
+import { useRouter } from '@/i18n/navigation';
 
 type CurrencyContextType = {
   currency: string | undefined;

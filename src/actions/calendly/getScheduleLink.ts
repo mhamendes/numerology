@@ -1,7 +1,7 @@
 'use server';
 'server-only';
 
-import { ProductId } from '@/actions/stripe/getProductPrice';
+import { ProductId } from '@/actions/eduzz/getProducts';
 import { LocalesType } from '@/i18n/routing';
 
 const BASE_URL = 'https://api.calendly.com';

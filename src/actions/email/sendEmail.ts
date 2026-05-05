@@ -3,7 +3,7 @@
 
 import { Resend } from 'resend';
 
-import { ProductId } from '@/actions/stripe/getProductPrice';
+import { ProductId } from '@/actions/eduzz/getProducts';
 import { LocalesType } from '@/i18n/routing';
 
 import { getBusinessNumerologyEmailReact } from './getBusinessNumerologyEmailReact';
