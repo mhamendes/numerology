@@ -75,7 +75,7 @@
     "tailwind-merge": "^3.4.0",
     "tap": "^21.7.2",
     "vaul": "^1.1.2",
-    "zod": "^4.1.13"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",
